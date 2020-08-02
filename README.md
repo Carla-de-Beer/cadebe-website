@@ -39,7 +39,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### `npm --bucket=<bucket name> run build`
+### `npm run deploy -- <BUCKET PATH>`
 
 Builds and deploys the frontend code directly to AWS S3.
+
+Create the AWS S3 bucket path parameter: `export BUCKET=s3://www.cadebe.dev`.
+
+Run the deployment command: `npm run deploy -- $BUCKET`
 
