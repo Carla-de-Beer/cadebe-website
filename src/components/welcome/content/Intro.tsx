@@ -24,9 +24,9 @@ export default class Content extends React.Component {
                                     What started off as an experiment on how to upload content to AWS S3 and
                                     integrating an SSL certificate with AWS CloudFront, seems to be morphing into a
                                     website.
+                                    Good stuff coming soon!
                                     In the meanwhile, you can reach me on &nbsp;
                                     <a className="typewriter-text" href="https://twitter.com/cadebe_">Twitter</a>.
-                                    Good stuff coming soon!
                                 </Card.Text>
                             </Card.Body>
                         </Card>
