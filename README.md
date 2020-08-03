@@ -40,7 +40,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Builds and deploys the frontend code directly to AWS S3.
 
-Create the AWS S3 bucket path parameter: `export BUCKET=s3://www.cadebe.dev`.
+Create the AWS S3 bucket path parameter: `export BUCKET=s3://<BUCKET NAME>`.
 
 Run the deployment command: `npm run deploy -- $BUCKET`
 
