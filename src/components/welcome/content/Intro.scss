@@ -38,7 +38,7 @@
   }
 
   .card-text {
-    color: $paragraph-gray
+    color: $paragraph-gray;
   }
 
   .card-tile {
@@ -47,4 +47,13 @@
     border: none;
     color: $header-grey;
   }
+
+  @media all and (max-width: 800px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+  }
+
 }

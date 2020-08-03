@@ -12,10 +12,10 @@ export default class Content extends React.Component {
                     <div className='mt-3'>
                     </div>
                 </div>
-                <div className='text-fields' style={{paddingTop: '30px'}}>
+                <div className='text-fields box' style={{paddingTop: '30px'}}>
                     <h1 className='mt-2'>News</h1>
                     <div className='mt-5'>
-                        <Card className='card-tile' style={{width: '40rem'}}>
+                        <Card className='card-tile' style={{width: '80%'}}>
                             <Card.Body>
                                 <Card.Title>Carla's Development Website is Online!</Card.Title>
                                 <Card.Text>
