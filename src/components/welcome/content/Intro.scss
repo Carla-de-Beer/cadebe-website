@@ -29,12 +29,12 @@
     color: $paragraph-gray;
   }
 
-  .header-text {
-    font-size: 45px !important;
-  }
-
   .text-fields {
     text-align: center;
+  }
+
+  .header-text {
+    font-size: 45px !important;
   }
 
   .card-text {
@@ -45,7 +45,14 @@
     width: 50%;
     margin: 0 auto;
     border: none;
-    color: $header-grey;
+    color: $accent-gray;
+
+    .typewriter-text {
+      @extend .font-style-accent;
+      font-size: 16px;
+      color: $header-grey;
+      font-weight: bold;
+    }
   }
 
   @media all and (max-width: 800px) {
