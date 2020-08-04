@@ -83,8 +83,13 @@ export default class ProjectCard extends React.Component {
                             <Card.Body>
                                 <Card.Title>TSP Distance Calculator</Card.Title>
                                 <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
+                                    This project demonstrates the use of a genetic algorithm to find an optimised
+                                    solution to the Travelling Salesman Problem. The program dynamically reads in city
+                                    data from a file and calculates the shortest distance it can find, linking all
+                                    cities. The actual physical distance on the route, calculated as the Haversine
+                                    distance, is also shown. Specifiable genetic algorithm parameters include the
+                                    crossover rate, mutation rate, population size, max. no. iterations and elitism
+                                    generation gap.
                                 </Card.Text>
                                 <Button variant="light" href="https://carla-de-beer.github.io/TSP-distance-calculator/"
                                         target="_blank">
@@ -101,8 +106,7 @@ export default class ProjectCard extends React.Component {
                             <Card.Body>
                                 <Card.Title>ISS Tracker</Card.Title>
                                 <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
+                                    A real-time 2D tracker for the International Space Station.
                                 </Card.Text>
                                 <Button variant="light" href="https://carla-de-beer.github.io/ISS-tracker/"
                                         target="_blank">
