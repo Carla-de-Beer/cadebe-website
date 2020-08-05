@@ -19,7 +19,7 @@ export default class ProjectCard extends React.Component {
     render() {
         return (
             <CardColumns className="project-tiles-wrapper">
-                <Row className='m-lg-5 row'>
+                <Row className='m-lg-5 box'>
                     <Col>
                         <Card className="p-4">
                             <Card.Img variant="bottom" src={som} alt="Project image"/>
@@ -76,7 +76,7 @@ export default class ProjectCard extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <Row className='ml-lg-5 mr-lg-5 mb-lg-5 row'>
+                <Row className='ml-lg-5 mr-lg-5 mb-lg-5 box'>
                     <Col>
                         <Card className="p-4">
                             <Card.Img src={TSPImage} alt="Project image"/>
@@ -118,7 +118,7 @@ export default class ProjectCard extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <Row className='ml-lg-5 mr-lg-5 mb-lg-5 row'>
+                <Row className='ml-lg-5 mr-lg-5 mb-lg-5 box'>
                     <Col>
                         <Card className="p-4">
                             <Card.Img src={matrix} alt="Project image"/>

@@ -1,18 +1,27 @@
 @import 'src/style/colors';
-@import 'src/style/fonts';
 
 .project-tiles-wrapper {
+
+  box-sizing: revert;
 
   .card-title {
     color: $header-grey;
   }
 
+  .text-fields {
+    text-align: center;
+  }
+
   @media all and (max-width: 800px) {
-    .row {
+    .box {
       display: block;
       float: none;
       width: 100%;
     }
+  }
+
+  *, ::after, ::before {
+    box-sizing: content-box;
   }
 
 }
