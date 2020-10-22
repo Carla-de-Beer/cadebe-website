@@ -26,7 +26,8 @@ export default class Content extends React.Component {
                                     website.
                                     Good stuff coming soon!
                                     In the meanwhile, you can reach me on &nbsp;
-                                    <a className="typewriter-text" href="https://twitter.com/cadebe_">Twitter</a>.
+                                    <a className="typewriter-text" rel="noopener noreferrer"
+                                       href="https://twitter.com/cadebe_" target="_blank">Twitter</a>.
                                 </Card.Text>
                             </Card.Body>
                         </Card>

@@ -1,23 +1,38 @@
 @import 'src/style/colors';
 @import 'src/style/fonts';
 
-.footer-text-small {
-  @extend .font-size-small;
-  text-align: center;
-}
+.footer-wrapper {
 
-.footer-text {
-  @extend .font-style-accent;
-  @extend .font-size-standard;
-  text-align: center;
-  font-weight: bold;
-}
+  .footer-text-small {
+    @extend .font-size-small;
+    text-align: center;
+    color: $footer-text;
+  }
 
-.footer-text-small {
-  @extend .font-size-small;
-  text-align: center;
-}
+  .footer-text {
+    @extend .font-style-accent;
+    @extend .font-size-standard;
+    text-align: center;
+    font-weight: bold;
+    color: $footer-text;
+  }
 
-.typewriter-text {
-  @extend .font-style-accent;
+  .typewriter-text {
+    @extend .font-style-accent;
+  }
+
+  .footer-background {
+    box-shadow: 0 50vh 0 50vh $footer-background;
+    background-color: $footer-background;
+  }
+
+  .btn-info-local {
+    color: $off-white !important;
+    background-color: $button-background !important;
+    border: none !important;
+  }
+
+  .tag-style {
+    margin-left: 70px;
+  }
 }
