@@ -2,13 +2,17 @@ import React from 'react';
 import './Intro.scss';
 import Card from 'react-bootstrap/Card';
 
+import logo from '../../../assets/images/logo.png';
+
 export default class Content extends React.Component {
   render() {
     return (
       <div className="content-wrapper">
         <div className="text-fields" style={{ paddingTop: '30px' }}>
-          <h1 className="mt-2 header-text">cadebe</h1>
-          <p>Carla de Beer</p>
+          <div>
+            <img src={logo} width="125" height="125" alt="logo" />
+          </div>
+          <p className="mt-3">Carla de Beer</p>
           <div className="mt-3" />
         </div>
         <div className="text-fields box" style={{ paddingTop: '30px' }}>

@@ -1,9 +1,9 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardDeck';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import './ProjectTiles.scss';
 
 import TSPImage from '../../../assets/images/TSP.gif';
@@ -20,68 +20,6 @@ export default class ProjectCard extends React.Component {
     return (
       <CardColumns className="project-tiles-wrapper">
         <Row className="m-lg-5 box">
-          <Col>
-            <Card className="p-4">
-              <Card.Img variant="bottom" src={som} alt="Project image" />
-              <Card.Body>
-                <Card.Title>Shape Mapping</Card.Title>
-                <Card.Text>
-                  This project demonstrates how a self-organising map (SOM), a type of artificial
-                  neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D
-                  point cloud.
-                </Card.Text>
-                <Button variant="light" href="https://vimeo.com/54726553" target="_blank">
-                  Project Link
-                </Button>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Self-Organising Map</small>
-              </Card.Footer>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="p-4">
-              <Card.Img src={selfOrganising} alt="Project image" />
-              <Card.Body>
-                <Card.Title>Self-Organising Structure</Card.Title>
-                <Card.Text>
-                  Randomised autonomous agents self-organise to build a structured pattern based on
-                  their ability to seek out a target and to adjust their velocity and acceleration
-                  accordingly.
-                </Card.Text>
-                <Button variant="light" href="https://vimeo.com/85047354" target="_blank">
-                  Project Link
-                </Button>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Boids</small>
-              </Card.Footer>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="p-4">
-              <Card.Img variant="bottom" src={earthquakeImage} alt="Project image" />
-              <Card.Body>
-                <Card.Title>Earthquake Data Visualisation</Card.Title>
-                <Card.Text>
-                  Visualisation of earthquake data by means of a Mercator projection. Data obtained
-                  from the US Geological Survey website and the map from MapBox.
-                </Card.Text>
-                <Button
-                  variant="light"
-                  href="https://github.com/Carla-de-Beer/p5js-projects/tree/master/earthquake-data-visualisation"
-                  target="_blank"
-                >
-                  Project Link
-                </Button>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Data Visualisation</small>
-              </Card.Footer>
-            </Card>
-          </Col>
-        </Row>
-        <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
           <Col>
             <Card className="p-4">
               <Card.Img src={TSPImage} alt="Project image" />
@@ -101,7 +39,7 @@ export default class ProjectCard extends React.Component {
                   href="https://carla-de-beer.github.io/TSP-distance-calculator/"
                   target="_blank"
                 >
-                  Project Link
+                  Web
                 </Button>
               </Card.Body>
               <Card.Footer>
@@ -122,7 +60,7 @@ export default class ProjectCard extends React.Component {
                   href="https://carla-de-beer.github.io/ISS-tracker/"
                   target="_blank"
                 >
-                  Project Link
+                  Web
                 </Button>
               </Card.Body>
               <Card.Footer>
@@ -153,33 +91,11 @@ export default class ProjectCard extends React.Component {
                   href="https://vimeo.com/152473776"
                   target="_blank"
                 >
-                  Project Link
+                  Video
                 </Button>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">Neural Network</small>
-              </Card.Footer>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="p-4">
-              <Card.Img src={naive} alt="Project image" />
-              <Card.Body>
-                <Card.Title>Naive Bayesian Text Classifier</Card.Title>
-                <Card.Text>
-                  A naive Bayesian text classifier that classifies input text into one of two
-                  categories: either a BUSINESS article or a SPORT article.
-                </Card.Text>
-                <Button
-                  variant="light"
-                  href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
-                  target="_blank"
-                >
-                  Project Link
-                </Button>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Machine Learning</small>
               </Card.Footer>
             </Card>
           </Col>
@@ -197,11 +113,97 @@ export default class ProjectCard extends React.Component {
                   href="https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier"
                   target="_blank"
                 >
-                  Project Link
+                  GitHub
                 </Button>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">Convolutional Neural Network</small>
+              </Card.Footer>
+            </Card>
+          </Col>
+        </Row>
+        <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
+          <Col>
+            <Card className="p-4">
+              <Card.Img variant="bottom" src={earthquakeImage} alt="Project image" />
+              <Card.Body>
+                <Card.Title>Earthquake Data Visualisation</Card.Title>
+                <Card.Text>
+                  Visualisation of earthquake data by means of a Mercator projection. Data obtained
+                  from the US Geological Survey website and the map from MapBox.
+                </Card.Text>
+                <Button
+                  variant="light"
+                  href="https://github.com/Carla-de-Beer/p5js-projects/tree/master/earthquake-data-visualisation"
+                  target="_blank"
+                >
+                  GitHub
+                </Button>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Data Visualisation</small>
+              </Card.Footer>
+            </Card>
+          </Col>
+          <Col>
+            <Card className="p-4">
+              <Card.Img src={naive} alt="Project image" />
+              <Card.Body>
+                <Card.Title>Naive Bayesian Text Classifier</Card.Title>
+                <Card.Text>
+                  A naive Bayesian text classifier that classifies input text into one of two
+                  categories: either a BUSINESS article or a SPORT article.
+                </Card.Text>
+                <Button
+                  variant="light"
+                  href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
+                  target="_blank"
+                >
+                  Web
+                </Button>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Machine Learning</small>
+              </Card.Footer>
+            </Card>
+          </Col>
+        </Row>
+        <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
+          <Col>
+            <Card className="p-4">
+              <Card.Img variant="bottom" src={som} alt="Project image" />
+              <Card.Body>
+                <Card.Title>Shape Mapping</Card.Title>
+                <Card.Text>
+                  This project demonstrates how a self-organising map (SOM), a type of artificial
+                  neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D
+                  point cloud.
+                </Card.Text>
+                <Button variant="light" href="https://vimeo.com/54726553" target="_blank">
+                  Video
+                </Button>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Self-Organising Map</small>
+              </Card.Footer>
+            </Card>
+          </Col>
+          <Col>
+            <Card className="p-4">
+              <Card.Img src={selfOrganising} alt="Project image" />
+              <Card.Body>
+                <Card.Title>Self-Organising Structure</Card.Title>
+                <Card.Text>
+                  Randomised autonomous agents self-organise to build a structured pattern based on
+                  their ability to seek out a target and to adjust their velocity and acceleration
+                  accordingly.
+                </Card.Text>
+                <Button variant="light" href="https://vimeo.com/85047354" target="_blank">
+                  Video
+                </Button>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Boids</small>
               </Card.Footer>
             </Card>
           </Col>
