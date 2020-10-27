@@ -16,6 +16,7 @@ import selfOrganising from '../../../assets/images/self-organising.png';
 import cnn from '../../../assets/images/cnn.jpg';
 import fourier from '../../../assets/images/FourierTransformHeart.gif';
 import imageSegmentation from '../../../assets/images/image-segmentation.png';
+import letterFrequencies from '../../../assets/images/letter-frequencies.png';
 
 export default function ProjectCard() {
   return (
@@ -216,17 +217,17 @@ export default function ProjectCard() {
       <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
         <Col>
           <Card className="p-4">
-            <Card.Img variant="bottom" src={fourier} alt="Project image" />
+            <Card.Img variant="bottom" src={letterFrequencies} alt="Project image" />
             <Card.Body>
-              <Card.Title>Discrete Fourier Transformation of a Heart Curve</Card.Title>
+              <Card.Title>Letter Frequency Calculator</Card.Title>
               <Card.Text>
-                Discrete Fourier Transformation with epicycles using a heart curve as input.
-                Switch the record boolean to true in order to generate as set of PNG files,
-                that may be converted to a GIF.
+                A Python program that reads in a set of text files and calculates
+                the frequency occurrences of each alphabet letter,
+                where the alphabet letters are listed in descending order of frequency.
               </Card.Text>
               <Button
                 variant="light"
-                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart"
+                href="https://github.com/Carla-de-Beer/python-projects/tree/master/python-scripts/letter-frequency-calculator"
                 target="_blank"
               >
                 GitHub
