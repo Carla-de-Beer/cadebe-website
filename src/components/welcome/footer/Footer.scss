@@ -27,14 +27,13 @@
   }
 
   .btn-info-local {
-    color: $off-white !important;
-    background-color: $button-background !important;
+    @extend .font-size-medium;
+    color: $paragraph-gray !important;
+    background-color: $off-white !important;
     border: none !important;
   }
 
   .tag-style {
-    margin-left: 70px;
     text-align: center;
-    margin-top: 70px;
   }
 }

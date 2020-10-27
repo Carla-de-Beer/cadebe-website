@@ -11,7 +11,7 @@ Website to showcase current and previous development projects. Built with React,
 * [ ] Add footer
 * [ ] Move projects to separate page
 * [ ] Check cross-browser compatibility
-* [ ] Add linting rules
+* [x] Add linting rules
 
 ## Available Scripts
 
