@@ -14,6 +14,8 @@ import som from '../../../assets/images/SOM.png';
 import matrix from '../../../assets/images/matrix-1.png';
 import selfOrganising from '../../../assets/images/self-organising.png';
 import cnn from '../../../assets/images/cnn.jpg';
+import fourier from '../../../assets/images/FourierTransformHeart.gif';
+import imageSegmentation from '../../../assets/images/image-segmentation.png';
 
 export default function ProjectCard() {
   return (
@@ -94,7 +96,7 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Neural Network</small>
+              <small className="text-muted">Feed-Forward Neural Network</small>
             </Card.Footer>
           </Card>
         </Col>
@@ -124,6 +126,50 @@ export default function ProjectCard() {
       <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
         <Col>
           <Card className="p-4">
+            <Card.Img variant="bottom" src={som} alt="Project image" />
+            <Card.Body>
+              <Card.Title>Shape Mapping</Card.Title>
+              <Card.Text>
+                This project demonstrates how a self-organising map (SOM), a type of artificial
+                neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D
+                point cloud.
+              </Card.Text>
+              <Button variant="light" href="https://vimeo.com/54726553" target="_blank">
+                Video
+              </Button>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">Self-Organising Map</small>
+            </Card.Footer>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="p-4">
+            <Card.Img
+              src={selfOrganising}
+              alt="Project image"
+            />
+            <Card.Body>
+              <Card.Title>Self-Organising Structure</Card.Title>
+              <Card.Text>
+                Randomised autonomous agents self-organise to build a structured pattern based on
+                their ability to seek out a target and to adjust their velocity and acceleration
+                accordingly.
+              </Card.Text>
+              <Button variant="light" href="https://vimeo.com/85047354" target="_blank">
+                Video
+              </Button>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">Boids</small>
+            </Card.Footer>
+          </Card>
+        </Col>
+      </Row>
+
+      <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
+        <Col>
+          <Card className="p-4">
             <Card.Img variant="bottom" src={earthquakeImage} alt="Project image" />
             <Card.Body>
               <Card.Title>Earthquake Data Visualisation</Card.Title>
@@ -148,9 +194,9 @@ export default function ProjectCard() {
           <Card className="p-4">
             <Card.Img src={naive} alt="Project image" />
             <Card.Body>
-              <Card.Title>Naive Bayesian Text Classifier</Card.Title>
+              <Card.Title>Naive Bayes Text Classifier</Card.Title>
               <Card.Text>
-                A naive Bayesian text classifier that classifies input text into one of two
+                A naive Bayes text classifier that classifies input text into one of two
                 categories: either a BUSINESS article or a SPORT article.
               </Card.Text>
               <Button
@@ -162,7 +208,7 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Machine Learning</small>
+              <small className="text-muted">Probabilistic Classifier</small>
             </Card.Footer>
           </Card>
         </Col>
@@ -170,39 +216,45 @@ export default function ProjectCard() {
       <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
         <Col>
           <Card className="p-4">
-            <Card.Img variant="bottom" src={som} alt="Project image" />
+            <Card.Img variant="bottom" src={fourier} alt="Project image" />
             <Card.Body>
-              <Card.Title>Shape Mapping</Card.Title>
+              <Card.Title>Discrete Fourier Transformation of a Heart Curve</Card.Title>
               <Card.Text>
-                This project demonstrates how a self-organising map (SOM), a type of artificial
-                neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D
-                point cloud.
+                Discrete Fourier Transformation with epicycles using a heart curve as input.
+                Switch the record boolean to true in order to generate as set of PNG files,
+                that may be converted to a GIF.
               </Card.Text>
-              <Button variant="light" href="https://vimeo.com/54726553" target="_blank">
-                Video
+              <Button
+                variant="light"
+                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart"
+                target="_blank"
+              >
+                GitHub
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Self-Organising Map</small>
+              <small className="text-muted">Fourier Transformation</small>
             </Card.Footer>
           </Card>
         </Col>
         <Col>
           <Card className="p-4">
-            <Card.Img src={selfOrganising} alt="Project image" />
+            <Card.Img src={imageSegmentation} alt="Project image" />
             <Card.Body>
-              <Card.Title>Self-Organising Structure</Card.Title>
+              <Card.Title>Image Segmentation (K-Nearest Neighbour)</Card.Title>
               <Card.Text>
-                Randomised autonomous agents self-organise to build a structured pattern based on
-                their ability to seek out a target and to adjust their velocity and acceleration
-                accordingly.
+                An image segmentation example using the k-nearest neighbour algorithm.
               </Card.Text>
-              <Button variant="light" href="https://vimeo.com/85047354" target="_blank">
-                Video
+              <Button
+                variant="light"
+                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN"
+                target="_blank"
+              >
+                GitHub
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Boids</small>
+              <small className="text-muted">Image Segmentation</small>
             </Card.Footer>
           </Card>
         </Col>

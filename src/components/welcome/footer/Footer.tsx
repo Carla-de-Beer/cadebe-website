@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="footer-background">
         <p className="pt-5 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
         <p className="footer-text">August 2020</p>
-        <p className="pb-3 footer-text-small mb-lg-2" style={{ marginTop: '200px' }}>
+        <p className="pb-3 footer-text-small mb-lg-2" style={{ marginTop: '300px' }}>
           Built with React and
           deployed on AWS •
           {' '}
