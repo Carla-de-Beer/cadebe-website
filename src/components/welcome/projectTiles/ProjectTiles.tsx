@@ -1,27 +1,26 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardDeck';
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import CardColumns from 'react-bootstrap/CardDeck';
 import './ProjectTiles.scss';
 
 import TSPImage from '../../../assets/images/TSP.gif';
 import ISSImage from '../../../assets/images/ISS.png';
-import earthquakeImage from '../../../assets/images/earthquake.png';
 import naive from '../../../assets/images/naive-bayes.png';
 import som from '../../../assets/images/SOM.png';
 import matrix from '../../../assets/images/matrix-1.png';
 import selfOrganising from '../../../assets/images/self-organising.png';
 import cnn from '../../../assets/images/cnn.jpg';
-import fourier from '../../../assets/images/FourierTransformHeart.gif';
 import imageSegmentation from '../../../assets/images/image-segmentation.png';
 import letterFrequencies from '../../../assets/images/letter-frequencies.png';
+import fourier from '../../../assets/images/FourierTransformHeart.gif';
 
 export default function ProjectCard() {
   return (
     <CardColumns className="project-tiles-wrapper">
-      <Row className="m-lg-5 box">
+      <Row className="m-lg-5">
         <Col>
           <Card className="p-4">
             <Card.Img src={TSPImage} alt="Project image" />
@@ -41,11 +40,17 @@ export default function ProjectCard() {
                 href="https://carla-de-beer.github.io/TSP-distance-calculator/"
                 target="_blank"
               >
-                Web
+                GitHub
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Genetic Algorithm</small>
+              <small className="text-muted">
+                Genetic Algorithm
+                {' '}
+                •
+                {' '}
+                JavaScript
+              </small>
             </Card.Footer>
           </Card>
         </Col>
@@ -66,27 +71,31 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Data Visualisation</small>
+              <small className="text-muted">
+                Data Visualisation
+                {' '}
+                •
+                {' '}
+                JavaScript
+              </small>
             </Card.Footer>
           </Card>
         </Col>
       </Row>
-      <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
+      <Row className="ml-lg-5 mr-lg-5 mb-lg-5">
         <Col>
           <Card className="p-4">
             <Card.Img src={matrix} alt="Project image" />
             <Card.Body>
               <Card.Title>Neural Network Matrix Visualisation</Card.Title>
               <Card.Text>
-                Artificial neural networks operate on a highly non-linear model and
-                are typically described as &quot;black boxes&quot;. This project is
-                an attempt to peer into the black box model by visualising the weight
-                changes affecting the hidden neurons, as well as the hidden neuron
-                matrices themselves. A simple three-layer feedforward neural network
-                was set up to differentiate between two classes of images: cartoons
-                and photographs. From this study it became clear that there appears
-                to be a general visual pattern to the hidden matrices of each of the
-                image sets provided.
+                Artificial neural networks operate on a highly non-linear model and are typically
+                described as "black boxes". This project is an attempt to peer into the black box
+                model by visualising the weight changes affecting the hidden neurons, as well as the
+                hidden neuron matrices themselves. A simple three-layer feedforward neural network
+                was set up to differentiate between two classes of images: cartoons and photographs.
+                From this study it became clear that there appears to be a general visual pattern to
+                the hidden matrices of each of the image sets provided.
               </Card.Text>
               <Button
                 variant="light"
@@ -97,7 +106,41 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Feed-Forward Neural Network</small>
+              <small className="text-muted">
+                Neural Network
+                {' '}
+                •
+                {' '}
+                Java
+              </small>
+            </Card.Footer>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="p-4">
+            <Card.Img src={naive} alt="Project image" />
+            <Card.Body>
+              <Card.Title>Naive Bayes Text Classifier</Card.Title>
+              <Card.Text>
+                A Naive Bayes Text Classifier that classifies input text into one of two
+                categories: either a BUSINESS article or a SPORT article.
+              </Card.Text>
+              <Button
+                variant="light"
+                href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
+                target="_blank"
+              >
+                GitHub
+              </Button>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">
+                Machine Learning
+                {' '}
+                •
+                {' '}
+                JavaScript
+              </small>
             </Card.Footer>
           </Card>
         </Col>
@@ -119,12 +162,18 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Convolutional Neural Network</small>
+              <small className="text-muted">
+                Convolutional Neural Network
+                {' '}
+                •
+                {' '}
+                TensorFlow
+              </small>
             </Card.Footer>
           </Card>
         </Col>
       </Row>
-      <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
+      <Row className="ml-lg-5 mr-lg-5 mb-lg-5">
         <Col>
           <Card className="p-4">
             <Card.Img variant="bottom" src={som} alt="Project image" />
@@ -140,16 +189,19 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Self-Organising Map</small>
+              <small className="text-muted">
+                Self-Organising Map
+                {' '}
+                •
+                {' '}
+                Processing
+              </small>
             </Card.Footer>
           </Card>
         </Col>
         <Col>
           <Card className="p-4">
-            <Card.Img
-              src={selfOrganising}
-              alt="Project image"
-            />
+            <Card.Img src={selfOrganising} alt="Project image" />
             <Card.Body>
               <Card.Title>Self-Organising Structure</Card.Title>
               <Card.Text>
@@ -162,59 +214,72 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Boids</small>
+              <small className="text-muted">
+                Boids
+                {' '}
+                •
+                {' '}
+                Processing
+              </small>
             </Card.Footer>
           </Card>
         </Col>
       </Row>
-
-      <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
+      <Row className="ml-lg-5 mr-lg-5 mb-lg-5">
         <Col>
           <Card className="p-4">
-            <Card.Img variant="bottom" src={earthquakeImage} alt="Project image" />
+            <Card.Img variant="bottom" src={fourier} alt="Project image" />
             <Card.Body>
-              <Card.Title>Earthquake Data Visualisation</Card.Title>
+              <Card.Title>Discrete Fourier Transformation of a Heart Curve</Card.Title>
               <Card.Text>
-                Visualisation of earthquake data by means of a Mercator projection. Data obtained
-                from the US Geological Survey website and the map from MapBox.
+                Discrete Fourier Transformation with epicycles using a heart curve as input.
               </Card.Text>
               <Button
                 variant="light"
-                href="https://github.com/Carla-de-Beer/p5js-projects/tree/master/earthquake-data-visualisation"
+                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart"
                 target="_blank"
               >
                 GitHub
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Data Visualisation</small>
+              <small className="text-muted">
+                Fourier Transformation
+                {' '}
+                •
+                {' '}
+                Processing
+              </small>
             </Card.Footer>
           </Card>
         </Col>
         <Col>
           <Card className="p-4">
-            <Card.Img src={naive} alt="Project image" />
+            <Card.Img src={imageSegmentation} alt="Project image" />
             <Card.Body>
-              <Card.Title>Naive Bayes Text Classifier</Card.Title>
+              <Card.Title>Image Segmentation with K-Nearest Neighbour</Card.Title>
               <Card.Text>
-                A naive Bayes text classifier that classifies input text into one of two
-                categories: either a BUSINESS article or a SPORT article.
+                An image segmentation example using the k-nearest neighbour algorithm.
               </Card.Text>
               <Button
                 variant="light"
-                href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
+                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN"
                 target="_blank"
               >
                 GitHub
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Probabilistic Classifier</small>
+              <small className="text-muted">
+                Image Segmentation
+                {' '}
+                •
+                {' '}
+                Processing
+              </small>
             </Card.Footer>
           </Card>
         </Col>
-      </Row>
-      <Row className="ml-lg-5 mr-lg-5 mb-lg-5 box">
         <Col>
           <Card className="p-4">
             <Card.Img variant="bottom" src={letterFrequencies} alt="Project image" />
@@ -234,28 +299,13 @@ export default function ProjectCard() {
               </Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Fourier Transformation</small>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col>
-          <Card className="p-4">
-            <Card.Img src={imageSegmentation} alt="Project image" />
-            <Card.Body>
-              <Card.Title>Image Segmentation (K-Nearest Neighbour)</Card.Title>
-              <Card.Text>
-                An image segmentation example using the k-nearest neighbour algorithm.
-              </Card.Text>
-              <Button
-                variant="light"
-                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">Image Segmentation</small>
+              <small className="text-muted">
+                Fourier Transformation
+                {' '}
+                •
+                {' '}
+                Python
+              </small>
             </Card.Footer>
           </Card>
         </Col>
