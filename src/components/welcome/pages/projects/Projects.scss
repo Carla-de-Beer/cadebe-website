@@ -1,0 +1,47 @@
+@import 'src/style/colors';
+@import 'src/style/fonts';
+@import 'src/style/common';
+
+.projects-wrapper {
+
+  box-sizing: revert;
+
+  .card {
+    border-radius: 0;
+  }
+
+  .card-title {
+    color: $header-grey;
+  }
+
+  .high-light {
+    @extend %base-high-light;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  @media all and (max-width: 800px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 576px) {
+    .card-deck .card {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+    *, ::after, ::before {
+      box-sizing: content-box;
+    }
+
+    .card-footer {
+      border-top: none !important;
+    }
+  }

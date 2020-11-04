@@ -6,7 +6,7 @@
   .footer-text-small {
     @extend .font-size-small;
     text-align: center;
-    color: $footer-text;
+    color: $paragraph-gray;
   }
 
   .footer-text {
@@ -14,22 +14,21 @@
     @extend .font-size-standard;
     text-align: center;
     font-weight: bold;
-    color: $footer-text;
+    color: $paragraph-gray;
   }
 
   .typewriter-text {
     @extend .font-style-accent;
   }
 
-  .footer-background {
-    box-shadow: 0 50vh 0 50vh $footer-background;
-    background-color: $footer-background;
+  .footer-style {
+    border-top: 0.75px dashed rgba(0, 0, 0, .125);
   }
 
   .btn-info-local {
     @extend .font-size-medium;
     color: $paragraph-gray !important;
-    background-color: $off-white !important;
+    background-color: $paragraph-gray !important;
     border: none !important;
   }
 

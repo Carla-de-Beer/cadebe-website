@@ -1,0 +1,28 @@
+@import 'src/style/colors';
+@import 'src/style/fonts';
+@import 'src/style/common';
+
+.about-wrapper {
+
+  body {
+    padding: 0;
+    position: relative;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  .text-fields {
+    text-align: center;
+  }
+
+  .high-light {
+    @extend %base-high-light;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+}

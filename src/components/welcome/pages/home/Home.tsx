@@ -1,24 +1,22 @@
 import React from 'react';
-import './Intro.scss';
 import Card from 'react-bootstrap/Card';
 
-import logo from '../../../assets/images/logo.png';
+import './Home.scss';
+import '../../../../style/_fonts.scss';
+import photo from '../../../../assets/images/0.jpg';
 
-export default function Intro() {
+export default function Home() {
   return (
-    <div className="content-wrapper">
+    <div className="home-wrapper">
       <div className="text-fields" style={{ paddingTop: '30px' }}>
-        <div>
-          <img src={logo} width="125" height="125" alt="logo" />
-        </div>
-        <p className="mt-3">Carla de Beer</p>
-        <div className="mt-3" />
+        <p className="mt-2 high-light">WELCOME</p>
       </div>
-      <div className="text-fields box" style={{ paddingTop: '30px' }}>
-        <div className="mt-2">
+      <div className="mt-4" />
+      <div className="text-fields box mt-5">
+        <div>
           <Card className="card-tile" style={{ width: '80%' }}>
             <Card.Body>
-              <Card.Title>Carla&apos;s Development Website is Online!</Card.Title>
+              <Card.Title />
               <Card.Text>
                 I&apos;m a software engineer involved in web development,
                 machine learning, computational and generative design.
@@ -39,9 +37,13 @@ export default function Intro() {
               </Card.Text>
             </Card.Body>
           </Card>
-        </div>
-        <div className="text-fields" style={{ paddingTop: '30px' }}>
-          <h1 className="mt-2">Projects</h1>
+          <div className="mt-4 ml-5 mr-5">
+            <img
+              src={photo}
+              style={{ maxWidth: '100%' }}
+              alt="xx"
+            />
+          </div>
         </div>
       </div>
     </div>

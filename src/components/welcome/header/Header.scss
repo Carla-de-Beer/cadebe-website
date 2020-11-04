@@ -1,0 +1,30 @@
+@import 'src/style/colors';
+@import 'src/style/fonts';
+
+.header-wrapper {
+
+  .logo {
+    // border: 1px solid $paragraph-gray;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  a:active {
+    color: $button-background;
+  }
+
+  .name-text {
+    @extend .font-style-default;
+    @extend .font-size-standard;
+    color: $paragraph-gray;
+  }
+
+  .nav-text {
+    @extend .font-style-default;
+    @extend .font-size-standard;
+    color: $paragraph-gray;
+    font-weight: bold;
+  }
+}

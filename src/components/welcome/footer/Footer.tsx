@@ -6,18 +6,21 @@ export default function Footer() {
   const year = date.getFullYear();
   return (
     <div className="footer-wrapper">
-      <div className="footer-background">
-        <p className="pt-5 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
+      <div className="footer-style mt-4 ml-5 mr-5">
+        <p className="pt-4 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
         <p className="footer-text">October 2020</p>
-        <p className="pb-3 footer-text-small mb-lg-2" style={{ marginTop: '300px' }}>
-          Built with React and
-          deployed on AWS
-          {' '}
-          •
-          {' '}
-          {year}
-        </p>
+        <div className="mt-4 ml-5 mr-5">
+          <p className="footer-style pb-5 pt-3 footer-text-small mb-lg-2" style={{ marginTop: '290px' }}>
+            Built with React and
+            deployed on AWS
+            {' '}
+            •
+            {' '}
+            {year}
+          </p>
+        </div>
       </div>
     </div>
+
   );
 }

@@ -1,15 +1,24 @@
 @import 'src/style/colors';
 @import 'src/style/fonts';
+@import 'src/style/common';
 
-.content-wrapper {
+.home-wrapper {
+
   body {
     padding: 0;
-    margin: 20px 50px 50px 50px;
     position: relative;
   }
 
   html, body {
     height: 100%;
+  }
+
+  .high-light {
+    @extend %base-high-light;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
   }
 
   h1, h2, h3 {
