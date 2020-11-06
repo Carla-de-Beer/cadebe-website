@@ -9,6 +9,10 @@
     color: $paragraph-gray;
   }
 
+  .text-fields {
+    text-align: center;
+  }
+
   .footer-text {
     @extend .font-style-accent;
     @extend .font-size-standard;
@@ -23,6 +27,11 @@
 
   .footer-style {
     border-top: 0.75px dashed rgba(0, 0, 0, .125);
+  }
+
+  .badge-secondary {
+    color: #fff;
+    background-color: #929292;
   }
 
   .btn-info-local {

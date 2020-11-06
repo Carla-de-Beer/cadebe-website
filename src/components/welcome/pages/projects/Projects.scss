@@ -30,6 +30,14 @@
     }
   }
 
+  p.card-text {
+    font-size: 14px;
+  }
+
+  a.btn.btn-light {
+    font-size: 14px;
+  }
+
   @media (min-width: 576px) {
     .card-deck .card {
       margin-right: 0;
@@ -37,11 +45,11 @@
     }
   }
 
-    *, ::after, ::before {
-      box-sizing: content-box;
-    }
-
-    .card-footer {
-      border-top: none !important;
-    }
+  *, ::after, ::before {
+    box-sizing: content-box;
   }
+
+  .card-footer {
+    border-top: none !important;
+  }
+}

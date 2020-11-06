@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
 
 import './Home.scss';
 import '../../../../style/_fonts.scss';
@@ -8,9 +9,6 @@ import photo from '../../../../assets/images/0.jpg';
 export default function Home() {
   return (
     <div className="home-wrapper">
-      <div className="text-fields" style={{ paddingTop: '30px' }}>
-        <p className="mt-2 high-light">WELCOME</p>
-      </div>
       <div className="mt-4" />
       <div className="text-fields box mt-5">
         <div>
@@ -18,7 +16,7 @@ export default function Home() {
             <Card.Body>
               <Card.Title />
               <Card.Text>
-                I&apos;m a software engineer involved in web development,
+                I&apos;m Carla de Beer, a software engineer involved in web development,
                 machine learning, computational and generative design.
                 What started off as an experiment on how to upload content to AWS S3 and
                 integrating an SSL certificate with AWS CloudFront, seems to be morphing into a
@@ -41,8 +39,11 @@ export default function Home() {
             <img
               src={photo}
               style={{ maxWidth: '100%' }}
-              alt="xx"
+              alt="photo"
             />
+          </div>
+          <div className="text-fields" style={{ paddingTop: '30px' }}>
+            <p className="mt-2 high-light">WELCOME</p>
           </div>
         </div>
       </div>

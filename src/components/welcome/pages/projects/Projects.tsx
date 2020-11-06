@@ -88,7 +88,7 @@ export default function Projects() {
           </Col>
         </Row>
         <Row>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img src={matrix} alt="Project image" />
               <Card.Body>
@@ -122,7 +122,7 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img src={naive} alt="Project image" />
               <Card.Body>
@@ -150,7 +150,7 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img src={cnn} alt="Project image" />
               <Card.Body>
@@ -180,7 +180,7 @@ export default function Projects() {
           </Col>
         </Row>
         <Row>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img variant="bottom" src={som} alt="Project image" />
               <Card.Body>
@@ -205,7 +205,7 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img src={selfOrganising} alt="Project image" />
               <Card.Body>
@@ -232,7 +232,7 @@ export default function Projects() {
           </Col>
         </Row>
         <Row>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img variant="bottom" src={fourier} alt="Project image" />
               <Card.Body>
@@ -259,7 +259,7 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img src={imageSegmentation} alt="Project image" />
               <Card.Body>
@@ -286,7 +286,7 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-5">
+          <Col className="mt-4">
             <Card className="p-4">
               <Card.Img variant="bottom" src={letterFrequencies} alt="Project image" />
               <Card.Body>

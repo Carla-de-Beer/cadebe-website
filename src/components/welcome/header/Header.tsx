@@ -12,7 +12,7 @@ export default function Header() {
         <div className="col-4">
 
           <div className="row">
-            <div className="col-4">
+            <div className="col-3">
               <img className="logo" src={logo} width="60" height="60" alt="logo" />
             </div>
             <div className="col-5">
