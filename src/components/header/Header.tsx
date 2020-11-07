@@ -6,6 +6,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import './Header.scss';
 
 import logo from '../../assets/images/logo.png';
+import menu from '../../assets/icons/menu.svg';
 
 export default class Header extends React.Component {
     setHeaderLayoutMobile = () => (
@@ -14,11 +15,26 @@ export default class Header extends React.Component {
           <div className="col-lg-2 col-md-2 col-3">
             <img className="logo ml-1" src={logo} width="60" height="60" alt="logo" />
           </div>
-          <div className="col-lg-7 col-md-7 col-6">
+          <div className="col-lg-8 col-md-9 col-7">
             <p className="mt-3 nav-text" style={{ color: '#31ccfd' }}>cadebe.dev</p>
           </div>
-          <div className="mt-2 col-lg-3 col-md-3 col-3">
-            <DropdownButton className="menu-button float-right" title="Menu" style={{ margin: 'none' }}>
+          <div className="mt-2 col-lg-2 col-md-1 col-2">
+            <DropdownButton
+              menuAlign="right"
+              className="menu-button"
+              style={{
+                width: '50%',
+              }}
+              title={(
+                <img
+                  src={menu}
+                  alt="Menu"
+                  style={{
+                    width: '30px', height: '30px', opacity: '0.5',
+                  }}
+                />
+                )}
+            >
               <Dropdown.Item>
                 <Link to="/" className="nav-text link"> Home </Link>
               </Dropdown.Item>
