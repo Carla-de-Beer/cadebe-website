@@ -4,12 +4,13 @@ Website to showcase current and previous development projects. Built with React,
 
 ### Todo
 * [ ] Move project text to a JSON-file
-* [ ] Add additional projects
+* [x] Add additional projects
 * [ ] Integrate P5.js projects
 * [ ] Integrate machine learning projects with models
 * [ ] Add intro page
-* [ ] Add footer
-* [ ] Move projects to separate page
+* [x] Add footer
+* [x] Move projects to separate page
+* [x] Convert to responsive design (mobile, tablet and desktop)
 * [ ] Check cross-browser compatibility
 * [x] Add linting rules
 
