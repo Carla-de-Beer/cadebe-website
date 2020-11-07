@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import './Header.scss';
 
@@ -19,10 +19,28 @@ export default class Header extends React.Component {
           </div>
           <div className="mt-2 col-lg-3 col-md-3 col-3">
             <DropdownButton className="menu-button float-right" title="Menu" style={{ margin: 'none' }}>
-              <Dropdown.Item href="/">Home</Dropdown.Item>
-              <Dropdown.Item href="/projects">Projects</Dropdown.Item>
-              <Dropdown.Item href="/news">News</Dropdown.Item>
-              <Dropdown.Item href="/about">About</Dropdown.Item>
+              <Dropdown.Item>
+                <Link to="/" className="nav-text link"> Home </Link>
+              </Dropdown.Item>
+              <Dropdown.Item href="/projects">
+                <Link to="/projects" className="nav-text link"> Projects </Link>
+              </Dropdown.Item>
+              <Dropdown.Item href="/news">
+                <Link
+                  to="/news"
+                  className="nav-text link"
+                >
+                  News
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item href="/about">
+                <Link
+                  to="/about"
+                  className="nav-text link"
+                >
+                  About
+                </Link>
+              </Dropdown.Item>
             </DropdownButton>
           </div>
         </div>
