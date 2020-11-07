@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './Blog.scss';
+import './News.scss';
 
-export default function Blog() {
+export default function News() {
   return (
-    <div className="blog-wrapper">
+    <div className="news-wrapper">
       <div className="text-fields" style={{ paddingTop: '30px' }}>
-        <p className="mt-2 high-light">BLOG</p>
+        <p className="mt-2 high-light">NEWS</p>
       </div>
       <div className="mt-4">
         <p />

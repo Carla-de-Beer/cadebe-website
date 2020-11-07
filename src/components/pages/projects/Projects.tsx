@@ -7,24 +7,24 @@ import CardColumns from 'react-bootstrap/CardDeck';
 
 import './Projects.scss';
 
-import TSPImage from '../../../../assets/images/TSP.gif';
-import ISSImage from '../../../../assets/images/ISS.png';
-import naive from '../../../../assets/images/naive-bayes.png';
-import som from '../../../../assets/images/SOM.png';
-import matrix from '../../../../assets/images/matrix-1.png';
-import selfOrganising from '../../../../assets/images/self-organising.png';
-import cnn from '../../../../assets/images/cnn.jpg';
-import imageSegmentation from '../../../../assets/images/image-segmentation.png';
-import letterFrequencies from '../../../../assets/images/letter-frequencies.png';
-import fourier from '../../../../assets/images/FourierTransformHeart.gif';
+import TSPImage from '../../../assets/images/TSP.gif';
+import ISSImage from '../../../assets/images/ISS.png';
+import naive from '../../../assets/images/naive-bayes.png';
+import som from '../../../assets/images/SOM.png';
+import matrix from '../../../assets/images/matrix-1.png';
+import selfOrganising from '../../../assets/images/self-organising.png';
+import cnn from '../../../assets/images/cnn.jpg';
+import imageSegmentation from '../../../assets/images/image-segmentation.png';
+import letterFrequencies from '../../../assets/images/letter-frequencies.png';
+import fourier from '../../../assets/images/FourierTransformHeart.gif';
 
 export default function Projects() {
   return (
     <div className="projects-wrapper">
-      <div className="text-fields" style={{ paddingTop: '30px' }}>
-        <p className="mt-2 high-light">PROJECTS</p>
+      <div className="text-fields mt-5">
+        <p className="mt-2 mr-4 high-light">PROJECTS</p>
       </div>
-      <CardColumns className="ml-5 mr-5 mt-5">
+      <CardColumns className="mt-5 ml-md-1 mr-md-4 ml-1 mr-sm-3">
         <Row>
           <Col>
             <Card className="p-4">

@@ -17,6 +17,13 @@
     @extend %base-high-light;
   }
 
+  @media screen and (max-width: 900px) {
+    .high-light {
+      @extend .high-light;
+      font-size: 28px;
+    }
+  }
+
   .text-fields {
     @extend %base-text-fields;
   }

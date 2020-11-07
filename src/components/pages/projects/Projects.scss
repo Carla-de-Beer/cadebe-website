@@ -14,20 +14,8 @@
     color: $header-grey;
   }
 
-  .high-light {
-    @extend %base-high-light;
-  }
-
   .text-fields {
     @extend %base-text-fields;
-  }
-
-  @media all and (max-width: 800px) {
-    .box {
-      display: block;
-      float: none;
-      width: 100%;
-    }
   }
 
   p.card-text {
@@ -36,6 +24,25 @@
 
   a.btn.btn-light {
     font-size: 14px;
+  }
+
+  @media all and (max-width: 812px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .high-light {
+    @extend %base-high-light;
+  }
+
+  @media screen and (max-width: 900px) {
+    .high-light {
+      @extend .high-light;
+      font-size: 28px;
+    }
   }
 
   @media (min-width: 576px) {

@@ -1,16 +1,16 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Badge from 'react-bootstrap/Badge';
 
 import './Home.scss';
-import '../../../../style/_fonts.scss';
-import photo from '../../../../assets/images/0.jpg';
+import '../../../style/_fonts.scss';
+
+import photo from '../../../assets/images/0.jpg';
 
 export default function Home() {
   return (
     <div className="home-wrapper">
       <div className="mt-4" />
-      <div className="text-fields box mt-5">
+      <div className="text-fields box mt-xl-5 mt-lg-5 mt-md-5 mt-4">
         <div>
           <Card className="card-tile" style={{ width: '80%' }}>
             <Card.Body>

@@ -3,8 +3,10 @@
 
 .header-wrapper {
 
-  .logo {
-    // border: 1px solid $paragraph-gray;
+  button.dropdown-toggle.btn.btn-primary {
+    color: $paragraph-gray;
+    background-color: #fff;
+    border-color: #fff;
   }
 
   .link {

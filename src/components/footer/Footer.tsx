@@ -1,18 +1,18 @@
 import React from 'react';
+import Badge from 'react-bootstrap/Badge';
 
 import './Footer.scss';
 
-import Badge from 'react-bootstrap/Badge';
-import linkedIn from '../../../assets/icons/Linkedin_1.svg';
-import gitHub from '../../../assets/icons/Github_1.svg';
-import twitter from '../../../assets/icons/Twitter_1.svg';
+import linkedIn from '../../assets/icons/Linkedin_1.svg';
+import gitHub from '../../assets/icons/Github_1.svg';
+import twitter from '../../assets/icons/Twitter_1.svg';
 
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
   return (
     <div className="footer-wrapper">
-      <div className="footer-style mt-4 ml-5 mr-5">
+      <div className="footer-style mt-5 mr-md-4 mr-lg-3">
         <p className="pt-4 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
         <p className="footer-text">November 2020</p>
         <div className="text-fields mt-5">

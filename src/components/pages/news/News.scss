@@ -2,7 +2,7 @@
 @import 'src/style/fonts';
 @import 'src/style/common';
 
-.blog-wrapper {
+.news-wrapper {
   body {
     padding: 0;
     position: relative;
@@ -14,6 +14,13 @@
 
   .high-light {
     @extend %base-high-light;
+  }
+
+  @media screen and (max-width: 900px) {
+    .high-light {
+      @extend .high-light;
+      font-size: 28px;
+    }
   }
 
   .text-fields {
