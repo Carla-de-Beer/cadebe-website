@@ -41,7 +41,7 @@ export default function Projects() {
               <a
                 href="https://carla-de-beer.github.io/TSP-distance-calculator/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img src={TSPImage} alt="Project Image" />
               </a>
@@ -78,7 +78,7 @@ export default function Projects() {
           </Col>
           <Col className="mt-3 right-card">
             <Card className="p-3">
-              <a href="https://carla-de-beer.github.io/ISS-tracker/" target="_blank" rel="noreferrer">
+              <a href="https://carla-de-beer.github.io/ISS-tracker/" target="_blank" rel="noopener noreferrer">
                 <Card.Img src={ISSImage} alt="Project Image" />
               </a>
               <Card.Body>
@@ -109,7 +109,7 @@ export default function Projects() {
         <Row>
           <Col className="mt-4">
             <Card className="p-3">
-              <a href="https://vimeo.com/152473776" target="_blank" rel="noreferrer">
+              <a href="https://vimeo.com/152473776" target="_blank" rel="noopener noreferrer">
                 <Card.Img src={matrix} alt="Project Image" />
               </a>
               <Card.Body>
@@ -148,7 +148,7 @@ export default function Projects() {
               <a
                 href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img src={naive} alt="Project Image" />
               </a>
@@ -182,7 +182,7 @@ export default function Projects() {
               <a
                 href="https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img src={cnn} alt="Project Image" />
               </a>
@@ -218,7 +218,7 @@ export default function Projects() {
               <a
                 href="https://vimeo.com/54726553"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img variant="bottom" src={som} alt="Project Image" />
               </a>
@@ -249,7 +249,7 @@ export default function Projects() {
               <a
                 href="https://vimeo.com/85047354"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img src={selfOrganising} alt="Project Image" />
               </a>
@@ -282,7 +282,7 @@ export default function Projects() {
               <a
                 href="https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img variant="bottom" src={fourier} alt="Project Image" />
               </a>
@@ -315,7 +315,7 @@ export default function Projects() {
               <a
                 href="https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img src={imageSegmentation} alt="Project Image" />
               </a>
@@ -348,7 +348,7 @@ export default function Projects() {
               <a
                 href="https://github.com/Carla-de-Beer/python-projects/tree/master/python-scripts/letter-frequency-calculator"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Card.Img variant="bottom" src={letterFrequencies} alt="Project Image" />
               </a>

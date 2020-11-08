@@ -37,28 +37,10 @@ export default class Header extends React.Component {
                 />
                         )}
             >
-              <Dropdown.Item>
-                <Link to="/" className="nav-text link">Home</Link>
-              </Dropdown.Item>
-              <Dropdown.Item href="/projects">
-                <Link to="/projects" className="nav-text link">Projects</Link>
-              </Dropdown.Item>
-              <Dropdown.Item href="/news">
-                <Link
-                  to="/news"
-                  className="nav-text link"
-                >
-                  News
-                </Link>
-              </Dropdown.Item>
-              <Dropdown.Item href="/about">
-                <Link
-                  to="/about"
-                  className="nav-text link"
-                >
-                  About
-                </Link>
-              </Dropdown.Item>
+              <Dropdown.Item href="/" className="nav-text link">Home</Dropdown.Item>
+              <Dropdown.Item href="/projects" className="nav-text link">Projects</Dropdown.Item>
+              <Dropdown.Item href="/news" className="nav-text link">News</Dropdown.Item>
+              <Dropdown.Item href="/about" className="nav-text link">About</Dropdown.Item>
             </DropdownButton>
           </div>
         </div>
