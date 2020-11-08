@@ -13,7 +13,7 @@ import naive from '../../../assets/images/naive-bayes.png';
 import som from '../../../assets/images/SOM.png';
 import matrix from '../../../assets/images/matrix-1.png';
 import selfOrganising from '../../../assets/images/self-organising.png';
-import cnn from '../../../assets/images/cnn.jpg';
+import cnn from '../../../assets/images/cnn.png';
 import imageSegmentation from '../../../assets/images/image-segmentation.png';
 import letterFrequencies from '../../../assets/images/letter-frequencies.png';
 import fourier from '../../../assets/images/FourierTransformHeart.gif';
@@ -38,12 +38,19 @@ export default function Projects() {
         <Row>
           <Col className="mt-3 left-card">
             <Card className="p-3">
-              <Card.Img src={TSPImage} alt="Project Image" />
+              <a
+                href="https://carla-de-beer.github.io/TSP-distance-calculator/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img src={TSPImage} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>TSP Distance Calculator</Card.Title>
                 <Card.Text>
                   This project demonstrates the use of a genetic algorithm to find an optimised
-                  solution to the Travelling Salesman Problem. The program dynamically reads in city
+                  solution to the Travelling Salesman Problem. The program dynamically reads in
+                  city
                   data from a file and calculates the shortest distance it can find, linking all
                   cities. The actual physical distance on the route, calculated as the Haversine
                   distance, is also shown. Specifiable genetic algorithm parameters include the
@@ -71,7 +78,9 @@ export default function Projects() {
           </Col>
           <Col className="mt-3 right-card">
             <Card className="p-3">
-              <Card.Img src={ISSImage} alt="Project Image" />
+              <a href="https://carla-de-beer.github.io/ISS-tracker/" target="_blank" rel="noreferrer">
+                <Card.Img src={ISSImage} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>ISS Tracker</Card.Title>
                 <Card.Text>
@@ -100,7 +109,9 @@ export default function Projects() {
         <Row>
           <Col className="mt-4">
             <Card className="p-3">
-              <Card.Img src={matrix} alt="Project Image" />
+              <a href="https://vimeo.com/152473776" target="_blank" rel="noreferrer">
+                <Card.Img src={matrix} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>Neural Network Matrix Visualisation</Card.Title>
                 <Card.Text>
@@ -134,7 +145,13 @@ export default function Projects() {
           </Col>
           <Col className="mt-4 middle-card">
             <Card className="p-3">
-              <Card.Img src={naive} alt="Project Image" />
+              <a
+                href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img src={naive} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>Naive Bayes Text Classifier</Card.Title>
                 <Card.Text>
@@ -162,7 +179,13 @@ export default function Projects() {
           </Col>
           <Col className="mt-4">
             <Card className="p-3">
-              <Card.Img src={cnn} alt="Project Image" />
+              <a
+                href="https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img src={cnn} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>CNN Landscape Classifier</Card.Title>
                 <Card.Text>
@@ -192,7 +215,13 @@ export default function Projects() {
         <Row>
           <Col className="mt-4 left-card">
             <Card className="p-3">
-              <Card.Img variant="bottom" src={som} alt="Project Image" />
+              <a
+                href="https://vimeo.com/54726553"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img variant="bottom" src={som} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>Shape Mapping</Card.Title>
                 <Card.Text>
@@ -217,7 +246,13 @@ export default function Projects() {
           </Col>
           <Col className="mt-4 right-card">
             <Card className="p-3">
-              <Card.Img src={selfOrganising} alt="Project Image" />
+              <a
+                href="https://vimeo.com/85047354"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img src={selfOrganising} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>Self-Organising Structure</Card.Title>
                 <Card.Text>
@@ -244,7 +279,13 @@ export default function Projects() {
         <Row>
           <Col className="mt-4">
             <Card className="p-3">
-              <Card.Img variant="bottom" src={fourier} alt="Project Image" />
+              <a
+                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img variant="bottom" src={fourier} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>Discrete Fourier Transformation of a Heart Curve</Card.Title>
                 <Card.Text>
@@ -271,7 +312,13 @@ export default function Projects() {
           </Col>
           <Col className="mt-4 middle-card">
             <Card className="p-3">
-              <Card.Img src={imageSegmentation} alt="Project Image" />
+              <a
+                href="https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img src={imageSegmentation} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>Image Segmentation with K-Nearest Neighbour</Card.Title>
                 <Card.Text>
@@ -298,7 +345,13 @@ export default function Projects() {
           </Col>
           <Col className="mt-4">
             <Card className="p-3">
-              <Card.Img variant="bottom" src={letterFrequencies} alt="Project Image" />
+              <a
+                href="https://github.com/Carla-de-Beer/python-projects/tree/master/python-scripts/letter-frequency-calculator"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Card.Img variant="bottom" src={letterFrequencies} alt="Project Image" />
+              </a>
               <Card.Body>
                 <Card.Title>Letter Frequency Calculator</Card.Title>
                 <Card.Text>

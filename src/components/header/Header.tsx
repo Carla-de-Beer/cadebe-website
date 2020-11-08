@@ -13,7 +13,9 @@ export default class Header extends React.Component {
       <div className="mt-4">
         <div className="row mr-3">
           <div className="col-lg-2 col-md-2 col-3">
-            <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+            <Link to="/">
+              <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+            </Link>
           </div>
           <div className="col-lg-8 col-md-9 col-7">
             <p className="mt-3 nav-text" style={{ color: '#31ccfd' }}>cadebe.dev</p>
@@ -69,7 +71,9 @@ export default class Header extends React.Component {
           <div className="col-4">
             <div className="row">
               <div className="col-lg-3">
-                <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+                <Link to="/">
+                  <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+                </Link>
               </div>
               <div className="col-lg-5">
                 <p className="nav-text mt-3" style={{ color: '#31ccfd' }}>cadebe.dev</p>
