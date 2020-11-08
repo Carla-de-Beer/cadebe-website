@@ -35,14 +35,14 @@ export default function Home() {
               </Card.Text>
             </Card.Body>
           </Card>
-          <div className="mt-4 ml-5 mr-5">
+          <div className="mt-4">
             <img
               src={photo}
               style={{ maxWidth: '100%' }}
-              alt="photo"
+              alt="Photo"
             />
           </div>
-          <div className="text-fields" style={{ paddingTop: '30px' }}>
+          <div className="text-fields ml-md-4 mr-md-4 pt-4">
             <p className="mt-2 high-light">WELCOME</p>
           </div>
         </div>

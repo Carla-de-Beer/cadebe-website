@@ -12,18 +12,18 @@ export default function Footer() {
   const year = date.getFullYear();
   return (
     <div className="footer-wrapper">
-      <div className="footer-style mt-5 mr-md-4 mr-lg-3">
+      <div className="footer-style mt-5">
         <p className="pt-4 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
         <p className="footer-text">November 2020</p>
         <div className="text-fields mt-5">
           <a href="https://twitter.com/cadebe_" target="_blank" rel="noreferrer">
-            <img src={twitter} width="25px" height="25px" alt="icon" />
+            <img src={twitter} width="25px" height="25px" alt="Icon" />
           </a>
           <a className="ml-2" href="https://www.linkedin.com/in/carla-de-beer/" target="_blank" rel="noreferrer">
-            <img src={linkedIn} width="25px" height="25px" alt="icon" />
+            <img src={linkedIn} width="25px" height="25px" alt="Icon" />
           </a>
           <a className="ml-2" href="https://github.com/Carla-de-Beer" target="_blank" rel="noreferrer">
-            <img src={gitHub} width="25px" height="25px" alt="icon" />
+            <img src={gitHub} width="25px" height="25px" alt="Icon" />
           </a>
         </div>
         <div className="text-fields" style={{ marginTop: '90px' }}>

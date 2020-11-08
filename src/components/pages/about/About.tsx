@@ -12,20 +12,6 @@ export default function About() {
         <p>
           I&apos;m Carla de Beer, a software engineer involved in web development,
           machine learning, computational and generative design.
-          What started off as an experiment on how to upload content to AWS S3 and
-          integrating an SSL certificate with AWS CloudFront, seems to be morphing into a
-          website.
-          Good stuff coming soon!
-          In the meanwhile, you can reach me on &nbsp;
-          <a
-            className="typewriter-text"
-            rel="noopener noreferrer"
-            href="https://twitter.com/cadebe_"
-            target="_blank"
-          >
-            Twitter
-          </a>
-          .
         </p>
       </div>
     </div>

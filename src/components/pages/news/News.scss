@@ -27,4 +27,18 @@
     @extend %base-text-fields;
   }
 
+  .card-tile {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    color: $accent-gray;
+
+    .typewriter-text {
+      @extend .font-style-accent;
+      font-size: 16px;
+      color: $header-grey;
+      font-weight: bold;
+    }
+  }
+
 }

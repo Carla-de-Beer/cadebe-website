@@ -9,7 +9,11 @@ export default function News() {
         <p className="mt-2 high-light">NEWS</p>
       </div>
       <div className="mt-4">
-        <p />
+        <div className="card-tile text-fields" style={{ width: '80%' }}>
+          <p>
+            This page is currently under construction. News updates will appear soon!
+          </p>
+        </div>
       </div>
     </div>
   );

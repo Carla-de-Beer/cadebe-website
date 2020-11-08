@@ -13,7 +13,7 @@ export default class Header extends React.Component {
       <div className="mt-4">
         <div className="row mr-3">
           <div className="col-lg-2 col-md-2 col-3">
-            <img className="logo ml-1" src={logo} width="60" height="60" alt="logo" />
+            <img className="logo" src={logo} width="60" height="60" alt="Logo" />
           </div>
           <div className="col-lg-8 col-md-9 col-7">
             <p className="mt-3 nav-text" style={{ color: '#31ccfd' }}>cadebe.dev</p>
@@ -33,13 +33,13 @@ export default class Header extends React.Component {
                     width: '30px', height: '30px', opacity: '0.5',
                   }}
                 />
-                )}
+                        )}
             >
               <Dropdown.Item>
-                <Link to="/" className="nav-text link"> Home </Link>
+                <Link to="/" className="nav-text link">Home</Link>
               </Dropdown.Item>
               <Dropdown.Item href="/projects">
-                <Link to="/projects" className="nav-text link"> Projects </Link>
+                <Link to="/projects" className="nav-text link">Projects</Link>
               </Dropdown.Item>
               <Dropdown.Item href="/news">
                 <Link
@@ -68,8 +68,8 @@ export default class Header extends React.Component {
         <div className="row">
           <div className="col-4">
             <div className="row">
-              <div className="col-lg-3 ml-1">
-                <img className="logo" src={logo} width="60" height="60" alt="logo" />
+              <div className="col-lg-3">
+                <img className="logo" src={logo} width="60" height="60" alt="Logo" />
               </div>
               <div className="col-lg-5">
                 <p className="nav-text mt-3" style={{ color: '#31ccfd' }}>cadebe.dev</p>
@@ -79,16 +79,16 @@ export default class Header extends React.Component {
           <div className="col-lg-4 mt-3">
             <div className="row">
               <div className="col-lg-3">
-                <Link to="/" className="nav-text link"> Home </Link>
+                <Link to="/" className="nav-text link">Home</Link>
               </div>
               <div className="col-lg-3">
-                <Link to="/projects" className="nav-text link"> Projects </Link>
+                <Link to="/projects" className="nav-text link">Projects</Link>
               </div>
               <div className="col-lg-3">
-                <Link to="/news" className="nav-text link">News </Link>
+                <Link to="/news" className="nav-text link">News</Link>
               </div>
               <div className="col-lg-3">
-                <Link to="/about" className="nav-text link"> About </Link>
+                <Link to="/about" className="nav-text link">About</Link>
               </div>
             </div>
           </div>

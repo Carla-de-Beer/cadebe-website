@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="mt-xl-5 mt-lg-4 mt-md-4 mt-4 ml-xl-5 mr-xl-4 ml-lg-4 mr-lg-2 ml-md-4 mr-md-2 ml-4 mr-4">
+    <div className="mt-xl-5 mt-lg-4 mt-md-4 mt-4 ml-xl-5 mr-xl-5 ml-lg-4 mr-lg-4 ml-md-4 mr-md-4 ml-4 mr-4">
       <BrowserRouter>
         <Header />
         <div className="mb-lg-5">

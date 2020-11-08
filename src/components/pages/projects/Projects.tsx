@@ -22,13 +22,23 @@ export default function Projects() {
   return (
     <div className="projects-wrapper">
       <div className="text-fields mt-5">
-        <p className="mt-2 mr-4 high-light">PROJECTS</p>
+        <p className="mt-2 high-light">PROJECTS</p>
       </div>
-      <CardColumns className="mt-5 ml-md-1 mr-md-4 ml-1 mr-sm-3">
+      <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+        <p>
+          This is a selection of &quot;side-projects&quot; I have worked on over the past few years.
+          Whilst most of my regular work involves Java development,
+          these projects reflect my interest beyond the world of enterprise development,
+          and usually contain a strong focus on machine learning.
+          In the search for finding patterns, many of these project often also endevour to make the
+          invisible visible via various means.
+        </p>
+      </div>
+      <CardColumns className="mt-5">
         <Row>
-          <Col>
-            <Card className="p-4">
-              <Card.Img src={TSPImage} alt="Project image" />
+          <Col className="mt-3 left-card">
+            <Card className="p-3">
+              <Card.Img src={TSPImage} alt="Project Image" />
               <Card.Body>
                 <Card.Title>TSP Distance Calculator</Card.Title>
                 <Card.Text>
@@ -59,9 +69,9 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col>
-            <Card className="p-4">
-              <Card.Img src={ISSImage} alt="Project image" />
+          <Col className="mt-3 right-card">
+            <Card className="p-3">
+              <Card.Img src={ISSImage} alt="Project Image" />
               <Card.Body>
                 <Card.Title>ISS Tracker</Card.Title>
                 <Card.Text>
@@ -89,8 +99,8 @@ export default function Projects() {
         </Row>
         <Row>
           <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img src={matrix} alt="Project image" />
+            <Card className="p-3">
+              <Card.Img src={matrix} alt="Project Image" />
               <Card.Body>
                 <Card.Title>Neural Network Matrix Visualisation</Card.Title>
                 <Card.Text>
@@ -122,9 +132,9 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img src={naive} alt="Project image" />
+          <Col className="mt-4 middle-card">
+            <Card className="p-3">
+              <Card.Img src={naive} alt="Project Image" />
               <Card.Body>
                 <Card.Title>Naive Bayes Text Classifier</Card.Title>
                 <Card.Text>
@@ -151,8 +161,8 @@ export default function Projects() {
             </Card>
           </Col>
           <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img src={cnn} alt="Project image" />
+            <Card className="p-3">
+              <Card.Img src={cnn} alt="Project Image" />
               <Card.Body>
                 <Card.Title>CNN Landscape Classifier</Card.Title>
                 <Card.Text>
@@ -180,9 +190,9 @@ export default function Projects() {
           </Col>
         </Row>
         <Row>
-          <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img variant="bottom" src={som} alt="Project image" />
+          <Col className="mt-4 left-card">
+            <Card className="p-3">
+              <Card.Img variant="bottom" src={som} alt="Project Image" />
               <Card.Body>
                 <Card.Title>Shape Mapping</Card.Title>
                 <Card.Text>
@@ -205,9 +215,9 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img src={selfOrganising} alt="Project image" />
+          <Col className="mt-4 right-card">
+            <Card className="p-3">
+              <Card.Img src={selfOrganising} alt="Project Image" />
               <Card.Body>
                 <Card.Title>Self-Organising Structure</Card.Title>
                 <Card.Text>
@@ -233,8 +243,8 @@ export default function Projects() {
         </Row>
         <Row>
           <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img variant="bottom" src={fourier} alt="Project image" />
+            <Card className="p-3">
+              <Card.Img variant="bottom" src={fourier} alt="Project Image" />
               <Card.Body>
                 <Card.Title>Discrete Fourier Transformation of a Heart Curve</Card.Title>
                 <Card.Text>
@@ -259,9 +269,9 @@ export default function Projects() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img src={imageSegmentation} alt="Project image" />
+          <Col className="mt-4 middle-card">
+            <Card className="p-3">
+              <Card.Img src={imageSegmentation} alt="Project Image" />
               <Card.Body>
                 <Card.Title>Image Segmentation with K-Nearest Neighbour</Card.Title>
                 <Card.Text>
@@ -287,8 +297,8 @@ export default function Projects() {
             </Card>
           </Col>
           <Col className="mt-4">
-            <Card className="p-4">
-              <Card.Img variant="bottom" src={letterFrequencies} alt="Project image" />
+            <Card className="p-3">
+              <Card.Img variant="bottom" src={letterFrequencies} alt="Project Image" />
               <Card.Body>
                 <Card.Title>Letter Frequency Calculator</Card.Title>
                 <Card.Text>

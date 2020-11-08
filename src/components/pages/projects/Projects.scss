@@ -18,6 +18,23 @@
     @extend %base-text-fields;
   }
 
+  @media screen and (min-width: 768px) {
+    div.middle-card {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    div.left-card {
+      margin-right: -18px;
+    }
+
+    div.right-card {
+      margin-left: -18px;
+    }
+  }
+
   p.card-text {
     font-size: 14px;
   }
@@ -45,18 +62,29 @@
     }
   }
 
-  @media (min-width: 576px) {
-    .card-deck .card {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-
   *, ::after, ::before {
     box-sizing: content-box;
   }
 
   .card-footer {
     border-top: none !important;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  .card-tile {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    color: $accent-gray;
+
+    .typewriter-text {
+      @extend .font-style-accent;
+      font-size: 16px;
+      color: $header-grey;
+      font-weight: bold;
+    }
   }
 }
