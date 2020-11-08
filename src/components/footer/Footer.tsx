@@ -39,9 +39,9 @@ export default class Footer extends React.Component {
               </a>
             </div>
             <div className="text-fields" style={{ marginTop: '90px' }}>
-              <Badge className="badge badge-pill badge-secondary ml-2">Machine Learning</Badge>
+              <Badge className="badge badge-pill badge-secondary">Machine Learning</Badge>
               {this.setNavHeader()}
-              <Badge className="badge badge-pill badge-secondary">Software Engineering</Badge>
+              <Badge className="badge badge-pill badge-secondary ml-2">Software Engineering</Badge>
               {this.setNavHeader()}
               <Badge className="badge badge-pill badge-secondary ml-2">Backend Development</Badge>
               {this.setNavHeader()}
