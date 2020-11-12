@@ -10,7 +10,7 @@ import menu from '../../assets/icons/menu.svg';
 
 export default class Header extends React.Component {
     setHeaderLayoutMobile = () => (
-      <div className="mt-4">
+      <div className="mt-xl-5 mt-lg-4 mt-md-3 mt-3">
         <div className="row mr-3">
           <div className="col-lg-2 col-md-2 col-3">
             <Link to="/">
@@ -18,7 +18,9 @@ export default class Header extends React.Component {
             </Link>
           </div>
           <div className="col-lg-8 col-md-9 col-7">
-            <p className="mt-3 nav-text" style={{ color: '#31ccfd' }}>cadebe.dev</p>
+            <Link to="/">
+              <p className="mt-3 nav-text" style={{ color: '#31ccfd' }}>cadebe.dev</p>
+            </Link>
           </div>
           <div className="mt-2 col-lg-2 col-md-1 col-2">
             <DropdownButton
