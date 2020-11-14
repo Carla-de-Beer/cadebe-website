@@ -146,7 +146,7 @@ export default function Projects() {
           <Col className="mt-4 middle-card">
             <Card className="p-3">
               <a
-                href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
+                href="https://github.com/Carla-de-Beer/naive-bayes-text-classifier"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -160,7 +160,7 @@ export default function Projects() {
                 </Card.Text>
                 <Button
                   variant="light"
-                  href="https://github.com/Carla-de-Beer/naive-bayesian-text-classifier"
+                  href="https://github.com/Carla-de-Beer/naive-bayes-text-classifier"
                   target="_blank"
                 >
                   GitHub
