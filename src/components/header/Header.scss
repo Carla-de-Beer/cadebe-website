@@ -4,7 +4,7 @@
 .header-wrapper {
 
   button.dropdown-toggle.btn.btn-primary {
-    color: $paragraph-gray;
+    color: $paragraph-gray-2;
     background-color: $white;
     border-color: $white;
   }
@@ -19,6 +19,12 @@
 
   .link {
     text-decoration: none;
+    color: $paragraph-gray-1 !important;
+  }
+
+  .link-high-light {
+    text-decoration: none;
+    color: $paragraph-gray-2 !important;
   }
 
   a:active {
@@ -32,13 +38,13 @@
   .name-text {
     @extend .font-style-default;
     @extend .font-size-standard;
-    color: $paragraph-gray;
+    color: $paragraph-gray-2;
   }
 
   .nav-text {
     @extend .font-style-default;
     @extend .font-size-standard;
-    color: $paragraph-gray;
+    color: $paragraph-gray-2;
     font-weight: bold;
   }
 

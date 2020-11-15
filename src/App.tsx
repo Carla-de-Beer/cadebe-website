@@ -5,7 +5,6 @@ import Home from './components/pages/home/Home';
 import Projects from './components/pages/projects/Projects';
 import News from './components/pages/news/News';
 import About from './components/pages/about/About';
-import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
 import './App.scss';
@@ -15,7 +14,6 @@ function App() {
   return (
     <div className="mt-xl-5 mt-lg-4 mt-md-3 mt-3 ml-xl-5 mr-xl-5 ml-lg-4 mr-lg-4 ml-md-3 mr-md-3 ml-3 mr-3">
       <BrowserRouter>
-        <Header />
         <div className="mb-lg-5">
           <Switch>
             <Route exact path="/" component={Home} />

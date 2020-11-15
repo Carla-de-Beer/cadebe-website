@@ -6,7 +6,7 @@
   .footer-text-small {
     @extend .font-size-small;
     text-align: center;
-    color: $paragraph-gray;
+    color: $paragraph-gray-2;
   }
 
   .text-fields {
@@ -18,7 +18,7 @@
     @extend .font-size-standard;
     text-align: center;
     font-weight: bold;
-    color: $paragraph-gray;
+    color: $paragraph-gray-2;
   }
 
   .typewriter-text {
@@ -36,8 +36,8 @@
 
   .btn-info-local {
     @extend .font-size-medium;
-    color: $paragraph-gray !important;
-    background-color: $paragraph-gray !important;
+    color: $paragraph-gray-2 !important;
+    background-color: $paragraph-gray-2 !important;
     border: none !important;
   }
 

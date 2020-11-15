@@ -9,12 +9,12 @@
   @extend .font-style-highlight;
   font-weight: bold;
   font-size: 38px;
-  color: $paragraph-gray;
+  color: $paragraph-gray-2;
 }
 
 %base-high-light-mobile {
   @extend .font-style-highlight;
   font-weight: bold;
   font-size: 30px;
-  color: $paragraph-gray;
+  color: $paragraph-gray-2;
 }
