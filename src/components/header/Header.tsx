@@ -19,7 +19,7 @@ export default class Header extends React.Component {
           </div>
           <div className="col-lg-8 col-md-9 col-7">
             <Link to="/">
-              <p className="mt-3 nav-text" style={{ color: '#31ccfd' }}>cadebe.dev</p>
+              <p className="mt-3 nav-text logo-accent">cadebe.dev</p>
             </Link>
           </div>
           <div className="mt-2 col-lg-2 col-md-1 col-2">
@@ -60,7 +60,9 @@ export default class Header extends React.Component {
                 </Link>
               </div>
               <div className="col-lg-5">
-                <p className="nav-text mt-3" style={{ color: '#31ccfd' }}>cadebe.dev</p>
+                <Link to="/">
+                  <p className="mt-3 nav-text logo-accent">cadebe.dev</p>
+                </Link>
               </div>
             </div>
           </div>

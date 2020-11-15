@@ -26,12 +26,12 @@
   }
 
   .footer-style {
-    border-top: 0.75px dashed rgba(0, 0, 0, .125);
+    border-top: 0.75px dashed $dark-accent;
   }
 
   .badge-secondary {
-    color: #fff;
-    background-color: #929292;
+    color: $white;
+    background-color: $warm-grey-2;
   }
 
   .btn-info-local {

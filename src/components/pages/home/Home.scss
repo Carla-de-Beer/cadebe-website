@@ -23,6 +23,11 @@
       font-size: 28px;
     }
   }
+  
+  .card {
+    background-color: $white;
+    border: none;
+  }
 
   .text-fields {
     @extend %base-text-fields;

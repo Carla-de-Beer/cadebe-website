@@ -5,8 +5,8 @@
 
   button.dropdown-toggle.btn.btn-primary {
     color: $paragraph-gray;
-    background-color: #fff;
-    border-color: #fff;
+    background-color: $white;
+    border-color: $white;
   }
 
   .btn {
@@ -25,6 +25,10 @@
     color: $button-background;
   }
 
+  a:hover {
+    text-decoration: none;
+  }
+
   .name-text {
     @extend .font-style-default;
     @extend .font-size-standard;
@@ -36,5 +40,9 @@
     @extend .font-size-standard;
     color: $paragraph-gray;
     font-weight: bold;
+  }
+
+  .logo-accent {
+    color: $logo-accent-color;
   }
 }
