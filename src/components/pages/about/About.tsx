@@ -9,7 +9,7 @@ export default function About() {
       <Header pageType="about" />
       <div className="about-wrapper">
         <div className="text-fields" style={{ paddingTop: '30px' }}>
-          <p className="mt-2 high-light">ABOUT</p>
+          <p className="mt-2 high-light">CARLA</p>
         </div>
         <div className="card-tile text-fields" style={{ width: '80%' }}>
           <p>

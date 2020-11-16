@@ -21,7 +21,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
         <div className="row mr-3">
           <div className="col-lg-2 col-md-2 col-3">
             <Link to="/">
-              <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+              <img src={logo} width="60" height="60" alt="Logo" />
             </Link>
           </div>
           <div className="col-lg-8 col-md-9 col-7">
@@ -83,7 +83,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
             <div className="row">
               <div className="col-lg-3">
                 <Link to="/">
-                  <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+                  <img src={logo} width="60" height="60" alt="Logo" />
                 </Link>
               </div>
               <div className="col-lg-5">

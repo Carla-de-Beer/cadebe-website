@@ -14,7 +14,8 @@
   }
 
   .dropdown-menu {
-    border-radius: unset;
+    border: 0.5px solid $warm-grey-3;
+    background-color: $warm-grey-1;
   }
 
   .link {
@@ -51,4 +52,5 @@
   .logo-accent {
     color: $logo-accent-color;
   }
+
 }

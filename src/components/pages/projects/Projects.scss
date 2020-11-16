@@ -8,7 +8,7 @@
 
   .card {
     background-color: $warm-grey-1;
-    border: none;
+    border: 0.5px solid $warm-grey-3;
   }
 
   .card-title {
@@ -53,13 +53,50 @@
   }
 
   .high-light {
-    @extend %base-high-light;
+    font-family: Georgia,"Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 38px;
+    color: $paragraph-gray-2;
   }
 
   @media screen and (max-width: 900px) {
     .high-light {
-      @extend .high-light;
+      font-family: Georgia,"Times New Roman", Times, serif;
+      font-weight: bold;
+      color: $paragraph-gray-2;
       font-size: 28px;
+      display: inline;
+    }
+  }
+
+  .high-light-1 {
+    font-weight: bold;
+    color: $paragraph-gray-2;
+  }
+
+  @media screen and (min-width: 820px) {
+    .high-light-1 {
+      display: none;
+    }
+
+    .high-light-2 {
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      font-size: 22px;
+      margin: unset;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .high-light-1 {
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      font-size: 16px;
+      margin: unset;
+    }
+
+    .high-light-2 {
+      display: none;
     }
   }
 

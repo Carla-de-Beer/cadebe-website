@@ -9,7 +9,7 @@ export default function News() {
       <Header pageType="news" />
       <div className="news-wrapper">
         <div className="text-fields" style={{ paddingTop: '30px' }}>
-          <p className="mt-2 high-light">NEWS</p>
+          <p className="mt-2 high-light">NEWS & BLOG</p>
         </div>
         <div className="mt-4">
           <div className="card-tile text-fields" style={{ width: '80%' }}>

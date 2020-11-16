@@ -23,8 +23,16 @@ export default function Projects() {
     <div>
       <Header pageType="projects" />
       <div className="projects-wrapper">
-        <div className="text-fields mt-5">
+        <div className="text-fields" style={{ paddingTop: '30px' }}>
           <p className="mt-2 high-light">PROJECTS</p>
+        </div>
+        <div className="text-fields mt-5">
+          <p className="high-light-1">Machine Learning • Swarm Intelligence</p>
+          <p className="high-light-1">Data Visualisation • Image Processing</p>
+          <p className="high-light-1">Mathematics</p>
+          <p className="high-light-2">Machine Learning • Swarm Intelligence</p>
+          <p className="high-light-2">Data Visualisation • Image Processing</p>
+          <p className="high-light-2">Mathematics</p>
         </div>
         <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
           <p>
@@ -38,10 +46,10 @@ export default function Projects() {
             invisible visible via various means.
           </p>
         </div>
-        <CardColumns className="mt-5">
+        <CardColumns className="mt-xl-5 mt-lg-5 mt-md-5 mt-2">
           <Row>
-            <Col className="mt-3 left-card">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2 left-card">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://carla-de-beer.github.io/TSP-distance-calculator/"
                   target="_blank"
@@ -80,8 +88,8 @@ export default function Projects() {
                 </Card.Footer>
               </Card>
             </Col>
-            <Col className="mt-3 right-card">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2 right-card">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://carla-de-beer.github.io/ISS-tracker/"
                   target="_blank"
@@ -115,8 +123,8 @@ export default function Projects() {
             </Col>
           </Row>
           <Row>
-            <Col className="mt-4">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a href="https://vimeo.com/152473776" target="_blank" rel="noopener noreferrer">
                   <Card.Img src={matrix} alt="Project Image" />
                 </a>
@@ -153,8 +161,8 @@ export default function Projects() {
                 </Card.Footer>
               </Card>
             </Col>
-            <Col className="mt-4 middle-card">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2 middle-card">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://github.com/Carla-de-Beer/naive-bayes-text-classifier"
                   target="_blank"
@@ -187,8 +195,8 @@ export default function Projects() {
                 </Card.Footer>
               </Card>
             </Col>
-            <Col className="mt-4">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier"
                   target="_blank"
@@ -224,8 +232,8 @@ export default function Projects() {
             </Col>
           </Row>
           <Row>
-            <Col className="mt-4 left-card">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2 left-card">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://vimeo.com/54726553"
                   target="_blank"
@@ -255,8 +263,8 @@ export default function Projects() {
                 </Card.Footer>
               </Card>
             </Col>
-            <Col className="mt-4 right-card">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2 right-card">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://vimeo.com/85047354"
                   target="_blank"
@@ -289,8 +297,8 @@ export default function Projects() {
             </Col>
           </Row>
           <Row>
-            <Col className="mt-4">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart"
                   target="_blank"
@@ -322,8 +330,8 @@ export default function Projects() {
                 </Card.Footer>
               </Card>
             </Col>
-            <Col className="mt-4 middle-card">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2 middle-card">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN"
                   target="_blank"
@@ -355,8 +363,8 @@ export default function Projects() {
                 </Card.Footer>
               </Card>
             </Col>
-            <Col className="mt-4">
-              <Card className="p-3">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
+              <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
                 <a
                   href="https://github.com/Carla-de-Beer/python-projects/tree/master/python-scripts/letter-frequency-calculator"
                   target="_blank"
