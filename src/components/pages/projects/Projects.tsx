@@ -30,9 +30,6 @@ export default function Projects() {
           <p className="high-light-1">Machine Learning • Swarm Intelligence</p>
           <p className="high-light-1">Data Visualisation • Image Processing</p>
           <p className="high-light-1">Mathematics</p>
-          <p className="high-light-2">Machine Learning • Swarm Intelligence</p>
-          <p className="high-light-2">Data Visualisation • Image Processing</p>
-          <p className="high-light-2">Mathematics</p>
         </div>
         <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
           <p>

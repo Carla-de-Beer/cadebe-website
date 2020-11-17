@@ -37,11 +37,11 @@
   }
 
   p.card-text {
-    font-size: 14px;
+    @extend .font-size-standard;
   }
 
   a.btn.btn-light {
-    font-size: 14px;
+    @extend .font-size-standard;
   }
 
   @media all and (max-width: 812px) {
@@ -53,21 +53,16 @@
   }
 
   .high-light {
-    font-family: Georgia,"Times New Roman", Times, serif;
-    font-weight: bold;
-    font-size: 38px;
-    color: $paragraph-gray-2;
+    @extend %base-high-light;
   }
 
   @media screen and (max-width: 900px) {
     .high-light {
-      font-family: Georgia,"Times New Roman", Times, serif;
-      font-weight: bold;
-      color: $paragraph-gray-2;
-      font-size: 28px;
-      display: inline;
+      @extend .high-light;
+      @include font-size-large-3;
     }
   }
+
 
   .high-light-1 {
     font-weight: bold;
@@ -76,27 +71,19 @@
 
   @media screen and (min-width: 820px) {
     .high-light-1 {
-      display: none;
-    }
-
-    .high-light-2 {
+      @include font-size-large-2;
       font-weight: bold;
       color: $paragraph-gray-2;
-      font-size: 22px;
       margin: unset;
     }
   }
 
   @media screen and (max-width: 820px) {
     .high-light-1 {
+      @include font-size-large-1;
       font-weight: bold;
       color: $paragraph-gray-2;
-      font-size: 16px;
       margin: unset;
-    }
-
-    .high-light-2 {
-      display: none;
     }
   }
 
@@ -120,9 +107,10 @@
 
     .typewriter-text {
       @extend .font-style-accent;
-      font-size: 16px;
+      @include font-size-large-1;
       color: $header-grey;
       font-weight: bold;
     }
   }
+
 }

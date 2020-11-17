@@ -6,8 +6,12 @@
   font-family: "DejaVu Sans", Courier, Arial, Helvetica, sans-serif;
 }
 
-.font-style-highlight {
-  font-family: Georgia,"Times New Roman", Times, serif;
+@mixin font-style-highlight {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+%font-style-highlight {
+  @include font-style-highlight;
 }
 
 .font-size-standard {
@@ -24,4 +28,36 @@
 
 .font-size-marge {
   font-size: 13px;
+}
+
+@mixin font-size-large-1 {
+  font-size: 16px;
+}
+
+%font-size-large-1 {
+  @include font-size-large-1;
+}
+
+@mixin font-size-large-2 {
+  font-size: 18px;
+}
+
+%font-size-large-2 {
+  @include font-size-large-2;
+}
+
+@mixin font-size-large-3 {
+  font-size: 28px;
+}
+
+%font-size-large-3 {
+  @include font-size-large-3;
+}
+
+@mixin font-size-extra {
+  font-size: 38px;
+}
+
+%font-size-extra {
+  @include font-size-extra;
 }
