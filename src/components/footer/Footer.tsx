@@ -39,7 +39,7 @@ export default class Footer extends React.Component {
         <div className="footer-wrapper">
           <div className="footer-style mt-5">
             <p className="pt-4 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
-            <p className="footer-text">November 2020</p>
+            <p className="footer-text">December 2020</p>
             <div className="text-fields mt-5">
               <a href="https://twitter.com/cadebe_" target="_blank" rel="noopener noreferrer">
                 <img src={twitter} width="25px" height="25px" alt="Icon" />

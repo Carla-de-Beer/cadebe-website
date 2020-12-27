@@ -16,6 +16,12 @@
     @extend %base-high-light;
   }
 
+  .sub-title {
+    @include font-size-medium;
+    color: $accent-gray;
+    font-weight: bold;
+  }
+
   @media screen and (max-width: 900px) {
     .high-light {
       @extend .high-light;
@@ -39,6 +45,46 @@
       color: $header-grey;
       font-weight: bold;
     }
+  }
+
+  p.card-text {
+    @extend .font-size-standard;
+    color: #212529;
+  }
+
+  .news-card {
+    height: 100%;
+    color: $accent-gray;
+  }
+
+  .no-link {
+    text-decoration: none;
+  }
+
+  .highlighted-text {
+    color: $logo-accent-color;
+    font-weight: bold
+  }
+
+  .block-1 {
+    height: 100%;
+  }
+
+  .block-2 {
+    height: 385px;
+  }
+
+  .block-4 {
+    height: 600px;
+  }
+
+  .block-3 {
+    padding: 0;
+  }
+
+  .block-mobile {
+    height: 100%;
+    padding: 0;
   }
 
 }
