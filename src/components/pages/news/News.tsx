@@ -13,14 +13,14 @@ export default class News extends React.Component {
       <div className="news-wrapper">
         {this.setCommon()}
 
-        <div className="mt-5">
+        <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
           <div className="row">
-            <div className="col-8" style={{ paddingRight: '10px' }}>
+            <div className="col-8 mt-xl-4 mt-lg-4 mt-md-4 mt-2" style={{ paddingRight: '10px' }}>
               <div id="first-card" className="block-1">
                 {this.makeCard1()}
               </div>
             </div>
-            <div className="col" style={{ paddingLeft: 0, marginLeft: '-10px' }}>
+            <div className="col mt-xl-4 mt-lg-4 mt-md-4 mt-2" style={{ paddingLeft: 0, marginLeft: '-10px' }}>
               <div className="ml-3 block-2">
                 {this.makeCard2()}
               </div>
@@ -167,9 +167,21 @@ export default class News extends React.Component {
         </div>
         <div className="mt-4">
           <div className="card-tile text-fields" style={{ width: '80%' }}>
-            <p>
-              Development news and blog stories.
-            </p>
+            <div className="text-fields mt-5">
+              {window.innerWidth.valueOf() >= 450
+                ? <p className="high-light-1">Software Development • Machine Learning</p> : (
+                  <div>
+                    <p className="high-light-1">Software Development</p>
+                    <p className="high-light-1">Machine Learning</p>
+                  </div>
+                )}
+            </div>
+            <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+              <p>
+                Development news and blog stories relating to software development,
+                including Java, Spring Framework, Python, Cloud Computing, and machine learning.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -250,14 +262,15 @@ export default class News extends React.Component {
               DeepLearning.AI Tensorflow Developer Coursera Certification
             </Card.Title>
             <Card.Subtitle className="mt-3 sub-title">13 APRIL 2020</Card.Subtitle>
-            <Card.Text className="mt-3">
-              Completed all 4 courses of the
-              DeepLearning.AI Tensorflow Developer Professional Certificate program:
-              <ul>
+            <Card.Text className="mt-3" as="div">
+              <p className="inner-text">
+                Completed all 4 courses of the
+                DeepLearning.AI Tensorflow Developer Professional Certificate program:
+              </p>
+              <ul className="inner-text">
                 <li>
-                  {' '}
-                  Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep
-                  Learning
+                  Introduction to TensorFlow for Artificial Intelligence, Machine Learning,
+                  and Deep Learning
                 </li>
                 <li>Convolutional Neural Networks in TensorFlow</li>
                 <li>Natural Language Processing in TensorFlow</li>

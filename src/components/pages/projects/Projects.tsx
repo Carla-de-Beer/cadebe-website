@@ -42,9 +42,9 @@ export default function Projects() {
             invisible visible via various means.
           </p>
         </div>
-        <CardColumns className="mt-xl-5 mt-lg-5 mt-md-5 mt-2">
+        <CardColumns className="mt-xl-4 mt-lg-4 mt-md-4 mt-4">
           <Row>
-            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-2 left-card">
+            <Col className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 left-card">
               <a
                 className="no-link"
                 href="https://carla-de-beer.github.io/TSP-distance-calculator/"

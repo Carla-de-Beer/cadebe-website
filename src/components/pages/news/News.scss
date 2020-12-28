@@ -12,8 +12,8 @@
     height: 100%;
   }
 
-  .high-light {
-    @extend %base-high-light;
+  .card-title {
+    color: $header-grey;
   }
 
   .sub-title {
@@ -52,6 +52,10 @@
     color: $dark-accent-2;
   }
 
+  .inner-text {
+    @extend p.card-text;
+  }
+
   .news-card {
     height: 100%;
     color: $accent-gray;
@@ -59,6 +63,52 @@
 
   .no-link {
     text-decoration: none;
+  }
+
+  .high-light-1 {
+    font-weight: bold;
+    color: $paragraph-gray-2;
+  }
+
+  @media screen and (min-width: 820px) {
+    .high-light-1 {
+      @include font-size-large-2;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .high-light-1 {
+      @include font-size-large-1;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  @media all and (max-width: 812px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .high-light {
+    @extend %base-high-light;
+  }
+
+  @media screen and (max-width: 900px) {
+    .high-light {
+      @extend .high-light;
+      @include font-size-large-3;
+    }
   }
 
   .highlighted-text {
