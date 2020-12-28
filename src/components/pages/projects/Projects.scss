@@ -44,6 +44,11 @@
     @extend .font-size-standard;
   }
 
+  .no-link {
+    color: $dark-accent-2;
+    text-decoration: none;
+  }
+
   @media all and (max-width: 812px) {
     .box {
       display: block;

@@ -3,13 +3,14 @@
 Website to showcase current and previous development projects. Built with React, TypeScript and SCSS and deployed on AWS.
 
 ### Todo
-* [ ] Move project text to a JSON-file
-* [x] Add additional projects
-* [ ] Integrate P5.js projects
-* [ ] Integrate machine learning projects with models
-* [ ] Add intro page
+* [ ] Complete Home page
+* [x] Complete Projects page
+* [x] Complete News page
+* [ ] Complete About page
+* [x] Add header
 * [x] Add footer
-* [x] Move projects to separate page
+* [ ] Add Project page sorting option
+* [ ] Add News page sorting option
 * [x] Convert to responsive design (mobile, tablet and desktop)
 * [ ] Check cross-browser compatibility
 * [x] Add linting rules

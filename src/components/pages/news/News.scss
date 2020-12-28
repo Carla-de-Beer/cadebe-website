@@ -49,7 +49,7 @@
 
   p.card-text {
     @extend .font-size-standard;
-    color: #212529;
+    color: $dark-accent-2;
   }
 
   .news-card {
