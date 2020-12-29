@@ -3,7 +3,7 @@
 Website to showcase current and previous development projects. Built with React, TypeScript and SCSS and deployed on AWS.
 
 ### Todo
-* [ ] Complete Home Page
+* [x] Complete Home Page
 * [x] Complete Projects Page
 * [x] Complete News Page
 * [x] Complete About Page

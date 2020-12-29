@@ -30,7 +30,7 @@ export default function About() {
             <br />
             <br />
             In addition to my professional work, I have a keen interest in the field of
-            machine learning, a journey I embarked on through my master's degree studies.
+            machine learning, a journey I embarked on through my master&apos;s degree studies.
             The advent of TensorFlow and Keras have made it so much easier and faster to
             create and test models.
             I am constantly amazed at the ability these frameworks provide to
