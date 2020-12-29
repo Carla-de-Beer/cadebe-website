@@ -15,12 +15,12 @@ export default class News extends React.Component {
 
         <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
           <div className="row">
-            <div className="col-8 mt-xl-4 mt-lg-4 mt-md-4 mt-2" style={{ paddingRight: '10px' }}>
+            <div className="col-8 mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingRight: '10px' }}>
               <div id="first-card" className="block-1">
                 {this.makeCard1()}
               </div>
             </div>
-            <div className="col mt-xl-4 mt-lg-4 mt-md-4 mt-2" style={{ paddingLeft: 0, marginLeft: '-10px' }}>
+            <div className="col mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingLeft: 0, marginLeft: '-10px' }}>
               <div className="ml-3 block-2">
                 {this.makeCard2()}
               </div>
@@ -179,7 +179,8 @@ export default class News extends React.Component {
             <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
               <p>
                 Development news and blog stories relating to software development,
-                including Java, Spring Framework, Python, Cloud Computing, and machine learning.
+                including Java, Spring Framework, Python, Cloud Computing, TensorFlow
+                and machine learning.
               </p>
             </div>
           </div>

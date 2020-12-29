@@ -13,6 +13,10 @@
     height: 100%;
   }
 
+  p {
+    @include font-size-large-1;
+  }
+
   .high-light {
     @extend %base-high-light;
   }

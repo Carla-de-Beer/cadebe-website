@@ -32,7 +32,7 @@ export default function Projects() {
         </div>
         <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
           <p>
-            This is a selection of &quot;side-projects&quot;
+            This is a selection of my own projects
             I have worked on over the past few years.
             Whilst most of my regular work involves Java development,
             these projects reflect my interest beyond the world of enterprise development,

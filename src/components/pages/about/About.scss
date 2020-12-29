@@ -13,6 +13,10 @@
     height: 100%;
   }
 
+  p {
+    @include font-size-large-1;
+  }
+
   .high-light {
     @extend %base-high-light;
   }
@@ -22,10 +26,6 @@
       @extend .high-light;
       @include font-size-large-3;
     }
-  }
-
-  .text-fields {
-    @extend %base-text-fields;
   }
 
   .card-tile {
@@ -39,6 +39,48 @@
       @include font-size-large-1;
       color: $header-grey;
       font-weight: bold;
+    }
+  }
+
+  @media screen and (min-width: 820px) {
+    .high-light-1 {
+      @include font-size-large-2;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .high-light-1 {
+      @include font-size-large-1;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  .high-light-1 {
+    font-weight: bold;
+    color: $paragraph-gray-2;
+  }
+
+  @media all and (max-width: 812px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .high-light {
+      @extend .high-light;
+      @include font-size-large-3;
     }
   }
 

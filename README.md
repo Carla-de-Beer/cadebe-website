@@ -6,7 +6,7 @@ Website to showcase current and previous development projects. Built with React,
 * [ ] Complete Home Page
 * [x] Complete Projects Page
 * [x] Complete News Page
-* [ ] Complete About Page
+* [x] Complete About Page
 * [x] Add header
 * [x] Add footer
 * [ ] Add Project Page sorting option

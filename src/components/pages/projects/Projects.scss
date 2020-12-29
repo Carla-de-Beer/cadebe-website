@@ -4,6 +4,10 @@
 
 .projects-wrapper {
 
+  p {
+    @include font-size-large-1;
+  }
+
   box-sizing: revert;
 
   .card {

@@ -19,22 +19,12 @@ export default function Home() {
               <Card.Body>
                 <Card.Title />
                 <Card.Text>
-                  I&apos;m Carla de Beer, a software engineer involved in web development,
-                  machine learning, computational and generative design.
-                  What started off as an experiment on how to upload content to AWS S3 and
-                  integrating an SSL certificate with AWS CloudFront, seems to be morphing into a
-                  website.
-                  Good stuff coming soon!
-                  In the meanwhile, you can reach me on &nbsp;
-                  <a
-                    className="typewriter-text"
-                    rel="noopener noreferrer"
-                    href="https://twitter.com/cadebe_"
-                    target="_blank"
-                  >
-                    Twitter
-                  </a>
-                  .
+                  I&apos;m Carla de Beer, a software engineer involved in
+                  web development and machine learning.
+                  <br />
+                  What started off as an experiment in uploading content to AWS S3 and
+                  integrating an SSL certificate with AWS CloudFront,
+                  has morphed into a proper website.
                 </Card.Text>
               </Card.Body>
             </Card>

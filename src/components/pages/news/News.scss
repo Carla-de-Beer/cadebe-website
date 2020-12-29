@@ -12,6 +12,10 @@
     height: 100%;
   }
 
+  p {
+    @include font-size-large-1;
+  }
+
   .card-title {
     color: $header-grey;
   }
