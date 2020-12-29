@@ -104,17 +104,6 @@
     }
   }
 
-  .high-light {
-    @extend %base-high-light;
-  }
-
-  @media screen and (max-width: 900px) {
-    .high-light {
-      @extend .high-light;
-      @include font-size-large-3;
-    }
-  }
-
   .highlighted-text {
     color: $logo-accent-color;
     font-weight: bold

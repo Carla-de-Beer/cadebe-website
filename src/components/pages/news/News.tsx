@@ -1,8 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import './News.scss';
 import Header from '../../header/Header';
+import Banner from '../../banner/Banner';
+
+import './News.scss';
 
 import awsCert from '../../../assets/images/aws-certificate.png';
 import awsCertManager from '../../../assets/images/aws-image.png';
@@ -162,9 +164,7 @@ export default class News extends React.Component {
 
     setCommon = () => (
       <div>
-        <div className="text-fields" style={{ paddingTop: '30px' }}>
-          <p className="mt-2 high-light">NEWS & BLOG</p>
-        </div>
+        <Banner title="NEWS & BLOG" />
         <div className="mt-4">
           <div className="card-tile text-fields" style={{ width: '80%' }}>
             <div className="text-fields mt-5">

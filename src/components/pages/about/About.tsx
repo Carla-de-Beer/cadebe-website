@@ -1,16 +1,16 @@
 import React from 'react';
 
-import './About.scss';
 import Header from '../../header/Header';
+import Banner from '../../banner/Banner';
+
+import './About.scss';
 
 export default function About() {
   return (
     <div>
       <Header pageType="about" />
       <div className="about-wrapper">
-        <div className="text-fields" style={{ paddingTop: '30px' }}>
-          <p className="mt-2 high-light">ABOUT</p>
-        </div>
+        <Banner title="ABOUT" />
         <div className="mt-5">
           <p className="text-fields high-light-1">Who • What</p>
         </div>

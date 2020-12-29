@@ -3,8 +3,11 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CardColumns from 'react-bootstrap/CardDeck';
+import Banner from '../../banner/Banner';
+import Header from '../../header/Header';
 
 import './Projects.scss';
+
 import TSPImage from '../../../assets/images/TSP.gif';
 import ISSImage from '../../../assets/images/ISS.png';
 import naive from '../../../assets/images/naive-bayes.png';
@@ -15,16 +18,13 @@ import cnn from '../../../assets/images/cnn.png';
 import imageSegmentation from '../../../assets/images/image-segmentation.png';
 import letterFrequencies from '../../../assets/images/letter-frequencies.png';
 import fourier from '../../../assets/images/FourierTransformHeart.gif';
-import Header from '../../header/Header';
 
 export default function Projects() {
   return (
     <div>
       <Header pageType="projects" />
       <div className="projects-wrapper">
-        <div className="text-fields" style={{ paddingTop: '30px' }}>
-          <p className="mt-2 high-light">PROJECTS</p>
-        </div>
+        <Banner title="PROJECTS" />
         <div className="text-fields mt-5">
           <p className="high-light-1">Machine Learning • Swarm Intelligence</p>
           <p className="high-light-1">Data Visualisation • Image Processing</p>

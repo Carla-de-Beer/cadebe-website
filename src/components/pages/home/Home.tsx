@@ -1,11 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Header from '../../header/Header';
+import Banner from '../../banner/Banner';
 
 import './Home.scss';
 import '../../../style/_fonts.scss';
 
 import photo from '../../../assets/images/0.jpg';
-import Header from '../../header/Header';
 
 export default function Home() {
   return (
@@ -35,9 +36,7 @@ export default function Home() {
                 alt="Portrait"
               />
             </div>
-            <div className="text-fields ml-md-4 mr-md-4 pt-4">
-              <p className="mt-2 high-light">WELCOME</p>
-            </div>
+            <Banner title="WELCOME" />
           </div>
         </div>
       </div>

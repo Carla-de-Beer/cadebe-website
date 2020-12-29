@@ -61,17 +61,6 @@
     }
   }
 
-  .high-light {
-    @extend %base-high-light;
-  }
-
-  @media screen and (max-width: 900px) {
-    .high-light {
-      @extend .high-light;
-      @include font-size-large-3;
-    }
-  }
-
   .high-light-1 {
     font-weight: bold;
     color: $paragraph-gray-2;

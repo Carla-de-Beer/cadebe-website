@@ -17,17 +17,6 @@
     @include font-size-large-1;
   }
 
-  .high-light {
-    @extend %base-high-light;
-  }
-
-  @media screen and (max-width: 900px) {
-    .high-light {
-      @extend .high-light;
-      @include font-size-large-3;
-    }
-  }
-
   .card-tile {
     width: 50%;
     margin: 0 auto;
@@ -74,13 +63,6 @@
       display: block;
       float: none;
       width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    .high-light {
-      @extend .high-light;
-      @include font-size-large-3;
     }
   }
 

@@ -1,0 +1,22 @@
+@import 'src/style/colors';
+@import 'src/style/fonts';
+@import 'src/style/common';
+
+.banner-wrapper {
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  .high-light {
+    @extend %base-high-light;
+  }
+
+  @media screen and (max-width: 900px) {
+    .high-light {
+      @extend .high-light;
+      @include font-size-large-3;
+    }
+  }
+
+}
