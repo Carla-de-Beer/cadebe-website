@@ -9,8 +9,6 @@ Website to showcase current and previous development projects. Built with React,
 * [x] Complete About Page
 * [x] Add header
 * [x] Add footer
-* [ ] Add Project Page sorting option
-* [ ] Add News Page sorting option
 * [x] Convert to responsive design (mobile, tablet and desktop)
 * [ ] Check cross-browser compatibility
 * [x] Add linting rules

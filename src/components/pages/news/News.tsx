@@ -8,7 +8,6 @@ import './News.scss';
 
 import awsCert from '../../../assets/images/aws-certificate.png';
 import awsCertManager from '../../../assets/images/aws-image.png';
-import courseraCert from '../../../assets/images/coursera-certificate.png';
 
 export default class News extends React.Component {
     setLayoutDesktop = () => (
@@ -16,17 +15,17 @@ export default class News extends React.Component {
         {this.setCommon()}
 
         <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
-          <div className="row">
-            <div className="col-8 mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingRight: '10px' }}>
-              <div id="first-card" className="block-1">
+          <div className="row" style={{ height: '100%' }}>
+            <div className="col-6 mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingRight: '10px' }}>
+              <div className="block-1">
                 {this.makeCard1()}
+              </div>
+              <div className="mt-3 block-2">
+                {this.makeCard2()}
               </div>
             </div>
             <div className="col mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingLeft: 0, marginLeft: '-10px' }}>
-              <div className="ml-3 block-2">
-                {this.makeCard2()}
-              </div>
-              <div className="mt-3 ml-3 block-4">
+              <div className="ml-3 block-3">
                 {this.makeCard3()}
               </div>
             </div>
@@ -35,13 +34,13 @@ export default class News extends React.Component {
 
         <div className="mt-5">
           <div className="row">
-            <div className="col ml-3 block-3">
+            <div className="col ml-3 block-4">
               {this.makeCard4()}
             </div>
-            <div className="col ml-3 block-3">
+            <div className="col ml-3 block-4">
               {this.makeCard5()}
             </div>
-            <div className="col ml-3 block-3 mr-3">
+            <div className="col ml-3 block-4 mr-3">
               {this.makeCard6()}
             </div>
           </div>
@@ -73,10 +72,10 @@ export default class News extends React.Component {
 
         <div className="mt-3">
           <div className="row">
-            <div className="col ml-3 block-3">
+            <div className="col ml-3 block-4">
               {this.makeCard3()}
             </div>
-            <div className="col ml-3 mr-3 block-3">
+            <div className="col ml-3 mr-3 block-4">
               {this.makeCard4()}
             </div>
           </div>
@@ -84,10 +83,10 @@ export default class News extends React.Component {
 
         <div className="mt-3">
           <div className="row">
-            <div className="col ml-3 block-3">
+            <div className="col ml-3 block-4">
               {this.makeCard5()}
             </div>
-            <div className="col ml-3 mr-3 block-3">
+            <div className="col ml-3 mr-3 block-4">
               {this.makeCard6()}
             </div>
           </div>
@@ -201,28 +200,24 @@ export default class News extends React.Component {
     makeCard1 = () => (
       <a
         className="no-link"
-        href="https://medium.com/@carla.debeer.uk/creating-a-static-website-with-aws-s3-and-cloudfront-963e9825028a"
+        href="https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/aop-demo"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Card className="p-3 news-card">
           <Card.Body>
             <Card.Title>
-              Creating a ReactJS Static Website with AWS S3 and
-              CloudFront
+              AOP and the Spring Framework
             </Card.Title>
-            <Card.Subtitle className="mt-3 sub-title">2 SEPTEMBER 2020</Card.Subtitle>
+            <Card.Subtitle className="mt-3 sub-title">11 OCTOBER 2020</Card.Subtitle>
             <Card.Text className="mt-3">
-              There are numerous online articles that describe how to configure AWS S3 in
-              order to host a static website.
-              In fact S3 makes this quite easy.
-              However, many of these articles do not necessarily follow best practices,
-              especially in terms of security requirements.
-              And there are also a number of gotchas along the way to keep an eye on.
-              I built a simple React JS website and deployed it onto AWS. This is how I did
-              it.
+              Aspect Oriented Programming has always felt inaccessible,
+              partly due to the opaque-sounding terminology.
+              Actually, it is quite simple and a really powerful tool.
+              I built a demo example using the SpringFramework,
+              and listed the terminology with practical explanations.
+              Doing is understanding!
             </Card.Text>
-            <Card.Img className="mt-3" src={awsCertManager} alt="Project Image" />
           </Card.Body>
         </Card>
       </a>
@@ -253,6 +248,65 @@ export default class News extends React.Component {
     makeCard3 = () => (
       <a
         className="no-link"
+        href="https://medium.com/@carla.debeer.uk/creating-a-static-website-with-aws-s3-and-cloudfront-963e9825028a"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Card className="p-3 news-card">
+          <Card.Body>
+            <Card.Title>
+              Creating a ReactJS Static Website with AWS S3 and
+              CloudFront
+            </Card.Title>
+            <Card.Subtitle className="mt-3 sub-title">2 SEPTEMBER 2020</Card.Subtitle>
+            <Card.Text className="mt-3">
+              There are numerous online articles that describe how to configure AWS S3 in
+              order to host a static website.
+              In fact S3 makes this quite easy.
+              However, many of these articles do not necessarily follow best practices,
+              especially in terms of security requirements.
+              And there are also a number of gotchas along the way to keep an eye on.
+              I built a simple React JS website and deployed it onto AWS. This is how I did
+              it.
+            </Card.Text>
+            {(window.innerWidth.valueOf() <= 400 || window.innerWidth.valueOf() > 1124)
+                    && <Card.Img className="mt-3" src={awsCertManager} alt="AWS" />}
+          </Card.Body>
+        </Card>
+      </a>
+    )
+
+    makeCard4 = () => (
+      <a
+        className="no-link"
+        href="https://cadebe.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Card className="p-3 news-card">
+          <Card.Body>
+            <Card.Title>
+              Website Live
+            </Card.Title>
+            <Card.Subtitle className="mt-3 sub-title">31 JULY 2020</Card.Subtitle>
+            <Card.Text className="mt-3">
+              <span className="highlighted-text">cadebe.dev</span>
+              {' '}
+              went live today!
+              <br />
+              <br />
+              What started off as an experiment on how to upload content to AWS S3 and
+              integrating an SSL certificate with AWS CloudFront, gradually morphed into a
+              website.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </a>
+    )
+
+    makeCard5 = () => (
+      <a
+        className="no-link"
         href="https://www.coursera.org/account/accomplishments/specialization/certificate/54T2J5Z5KWCN"
         target="_blank"
         rel="noopener noreferrer"
@@ -278,40 +332,12 @@ export default class News extends React.Component {
                 <li>Sequences, Time Series and Prediction</li>
               </ul>
             </Card.Text>
-            {(window.innerWidth.valueOf() > 1124)
-                    && <Card.Img className="mt-3" src={courseraCert} alt="Project Image" />}
           </Card.Body>
         </Card>
       </a>
     )
 
-    makeCard4 = () => (
-      <a
-        className="no-link"
-        href="https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/aop-demo"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Card className="p-3 news-card">
-          <Card.Body>
-            <Card.Title>
-              AOP and the Spring Framework
-            </Card.Title>
-            <Card.Subtitle className="mt-3 sub-title">11 OCTOBER 2020</Card.Subtitle>
-            <Card.Text className="mt-3">
-              Aspect Oriented Programming has always felt inaccessible,
-              partly due to the opaque-sounding terminology.
-              Actually, it is quite simple and a really powerful tool.
-              I built a demo example using the SpringFramework,
-              and listed the terminology with practical explanations.
-              Doing is understanding!
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </a>
-    )
-
-    makeCard5 = () => (
+    makeCard6 = () => (
       <a
         className="no-link"
         href="https://medium.com/@carla.debeer.uk/essential-anaconda-setup-kit-4b7e1fb803fc"
@@ -327,34 +353,6 @@ export default class News extends React.Component {
             <Card.Text className="mt-3">
               This article describes the essential steps required for installing Anaconda and
               creating a conda environment on a Unix-based OS.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </a>
-    )
-
-    makeCard6 = () => (
-      <a
-        className="no-link"
-        href="https://cadebe.dev"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Card className="p-3 news-card">
-          <Card.Body>
-            <Card.Title>
-              Website Live
-            </Card.Title>
-            <Card.Subtitle className="mt-3 sub-title">31 JULY 2020</Card.Subtitle>
-            <Card.Text className="mt-3">
-              <span className="highlighted-text">cadebe.dev</span>
-              {' '}
-              went live today!
-              <br />
-              <br />
-              What started off as an experiment on how to upload content to AWS S3 and
-              integrating an SSL certificate with AWS CloudFront, gradually morphed into a
-              website.
             </Card.Text>
           </Card.Body>
         </Card>
