@@ -10,9 +10,19 @@
 
   box-sizing: revert;
 
-  .card {
-    background-color: $warm-grey-1;
-    border: 0.5px solid $warm-grey-3;
+  @media screen and (max-width: 400px) {
+    .card {
+      background-color: $warm-grey-1;
+      border: 0.5px solid $warm-grey-3;
+    }
+  }
+
+  @media screen and (min-width: 401px) {
+    .card {
+      background-color: $warm-grey-1;
+      border: 0.5px solid $warm-grey-3;
+      height: 100%;
+    }
   }
 
   .card-title {
@@ -24,19 +34,12 @@
   }
 
   @media screen and (min-width: 768px) {
-    div.middle-card {
-      margin-left: -20px;
-      margin-right: -20px;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
     div.left-card {
       margin-right: -18px;
     }
 
     div.right-card {
-      margin-left: -18px;
+      margin-left: -20px;
     }
   }
 
