@@ -35,25 +35,19 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xxl-4 p-lg-4 p-md-4 p-3">
+        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
           <Card.Img src={TSPImage} alt="Project Image" />
           <Card.Body>
             <Card.Title>TSP Distance Calculator</Card.Title>
             <Card.Text>
               This project demonstrates the use of a genetic algorithm to find an
-              optimised
-              solution to the Travelling Salesman Problem. The program dynamically reads
-              in
-              city
-              data from a file and calculates the shortest distance it can find, linking
-              all
-              cities. The actual physical distance on the route, calculated as the
-              Haversine
+              optimised solution to the Travelling Salesman Problem.
+              The program dynamically reads in city
+              data from a file and calculates the shortest distance it can find, linking all
+              cities. The actual physical distance on the route, calculated as the Haversine
               distance, is also shown. Specifiable genetic algorithm parameters include
-              the
-              crossover rate, mutation rate, population size, max. no. iterations and
-              elitism
-              generation gap.
+              the crossover rate, mutation rate, population size,
+              max. no. iterations and elitism generation gap.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -105,7 +99,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xxl-4 p-lg-4 p-md-4 p-3">
+        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
           <Card.Img src={cnn} alt="Project Image" />
           <Card.Body>
             <Card.Title>CNN Landscape Classifier</Card.Title>
@@ -142,20 +136,14 @@ export default class Projects extends React.Component {
             <Card.Title>Neural Network Matrix Visualisation</Card.Title>
             <Card.Text>
               Artificial neural networks operate on a highly non-linear model and are
-              typically
-              described as &quot;black boxes&quot;. This project is an attempt to peer
-              into
-              the
-              black box model by visualising the weight changes affecting the hidden
-              neurons,
-              as well as the hidden neuron matrices themselves. A simple three-layer
-              feedforward neural network was set up to differentiate between two
-              classes
-              of images: cartoons and photographs. From this study it became clear
-              that
-              there appears to be a general visual pattern to the hidden matrices of
-              each
-              of the image sets provided.
+              typically described as &quot;black boxes&quot;.
+              This project is an attempt to peer
+              into the black box model by visualising the weight changes
+              affecting the hidden neurons, as well as the hidden neuron matrices themselves.
+              A simple three-layer feedforward neural network was set up to differentiate
+              between two classes of images: cartoons and photographs.
+              From this study it became clear that there appears to be a general visual pattern
+              to the hidden matrices of each of the image sets provided.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -178,7 +166,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xxl-4 p-lg-4 p-md-4 p-3">
+        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
           <Card.Img src={naive} alt="Project Image" />
           <Card.Body>
             <Card.Title>Naive Bayes Text Classifier</Card.Title>
@@ -242,12 +230,9 @@ export default class Projects extends React.Component {
           <Card.Body>
             <Card.Title>Shape Mapping</Card.Title>
             <Card.Text>
-              This project demonstrates how a self-organising map (SOM), a type of
-              artificial
+              This project demonstrates how a self-organising map (SOM), a type of artificial
               neural network also known as a Kohonen map, maps a randomised 2D mesh
-              over a
-              3D
-              point cloud.
+              over a 3D point cloud.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -276,11 +261,8 @@ export default class Projects extends React.Component {
             <Card.Title>Self-Organising Structure</Card.Title>
             <Card.Text>
               Randomised autonomous agents self-organise to build a structured pattern
-              based
-              on
-              their ability to seek out a target and to adjust their velocity and
-              acceleration
-              accordingly.
+              based on their ability to seek out a target and to adjust their velocity
+              and acceleration accordingly.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -303,7 +285,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xxl-4 p-lg-4 p-md-4 p-3">
+        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
           <Card.Img variant="bottom" src={fourier} alt="Project Image" />
           <Card.Body>
             <Card.Title>Discrete Fourier Transformation of a Heart Curve</Card.Title>
@@ -363,9 +345,7 @@ export default class Projects extends React.Component {
         </div>
         <div
           className="card-tile text-fields mt-5"
-          style={{
-            width: '80%',
-          }}
+          style={{ width: '80%' }}
         >
           <p>
             This is a selection of my own projects
