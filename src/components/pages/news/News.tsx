@@ -167,7 +167,7 @@ export default class News extends React.Component {
         <div className="mt-4">
           <div className="card-tile text-fields" style={{ width: '80%' }}>
             <div className="text-fields mt-5">
-              {window.innerWidth.valueOf() >= 450
+              {window.innerWidth.valueOf() >= 576
                 ? <p className="high-light-1">Software Development • Machine Learning</p> : (
                   <div>
                     <p className="high-light-1">Software Development</p>
@@ -188,10 +188,10 @@ export default class News extends React.Component {
     );
 
     setPageLayout() {
-      if (window.innerWidth.valueOf() <= 400) {
+      if (window.innerWidth.valueOf() <= 576) {
         return this.setLayoutMobile();
       }
-      if (window.innerWidth.valueOf() > 400 && window.innerWidth.valueOf() < 1124) {
+      if (window.innerWidth.valueOf() > 576 && window.innerWidth.valueOf() < 1025) {
         return this.setLayoutTablet();
       }
       return this.setLayoutDesktop();
@@ -211,11 +211,11 @@ export default class News extends React.Component {
             </Card.Title>
             <Card.Subtitle className="mt-3 sub-title">11 OCTOBER 2020</Card.Subtitle>
             <Card.Text className="mt-3">
-              Aspect Oriented Programming has always felt inaccessible,
-              partly due to the opaque-sounding terminology.
+              Aspect Oriented Programming (AOP) has been around for a while
+              but has always felt inaccessible, partly due to the opaque-sounding terminology.
               Actually, it is quite simple and a really powerful tool.
               I built a demo example using the SpringFramework,
-              and listed the terminology with practical explanations.
+              and illustrated the terminology with practical explanations.
               Doing is understanding!
             </Card.Text>
           </Card.Body>
@@ -237,7 +237,7 @@ export default class News extends React.Component {
             </Card.Title>
             <Card.Subtitle className="mt-3 sub-title">23 SEPTEMBER 2020</Card.Subtitle>
             <Card.Text className="mt-3">
-              Passed the AWS Developer Associate Examination
+              Passed the AWS Developer Associate Examination.
             </Card.Text>
             <Card.Img className="mt-3" src={awsCert} alt="Project Image" />
           </Card.Body>
@@ -261,15 +261,13 @@ export default class News extends React.Component {
             <Card.Subtitle className="mt-3 sub-title">2 SEPTEMBER 2020</Card.Subtitle>
             <Card.Text className="mt-3">
               There are numerous online articles that describe how to configure AWS S3 in
-              order to host a static website.
-              In fact S3 makes this quite easy.
+              order to host a static website. In fact S3 makes this quite easy.
               However, many of these articles do not necessarily follow best practices,
               especially in terms of security requirements.
               And there are also a number of gotchas along the way to keep an eye on.
-              I built a simple React JS website and deployed it onto AWS. This is how I did
-              it.
+              I built a simple React JS website and deployed it onto AWS. This is how I did it.
             </Card.Text>
-            {(window.innerWidth.valueOf() <= 400 || window.innerWidth.valueOf() > 1124)
+            {(window.innerWidth.valueOf() <= 576 || window.innerWidth.valueOf() > 1025)
                     && <Card.Img className="mt-3" src={awsCertManager} alt="AWS" />}
           </Card.Body>
         </Card>

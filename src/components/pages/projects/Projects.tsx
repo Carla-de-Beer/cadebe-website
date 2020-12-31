@@ -21,7 +21,7 @@ import fourier from '../../../assets/images/FourierTransformHeart.gif';
 
 export default class Projects extends React.Component {
   setPageLayout() {
-    if (window.innerWidth.valueOf() <= 400) {
+    if (window.innerWidth.valueOf() <= 768) {
       return this.setLayoutMobile();
     }
 
@@ -75,8 +75,7 @@ export default class Projects extends React.Component {
           <Card.Body>
             <Card.Title>ISS Tracker</Card.Title>
             <Card.Text>
-              A real-time 2D tracker for the International Space
-              Station.
+              A real-time 2D tracker for the International Space Station.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -104,10 +103,8 @@ export default class Projects extends React.Component {
           <Card.Body>
             <Card.Title>CNN Landscape Classifier</Card.Title>
             <Card.Text>
-              A convolutional neural network built with TensorFlow/Keras to allow for
-              landscape
-              classification based on one of three categories: desert, forest and
-              polar.
+              A convolutional neural network built with TensorFlow/Keras to allow for landscape
+              classification based on one of three categories: desert, forest and polar.
             </Card.Text>
           </Card.Body>
           <Card.Footer>
@@ -368,52 +365,52 @@ export default class Projects extends React.Component {
           {this.setCommon()}
           <CardColumns className="mt-4">
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard1()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard2()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard3()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard4()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard5()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard6()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard7()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard8()}
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard9()}
               </Col>
             </Row>
             <Row style={{ marginBottom: '-15px' }}>
-              <Col className="mt-2">
+              <Col className="mt-3">
                 {this.makeCard10()}
               </Col>
             </Row>

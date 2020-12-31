@@ -9,7 +9,7 @@ import twitter from '../../assets/icons/Twitter_1.svg';
 
 export default class Footer extends React.Component {
     setNavHeader = () => {
-      if (window.innerWidth.valueOf() < 1024) {
+      if (window.innerWidth.valueOf() < 768) {
         return (
           <div>
             <Badge className="badge badge-pill badge-secondary">Machine Learning</Badge>
