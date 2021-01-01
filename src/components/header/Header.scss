@@ -3,6 +3,14 @@
 
 .header-wrapper {
 
+  a:active {
+    color: $button-background;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
   button.dropdown-toggle.btn.btn-primary {
     color: $paragraph-gray-2;
     background-color: $white;
@@ -26,14 +34,6 @@
   .link-high-light {
     text-decoration: none;
     color: $paragraph-gray-2 !important;
-  }
-
-  a:active {
-    color: $button-background;
-  }
-
-  a:hover {
-    text-decoration: none;
   }
 
   .name-text {

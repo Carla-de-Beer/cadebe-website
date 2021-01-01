@@ -3,6 +3,7 @@
 @import 'src/style/common';
 
 .news-wrapper {
+
   body {
     padding: 0;
     position: relative;
@@ -16,25 +17,9 @@
     @include font-size-large-1;
   }
 
-  .card-title {
-    color: $header-grey;
-  }
-
-  .sub-title {
-    @include font-size-medium;
-    color: $accent-gray;
-    font-weight: bold;
-  }
-
-  @media all and (max-width: 768px) {
-    .high-light {
-      @extend .high-light;
-      @include font-size-large-3;
-    }
-  }
-
-  .text-fields {
-    @extend %base-text-fields;
+  p.card-text {
+    @extend .font-size-standard;
+    color: $dark-accent-2;
   }
 
   .card-tile {
@@ -51,9 +36,18 @@
     }
   }
 
-  p.card-text {
-    @extend .font-size-standard;
-    color: $dark-accent-2;
+  .card-title {
+    color: $header-grey;
+  }
+
+  .sub-title {
+    @include font-size-medium;
+    color: $accent-gray;
+    font-weight: bold;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
   }
 
   .text-fields {
@@ -76,32 +70,6 @@
   .high-light-1 {
     font-weight: bold;
     color: $paragraph-gray-2;
-  }
-
-  @media all and (min-width: 769px) {
-    .high-light-1 {
-      @include font-size-large-2;
-      font-weight: bold;
-      color: $paragraph-gray-2;
-      margin: unset;
-    }
-  }
-
-  @media all and (max-width: 768px) {
-    .high-light-1 {
-      @include font-size-large-1;
-      font-weight: bold;
-      color: $paragraph-gray-2;
-      margin: unset;
-    }
-  }
-
-  @media all and (max-width: 768px) {
-    .box {
-      display: block;
-      float: none;
-      width: 100%;
-    }
   }
 
   .highlighted-text {
@@ -128,6 +96,35 @@
   .block-mobile {
     height: 100%;
     padding: 0;
+  }
+
+  @media all and (min-width: 769px) {
+    .high-light-1 {
+      @include font-size-large-2;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+
+    .high-light {
+      @extend .high-light;
+      @include font-size-large-3;
+    }
+
+    .high-light-1 {
+      @include font-size-large-1;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
   }
 
 }

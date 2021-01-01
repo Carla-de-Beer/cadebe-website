@@ -13,19 +13,6 @@
     height: 100%;
   }
 
-  p {
-    @include font-size-large-1;
-  }
-
-  .card {
-    background-color: $white;
-    border: none;
-  }
-
-  .text-fields {
-    @extend %base-text-fields;
-  }
-
   h1, h2, h3 {
     @extend .font-style-default;
     color: $header-grey;
@@ -40,15 +27,13 @@
 
   p {
     @extend .font-style-default;
+    @include font-size-large-1;
     color: $paragraph-gray-2;
   }
 
-  .text-fields {
-    text-align: center;
-  }
-
-  .header-text {
-    font-size: 45px !important;
+  .card {
+    background-color: $white;
+    border: none;
   }
 
   .card-text {
@@ -67,6 +52,18 @@
       color: $header-grey;
       font-weight: bold;
     }
+  }
+
+  .header-text {
+    font-size: 45px !important;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  .text-fields {
+    text-align: center;
   }
 
   @media all and (max-width: 768px) {

@@ -9,8 +9,8 @@
     color: $paragraph-gray-2;
   }
 
-  .text-fields {
-    text-align: center;
+  .footer-style {
+    border-top: 0.75px dashed $dark-accent;
   }
 
   .footer-text {
@@ -21,12 +21,12 @@
     color: $paragraph-gray-2;
   }
 
-  .typewriter-text {
-    @extend .font-style-accent;
+  .text-fields {
+    text-align: center;
   }
 
-  .footer-style {
-    border-top: 0.75px dashed $dark-accent;
+  .typewriter-text {
+    @extend .font-style-accent;
   }
 
   .badge-secondary {

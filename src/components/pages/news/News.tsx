@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 import Header from '../../header/Header';
 import Banner from '../../banner/Banner';
+import PageSize from '../../../util/Enums';
 
 import './News.scss';
 
@@ -167,7 +168,7 @@ export default class News extends React.Component {
         <div className="mt-4">
           <div className="card-tile text-fields" style={{ width: '80%' }}>
             <div className="text-fields mt-5">
-              {window.innerWidth.valueOf() >= 576
+              {window.innerWidth.valueOf() >= PageSize.SMALL
                 ? <p className="high-light-1">Software Development • Machine Learning</p> : (
                   <div>
                     <p className="high-light-1">Software Development</p>
@@ -188,10 +189,10 @@ export default class News extends React.Component {
     );
 
     setPageLayout() {
-      if (window.innerWidth.valueOf() <= 576) {
+      if (window.innerWidth.valueOf() <= PageSize.SMALL) {
         return this.setLayoutMobile();
       }
-      if (window.innerWidth.valueOf() > 576 && window.innerWidth.valueOf() < 1025) {
+      if (window.innerWidth.valueOf() > PageSize.SMALL && window.innerWidth.valueOf() < PageSize.LARGE) {
         return this.setLayoutTablet();
       }
       return this.setLayoutDesktop();
@@ -267,7 +268,7 @@ export default class News extends React.Component {
               And there are also a number of gotchas along the way to keep an eye on.
               I built a simple React JS website and deployed it onto AWS. This is how I did it.
             </Card.Text>
-            {(window.innerWidth.valueOf() <= 576 || window.innerWidth.valueOf() > 1025)
+            {(window.innerWidth.valueOf() <= PageSize.SMALL || window.innerWidth.valueOf() > PageSize.LARGE)
                     && <Card.Img className="mt-3" src={awsCertManager} alt="AWS" />}
           </Card.Body>
         </Card>

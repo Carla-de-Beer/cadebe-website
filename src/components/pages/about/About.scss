@@ -31,24 +31,6 @@
     }
   }
 
-  @media all and (max-width: 768px) {
-    .high-light-1 {
-      @include font-size-large-1;
-      font-weight: bold;
-      color: $paragraph-gray-2;
-      margin: unset;
-    }
-  }
-
-  @media all and (min-width: 769px) {
-    .high-light-1 {
-      @include font-size-large-2;
-      font-weight: bold;
-      color: $paragraph-gray-2;
-      margin: unset;
-    }
-  }
-
   .text-fields {
     @extend %base-text-fields;
   }
@@ -63,6 +45,22 @@
       display: block;
       float: none;
       width: 100%;
+    }
+
+    .high-light-1 {
+      @include font-size-large-1;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
+  }
+
+  @media all and (min-width: 769px) {
+    .high-light-1 {
+      @include font-size-large-2;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
     }
   }
 

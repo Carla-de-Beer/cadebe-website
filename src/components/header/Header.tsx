@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import PageSize from '../../util/Enums';
 
 import './Header.scss';
 
@@ -135,7 +136,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
     )
 
     setNavHeader = () => {
-      if (window.innerWidth.valueOf() < 1025) {
+      if (window.innerWidth.valueOf() < PageSize.LARGE) {
         return this.setHeaderLayoutMobile(this.state.pageType);
       }
       return this.setHeaderLayoutLarge(this.state.pageType);

@@ -4,95 +4,18 @@
 
 .projects-wrapper {
 
-  p {
-    @include font-size-large-1;
-  }
-
   box-sizing: revert;
 
-  @media all and (max-width: 768px) {
-    .card {
-      background-color: $warm-grey-1;
-      border: 0.5px solid $warm-grey-3;
-    }
-  }
-
-  @media all and (min-width: 769px) {
-    .card {
-      background-color: $warm-grey-1;
-      border: 0.5px solid $warm-grey-3;
-      height: 100%;
-    }
+  p {
+    @include font-size-large-1;
   }
 
   .card-title {
     color: $header-grey;
   }
 
-  .text-fields {
-    @extend %base-text-fields;
-  }
-
-  @media all and (min-width: 769px) {
-    div.left-card {
-      margin-right: -20px;
-    }
-
-    div.right-card {
-      margin-left: -20px;
-    }
-  }
-
-  p.card-text {
-    @extend .font-size-standard;
-  }
-
-  .no-link {
-    color: $dark-accent-2;
-    text-decoration: none;
-  }
-
-  @media all and (max-width: 768px) {
-    .box {
-      display: block;
-      float: none;
-      width: 100%;
-    }
-  }
-
-  .high-light-1 {
-    font-weight: bold;
-    color: $paragraph-gray-2;
-  }
-
-  @media all and (min-width: 769px) {
-    .high-light-1 {
-      @include font-size-large-2;
-      font-weight: bold;
-      color: $paragraph-gray-2;
-      margin: unset;
-    }
-  }
-
-  @media all and (max-width: 768px) {
-    .high-light-1 {
-      @include font-size-large-1;
-      font-weight: bold;
-      color: $paragraph-gray-2;
-      margin: unset;
-    }
-  }
-
-  *, ::after, ::before {
-    box-sizing: content-box;
-  }
-
   .card-footer {
     border-top: none;
-  }
-
-  .text-fields {
-    @extend %base-text-fields;
   }
 
   .card-tile {
@@ -106,6 +29,87 @@
       @include font-size-large-1;
       color: $header-grey;
       font-weight: bold;
+    }
+  }
+
+  p.card-text {
+    @extend .font-size-standard;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  .no-link {
+    color: $dark-accent-2;
+    text-decoration: none;
+  }
+
+  .high-light-1 {
+    font-weight: bold;
+    color: $paragraph-gray-2;
+  }
+
+  *, ::after, ::before {
+    box-sizing: content-box;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  @media all and (max-width: 768px) {
+    .card {
+      background-color: $warm-grey-1;
+      border: 0.5px solid $warm-grey-3;
+    }
+
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+
+    .card-style {
+      padding: 1.0rem;
+    }
+
+    .high-light-1 {
+      @include font-size-large-1;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
+    }
+  }
+
+  @media all and (min-width: 769px) {
+    .card {
+      background-color: $warm-grey-1;
+      border: 0.5px solid $warm-grey-3;
+      height: 100%;
+    }
+
+    div.left-card {
+      margin-right: -1.4rem;
+    }
+
+    div.right-card {
+      margin-left: -1.4rem;
+    }
+
+    div.project-card {
+      margin-top: 1.25rem;
+    }
+
+    .card-style {
+      padding: 1.3rem;
+    }
+
+    .high-light-1 {
+      @include font-size-large-2;
+      font-weight: bold;
+      color: $paragraph-gray-2;
+      margin: unset;
     }
   }
 

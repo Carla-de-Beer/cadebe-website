@@ -4,6 +4,8 @@
     "es2020": true
   },
   "globals": {
+    "IBannerProps": "readonly",
+    "IBannerState": "writable",
     "IHeaderProps": "readonly",
     "IHeaderState": "writable"
   },

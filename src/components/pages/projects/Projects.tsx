@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import CardColumns from 'react-bootstrap/CardDeck';
 import Banner from '../../banner/Banner';
 import Header from '../../header/Header';
+import PageSize from '../../../util/Enums';
 
 import './Projects.scss';
 
@@ -21,7 +22,7 @@ import fourier from '../../../assets/images/FourierTransformHeart.gif';
 
 export default class Projects extends React.Component {
   setPageLayout() {
-    if (window.innerWidth.valueOf() <= 768) {
+    if (window.innerWidth.valueOf() <= PageSize.MEDIUM) {
       return this.setLayoutMobile();
     }
 
@@ -35,7 +36,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img src={TSPImage} alt="Project Image" />
           <Card.Body>
             <Card.Title>TSP Distance Calculator</Card.Title>
@@ -70,7 +71,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img src={ISSImage} alt="Project Image" />
           <Card.Body>
             <Card.Title>ISS Tracker</Card.Title>
@@ -98,7 +99,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img src={cnn} alt="Project Image" />
           <Card.Body>
             <Card.Title>CNN Landscape Classifier</Card.Title>
@@ -127,7 +128,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img src={matrix} alt="Project Image" />
           <Card.Body>
             <Card.Title>Neural Network Matrix Visualisation</Card.Title>
@@ -163,7 +164,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img src={naive} alt="Project Image" />
           <Card.Body>
             <Card.Title>Naive Bayes Text Classifier</Card.Title>
@@ -192,7 +193,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img variant="bottom" src={letterFrequencies} alt="Project Image" />
           <Card.Body>
             <Card.Title>Letter Frequency Calculator</Card.Title>
@@ -222,7 +223,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img variant="bottom" src={som} alt="Project Image" />
           <Card.Body>
             <Card.Title>Shape Mapping</Card.Title>
@@ -252,7 +253,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img src={selfOrganising} alt="Project Image" />
           <Card.Body>
             <Card.Title>Self-Organising Structure</Card.Title>
@@ -282,7 +283,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img variant="bottom" src={fourier} alt="Project Image" />
           <Card.Body>
             <Card.Title>Discrete Fourier Transformation of a Heart Curve</Card.Title>
@@ -311,7 +312,7 @@ export default class Projects extends React.Component {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Card className="p-xl-4 p-lg-4 p-md-4 p-3">
+        <Card className="card-style">
           <Card.Img src={imageSegmentation} alt="Project Image" />
           <Card.Body>
             <Card.Title>Image Segmentation with K-Nearest Neighbour</Card.Title>
@@ -364,53 +365,53 @@ export default class Projects extends React.Component {
         <div className="projects-wrapper">
           {this.setCommon()}
           <CardColumns className="mt-4">
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard1()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard2()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard3()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard4()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard5()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard6()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard7()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard8()}
               </Col>
             </Row>
-            <Row>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3">
+              <Col>
                 {this.makeCard9()}
               </Col>
             </Row>
-            <Row style={{ marginBottom: '-15px' }}>
-              <Col className="mt-3">
+            <Row className="mt-sm-3 mt-md-3" style={{ marginBottom: '-15px' }}>
+              <Col>
                 {this.makeCard10()}
               </Col>
             </Row>
@@ -424,51 +425,51 @@ export default class Projects extends React.Component {
         <Header pageType="projects" />
         <div className="projects-wrapper">
           {this.setCommon()}
-          <CardColumns className="mt-xl-4 mt-lg-4 mt-md-4">
+          <CardColumns className="project-card">
             <Row>
-              <Col className="mt-xl-4 mt-lg-4 mt-md-4 left-card">
+              <Col className="project-card left-card">
                 {this.makeCard1()}
               </Col>
-              <Col className="mt-xl-4 mt-lg-4 mt-md-4 right-card">
+              <Col className="project-card right-card">
                 {this.makeCard2()}
               </Col>
             </Row>
-            <div className="mt-xl-4 mt-lg-4 mt-md-4">
-              <Row className="mt-xl-4 mt-lg-4 mt-md-4">
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 left-card">
+            <div className="project-card">
+              <Row className="project-card">
+                <Col className="project-card left-card">
                   {this.makeCard3()}
                 </Col>
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 right-card">
+                <Col className="project-card right-card">
                   {this.makeCard4()}
                 </Col>
               </Row>
             </div>
-            <div className="mt-xl-4 mt-lg-4 mt-md-4">
-              <Row className="mt-xl-4 mt-lg-4 mt-md-4">
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 left-card">
+            <div className="project-card">
+              <Row className="project-card">
+                <Col className="project-card left-card">
                   {this.makeCard5()}
                 </Col>
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 right-card">
+                <Col className="project-card right-card">
                   {this.makeCard6()}
                 </Col>
               </Row>
             </div>
-            <div className="mt-xl-4 mt-lg-4 mt-md-4">
-              <Row className="mt-xl-4 mt-lg-4 mt-md-4">
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 left-card">
+            <div className="project-card">
+              <Row className="project-card">
+                <Col className="project-card left-card">
                   {this.makeCard7()}
                 </Col>
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 right-card">
+                <Col className="project-card right-card">
                   {this.makeCard8()}
                 </Col>
               </Row>
             </div>
-            <div className="mt-xl-4 mt-lg-4 mt-md-4">
-              <Row className="mt-xl-4 mt-lg-4 mt-md-4">
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 left-card">
+            <div className="project-card">
+              <Row className="project-card">
+                <Col className="project-card left-card">
                   {this.makeCard9()}
                 </Col>
-                <Col className="mt-xl-4 mt-lg-4 mt-md-4 right-card">
+                <Col className="project-card right-card">
                   {this.makeCard10()}
                 </Col>
               </Row>
