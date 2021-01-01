@@ -25,12 +25,12 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
               <img src={logo} width="60" height="60" alt="Logo" />
             </Link>
           </div>
-          <div className="col-lg-8 col-md-9 col-7">
+          <div className="col-lg-9 col-md-9 col-7">
             <Link to="/">
               <p className="mt-3 nav-text logo-accent">cadebe.dev</p>
             </Link>
           </div>
-          <div className="mt-2 col-lg-2 col-md-1 col-2">
+          <div className="mt-2 col-lg-1 col-md-1 col-2 pl-lg-5 pl-md-4 pl-4">
             <DropdownButton
               menuAlign="right"
               className="menu-button"
