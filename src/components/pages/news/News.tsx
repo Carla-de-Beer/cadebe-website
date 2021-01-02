@@ -192,7 +192,8 @@ export default class News extends React.Component {
       if (window.innerWidth.valueOf() <= PageSize.SMALL) {
         return this.setLayoutMobile();
       }
-      if (window.innerWidth.valueOf() > PageSize.SMALL && window.innerWidth.valueOf() < PageSize.LARGE) {
+      if (window.innerWidth.valueOf() > PageSize.SMALL
+            && window.innerWidth.valueOf() < PageSize.LARGE) {
         return this.setLayoutTablet();
       }
       return this.setLayoutDesktop();
@@ -268,7 +269,8 @@ export default class News extends React.Component {
               And there are also a number of gotchas along the way to keep an eye on.
               I built a simple React JS website and deployed it onto AWS. This is how I did it.
             </Card.Text>
-            {(window.innerWidth.valueOf() <= PageSize.SMALL || window.innerWidth.valueOf() > PageSize.LARGE)
+            {(window.innerWidth.valueOf() <= PageSize.SMALL
+                        || window.innerWidth.valueOf() > PageSize.LARGE)
                     && <Card.Img className="mt-3" src={awsCertManager} alt="AWS" />}
           </Card.Body>
         </Card>

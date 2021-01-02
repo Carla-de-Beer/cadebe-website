@@ -2,7 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CardColumns from 'react-bootstrap/CardDeck';
 import Banner from '../../banner/Banner';
 import Header from '../../header/Header';
 import PageSize from '../../../utils/enums';
