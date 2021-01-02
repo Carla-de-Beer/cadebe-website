@@ -34,8 +34,8 @@ export default function About() {
             The advent of TensorFlow and Keras have made it so much easier and faster to
             create and test models.
             I am constantly amazed at the ability these frameworks provide to
-            extract meaning from data,
-            and in a way, visualising the invisible has been something of a passion for me.
+            extract meaning from data.
+            And in a way, visualising the invisible has been something of a passion for me.
             <br />
             <br />
             If you want to get in touch, you can reach me via &nbsp;
