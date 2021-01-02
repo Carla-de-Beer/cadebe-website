@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import CardColumns from 'react-bootstrap/CardDeck';
 import Banner from '../../banner/Banner';
 import Header from '../../header/Header';
-import PageSize from '../../../util/Enums';
+import PageSize from '../../../utils/enums';
 
 import './Projects.scss';
 
@@ -360,62 +360,82 @@ export default class Projects extends React.Component {
     )
 
     setLayoutMobile = () => (
-      <div>
+      <div className="pb-3">
         <Header pageType="projects" />
         <div className="projects-wrapper">
           {this.setCommon()}
-          <CardColumns className="mt-4">
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard1()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard2()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard3()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard4()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard5()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard6()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard7()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard8()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3">
-              <Col>
-                {this.makeCard9()}
-              </Col>
-            </Row>
-            <Row className="mt-sm-3 mt-md-3" style={{ marginBottom: '-15px' }}>
-              <Col>
-                {this.makeCard10()}
-              </Col>
-            </Row>
-          </CardColumns>
+          <div className="mt-lg-2 mt-md-2 mt-2 pt-lg-2 pt-md-2 pt-3 project-card">
+            <div className="mt-3">
+              <Row className="mt-sm-4 mt-md-4">
+                <Col>
+                  {this.makeCard1()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard2()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard3()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard4()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard5()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard6()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard7()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard8()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard9()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3" style={{ marginBottom: '-15px' }}>
+                <Col>
+                  {this.makeCard10()}
+                </Col>
+              </Row>
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -425,7 +445,7 @@ export default class Projects extends React.Component {
         <Header pageType="projects" />
         <div className="projects-wrapper">
           {this.setCommon()}
-          <CardColumns className="project-card">
+          <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2 project-card">
             <Row>
               <Col className="project-card left-card">
                 {this.makeCard1()}
@@ -434,7 +454,7 @@ export default class Projects extends React.Component {
                 {this.makeCard2()}
               </Col>
             </Row>
-            <div className="project-card">
+            <div className="project-card mt-5">
               <Row className="project-card">
                 <Col className="project-card left-card">
                   {this.makeCard3()}
@@ -444,7 +464,7 @@ export default class Projects extends React.Component {
                 </Col>
               </Row>
             </div>
-            <div className="project-card">
+            <div className="project-card mt-5">
               <Row className="project-card">
                 <Col className="project-card left-card">
                   {this.makeCard5()}
@@ -454,7 +474,7 @@ export default class Projects extends React.Component {
                 </Col>
               </Row>
             </div>
-            <div className="project-card">
+            <div className="project-card mt-5">
               <Row className="project-card">
                 <Col className="project-card left-card">
                   {this.makeCard7()}
@@ -464,7 +484,7 @@ export default class Projects extends React.Component {
                 </Col>
               </Row>
             </div>
-            <div className="project-card">
+            <div className="project-card mt-5">
               <Row className="project-card">
                 <Col className="project-card left-card">
                   {this.makeCard9()}
@@ -474,7 +494,7 @@ export default class Projects extends React.Component {
                 </Col>
               </Row>
             </div>
-          </CardColumns>
+          </div>
         </div>
       </div>
     )

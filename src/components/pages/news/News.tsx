@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 import Header from '../../header/Header';
 import Banner from '../../banner/Banner';
-import PageSize from '../../../util/Enums';
+import PageSize from '../../../utils/enums';
 
 import './News.scss';
 

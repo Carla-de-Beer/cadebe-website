@@ -1,6 +1,6 @@
 import React from 'react';
 import Badge from 'react-bootstrap/Badge';
-import PageSize from '../../util/Enums';
+import PageSize from '../../utils/enums';
 
 import './Footer.scss';
 
