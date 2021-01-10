@@ -41,8 +41,8 @@
   }
 
   .sub-title {
-    @include font-size-medium;
-    color: $accent-gray;
+    @include font-size-small;
+    color: $paragraph-gray-1;
     font-weight: bold;
   }
 
