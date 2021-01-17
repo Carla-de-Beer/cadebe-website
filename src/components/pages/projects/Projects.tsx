@@ -13,8 +13,8 @@ import ISSImage from '../../../assets/images/projects/ISS.png';
 import naive from '../../../assets/images/projects/naive-bayes.png';
 import som from '../../../assets/images/projects/SOM.png';
 import matrix from '../../../assets/images/projects/matrix-1.png';
-import mushroomAutoencoder from '../../../assets/images/news/mushroom-autoencoder.png';
-import mushroomGraph from '../../../assets/images/news/mushroom-val-loss.png';
+import mushroomAutoencoder from '../../../assets/images/projects/mushroom-autoencoder.png';
+import mushroomGraph from '../../../assets/images/projects/mushroom-val-loss.png';
 import selfOrganising from '../../../assets/images/projects/self-organising.png';
 import cnn from '../../../assets/images/projects/cnn.png';
 import imageSegmentation from '../../../assets/images/projects/image-segmentation.png';
@@ -491,7 +491,7 @@ export default class Projects extends React.Component {
             <div className="mt-3">
               <Row className="mt-sm-3 mt-md-3">
                 <Col>
-                  {this.makeCard7()}
+                  {this.makeCard9()}
                 </Col>
               </Row>
             </div>
@@ -512,7 +512,7 @@ export default class Projects extends React.Component {
             <div className="mt-3">
               <Row className="mt-sm-3 mt-md-3" style={{ marginBottom: '-15px' }}>
                 <Col>
-                  {this.makeCard10()}
+                  {this.makeCard12()}
                 </Col>
               </Row>
             </div>
@@ -568,7 +568,7 @@ export default class Projects extends React.Component {
             <div className="project-card mt-5">
               <Row className="project-card">
                 <Col className="project-card left-card">
-                  {this.makeCard7()}
+                  {this.makeCard9()}
                 </Col>
                 <Col className="project-card right-card">
                   {this.makeCard10()}
@@ -581,7 +581,7 @@ export default class Projects extends React.Component {
                   {this.makeCard11()}
                 </Col>
                 <Col className="project-card right-card">
-                  {this.makeCard10()}
+                  {this.makeCard12()}
                 </Col>
               </Row>
             </div>
