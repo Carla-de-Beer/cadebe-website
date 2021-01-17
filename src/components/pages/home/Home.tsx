@@ -6,7 +6,7 @@ import Banner from '../../banner/Banner';
 import './Home.scss';
 import '../../../style/_fonts.scss';
 
-import photo from '../../../assets/images/0.jpg';
+import photo from '../../../assets/images/shared/photo-packing-circles.jpg';
 
 export default function Home() {
   return (

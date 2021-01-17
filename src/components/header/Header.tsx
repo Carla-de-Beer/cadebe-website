@@ -6,7 +6,7 @@ import PageSize from '../../utils/enums';
 
 import './Header.scss';
 
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/shared/logo.png';
 import menu from '../../assets/icons/menu.svg';
 
 export default class Header extends React.Component<IHeaderProps, IHeaderState> {

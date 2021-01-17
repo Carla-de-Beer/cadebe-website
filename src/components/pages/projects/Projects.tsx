@@ -8,16 +8,18 @@ import PageSize from '../../../utils/enums';
 
 import './Projects.scss';
 
-import TSPImage from '../../../assets/images/TSP.gif';
-import ISSImage from '../../../assets/images/ISS.png';
-import naive from '../../../assets/images/naive-bayes.png';
-import som from '../../../assets/images/SOM.png';
-import matrix from '../../../assets/images/matrix-1.png';
-import selfOrganising from '../../../assets/images/self-organising.png';
-import cnn from '../../../assets/images/cnn.png';
-import imageSegmentation from '../../../assets/images/image-segmentation.png';
-import letterFrequencies from '../../../assets/images/letter-frequencies.png';
-import fourier from '../../../assets/images/FourierTransformHeart.gif';
+import TSPImage from '../../../assets/images/projects/TSP.gif';
+import ISSImage from '../../../assets/images/projects/ISS.png';
+import naive from '../../../assets/images/projects/naive-bayes.png';
+import som from '../../../assets/images/projects/SOM.png';
+import matrix from '../../../assets/images/projects/matrix-1.png';
+import mushroomAutoencoder from '../../../assets/images/news/mushroom-autoencoder.png';
+import mushroomGraph from '../../../assets/images/news/mushroom-val-loss.png';
+import selfOrganising from '../../../assets/images/projects/self-organising.png';
+import cnn from '../../../assets/images/projects/cnn.png';
+import imageSegmentation from '../../../assets/images/projects/image-segmentation.png';
+import letterFrequencies from '../../../assets/images/projects/letter-frequencies.png';
+import fourier from '../../../assets/images/projects/FourierTransformHeart.gif';
 
 export default class Projects extends React.Component {
   setPageLayout() {
@@ -128,7 +130,7 @@ export default class Projects extends React.Component {
         rel="noopener noreferrer"
       >
         <Card className="card-style">
-          <Card.Img src={matrix} alt="Project Image" />
+          <Card.Img src={matrix} alt="Project Image" className="centred-image" />
           <Card.Body>
             <Card.Title>Neural Network Matrix Visualisation</Card.Title>
             <Card.Text>
@@ -159,6 +161,72 @@ export default class Projects extends React.Component {
     makeCard5 = () => (
       <a
         className="no-link"
+        href="https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Card className="card-style">
+          <Card.Img src={mushroomAutoencoder} alt="Project Image" className="centred-image" />
+          <Card.Body>
+            <Card.Title>Autoencoder for Dimensionality Reduction</Card.Title>
+            <Card.Text>
+              This is a demo project that shows how an autoencoder, built with TensorFlow-Keras,
+              can be used to graphically represent high-dimensional data into a 2D or 3D space
+              for visualisation. The project uses the multivariate Mushroom Dataset.
+              It consists of mushroom dimensions and appearances and classifies them as being either
+              edible or poisonous. The autoencoder shows that the two classes,
+              when reduced to a 2-dimensional space, are not linearly separable.
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">
+              Autoencoder
+              {' '}
+              •
+              {' '}
+              TensorFlow-Keras
+            </small>
+          </Card.Footer>
+        </Card>
+      </a>
+    )
+
+    makeCard6 = () => (
+      <a
+        className="no-link"
+        href="https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/dff/classifier/mushroom-dataset-classifier"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Card className="card-style">
+          <Card.Img src={mushroomGraph} alt="Project Image" />
+          <Card.Body>
+            <Card.Title>Deep Neural Network Binary Classifier</Card.Title>
+            <Card.Text>
+              This is a demo project that shows how a deep neural network,
+              built with TensorFlow-Keras, can be used as a binary classifier.
+              The project uses the multivariate Mushroom Dataset that was previously analysed with
+              the autoencoder. Despite the linearly inseparable nature of the high-dimensional data
+              (as shown via the autoencoder study), the classifier has a high accuracy rate
+              and has few difficulties in making an relatively accurate classification.
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">
+              Deep Neural Network
+              {' '}
+              •
+              {' '}
+              TensorFlow-Keras
+            </small>
+          </Card.Footer>
+        </Card>
+      </a>
+    )
+
+    makeCard7 = () => (
+      <a
+        className="no-link"
         href="https://github.com/Carla-de-Beer/naive-bayes-text-classifier"
         target="_blank"
         rel="noopener noreferrer"
@@ -185,7 +253,7 @@ export default class Projects extends React.Component {
       </a>
     )
 
-    makeCard6 = () => (
+    makeCard8 = () => (
       <a
         className="no-link"
         href="https://github.com/Carla-de-Beer/python-projects/tree/master/python-scripts/letter-frequency-calculator"
@@ -215,7 +283,7 @@ export default class Projects extends React.Component {
       </a>
     )
 
-    makeCard7 = () => (
+    makeCard9 = () => (
       <a
         className="no-link"
         href="https://vimeo.com/54726553"
@@ -245,7 +313,7 @@ export default class Projects extends React.Component {
       </a>
     )
 
-    makeCard8 = () => (
+    makeCard10 = () => (
       <a
         className="no-link"
         href="https://vimeo.com/85047354"
@@ -275,7 +343,7 @@ export default class Projects extends React.Component {
       </a>
     )
 
-    makeCard9 = () => (
+    makeCard11 = () => (
       <a
         className="no-link"
         href="https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart"
@@ -304,7 +372,7 @@ export default class Projects extends React.Component {
       </a>
     )
 
-    makeCard10 = () => (
+    makeCard12 = () => (
       <a
         className="no-link"
         href="https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN"
@@ -423,7 +491,21 @@ export default class Projects extends React.Component {
             <div className="mt-3">
               <Row className="mt-sm-3 mt-md-3">
                 <Col>
-                  {this.makeCard9()}
+                  {this.makeCard7()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard10()}
+                </Col>
+              </Row>
+            </div>
+            <div className="mt-3">
+              <Row className="mt-sm-3 mt-md-3">
+                <Col>
+                  {this.makeCard11()}
                 </Col>
               </Row>
             </div>
@@ -486,7 +568,17 @@ export default class Projects extends React.Component {
             <div className="project-card mt-5">
               <Row className="project-card">
                 <Col className="project-card left-card">
-                  {this.makeCard9()}
+                  {this.makeCard7()}
+                </Col>
+                <Col className="project-card right-card">
+                  {this.makeCard10()}
+                </Col>
+              </Row>
+            </div>
+            <div className="project-card mt-5">
+              <Row className="project-card">
+                <Col className="project-card left-card">
+                  {this.makeCard11()}
                 </Col>
                 <Col className="project-card right-card">
                   {this.makeCard10()}

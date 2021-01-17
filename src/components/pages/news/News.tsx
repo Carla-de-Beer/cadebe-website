@@ -7,8 +7,8 @@ import PageSize from '../../../utils/enums';
 
 import './News.scss';
 
-import awsCert from '../../../assets/images/aws-certificate.png';
-import awsCertManager from '../../../assets/images/aws-image.png';
+import awsCert from '../../../assets/images/news/aws-certificate.png';
+import awsCertManager from '../../../assets/images/news/aws-image.png';
 
 export default class News extends React.Component {
     setLayoutDesktop = () => (
@@ -19,15 +19,15 @@ export default class News extends React.Component {
           <div className="row" style={{ height: '100%' }}>
             <div className="col-6 mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingRight: '10px' }}>
               <div className="block-1">
-                {this.makeCard1()}
+                {this.makeCard6()}
               </div>
               <div className="mt-3 block-2">
-                {this.makeCard2()}
+                {this.makeCard5()}
               </div>
             </div>
             <div className="col mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingLeft: 0, marginLeft: '-10px' }}>
               <div className="ml-3 block-3">
-                {this.makeCard3()}
+                {this.makeCard4()}
               </div>
             </div>
           </div>
@@ -36,13 +36,13 @@ export default class News extends React.Component {
         <div className="mt-5">
           <div className="row">
             <div className="col ml-3 block-4">
-              {this.makeCard4()}
+              {this.makeCard3()}
             </div>
             <div className="col ml-3 block-4">
-              {this.makeCard5()}
+              {this.makeCard2()}
             </div>
             <div className="col ml-3 block-4 mr-3">
-              {this.makeCard6()}
+              {this.makeCard1()}
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default class News extends React.Component {
           <div className="row">
             <div className="col">
               <div className="block-mobile">
-                {this.makeCard1()}
+                {this.makeCard6()}
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default class News extends React.Component {
         <div className="mt-3" style={{ backgroundColor: 'lightyellow' }}>
           <div className="row">
             <div className="col ml-3 mr-3 block-mobile">
-              {this.makeCard2()}
+              {this.makeCard5()}
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default class News extends React.Component {
               {this.makeCard3()}
             </div>
             <div className="col ml-3 mr-3 block-4">
-              {this.makeCard4()}
+              {this.makeCard3()}
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default class News extends React.Component {
               {this.makeCard5()}
             </div>
             <div className="col ml-3 mr-3 block-4">
-              {this.makeCard6()}
+              {this.makeCard1()}
             </div>
           </div>
         </div>
@@ -103,37 +103,7 @@ export default class News extends React.Component {
           <div className="row">
             <div className="col">
               <div className="block-mobile">
-                {this.makeCard1()}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-3">
-          <div className="row">
-            <div className="col">
-              <div className="block-mobile">
-                {this.makeCard2()}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-3">
-          <div className="row">
-            <div className="col">
-              <div className="block-mobile">
-                {this.makeCard3()}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-3">
-          <div className="row">
-            <div className="col">
-              <div className="block-mobile">
-                {this.makeCard4()}
+                {this.makeCard6()}
               </div>
             </div>
           </div>
@@ -153,7 +123,37 @@ export default class News extends React.Component {
           <div className="row">
             <div className="col">
               <div className="block-mobile">
-                {this.makeCard6()}
+                {this.makeCard3()}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-3">
+          <div className="row">
+            <div className="col">
+              <div className="block-mobile">
+                {this.makeCard3()}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-3">
+          <div className="row">
+            <div className="col">
+              <div className="block-mobile">
+                {this.makeCard5()}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-3">
+          <div className="row">
+            <div className="col">
+              <div className="block-mobile">
+                {this.makeCard1()}
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@ export default class News extends React.Component {
       return this.setLayoutDesktop();
     }
 
-    makeCard1 = () => (
+    makeCard6 = () => (
       <a
         className="no-link"
         href="https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/aop-demo"
@@ -225,7 +225,7 @@ export default class News extends React.Component {
       </a>
     )
 
-    makeCard2 = () => (
+    makeCard5 = () => (
       <a
         className="no-link"
         href="https://www.youracclaim.com/badges/e5bb66e2-78bc-4be1-820e-df7963b8e410?source=linked_in_profile"
@@ -247,7 +247,7 @@ export default class News extends React.Component {
       </a>
     )
 
-    makeCard3 = () => (
+    makeCard4 = () => (
       <a
         className="no-link"
         href="https://medium.com/@carla.debeer.uk/creating-a-static-website-with-aws-s3-and-cloudfront-963e9825028a"
@@ -277,7 +277,7 @@ export default class News extends React.Component {
       </a>
     )
 
-    makeCard4 = () => (
+    makeCard3 = () => (
       <a
         className="no-link"
         href="https://cadebe.dev"
@@ -305,7 +305,7 @@ export default class News extends React.Component {
       </a>
     )
 
-    makeCard5 = () => (
+    makeCard2 = () => (
       <a
         className="no-link"
         href="https://www.coursera.org/account/accomplishments/specialization/certificate/54T2J5Z5KWCN"
@@ -338,7 +338,7 @@ export default class News extends React.Component {
       </a>
     )
 
-    makeCard6 = () => (
+    makeCard1 = () => (
       <a
         className="no-link"
         href="https://medium.com/@carla.debeer.uk/essential-anaconda-setup-kit-4b7e1fb803fc"
