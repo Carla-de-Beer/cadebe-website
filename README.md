@@ -10,6 +10,7 @@ Website to showcase current and previous development projects. Built with React,
 * [x] Add header
 * [x] Add footer
 * [x] Convert to responsive design (mobile, tablet and desktop)
+* [x] Dynamically load project data from JSON file
 * [ ] Check cross-browser compatibility
 * [x] Add linting rules
 

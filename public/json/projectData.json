@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "TSP Distance Calculator",
+      "text": "This project demonstrates the use of a genetic algorithm to find an optimised solution to the Travelling Salesman Problem. The program dynamically reads in city data from a file and calculates the shortest distance it can find, linking all cities. The actual physical distance on the route, calculated as the Haversine distance, is also shown. Specifiable genetic algorithm parameters include the crossover rate, mutation rate, population size, max. no. iterations and elitism generation gap.",
+      "url": "https://carla-de-beer.github.io/TSP-distance-calculator/",
+      "footerClass": "Genetic Algorithm",
+      "footerLanguage": "JavaScript"
+    },
+    {
+      "id": 2,
+      "title": "ISS Tracker",
+      "text": "A real-time 2D tracker for the International Space Station.",
+      "url": "https://carla-de-beer.github.io/ISS-tracker/",
+      "footerClass": "Data Visualisation",
+      "footerLanguage": "JavaScript"
+    },
+    {
+      "id": 3,
+      "title": "CNN Landscape Classifier",
+      "text": "A convolutional neural network built with TensorFlow/Keras to allow for landscape classification based on one of three categories: desert, forest and polar.",
+      "url": "https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier",
+      "footerClass": "Convolutional Neural Network",
+      "footerLanguage": "TensorFlow"
+    },
+    {
+      "id": 4,
+      "title": "Neural Network Matrix Visualisation",
+      "text": "Artificial neural networks operate on a highly non-linear model and are typically described as \"black boxes\". This project is an attempt to peer into the black box model by visualising the weight changes affecting the hidden neurons, as well as the hidden neuron matrices themselves. A simple three-layer feedforward neural network was set up to differentiate between two classes of images: cartoons and photographs. From this study it became clear that there appears to be a general visual pattern to the hidden matrices of each of the image sets provided.",
+      "url": "https://vimeo.com/152473776",
+      "footerClass": "Feed-Forward Neural Network",
+      "footerLanguage": "Java"
+    },
+    {
+      "id": 5,
+      "title": "Autoencoder for Dimensionality Reduction",
+      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
+      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
+      "footerClass": "Autoencoder",
+      "footerLanguage": "TensorFlow"
+    },
+    {
+      "id": 6,
+      "title": "Deep Neural Network Binary Classifier",
+      "text": "This is a demo project that shows how a deep neural network, built with TensorFlow-Keras, can be used as a binary classifier. The project uses the multivariate Mushroom Dataset that was previously analysed with the autoencoder. Despite the linearly inseparable nature of the high-dimensional data (as shown via the autoencoder study), the classifier has a high accuracy rate and has few difficulties in making an relatively accurate classification.",
+      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/dff/classifier/mushroom-dataset-classifier",
+      "footerClass": " Deep Neural Network",
+      "footerLanguage": "TensorFlow"
+    },
+    {
+      "id": 7,
+      "title": "Naive Bayes Text Classifier",
+      "text": "A Naive Bayes Text Classifier that classifies input text into one of two categories: either a BUSINESS article or a SPORT article.",
+      "url": "https://github.com/Carla-de-Beer/naive-bayes-text-classifier",
+      "footerClass": "Bayes Classifier",
+      "footerLanguage": "JavaScript"
+    },
+    {
+      "id": 8,
+      "title": "Letter Frequency Calculator",
+      "text": "A Python program that reads in a set of text files and calculates the frequency occurrences of each alphabet letter, where the alphabet letters are listed in descending order of frequency.",
+      "url": "https://github.com/Carla-de-Beer/python-projects/tree/master/python-scripts/letter-frequency-calculator",
+      "footerClass": "Data Visualisation",
+      "footerLanguage": "Python"
+    },
+    {
+      "id": 9,
+      "title": "Shape Mapping",
+      "text": "This project demonstrates how a self-organising map (SOM), a type of artificial neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D point cloud.",
+      "url": "https://vimeo.com/54726553",
+      "footerClass": "Self-Organising Map",
+      "footerLanguage": "Processing"
+    },
+    {
+      "id": 10,
+      "title": "Self-Organising Structure",
+      "text": " Randomised autonomous agents self-organise to build a structured pattern based on their ability to seek out a target and to adjust their velocity and acceleration accordingly.",
+      "url": "https://vimeo.com/85047354",
+      "footerClass": "Boids",
+      "footerLanguage": "Processing"
+    },
+    {
+      "id": 11,
+      "title": "Discrete Fourier Transformation of a Heart Curve",
+      "text": " Discrete Fourier Transformation with epicycles using a heart curve as input.",
+      "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart",
+      "footerClass": "Mathematical Transform",
+      "footerLanguage": "Processing"
+    },
+    {
+      "id": 12,
+      "title": "Image Segmentation with K-Nearest Neighbour",
+      "text": "An image segmentation example using the k-nearest neighbour algorithm.",
+      "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN",
+      "footerClass": "Image Segmentation",
+      "footerLanguage": "Processing"
+    }
+  ]
+}

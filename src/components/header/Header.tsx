@@ -12,8 +12,11 @@ import menu from '../../assets/icons/menu.svg';
 export default class Header extends React.Component<IHeaderProps, IHeaderState> {
   constructor(props: IHeaderProps) {
     super(props);
+
+    const { pageType } = this.props;
+
     this.state = {
-      pageType: this.props.pageType,
+      pageType,
     };
   }
 
@@ -136,10 +139,12 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
     )
 
     setNavHeader = () => {
+      const { pageType } = this.props;
+
       if (window.innerWidth.valueOf() < PageSize.LARGE) {
-        return this.setHeaderLayoutMobile(this.state.pageType);
+        return this.setHeaderLayoutMobile(pageType);
       }
-      return this.setHeaderLayoutLarge(this.state.pageType);
+      return this.setHeaderLayoutLarge(pageType);
     };
 
     render() {
