@@ -1,0 +1,46 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Essential Unix-based Anaconda Setup Guide",
+      "subTitle": "8 FEBRUARY 2020",
+      "text": "This article describes the essential steps required for installing Anaconda and creating a conda environment on a Unix-based OS.",
+      "url": "https://medium.com/@carla.debeer.uk/essential-anaconda-setup-kit-4b7e1fb803fc"
+    },
+    {
+      "id": 2,
+      "title": "DeepLearning.AI Tensorflow Developer Coursera Certification",
+      "subTitle": "13 APRIL 2020",
+      "text": "<p className=\"inner-text\">Completed all 4 courses of the DeepLearning.AI Tensorflow Developer Professional Certificate program:</p><ul className=\"inner-text\"><li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li><li>Convolutional Neural Networks in TensorFlow</li><li>Natural Language Processing in TensorFlow</li><li>Sequences, Time Series and Prediction</li></ul>",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/54T2J5Z5KWCN"
+    },
+    {
+      "id": 3,
+      "title": "Website Live",
+      "subTitle": "31 JULY 2020",
+      "text": "<span className=\"highlighted-text\">cadebe.dev</span> went live today!<br /><br />What started off as an experiment on how to upload content to AWS S3 and integrating an SSL certificate with AWS CloudFront, gradually morphed into a website.",
+      "url": "https://cadebe.dev"
+    },
+    {
+      "id": 4,
+      "title": "Creating a ReactJS Static Website with AWS S3 and CloudFront",
+      "subTitle": "2 SEPTEMBER 2020",
+      "text": "There are numerous online articles that describe how to configure AWS S3 in order to host a static website. In fact S3 makes this quite easy. However, many of these articles do not necessarily follow best practices, especially in terms of security requirements. And there are also a number of gotchas along the way to keep an eye on. I built a simple React JS website and deployed it onto AWS. This is how I did it.",
+      "url": "https://medium.com/@carla.debeer.uk/creating-a-static-website-with-aws-s3-and-cloudfront-963e9825028a"
+    },
+    {
+      "id": 5,
+      "title": "AWS Developer Associate Certification",
+      "subTitle": "23 SEPTEMBER 2020",
+      "text": "Passed the AWS Developer Associate Examination.",
+      "url": "https://www.youracclaim.com/badges/e5bb66e2-78bc-4be1-820e-df7963b8e410?source=linked_in_profile"
+    },
+    {
+      "id": 6,
+      "title": "AOP and the Spring Framework",
+      "subTitle": "11 OCTOBER 2020",
+      "text": "Aspect Oriented Programming (AOP) has been around for a while but has always felt inaccessible, partly due to the opaque-sounding terminology. Actually, it is quite simple and a really powerful tool. I built a demo example using the SpringFramework, and illustrated the terminology with practical explanations. Doing is understanding!",
+      "url": "https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/aop-demo"
+    }
+  ]
+}

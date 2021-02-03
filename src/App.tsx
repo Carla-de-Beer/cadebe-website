@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from './components/pages/home/Home';
 import Projects from './components/pages/projects/ProjectLoader';
-import News from './components/pages/news/News';
+import News from './components/pages/news/NewsLoader';
 import About from './components/pages/about/About';
 import Footer from './components/footer/Footer';
 

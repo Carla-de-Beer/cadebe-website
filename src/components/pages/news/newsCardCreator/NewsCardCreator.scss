@@ -54,7 +54,7 @@
     @extend %base-text-fields;
   }
 
-  .inner-text {
+  .dangerous p {
     @extend p.card-text;
   }
 
@@ -73,7 +73,12 @@
   }
 
   .highlighted-text {
-    color: $logo-accent-color;
+    color: $logo-accent-color !important;
+    font-weight: bold
+  }
+
+  .dangerous span {
+    color: $logo-accent-color !important;
     font-weight: bold
   }
 
