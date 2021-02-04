@@ -44,11 +44,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
     </div>
   );
 
-  setLayoutDesktop() {
-    const content = this.state.newsContent;
+  setLayoutDesktop({ ...newsContent }) {
     let renderContent;
 
-    if (content.length > 1) {
+    if (Object.keys(newsContent).length > 1) {
       renderContent = (
         <>
           <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
@@ -56,19 +55,19 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col-6 mt-xl-4 mt-lg-4 mt-md-4 mt-4" style={{ paddingRight: '10px' }}>
                 <div className="block-1">
                   { this.makeStandardCard(
-                    content[5].url,
-                    content[5].title,
-                    content[5].subTitle,
-                    content[5].text,
+                    newsContent[5].url,
+                    newsContent[5].title,
+                    newsContent[5].subTitle,
+                    newsContent[5].text,
                   ) }
                 </div>
                 <div className="mt-3 block-2">
                   { this.makeStandardCard(
-                    content[4].url,
-                    content[4].title,
-                    content[4].subTitle,
-                    content[4].text,
-                    content[4].id,
+                    newsContent[4].url,
+                    newsContent[4].title,
+                    newsContent[4].subTitle,
+                    newsContent[4].text,
+                    newsContent[4].id,
                   ) }
                 </div>
               </div>
@@ -81,11 +80,11 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               >
                 <div className="ml-3 block-3">
                   { this.makeStandardCard(
-                    content[3].url,
-                    content[3].title,
-                    content[3].subTitle,
-                    content[3].text,
-                    content[3].id,
+                    newsContent[3].url,
+                    newsContent[3].title,
+                    newsContent[3].subTitle,
+                    newsContent[3].text,
+                    newsContent[3].id,
                   ) }
                 </div>
               </div>
@@ -96,26 +95,26 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
             <div className="row">
               <div className="col ml-3 block-4">
                 { this.makeStandardCard(
-                  content[2].url,
-                  content[2].title,
-                  content[2].subTitle,
-                  content[2].text,
+                  newsContent[2].url,
+                  newsContent[2].title,
+                  newsContent[2].subTitle,
+                  newsContent[2].text,
                 ) }
               </div>
               <div className="col ml-3 block-4">
                 { this.makeStandardCard(
-                  content[1].url,
-                  content[1].title,
-                  content[1].subTitle,
-                  content[1].text,
+                  newsContent[1].url,
+                  newsContent[1].title,
+                  newsContent[1].subTitle,
+                  newsContent[1].text,
                 ) }
               </div>
               <div className="col ml-3 block-4 mr-3">
                 { this.makeStandardCard(
-                  content[0].url,
-                  content[0].title,
-                  content[0].subTitle,
-                  content[0].text,
+                  newsContent[0].url,
+                  newsContent[0].title,
+                  newsContent[0].subTitle,
+                  newsContent[0].text,
                 ) }
               </div>
             </div>
@@ -132,11 +131,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
     );
   }
 
-  setLayoutTablet() {
-    const content = this.state.newsContent;
+  setLayoutTablet({ ...newsContent }) {
     let renderContent;
 
-    if (content.length > 1) {
+    if (Object.keys(newsContent).length > 1) {
       renderContent = (
         <div className="news-wrapper">
           { this.setCommon() }
@@ -145,10 +143,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    content[5].url,
-                    content[5].title,
-                    content[5].subTitle,
-                    content[5].text,
+                    newsContent[5].url,
+                    newsContent[5].title,
+                    newsContent[5].subTitle,
+                    newsContent[5].text,
                   ) }
                 </div>
               </div>
@@ -159,11 +157,11 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
             <div className="row">
               <div className="col ml-3 mr-3 block-mobile">
                 { this.makeStandardCard(
-                  content[4].url,
-                  content[4].title,
-                  content[4].subTitle,
-                  content[4].text,
-                  content[4].id,
+                  newsContent[4].url,
+                  newsContent[4].title,
+                  newsContent[4].subTitle,
+                  newsContent[4].text,
+                  newsContent[4].id,
                 ) }
               </div>
             </div>
@@ -173,19 +171,19 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
             <div className="row">
               <div className="col ml-3 block-4">
                 { this.makeStandardCard(
-                  content[3].url,
-                  content[3].title,
-                  content[3].subTitle,
-                  content[3].text,
-                  content[3].id,
+                  newsContent[3].url,
+                  newsContent[3].title,
+                  newsContent[3].subTitle,
+                  newsContent[3].text,
+                  newsContent[3].id,
                 ) }
               </div>
               <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
-                  content[2].url,
-                  content[2].title,
-                  content[2].subTitle,
-                  content[2].text,
+                  newsContent[2].url,
+                  newsContent[2].title,
+                  newsContent[2].subTitle,
+                  newsContent[2].text,
                 ) }
               </div>
             </div>
@@ -195,18 +193,18 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
             <div className="row">
               <div className="col ml-3 block-4">
                 { this.makeStandardCard(
-                  content[1].url,
-                  content[1].title,
-                  content[1].subTitle,
-                  content[1].text,
+                  newsContent[1].url,
+                  newsContent[1].title,
+                  newsContent[1].subTitle,
+                  newsContent[1].text,
                 ) }
               </div>
               <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
-                  content[0].url,
-                  content[0].title,
-                  content[0].subTitle,
-                  content[0].text,
+                  newsContent[0].url,
+                  newsContent[0].title,
+                  newsContent[0].subTitle,
+                  newsContent[0].text,
                 ) }
               </div>
             </div>
@@ -220,11 +218,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
     );
   }
 
-  setLayoutMobile() {
-    const content = this.state.newsContent;
+  setLayoutMobile({ ...newsContent }) {
     let renderContent;
 
-    if (content.length > 1) {
+    if (Object.keys(newsContent).length > 1) {
       renderContent = (
         <>
           <div className="mt-5">
@@ -232,10 +229,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    content[5].url,
-                    content[5].title,
-                    content[5].subTitle,
-                    content[5].text,
+                    newsContent[5].url,
+                    newsContent[5].title,
+                    newsContent[5].subTitle,
+                    newsContent[5].text,
                   ) }
                 </div>
               </div>
@@ -247,11 +244,11 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    content[4].url,
-                    content[4].title,
-                    content[4].subTitle,
-                    content[4].text,
-                    content[4].id,
+                    newsContent[4].url,
+                    newsContent[4].title,
+                    newsContent[4].subTitle,
+                    newsContent[4].text,
+                    newsContent[4].id,
                   ) }
                 </div>
               </div>
@@ -263,11 +260,11 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    content[3].url,
-                    content[3].title,
-                    content[3].subTitle,
-                    content[3].text,
-                    content[3].id,
+                    newsContent[3].url,
+                    newsContent[3].title,
+                    newsContent[3].subTitle,
+                    newsContent[3].text,
+                    newsContent[3].id,
                   ) }
                 </div>
               </div>
@@ -279,10 +276,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    content[2].url,
-                    content[2].title,
-                    content[2].subTitle,
-                    content[2].text,
+                    newsContent[2].url,
+                    newsContent[2].title,
+                    newsContent[2].subTitle,
+                    newsContent[2].text,
                   ) }
                 </div>
               </div>
@@ -294,10 +291,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    content[1].url,
-                    content[1].title,
-                    content[1].subTitle,
-                    content[1].text,
+                    newsContent[1].url,
+                    newsContent[1].title,
+                    newsContent[1].subTitle,
+                    newsContent[1].text,
                   ) }
                 </div>
               </div>
@@ -309,10 +306,10 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    content[0].url,
-                    content[0].title,
-                    content[0].subTitle,
-                    content[0].text,
+                    newsContent[0].url,
+                    newsContent[0].title,
+                    newsContent[0].subTitle,
+                    newsContent[0].text,
                   ) }
                 </div>
               </div>
@@ -331,14 +328,16 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
   }
 
   setPageLayout() {
+    const { newsContent } = this.state;
     if (window.innerWidth.valueOf() <= PageSize.SMALL) {
-      return this.setLayoutMobile();
+      return this.setLayoutMobile(newsContent);
     }
     if (window.innerWidth.valueOf() > PageSize.SMALL
       && window.innerWidth.valueOf() < PageSize.LARGE) {
-      return this.setLayoutTablet();
+      return this.setLayoutTablet(newsContent);
     }
-    return this.setLayoutDesktop();
+
+    return this.setLayoutDesktop(newsContent);
   }
 
   bindImages = (id: number | undefined) => {

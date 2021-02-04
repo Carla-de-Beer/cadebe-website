@@ -32,11 +32,12 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
   }
 
   setPageLayout() {
+    const { projectContent } = this.state;
     if (window.innerWidth.valueOf() <= PageSize.MEDIUM) {
-      return this.setLayoutMobile();
+      return this.setLayoutMobile(projectContent);
     }
 
-    return this.setLayoutDesktop();
+    return this.setLayoutDesktop(projectContent);
   }
 
   setCommon = () => (
@@ -65,23 +66,21 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
     </div>
   );
 
-  setLayoutMobile() {
-    const content = this.props.projectContent;
-
+  setLayoutMobile({ ...projectContent }) {
     const innerArray = [];
     const outerArray = [];
 
-    if (content.length > 1) {
-      for (let i = 0; i < content.length; i += 1) {
+    if (Object.keys(projectContent).length > 1) {
+      for (let i = 0; i < Object.keys(projectContent).length; i += 1) {
         innerArray.push(
           <Col>
             { this.makeCard(
-              content[i].id,
-              content[i].url,
-              content[i].title,
-              content[i].text,
-              content[i].footerClass,
-              content[i].footerLanguage,
+              projectContent[i].id,
+              projectContent[i].url,
+              projectContent[i].title,
+              projectContent[i].text,
+              projectContent[i].footerClass,
+              projectContent[i].footerLanguage,
             ) }
           </Col>,
         );
@@ -90,7 +89,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       for (let i = 0; i < innerArray.length; i += 1) {
         if (i === 0) {
           outerArray.push(
-            <div className="mt-3" key={content[i].id}>
+            <div className="mt-3" key={projectContent[i].id}>
               <Row className="mt-sm-4 mt-md-4">
                 { innerArray[i] }
               </Row>
@@ -98,7 +97,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
           );
         } else if (i === innerArray.length - 1) {
           outerArray.push(
-            <div className="mt-3" key={content[i].id}>
+            <div className="mt-3" key={projectContent[i].id}>
               <Row className="mt-sm-3 mt-md-3" style={{ marginBottom: '-15px' }}>
                 { innerArray[i] }
               </Row>
@@ -106,7 +105,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
           );
         } else {
           outerArray.push(
-            <div className="mt-3" key={content[i].id}>
+            <div className="mt-3" key={projectContent[i].id}>
               <Row className="mt-sm-3 mt-md-3">
                 { innerArray[i] }
               </Row>
@@ -120,47 +119,45 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       <div className="pb-3">
         <Header pageType="projects" />
         <div className="projects-wrapper">
-          { this.setCommon() }
+          {this.setCommon()}
           <div className="mt-lg-2 mt-md-2 mt-2 pt-lg-2 pt-md-2 pt-3 project-card">
-            { outerArray }
+            {outerArray}
           </div>
         </div>
       </div>
     );
   }
 
-  setLayoutDesktop() {
-    const content = this.props.projectContent;
-
+  setLayoutDesktop({ ...projectContent }) {
     const innerArray = [];
     const outerArray = [];
 
-    if (content.length > 1) {
-      for (let i = 0; i < content.length; i += 1) {
+    if (Object.keys(projectContent).length > 1) {
+      for (let i = 0; i < Object.keys(projectContent).length; i += 1) {
         if (i % 2 === 0) {
           innerArray.push(
             <Col className="project-card left-card">
-              { this.makeCard(
-                content[i].id,
-                content[i].url,
-                content[i].title,
-                content[i].text,
-                content[i].footerClass,
-                content[i].footerLanguage,
-              ) }
+              {this.makeCard(
+                projectContent[i].id,
+                projectContent[i].url,
+                projectContent[i].title,
+                projectContent[i].text,
+                projectContent[i].footerClass,
+                projectContent[i].footerLanguage,
+              )}
             </Col>,
           );
         } else {
           innerArray.push(
             <Col className="project-card right-card">
-              { this.makeCard(
-                content[i].id,
-                content[i].url,
-                content[i].title,
-                content[i].text,
-                content[i].footerClass,
-                content[i].footerLanguage,
-              ) }
+              {this.makeCard(
+                projectContent[i].id,
+                projectContent[i].url,
+                projectContent[i].title,
+                projectContent[i].text,
+                projectContent[i].footerClass,
+                projectContent[i].footerLanguage,
+              )}
             </Col>,
           );
         }
@@ -170,14 +167,14 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
     for (let i = 0; i < innerArray.length; i += 2) {
       if (i < 2) {
         outerArray.push(
-          <Row key={content[i].id}>
+          <Row key={projectContent[i].id}>
             { innerArray[i] }
             { innerArray[i + 1] }
           </Row>,
         );
       } else {
         outerArray.push(
-          <div className="project-card mt-5" key={content[i].id}>
+          <div className="project-card mt-5" key={projectContent[i].id}>
             <Row className="project-card">
               { innerArray[i] }
               { innerArray[i + 1] }
@@ -251,8 +248,8 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
         <Card className="card-style">
           { this.bindImages(id) }
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>{text}</Card.Text>
+            <Card.Title>{ title }</Card.Title>
+            <Card.Text>{ text }</Card.Text>
           </Card.Body>
           <Card.Footer>
             <small className="text-muted">

@@ -8,7 +8,7 @@ export default function NewsLoader() {
   const [list, setNews] = useState({
     news: [{
       id: 1,
-      title: 'XXXEssential Unix-based Anaconda Setup Guide',
+      title: 'Essential Unix-based Anaconda Setup Guide',
       subTitle: '8 FEBRUARY 2020',
       text: 'This article describes the essential steps required for installing Anaconda and creating a conda environment on a Unix-based OS.',
       url: 'https://medium.com/@carla.debeer.uk/essential-anaconda-setup-kit-4b7e1fb803fc',
