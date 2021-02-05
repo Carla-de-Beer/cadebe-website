@@ -139,7 +139,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
     )
 
     setNavHeader = () => {
-      const { pageType } = this.props;
+      const { pageType } = this.state;
 
       if (window.innerWidth.valueOf() < PageSize.LARGE) {
         return this.setHeaderLayoutMobile(pageType);

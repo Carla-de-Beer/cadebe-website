@@ -153,7 +153,7 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
             </div>
           </div>
 
-          <div className="mt-3" style={{ backgroundColor: 'lightyellow' }}>
+          <div className="mt-3">
             <div className="row">
               <div className="col ml-3 mr-3 block-mobile">
                 { this.makeStandardCard(
@@ -219,104 +219,47 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
   }
 
   setLayoutMobile({ ...newsContent }) {
-    let renderContent;
+    const renderContent = [];
 
     if (Object.keys(newsContent).length > 1) {
-      renderContent = (
-        <>
-          <div className="mt-5">
-            <div className="row">
-              <div className="col">
-                <div className="block-mobile">
-                  { this.makeStandardCard(
-                    newsContent[5].url,
-                    newsContent[5].title,
-                    newsContent[5].subTitle,
-                    newsContent[5].text,
-                  ) }
+      for (let i = Object.keys(newsContent).length - 1; i >= 0; i -= 1) {
+        if (i === Object.keys(newsContent).length - 1) {
+          renderContent.push(
+            <div className="mt-5">
+              <div className="row">
+                <div className="col">
+                  <div className="block-mobile">
+                    { this.makeStandardCard(
+                      newsContent[i].url,
+                      newsContent[i].title,
+                      newsContent[i].subTitle,
+                      newsContent[i].text,
+                    ) }
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="mt-3">
-            <div className="row">
-              <div className="col">
-                <div className="block-mobile">
-                  { this.makeStandardCard(
-                    newsContent[4].url,
-                    newsContent[4].title,
-                    newsContent[4].subTitle,
-                    newsContent[4].text,
-                    newsContent[4].id,
-                  ) }
+            </div>,
+          );
+        } else {
+          renderContent.push(
+            <div className="mt-3">
+              <div className="row">
+                <div className="col">
+                  <div className="block-mobile">
+                    { this.makeStandardCard(
+                      newsContent[i].url,
+                      newsContent[i].title,
+                      newsContent[i].subTitle,
+                      newsContent[i].text,
+                      newsContent[i].id,
+                    ) }
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="mt-3">
-            <div className="row">
-              <div className="col">
-                <div className="block-mobile">
-                  { this.makeStandardCard(
-                    newsContent[3].url,
-                    newsContent[3].title,
-                    newsContent[3].subTitle,
-                    newsContent[3].text,
-                    newsContent[3].id,
-                  ) }
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-3">
-            <div className="row">
-              <div className="col">
-                <div className="block-mobile">
-                  { this.makeStandardCard(
-                    newsContent[2].url,
-                    newsContent[2].title,
-                    newsContent[2].subTitle,
-                    newsContent[2].text,
-                  ) }
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-3">
-            <div className="row">
-              <div className="col">
-                <div className="block-mobile">
-                  { this.makeStandardCard(
-                    newsContent[1].url,
-                    newsContent[1].title,
-                    newsContent[1].subTitle,
-                    newsContent[1].text,
-                  ) }
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-3">
-            <div className="row">
-              <div className="col">
-                <div className="block-mobile">
-                  { this.makeStandardCard(
-                    newsContent[0].url,
-                    newsContent[0].title,
-                    newsContent[0].subTitle,
-                    newsContent[0].text,
-                  ) }
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
-      );
+            </div>,
+          );
+        }
+      }
     }
 
     return (
