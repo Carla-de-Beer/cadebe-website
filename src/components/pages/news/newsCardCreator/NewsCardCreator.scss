@@ -4,15 +4,6 @@
 
 .news-wrapper {
 
-  body {
-    padding: 0;
-    position: relative;
-  }
-
-  html, body {
-    height: 100%;
-  }
-
   p {
     @include font-size-large-1;
   }
@@ -103,7 +94,7 @@
     padding: 0;
   }
 
-  @media all and (min-width: 769px) {
+  @media all and (min-width: 824px) {
     .high-light-1 {
       @include font-size-large-2;
       font-weight: bold;
@@ -112,7 +103,7 @@
     }
   }
 
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 825px) {
     .box {
       display: block;
       float: none;

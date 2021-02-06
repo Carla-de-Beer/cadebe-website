@@ -1,6 +1,6 @@
 enum PageSize {
     SMALL = 576,
-    MEDIUM = 768,
+    MEDIUM = 824,
     LARGE = 1025,
 }
 
