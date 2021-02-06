@@ -5,11 +5,11 @@ import Home from './components/pages/home/Home';
 import Projects from './components/pages/projects/ProjectLoader';
 import News from './components/pages/news/NewsLoader';
 import About from './components/pages/about/About';
+import Logo from './components/header/Logo';
 import Footer from './components/footer/Footer';
 
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Logo from './components/header/Logo';
 
 function App() {
   return (

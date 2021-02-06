@@ -13,3 +13,21 @@ $warm-grey-1: #fafaf9;
 $warm-grey-2: #929292;
 $warm-grey-3: rgba(200, 200, 200, .1);
 $logo-accent-color: rgb(49, 129, 253);
+
+:root {
+  --header-grey: #{$header-grey};
+  --accent-gray: #{$accent-gray};
+  --paragraph-gray-1: #{$paragraph-gray-1};
+  --paragraph-gray-2: #{$paragraph-gray-2};
+  --footer-background: #{$footer-background};
+  --dark-accent: #{$dark-accent};
+  --dark-accent-2: #{$dark-accent-2};
+  --button-background: #{$button-background};
+  --footer-text: #{$footer-text};
+  --off-white: #{$off-white};
+  --white: #{$white};
+  --warm-grey-1: #{$warm-grey-1};
+  --warm-grey-2: #{$warm-grey-2};
+  --warm-grey-3: #{$warm-grey-3};
+  --logo-accent-color: #{$logo-accent-color};
+}

@@ -19,7 +19,7 @@
     {
       "id": 3,
       "title": "CNN Landscape Classifier",
-      "text": "A convolutional neural network built with TensorFlow/Keras to allow for landscape classification based on one of three categories: desert, forest and polar.",
+      "text": "A convolutional neural network built with TensorFlow-Keras to allow for landscape classification based on one of three categories: desert, forest and polar.",
       "url": "https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier",
       "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"

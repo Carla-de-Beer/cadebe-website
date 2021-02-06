@@ -31,11 +31,6 @@
     color: $paragraph-gray-1 !important;
   }
 
-  .link-high-light {
-    text-decoration: none;
-    color: $paragraph-gray-2 !important;
-  }
-
   .name-text {
     @extend .font-style-default;
     @extend .font-size-standard;
@@ -51,6 +46,25 @@
 
   .logo-accent {
     color: $logo-accent-color;
+  }
+
+  .logo {
+    opacity: 5%;
+  }
+
+  @media all and (max-width: 1024px) {
+    .link-high-light {
+      text-decoration: none;
+      color: $paragraph-gray-2 !important;
+    }
+  }
+
+  @media all and (min-width: 1025px) {
+    .link-high-light {
+      text-decoration: none;
+      color: $paragraph-gray-2 !important;
+      border-bottom: solid $paragraph-gray-2 2px;
+    }
   }
 
 }

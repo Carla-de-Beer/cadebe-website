@@ -33,7 +33,7 @@ export default class Logo extends React.Component<any, any> {
   render() {
     return (
       <>
-        {this.setNavHeader()}
+        { this.setNavHeader() }
       </>
     );
   }

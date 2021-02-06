@@ -119,9 +119,9 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       <div className="pb-3">
         <Header pageType="projects" />
         <div className="projects-wrapper">
-          {this.setCommon()}
+          { this.setCommon() }
           <div className="mt-lg-2 mt-md-2 mt-2 pt-lg-2 pt-md-2 pt-3 project-card">
-            {outerArray}
+            { outerArray }
           </div>
         </div>
       </div>
@@ -137,14 +137,14 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
         if (i % 2 === 0) {
           innerArray.push(
             <Col className="project-card left-card">
-              {this.makeCard(
+              { this.makeCard(
                 projectContent[i].id,
                 projectContent[i].url,
                 projectContent[i].title,
                 projectContent[i].text,
                 projectContent[i].footerClass,
                 projectContent[i].footerLanguage,
-              )}
+              ) }
             </Col>,
           );
         } else {

@@ -26,10 +26,10 @@ export default function NewsLoader() {
 
   return (
     <>
-      {isLoading && <NewsCardCreator newsContent={list.news} />}
-      {!isLoading && (
+      { isLoading && <NewsCardCreator newsContent={list.news} /> }
+      { !isLoading && (
         <NewsCardCreator newsContent={list.news} />
-      )}
+      ) }
     </>
   );
 }

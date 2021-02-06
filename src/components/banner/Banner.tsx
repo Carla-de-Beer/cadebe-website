@@ -18,7 +18,7 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
 
     return (
       <div className="banner-wrapper text-fields" style={{ paddingTop: '30px' }}>
-        <p className="mt-2 high-light">{title}</p>
+        <p className="mt-2 high-light">{ title }</p>
       </div>
     );
   }

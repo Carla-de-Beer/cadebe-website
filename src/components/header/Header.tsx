@@ -25,7 +25,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
         <div className="row mr-3">
           <div className="col-lg-2 col-md-2 col-3">
             <Link to="/">
-              <img src={logo} width="60" height="60" alt="Logo" />
+              <img className="logo" src={logo} width="60" height="60" alt="Logo" />
             </Link>
           </div>
           <div className="col-lg-9 col-md-9 col-7">
@@ -48,7 +48,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
                     width: '30px', height: '30px', opacity: '0.5',
                   }}
                 />
-                        )}
+              )}
             >
               <Dropdown.Item
                 href="/"
@@ -87,7 +87,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
             <div className="row">
               <div className="col-lg-3">
                 <Link to="/">
-                  <img src={logo} width="60" height="60" alt="Logo" />
+                  <img className="logo" src={logo} width="60" height="60" alt="Logo" />
                 </Link>
               </div>
               <div className="col-lg-5">
@@ -150,7 +150,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
     render() {
       return (
         <div className="header-wrapper">
-          {this.setNavHeader()}
+          { this.setNavHeader() }
         </div>
       );
     }

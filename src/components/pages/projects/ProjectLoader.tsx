@@ -27,10 +27,10 @@ export default function ProjectLoader() {
 
   return (
     <>
-      {isLoading && <ProjectCardCreator projectContent={list.projects} />}
-      {!isLoading && (
+      { isLoading && <ProjectCardCreator projectContent={list.projects} /> }
+      { !isLoading && (
         <ProjectCardCreator projectContent={list.projects} />
-      )}
+      ) }
     </>
   );
 }
