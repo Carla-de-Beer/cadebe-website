@@ -19,7 +19,7 @@
     {
       "id": 3,
       "title": "CNN Landscape Classifier",
-      "text": "A convolutional neural network built with TensorFlow-Keras to allow for landscape classification based on one of three categories: desert, forest and polar.",
+      "text": "A convolutional neural network (CNN) built with TensorFlow-Keras to allow for landscape classification based on one of three categories: desert, forest and polar.",
       "url": "https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier",
       "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"
@@ -42,10 +42,10 @@
     },
     {
       "id": 6,
-      "title": "Deep Neural Network Binary Classifier",
-      "text": "This is a demo project that shows how a deep neural network, built with TensorFlow-Keras, can be used as a binary classifier. The project uses the multivariate Mushroom Dataset that was previously analysed with the autoencoder. Despite the linearly inseparable nature of the high-dimensional data (as shown via the autoencoder study), the classifier has a high accuracy rate and has few difficulties in making an relatively accurate classification.",
-      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/dff/classifier/mushroom-dataset-classifier",
-      "footerClass": " Deep Neural Network",
+      "title": "Cartoon-Photo Classifier",
+      "text": "Two comparative Tensorflow-Keras-based deeplearning convolutional neural networks (CNNs) to predict whether an image is a cartoon or a photo. The simpler CNN makes use solely of the provided dataset, whereas the other CNN additionally benefits from the application of the weights from a pre-trained model in the process of transfer learning. The classifier based on transfer learning boosts the accuracy of the somewhat limited dataset to nearly 100%, and additionally manages to train more quickly in only a handful of epochs.",
+      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/CNN/cartoon-photo-classifier",
+      "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"
     },
     {

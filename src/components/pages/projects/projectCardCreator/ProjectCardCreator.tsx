@@ -10,7 +10,7 @@ import ISSImage from '../../../../assets/images/projects/ISS.png';
 import cnn from '../../../../assets/images/projects/cnn.png';
 import matrix from '../../../../assets/images/projects/matrix-1.png';
 import mushroomAE from '../../../../assets/images/projects/mushroom-autoencoder.png';
-import mushroomGraph from '../../../../assets/images/projects/mushroom-val-loss.png';
+import cartoonsPhotos from '../../../../assets/images/projects/cartoons-photos.png';
 import naive from '../../../../assets/images/projects/naive-bayes.png';
 import letterFrequencies from '../../../../assets/images/projects/letter-frequencies.png';
 import som from '../../../../assets/images/projects/SOM.png';
@@ -212,7 +212,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       case 5:
         return (<Card.Img src={mushroomAE} alt={alt} />);
       case 6:
-        return (<Card.Img src={mushroomGraph} alt={alt} />);
+        return (<Card.Img src={cartoonsPhotos} alt={alt} />);
       case 7:
         return (<Card.Img src={naive} alt={alt} />);
       case 8:
