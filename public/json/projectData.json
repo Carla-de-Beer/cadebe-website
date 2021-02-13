@@ -32,20 +32,21 @@
       "footerClass": "Feed-Forward Neural Network",
       "footerLanguage": "Java"
     },
+
     {
       "id": 5,
-      "title": "Autoencoder for Dimensionality Reduction",
-      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
-      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
-      "footerClass": "Autoencoder",
-      "footerLanguage": "TensorFlow"
-    },
-    {
-      "id": 6,
       "title": "Cartoon-Photo Classifier",
       "text": "Two comparative Tensorflow-Keras-based deeplearning convolutional neural networks (CNNs) to predict whether an image is a cartoon or a photo. The simpler CNN makes use solely of the provided dataset, whereas the other CNN additionally benefits from the application of the weights from a pre-trained model in the process of transfer learning. The classifier based on transfer learning boosts the accuracy of the somewhat limited dataset to nearly 100%, and additionally manages to train more quickly in only a handful of epochs.",
       "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/CNN/cartoon-photo-classifier",
       "footerClass": "Convolutional Neural Network",
+      "footerLanguage": "TensorFlow"
+    },
+    {
+      "id": 6,
+      "title": "Autoencoder for Dimensionality Reduction",
+      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
+      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
+      "footerClass": "Autoencoder",
       "footerLanguage": "TensorFlow"
     },
     {
