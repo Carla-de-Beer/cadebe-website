@@ -36,6 +36,15 @@
     @extend .font-size-standard;
   }
 
+  .dangerous p {
+    @extend p.card-text;
+  }
+
+  .dangerous a {
+    color: $logo-accent-color !important;
+    font-weight: bold
+  }
+
   .text-fields {
     @extend %base-text-fields;
   }

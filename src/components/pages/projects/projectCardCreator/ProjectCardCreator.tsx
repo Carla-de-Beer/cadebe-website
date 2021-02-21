@@ -11,8 +11,8 @@ import cnn from '../../../../assets/images/projects/cnn.png';
 import matrix from '../../../../assets/images/projects/matrix-1.png';
 import mushroomAE from '../../../../assets/images/projects/mushroom-autoencoder.png';
 import cartoonsPhotos from '../../../../assets/images/projects/cartoons-photos.png';
+import cartoonsPhotosWeb from '../../../../assets/images/projects/cartoons-photos-web.png';
 import naive from '../../../../assets/images/projects/naive-bayes.png';
-import letterFrequencies from '../../../../assets/images/projects/letter-frequencies.png';
 import som from '../../../../assets/images/projects/SOM.png';
 import selfOrganising from '../../../../assets/images/projects/self-organising.png';
 import fourier from '../../../../assets/images/projects/FourierTransformHeart.gif';
@@ -212,11 +212,11 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       case 5:
         return (<Card.Img src={cartoonsPhotos} alt={alt} />);
       case 6:
-        return (<Card.Img src={mushroomAE} alt={alt} />);
+        return (<Card.Img src={cartoonsPhotosWeb} alt={alt} />);
       case 7:
         return (<Card.Img src={naive} alt={alt} />);
       case 8:
-        return (<Card.Img src={letterFrequencies} alt={alt} />);
+        return (<Card.Img src={mushroomAE} alt={alt} />);
       case 9:
         return (<Card.Img src={som} alt={alt} />);
       case 10:
@@ -249,7 +249,9 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
           { this.bindImages(id) }
           <Card.Body>
             <Card.Title>{ title }</Card.Title>
-            <Card.Text>{ text }</Card.Text>
+            <Card.Text>
+              <div className="dangerous" dangerouslySetInnerHTML={{ __html: text }} />
+            </Card.Text>
           </Card.Body>
           <Card.Footer>
             <small className="text-muted">

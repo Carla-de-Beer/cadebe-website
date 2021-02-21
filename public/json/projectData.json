@@ -35,7 +35,7 @@
 
     {
       "id": 5,
-      "title": "Cartoon-Photo Classifier",
+      "title": "Cartoon-Photo Classifier (Code)",
       "text": "Two comparative Tensorflow-Keras-based deeplearning convolutional neural networks (CNNs) to predict whether an image is a cartoon or a photo. The simpler CNN makes use solely of the provided dataset, whereas the other CNN additionally benefits from the application of the weights from a pre-trained model in the process of transfer learning. The classifier based on transfer learning boosts the accuracy of the somewhat limited dataset to nearly 100%, and additionally manages to train more quickly in only a handful of epochs.",
       "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/CNN/cartoon-photo-classifier",
       "footerClass": "Convolutional Neural Network",
@@ -43,10 +43,10 @@
     },
     {
       "id": 6,
-      "title": "Autoencoder for Dimensionality Reduction",
-      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
-      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
-      "footerClass": "Autoencoder",
+      "title": "Cartoon-Photo Classifier (Web)",
+      "text": "A Python Flask web app exposing a TensorFlow-Keras model trained to differentiate between cartoons and photos. Photos are uploaded to the app and the model predicts whether the image is a cartoon or a photo, and the degree of certainty associated with this prediction. The code for the app can be found <a className=\"highlighted-text\" target=\"_blank\" href=\"https://github.com/Carla-de-Beer/python-projects/tree/master/flask-projects/keras-model-deployment/cartoon-photo-classifier-web\">here</a>.",
+      "url": "https://vimeo.com/514892360",
+      "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"
     },
     {
@@ -59,11 +59,11 @@
     },
     {
       "id": 8,
-      "title": "Letter Frequency Calculator",
-      "text": "A Python program that reads in a set of text files and calculates the frequency occurrences of each alphabet letter, where the alphabet letters are listed in descending order of frequency.",
-      "url": "https://github.com/Carla-de-Beer/python-projects/tree/master/python-scripts/letter-frequency-calculator",
-      "footerClass": "Data Visualisation",
-      "footerLanguage": "Python"
+      "title": "Autoencoder for Dimensionality Reduction",
+      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
+      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
+      "footerClass": "Autoencoder",
+      "footerLanguage": "TensorFlow"
     },
     {
       "id": 9,
