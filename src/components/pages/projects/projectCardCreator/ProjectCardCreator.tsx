@@ -218,13 +218,13 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       case 8:
         return (<Card.Img src={mushroomAE} alt={alt} />);
       case 9:
-        return (<Card.Img src={som} alt={alt} />);
-      case 10:
-        return (<Card.Img src={selfOrganising} alt={alt} />);
-      case 11:
         return (<Card.Img src={fourier} alt={alt} />);
-      case 12:
+      case 10:
         return (<Card.Img src={imageSegmentation} alt={alt} />);
+      case 11:
+        return (<Card.Img src={som} alt={alt} />);
+      case 12:
+        return (<Card.Img src={selfOrganising} alt={alt} />);
       default:
         return (<Card.Img src={dummy} alt={alt} />);
     }

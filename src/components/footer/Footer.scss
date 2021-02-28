@@ -21,6 +21,12 @@
     color: $paragraph-gray-2;
   }
 
+  .footer-text-2 {
+    @extend .font-size-small;
+    text-align: center;
+    color: $paragraph-gray-2;
+  }
+
   .text-fields {
     text-align: center;
   }

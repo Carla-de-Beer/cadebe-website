@@ -11,7 +11,7 @@
       "id": 2,
       "title": "DeepLearning.AI Tensorflow Developer Coursera Certification",
       "subTitle": "13 APRIL 2020",
-      "text": "<p className=\"inner-text\">Completed all 4 courses of the DeepLearning.AI Tensorflow Developer Professional Certificate program:</p><ul className=\"inner-text\"><li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li><li>Convolutional Neural Networks in TensorFlow</li><li>Natural Language Processing in TensorFlow</li><li>Sequences, Time Series and Prediction</li></ul>",
+      "text": "<p>Completed all 4 courses of the DeepLearning.AI Tensorflow Developer Professional Certificate program:<ul><li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li><li>Convolutional Neural Networks in TensorFlow</li><li>Natural Language Processing in TensorFlow</li><li>Sequences, Time Series and Prediction</li></ul></p>",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/54T2J5Z5KWCN"
     },
     {
@@ -41,6 +41,13 @@
       "subTitle": "11 OCTOBER 2020",
       "text": "Aspect Oriented Programming (AOP) has been around for a while but has always felt inaccessible, partly due to the opaque-sounding terminology. Actually, it is quite simple and a really powerful tool. I built a demo example using the SpringFramework, and illustrated the terminology with practical explanations. Doing is understanding!",
       "url": "https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/aop-demo"
+    },
+    {
+      "id": 7,
+      "title": "TensorFlow Serving for Deployment",
+      "subTitle": "27 FEBRUARY 2021",
+      "text": "TensorFlow Serving is a flexible, high-performance serving system for machine learning models, designed for production environments. TensorFlow Serving provides out-of-the-box integration with TensorFlow models by providing an easily accessible API to directly query a pre-trained model. Whilst here are several methods by which TensorFlow Serving can be installed, this example uses Docker.",
+      "url": "https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment/tensorflow-serving-deployment"
     }
   ]
 }

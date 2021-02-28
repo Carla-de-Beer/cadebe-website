@@ -35,16 +35,16 @@
 
     {
       "id": 5,
-      "title": "Cartoon-Photo Classifier (Code)",
+      "title": "Cartoon-Photo Classifier (Model)",
       "text": "Two comparative Tensorflow-Keras-based deeplearning convolutional neural networks (CNNs) to predict whether an image is a cartoon or a photo. The simpler CNN makes use solely of the provided dataset, whereas the other CNN additionally benefits from the application of the weights from a pre-trained model in the process of transfer learning. The classifier based on transfer learning boosts the accuracy of the somewhat limited dataset to nearly 100%, and additionally manages to train more quickly in only a handful of epochs.",
-      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/CNN/cartoon-photo-classifier",
+      "url": "https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/classifier",
       "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"
     },
     {
       "id": 6,
-      "title": "Cartoon-Photo Classifier (Web)",
-      "text": "A Python Flask web app exposing a TensorFlow-Keras model trained to differentiate between cartoons and photos. Photos are uploaded to the app and the model predicts whether the image is a cartoon or a photo, and the degree of certainty associated with this prediction. The code for the app can be found <a className=\"highlighted-text\" target=\"_blank\" href=\"https://github.com/Carla-de-Beer/python-projects/tree/master/flask-projects/keras-model-deployment/cartoon-photo-classifier-web\">here</a>.",
+      "title": "Cartoon-Photo Classifier (Deployment)",
+      "text": "<p>Two techniques are explored for deploying the pre-trained cartoons-photos model:</p><ul><li>Python Flask apps exposing the TensorFlow-Keras model either as an API or as a web app. Photos are uploaded and the model predicts whether the image is a cartoon or a photo, and the degree of certainty associated with this prediction.</li><li>TensorFlow Serving acting as a wrapper for the model by providing an API by which to query the model directly through HTTP requests, thereby side-stepping the need for a Flask API. There are several methods by which TensorFlow Serving can be installed. This example uses Docker.</li></ul><p>The deployment code can be found <a className=\"highlighted-text\" target=\"_blank\" href=\"https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment\">here</a>.</p>",
       "url": "https://vimeo.com/514892360",
       "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"
@@ -67,22 +67,6 @@
     },
     {
       "id": 9,
-      "title": "Shape Mapping",
-      "text": "This project demonstrates how a self-organising map (SOM), a type of artificial neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D point cloud.",
-      "url": "https://vimeo.com/54726553",
-      "footerClass": "Self-Organising Map",
-      "footerLanguage": "Processing"
-    },
-    {
-      "id": 10,
-      "title": "Self-Organising Structure",
-      "text": " Randomised autonomous agents self-organise to build a structured pattern based on their ability to seek out a target and to adjust their velocity and acceleration accordingly.",
-      "url": "https://vimeo.com/85047354",
-      "footerClass": "Boids",
-      "footerLanguage": "Processing"
-    },
-    {
-      "id": 11,
       "title": "Discrete Fourier Transformation of a Heart Curve",
       "text": " Discrete Fourier Transformation with epicycles using a heart curve as input.",
       "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart",
@@ -90,11 +74,27 @@
       "footerLanguage": "Processing"
     },
     {
-      "id": 12,
+      "id": 10,
       "title": "Image Segmentation with K-Nearest Neighbour",
       "text": "An image segmentation example using the k-nearest neighbour algorithm.",
       "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN",
       "footerClass": "Image Segmentation",
+      "footerLanguage": "Processing"
+    },
+    {
+      "id": 11,
+      "title": "Shape Mapping",
+      "text": "This project demonstrates how a self-organising map (SOM), a type of artificial neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D point cloud.",
+      "url": "https://vimeo.com/54726553",
+      "footerClass": "Self-Organising Map",
+      "footerLanguage": "Processing"
+    },
+    {
+      "id": 12,
+      "title": "Self-Organising Structure",
+      "text": " Randomised autonomous agents self-organise to build a structured pattern based on their ability to seek out a target and to adjust their velocity and acceleration accordingly.",
+      "url": "https://vimeo.com/85047354",
+      "footerClass": "Boids",
       "footerLanguage": "Processing"
     }
   ]
