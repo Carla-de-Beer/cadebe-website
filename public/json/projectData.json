@@ -44,8 +44,7 @@
     {
       "id": 6,
       "title": "Cartoon-Photo Classifier (Deployment)",
-      "text": "<p>Two techniques are explored for deploying the pre-trained cartoons-photos model:</p><ul><li>Python Flask apps exposing the TensorFlow-Keras model either as an API or as a web app. Photos are uploaded and the model predicts whether the image is a cartoon or a photo, and the degree of certainty associated with this prediction.</li><li>TensorFlow Serving acting as a wrapper for the model by providing an API by which to query the model directly through HTTP requests, thereby side-stepping the need for a Flask API. This example uses Docker.</li></ul><p>The deployment code can be found <a className=\"highlighted-text\" target=\"_blank\" href=\"https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment\">here</a>.</p>",
-      "url": "https://vimeo.com/514892360",
+      "text": "<p>Two techniques are explored for deploying the pre-trained cartoons-photos model:</p><ul><li>Python Flask apps exposing the TensorFlow-Keras model either as an API or as a web app. Photos are uploaded and the model predicts whether the image is a cartoon or a photo, and the degree of certainty associated with this prediction.</li><li>TensorFlow Serving, run inside a docker container, acting as a wrapper for the model to provide an API by which to query the model directly via HTTP requests.</li></ul><p>The deployment code can be found <a className=\"highlighted-text\" target=\"_blank\" href=\"https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment\">here</a>.</p>",
       "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"
     },
