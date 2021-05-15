@@ -66,6 +66,22 @@
     text-align: center;
   }
 
+  .theme-color {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #cadebe;
+
+    p {
+      @extend .font-style-accent;
+      @extend .font-size-medium;
+      font-weight: bold;
+      text-align: center;
+      color: var(--footer-background);
+    }
+  }
+
   @media all and (max-width: 824px) {
     .box {
       display: block;

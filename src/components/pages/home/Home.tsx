@@ -23,7 +23,14 @@ export default function Home() {
                 alt="Portrait"
               />
             </div>
-            <Banner title="WELCOME" />
+            <div className="theme-color">
+              <p>
+                #cadebe hex colour : RGB(202, 222, 190)
+              </p>
+            </div>
+            <div className="mt-4">
+              <Banner title="WELCOME" />
+            </div>
             <div>
               <Card className="card-tile" style={{ width: '80%' }}>
                 <Card.Body>
