@@ -3,7 +3,6 @@
 @import 'src/style/common';
 
 .projects-wrapper {
-
   box-sizing: revert;
 
   p {
@@ -11,23 +10,23 @@
   }
 
   .card-title {
-    color: $header-grey;
+    color: var(--header-grey);
   }
 
   .card-footer {
-    border-top: none;
+    border-top: 0;
   }
 
   .card-tile {
-    width: 50%;
+    border: 0;
+    color: var(--accent-gray);
     margin: 0 auto;
-    border: none;
-    color: $accent-gray;
+    width: 50%;
 
     .typewriter-text {
       @extend .font-style-accent;
       @include font-size-large-1;
-      color: $header-grey;
+      color: var(--header-grey);
       font-weight: bold;
     }
   }
@@ -41,8 +40,8 @@
   }
 
   .dangerous a {
-    color: $logo-accent-color !important;
-    font-weight: bold
+    color: var(--logo-accent-color) !important;
+    font-weight: bold;
   }
 
   .text-fields {
@@ -50,13 +49,13 @@
   }
 
   .no-link {
-    color: $dark-accent-2;
+    color:var(--dark-accent-2);
     text-decoration: none;
   }
 
   .high-light-1 {
+    color: var(--paragraph-gray-2);
     font-weight: bold;
-    color: $paragraph-gray-2;
   }
 
   .centred-image {
@@ -65,7 +64,9 @@
     margin-right: auto;
   }
 
-  *, ::after, ::before {
+  *,
+  ::after,
+  ::before {
     box-sizing: content-box;
   }
 
@@ -75,8 +76,8 @@
 
   @media all and (max-width: 824px) {
     .card {
-      background-color: $warm-grey-1;
-      border: 0.5px solid $warm-grey-3;
+      background-color: var(--warm-grey-1);
+      border: 0.5px solid var(--warm-grey-3);
     }
 
     .box {
@@ -86,21 +87,21 @@
     }
 
     .card-style {
-      padding: 1.0rem;
+      padding: 1rem;
     }
 
     .high-light-1 {
       @include font-size-large-1;
+      color: var(--paragraph-gray-2);
       font-weight: bold;
-      color: $paragraph-gray-2;
       margin: unset;
     }
   }
 
   @media all and (min-width: 825px) {
     .card {
-      background-color: $warm-grey-1;
-      border: 0.5px solid $warm-grey-3;
+      background-color: var(--warm-grey-1);
+      border: 0.5px solid var(--warm-grey-3);
       height: 100%;
     }
 
@@ -122,10 +123,9 @@
 
     .high-light-1 {
       @include font-size-large-2;
+      color: var(--paragraph-gray-2);
       font-weight: bold;
-      color: $paragraph-gray-2;
       margin: unset;
     }
   }
-
 }

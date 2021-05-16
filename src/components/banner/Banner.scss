@@ -3,7 +3,6 @@
 @import 'src/style/common';
 
 .banner-wrapper {
-
   .text-fields {
     @extend %base-text-fields;
   }
@@ -18,5 +17,4 @@
       @include font-size-large-3;
     }
   }
-
 }

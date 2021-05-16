@@ -3,13 +3,13 @@
 @import 'src/style/common';
 
 .about-wrapper {
-
   body {
     padding: 0;
     position: relative;
   }
 
-  html, body {
+  html,
+  body {
     height: 100%;
   }
 
@@ -18,15 +18,15 @@
   }
 
   .card-tile {
-    width: 50%;
+    border: 0;
+    color: var(--accent-gray);
     margin: 0 auto;
-    border: none;
-    color: $accent-gray;
+    width: 50%;
 
     .typewriter-text {
       @extend .font-style-accent;
       @include font-size-large-1;
-      color: $header-grey;
+      color: var(--header-grey);
       font-weight: bold;
     }
   }
@@ -36,8 +36,8 @@
   }
 
   .high-light-1 {
+    color: var(--paragraph-gray-2);
     font-weight: bold;
-    color: $paragraph-gray-2;
   }
 
   @media all and (max-width: 824px) {
@@ -49,8 +49,8 @@
 
     .high-light-1 {
       @include font-size-large-1;
+      color: var(--paragraph-gray-2);
       font-weight: bold;
-      color: $paragraph-gray-2;
       margin: unset;
     }
   }
@@ -58,10 +58,9 @@
   @media all and (min-width: 825px) {
     .high-light-1 {
       @include font-size-large-2;
+      color: var(--paragraph-gray-2);
       font-weight: bold;
-      color: $paragraph-gray-2;
       margin: unset;
     }
   }
-
 }

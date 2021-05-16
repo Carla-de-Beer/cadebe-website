@@ -1,13 +1,13 @@
 .font-style-default {
-  font-family: avenirblack, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: avenirblack, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .font-style-accent {
-  font-family: "DejaVu Sans", Courier, Arial, Helvetica, sans-serif;
+  font-family: 'DejaVu Sans', Courier, Arial, Helvetica, sans-serif;
 }
 
 @mixin font-style-highlight {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 %font-style-highlight {

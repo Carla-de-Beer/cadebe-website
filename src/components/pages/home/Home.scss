@@ -3,53 +3,55 @@
 @import 'src/style/common';
 
 .home-wrapper {
-
   body {
     padding: 0;
     position: relative;
   }
 
-  html, body {
+  html,
+  body {
     height: 100%;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @extend .font-style-default;
-    color: $header-grey;
+    color: var(--header-grey);
   }
 
   a {
     @extend .font-style-default;
-    color: $accent-gray;
-    text-decoration: none;
+    color: var(--accent-gray);
     font-size: 13px;
+    text-decoration: none;
   }
 
   p {
     @extend .font-style-default;
     @include font-size-large-1;
-    color: $paragraph-gray-2;
+    color: var(--paragraph-gray-2);
   }
 
   .card {
-    background-color: $white;
-    border: none;
+    background-color: var(--white);
+    border: 0;
   }
 
   .card-text {
-    color: $accent-gray;
+    color: var(--accent-gray);
   }
 
   .card-tile {
-    width: 50%;
+    border: 0;
+    color: var(--accent-gray);
     margin: 0 auto;
-    border: none;
-    color: $accent-gray;
+    width: 50%;
 
     .typewriter-text {
       @extend .font-style-accent;
       @include font-size-large-1;
-      color: $header-grey;
+      color: var(--header-grey);
       font-weight: bold;
     }
   }
@@ -67,18 +69,17 @@
   }
 
   .theme-color {
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    margin: 0 auto;
     background-color: #cadebe;
+    height: 32px;
+    line-height: 31px;
+    margin: 0 auto;
 
     p {
       @extend .font-style-accent;
-      @extend .font-size-medium;
-      font-weight: bold;
-      text-align: center;
+      @extend .font-size-small;
       color: var(--footer-background);
+      padding-right: 10px;
+      text-align: right;
     }
   }
 
@@ -89,5 +90,4 @@
       width: 100%;
     }
   }
-
 }
