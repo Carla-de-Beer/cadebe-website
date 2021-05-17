@@ -137,7 +137,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       for (let i = 0; i < Object.keys(projectContent).length; i += 1) {
         if (i % 2 === 0) {
           innerArray.push(
-            <Col className="project-card left-card">
+            <Col className="project-card left-card pb-5">
               { this.makeCard(
                 projectContent[i].id,
                 projectContent[i].url,
@@ -150,7 +150,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
           );
         } else {
           innerArray.push(
-            <Col className="project-card right-card">
+            <Col className="project-card right-card pb-5">
               {this.makeCard(
                 projectContent[i].id,
                 projectContent[i].url,
@@ -175,7 +175,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
         );
       } else {
         outerArray.push(
-          <div className="project-card mt-5" key={projectContent[i].id}>
+          <div className="project-card mt-4" key={projectContent[i].id}>
             <Row className="project-card">
               { innerArray[i] }
               { innerArray[i + 1] }
