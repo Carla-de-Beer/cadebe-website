@@ -25,7 +25,7 @@ export default function Home() {
             </div>
             <div className="theme-color">
               <p>
-                #cadebe : RGB(202, 222, 190)
+                <strong>#cadebe</strong> : RGB(202, 222, 190)
               </p>
             </div>
             <div className="mt-4">
