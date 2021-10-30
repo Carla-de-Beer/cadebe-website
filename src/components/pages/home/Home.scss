@@ -68,19 +68,8 @@
     text-align: center;
   }
 
-  .theme-color {
-    background-color: #cadebe;
-    height: 32px;
-    line-height: 31px;
-    margin: 0 auto;
-
-    p {
-      @extend .font-style-accent;
-      @extend .font-size-small;
-      color: var(--footer-background);
-      padding-right: 10px;
-      text-align: right;
-    }
+  .images {
+    text-align: center;
   }
 
   @media all and (max-width: 824px) {

@@ -1,57 +1,145 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-import Header from '../../header/Header';
-import Banner from '../../banner/Banner';
 
 import './Home.scss';
 import '../../../style/_fonts.scss';
+import Banner from '../../banner/Banner';
+import Header from '../../header/Header';
 
-import photo from '../../../assets/images/shared/photo-packing-circles.jpg';
+import photoImageSeg from '../../../assets/images/about/result-image-seg.jpg';
+import photoImageDotScreen from '../../../assets/images/about/result-dot-screen.jpg';
+import photoImageThreshold from '../../../assets/images/about/result-threshold.jpg';
+import photoImageVoronoi from '../../../assets/images/about/result-voronoi.jpg';
+import PageSize from '../../../utils/enums';
 
-export default function Home() {
-  return (
-    <div>
-      <Header pageType="home" />
-      <div className="home-wrapper">
-        <div className="mt-4" />
-        <div className="text-fields box mt-xl-5 mt-lg-5 mt-md-5 mt-4">
-          <div>
-            <div className="mt-4">
-              <img
-                src={photo}
-                style={{ maxWidth: '100%' }}
-                alt="Portrait"
-              />
-            </div>
-            <div className="theme-color">
-              <p>
-                <strong>#cadebe</strong> : RGB(202, 222, 190)
-              </p>
-            </div>
-            <div className="mt-4">
-              <Banner title="WELCOME" />
-            </div>
+const sizeRatio = '40%';
+const sizeRatioMobile = '80%';
+
+export default class Home extends Component<any, any> {
+  setPageLayout() {
+    if (window.innerWidth.valueOf() <= PageSize.MEDIUM) {
+      return this.setLayoutMobile();
+    }
+    return this.setLayoutDesktop();
+  }
+
+    setBody = () => (
+      <div>
+        <Card className="card-tile" style={{ width: '80%' }}>
+          <Card.Body>
+            <Card.Title />
+            <Card.Text>
+              I&apos;m Carla de Beer, a software engineer involved in
+              web development and machine learning.
+              <br />
+              <br />
+              What started off as an experiment in uploading content to AWS S3 and
+              integrating an SSL certificate with AWS CloudFront,
+              has morphed into a proper website.
+              This website showcases some of my own development work from the past few
+              years,
+              as well as news and blog updates.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+    );
+
+    setLayoutMobile = () => (
+      <div>
+        <Header pageType="home" />
+        <div className="home-wrapper">
+          <div className="text-fields box">
             <div>
-              <Card className="card-tile" style={{ width: '80%' }}>
-                <Card.Body>
-                  <Card.Title />
-                  <Card.Text>
-                    I&apos;m Carla de Beer, a software engineer involved in
-                    web development and machine learning.
-                    <br />
-                    <br />
-                    What started off as an experiment in uploading content to AWS S3 and
-                    integrating an SSL certificate with AWS CloudFront,
-                    has morphed into a proper website.
-                    This website showcases some of my own development work from the past few years,
-                    as well as news and blog updates.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <div>
+                <Banner title="WELCOME" />
+              </div>
+              <br />
+              <div className="images">
+                <img
+                  src={photoImageSeg}
+                  style={{ maxWidth: sizeRatioMobile }}
+                  alt="Portrait"
+                />
+              </div>
+              <div className="images">
+                <img
+                  src={photoImageVoronoi}
+                  style={{ maxWidth: sizeRatioMobile }}
+                  alt="Portrait"
+                />
+              </div>
+              <div className="images">
+                <img
+                  src={photoImageThreshold}
+                  style={{ maxWidth: sizeRatioMobile }}
+                  alt="Portrait"
+                />
+              </div>
+              <div className="images">
+                <img
+                  src={photoImageDotScreen}
+                  style={{ maxWidth: sizeRatioMobile }}
+                  alt="Portrait"
+                />
+              </div>
+              <br />
+              {this.setBody()}
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+
+    setLayoutDesktop = () => (
+      <div>
+        <Header pageType="home" />
+        <div className="home-wrapper">
+          <div className="text-fields box">
+            <div>
+              <div>
+                <Banner title="WELCOME" />
+              </div>
+              <br />
+              <br />
+              <div className="images">
+                <img
+                  src={photoImageSeg}
+                  style={{ maxWidth: sizeRatio }}
+                  alt="Portrait"
+                />
+                <img
+                  src={photoImageVoronoi}
+                  style={{ maxWidth: sizeRatio }}
+                  alt="Portrait"
+                />
+              </div>
+              <br />
+              <div className="images">
+                <img
+                  src={photoImageThreshold}
+                  style={{ maxWidth: sizeRatio }}
+                  alt="Portrait"
+                />
+                <img
+                  src={photoImageDotScreen}
+                  style={{ maxWidth: sizeRatio }}
+                  alt="Portrait"
+                />
+              </div>
+              <br />
+              {this.setBody()}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+
+    render() {
+      return (
+        <div>
+          {this.setPageLayout()}
+        </div>
+      );
+    }
 }

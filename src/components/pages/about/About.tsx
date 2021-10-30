@@ -4,6 +4,7 @@ import Header from '../../header/Header';
 import Banner from '../../banner/Banner';
 
 import './About.scss';
+import photo from '../../../assets/images/shared/photo-packing-circles.jpg';
 
 export default function About() {
   return (
@@ -18,6 +19,22 @@ export default function About() {
           <p>
             I&apos;m Carla de Beer,
             a software engineer involved in web development and machine learning.
+            <br />
+            <br />
+            <div className="mt-4">
+              <img
+                src={photo}
+                style={{ maxWidth: '100%' }}
+                alt="Portrait"
+              />
+            </div>
+            <div className="theme-color">
+              <p>
+                <strong>#cadebe</strong>
+                {' '}
+                : RGB(202, 222, 190)
+              </p>
+            </div>
             <br />
             <br />
             As a software engineer with experience in developing web-based applications
