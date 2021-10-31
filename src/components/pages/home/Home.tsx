@@ -6,10 +6,10 @@ import '../../../style/_fonts.scss';
 import Banner from '../../banner/Banner';
 import Header from '../../header/Header';
 
-import photoImageSeg from '../../../assets/images/about/result-image-seg.jpg';
-import photoImageDotScreen from '../../../assets/images/about/result-dot-screen.jpg';
-import photoImageThreshold from '../../../assets/images/about/result-threshold.jpg';
-import photoImageVoronoi from '../../../assets/images/about/result-voronoi.jpg';
+import photoImageSeg from '../../../assets/images/home/result-image-seg.jpg';
+import photoImageDotScreen from '../../../assets/images/home/result-dot-screen.jpg';
+import photoImageThreshold from '../../../assets/images/home/result-threshold.jpg';
+import photoImageVoronoi from '../../../assets/images/home/result-voronoi.jpg';
 import PageSize from '../../../utils/enums';
 
 const sizeRatio = '40%';

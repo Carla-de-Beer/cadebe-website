@@ -4,7 +4,7 @@ import Header from '../../header/Header';
 import Banner from '../../banner/Banner';
 
 import './About.scss';
-import photo from '../../../assets/images/shared/photo-packing-circles.jpg';
+import photo from '../../../assets/images/about/photo-packing-circles.jpg';
 
 export default function About() {
   return (
