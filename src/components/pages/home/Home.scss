@@ -77,6 +77,13 @@
       color: var(--paragraph-gray-2);
       text-align: center;
     }
+
+    .caption-text-mobile {
+      @extend .font-size-small;
+      margin-top: -15px;
+      color: var(--paragraph-gray-2);
+      text-align: center;
+    }
   }
 
   @media all and (max-width: 824px) {

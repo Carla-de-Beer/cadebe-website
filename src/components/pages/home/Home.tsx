@@ -82,6 +82,15 @@ export default class Home extends Component<any, any> {
                   style={{ maxWidth: sizeRatioMobile }}
                   alt="Portrait"
                 />
+                <p className="caption-text">
+                  Image Processing
+                </p>
+                <p className="caption-text-mobile">
+                  Top: Image Segmentation, Voronoi.
+                </p>
+                <p className="caption-text-mobile">
+                  Bottom: Circle Packing, Thresholding, Dot-Screen
+                </p>
               </div>
               <br />
               {this.setBody()}
