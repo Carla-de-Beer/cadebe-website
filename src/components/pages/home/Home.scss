@@ -70,6 +70,13 @@
 
   .images {
     text-align: center;
+
+    .caption-text {
+      @extend .font-size-small;
+      margin-top: 10px;
+      color: var(--paragraph-gray-2);
+      text-align: center;
+    }
   }
 
   @media all and (max-width: 824px) {

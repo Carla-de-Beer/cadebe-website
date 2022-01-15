@@ -126,6 +126,12 @@ export default class Home extends Component<any, any> {
                   style={{ maxWidth: sizeRatio }}
                   alt="Portrait"
                 />
+                <div>
+                  <p className="caption-text">
+                    Image Processing | Top: Image Segmentation, Voronoi.
+                    Bottom: Circle Packing, Thresholding, Dot-Screen
+                  </p>
+                </div>
               </div>
               <br />
               {this.setBody()}
