@@ -48,7 +48,7 @@ Create the AWS S3 bucket path parameter: `export BUCKET=s3://<BUCKET NAME>`.
 
 Run the deployment command: `npm run deploy -- $BUCKET`
 
-### Todo
+## TODOs
 * [x] Complete Home Page
 * [x] Complete Projects Page
 * [x] Complete News Page
