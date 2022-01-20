@@ -83,13 +83,13 @@ export default class Home extends Component<any, any> {
                   alt="Portrait"
                 />
                 <p className="caption-text">
-                  Image Processing
+                  Image Processing Studies
                 </p>
                 <p className="caption-text-mobile">
-                  Top: Image Segmentation, Voronoi.
+                  Top: Image Segmentation, Voronoi Tessellation.
                 </p>
                 <p className="caption-text-mobile">
-                  Bottom: Circle Packing, Thresholding, Dot-Screen
+                  Bottom: Circle Packing, Thresholding, Dot-Screening
                 </p>
               </div>
               <br />
@@ -137,8 +137,8 @@ export default class Home extends Component<any, any> {
                 />
                 <div>
                   <p className="caption-text">
-                    Image Processing | Top: Image Segmentation, Voronoi.
-                    Bottom: Circle Packing, Thresholding, Dot-Screen
+                    Image Processing Studies | Top: Image Segmentation, Voronoi Tessellation.
+                    Bottom: Circle Packing, Thresholding, Dot-Screening
                   </p>
                 </div>
               </div>
