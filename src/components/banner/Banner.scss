@@ -13,7 +13,7 @@
 
   @media all and (max-width: 768px) {
     .high-light {
-      @extend .high-light;
+      @extend %base-high-light;
       @include font-size-large-3;
     }
   }

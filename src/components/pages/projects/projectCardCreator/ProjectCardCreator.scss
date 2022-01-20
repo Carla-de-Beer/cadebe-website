@@ -36,7 +36,7 @@
   }
 
   .dangerous p {
-    @extend p.card-text;
+    @extend .font-size-standard;
   }
 
   .dangerous a {

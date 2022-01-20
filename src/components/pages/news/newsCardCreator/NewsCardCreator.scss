@@ -45,7 +45,8 @@
   }
 
   .dangerous p {
-    @extend p.card-text;
+    @extend .font-size-standard;
+    color: var(--dark-accent-2);
   }
 
   .news-card {
