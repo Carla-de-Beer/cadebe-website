@@ -58,7 +58,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
           I have worked on over the past few years.
           Whilst most of my regular work involves Java development,
           these projects reflect my interest beyond the world of enterprise development,
-          and usually contain a strong focus on machine learning.
+          and typically contain a strong focus on machine learning.
           In the search for finding patterns,
           many of these project often also endevour to make the
           invisible visible via various means.
