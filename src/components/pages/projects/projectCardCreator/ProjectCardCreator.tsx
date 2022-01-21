@@ -203,31 +203,31 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
 
     switch (id) {
       case 1:
-        return (<Card.Img src={TSPImage} alt={alt} />);
+        return (<Card.Img className="image-container" src={TSPImage} alt={alt} />);
       case 2:
-        return (<Card.Img src={ISSImage} alt={alt} />);
+        return (<Card.Img className="image-container" src={ISSImage} alt={alt} />);
       case 3:
-        return (<Card.Img src={cnn} alt={alt} />);
+        return (<Card.Img className="image-container" src={cnn} alt={alt} />);
       case 4:
-        return (<Card.Img src={matrix} alt={alt} />);
+        return (<Card.Img className="image-container" src={matrix} alt={alt} />);
       case 5:
-        return (<Card.Img src={cartoonsPhotos} alt={alt} />);
+        return (<Card.Img className="image-container" src={cartoonsPhotos} alt={alt} />);
       case 6:
-        return (<Card.Img src={cartoonsPhotosFlask} alt={alt} />);
+        return (<Card.Img className="image-container" src={cartoonsPhotosFlask} alt={alt} />);
       case 7:
-        return (<Card.Img src={naive} alt={alt} />);
+        return (<Card.Img className="image-container" src={naive} alt={alt} />);
       case 8:
-        return (<Card.Img src={mushroomAE} alt={alt} />);
+        return (<Card.Img className="image-container" src={mushroomAE} alt={alt} />);
       case 9:
-        return (<Card.Img src={fourier} alt={alt} />);
+        return (<Card.Img className="image-container" src={fourier} alt={alt} />);
       case 10:
-        return (<Card.Img src={imageSegmentation} alt={alt} />);
+        return (<Card.Img className="image-container" src={imageSegmentation} alt={alt} />);
       case 11:
-        return (<Card.Img src={som} alt={alt} />);
+        return (<Card.Img className="image-container" src={som} alt={alt} />);
       case 12:
-        return (<Card.Img src={selfOrganising} alt={alt} />);
+        return (<Card.Img className="image-container" src={selfOrganising} alt={alt} />);
       default:
-        return (<Card.Img src={dummy} alt={alt} />);
+        return (<Card.Img className="image-container" src={dummy} alt={alt} />);
     }
   };
 
@@ -248,7 +248,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       >
         <Card className="card-style">
           { this.bindImages(id) }
-          <Card.Body>
+          <Card.Body className="text-container">
             <Card.Title>{ title }</Card.Title>
             <Card.Text>
               <div className="dangerous" dangerouslySetInnerHTML={{ __html: text }} />
