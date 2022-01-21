@@ -48,6 +48,20 @@
       "subTitle": "27 FEBRUARY 2021",
       "text": "TensorFlow Serving is a flexible, high-performance serving system for machine learning models, designed for production environments. It provides out-of-the-box integration with TensorFlow models by providing an easily accessible API to directly query a pre-trained model. Whilst here are several methods by which TensorFlow Serving can be installed, this example uses Docker.",
       "url": "https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment/tensorflow-serving-deployment"
+    },
+    {
+      "id": 8,
+      "title": "Oracle Certified Professional: Java SE 11 Developer",
+      "subTitle": "6 FEBRUARY 2023",
+      "text": "Passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of so many other activities. It has been worthwhile, though. My Java skills have been supercharged.",
+      "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951F20F63C52D9518F9E1C804BCD633710E"
+    },
+    {
+      "id": 9,
+      "title": "Oracle Certified Professional: Java SE 17 Developer",
+      "subTitle": "31 MARCH 2023",
+      "text": "I leveraged on my recent studies for the OCP Java SE 11 Developer exam to pass the OCP Java SE 17 Developer examination.\n\nAs Oracle puts it: \"By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.\"",
+      "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951482F83B53E3E1D5AC994787AE1FA8922"
     }
   ]
 }
