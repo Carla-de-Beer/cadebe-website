@@ -49,7 +49,7 @@
   }
 
   .no-link {
-    color:var(--dark-accent-2);
+    color: var(--dark-accent-2);
     text-decoration: none;
   }
 
@@ -76,8 +76,7 @@
 
   @media all and (max-width: 824px) {
     .card {
-      background-color: var(--warm-grey-1);
-      border: 0.5px solid var(--white);
+      border: 1px solid rgba(0, 0, 0, .125);
     }
 
     .box {
@@ -98,10 +97,23 @@
     }
   }
 
+  @media all and (min-width: 1201px) {
+    .image-container {
+      width: 485px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .text-container {
+    margin-top: 10px;
+    text-align: justify;
+  }
+
   @media all and (min-width: 825px) {
     .card {
-      background-color: var(--warm-grey-1);
-      border: 0.5px solid var(--white);
+      border: 1px solid rgba(0, 0, 0, .125);
       height: 100%;
     }
 
