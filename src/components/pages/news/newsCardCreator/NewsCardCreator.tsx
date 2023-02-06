@@ -8,6 +8,7 @@ import './NewsCardCreator.scss';
 
 import awsCert from '../../../../assets/images/news/aws-certificate.png';
 import awsCertManager from '../../../../assets/images/news/aws-image.png';
+import oracleBadge from '../../../../assets/images/news/ocp-java-11.jpg';
 
 export default class NewsCardCreator extends Component<INewsDataProps, INewsDataState> {
   constructor(props: INewsDataState) {
@@ -55,12 +56,26 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="row">
                 <div className="col ml-3 mr-3 block-4">
                   { this.makeStandardCard(
-                    newsContent[6].url,
-                    newsContent[6].title,
-                    newsContent[6].subTitle,
-                    newsContent[6].text,
+                    newsContent[7].url,
+                    newsContent[7].title,
+                    newsContent[7].subTitle,
+                    newsContent[7].text,
+                    newsContent[7].id,
                   ) }
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
+                { this.makeStandardCard(
+                  newsContent[6].url,
+                  newsContent[6].title,
+                  newsContent[6].subTitle,
+                  newsContent[6].text,
+                ) }
               </div>
             </div>
           </div>
@@ -156,11 +171,26 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
               <div className="col">
                 <div className="block-mobile">
                   { this.makeStandardCard(
-                    newsContent[6].url,
-                    newsContent[6].title,
-                    newsContent[6].subTitle,
-                    newsContent[6].text,
+                    newsContent[7].url,
+                    newsContent[7].title,
+                    newsContent[7].subTitle,
+                    newsContent[7].text,
+                    newsContent[7].id,
                   ) }
+                </div>
+              </div>
+            </div>
+            <div className="mt-3">
+              <div className="row">
+                <div className="col">
+                  <div className="block-mobile">
+                    { this.makeStandardCard(
+                      newsContent[6].url,
+                      newsContent[6].title,
+                      newsContent[6].subTitle,
+                      newsContent[6].text,
+                    ) }
+                  </div>
                 </div>
               </div>
             </div>
@@ -262,6 +292,7 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
                       newsContent[i].title,
                       newsContent[i].subTitle,
                       newsContent[i].text,
+                      newsContent[i].id,
                     ) }
                   </div>
                 </div>
@@ -318,6 +349,8 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
         return (<Card.Img className="mt-3" src={awsCertManager} alt={alt} />);
       case 5:
         return (<Card.Img className="mt-3" src={awsCert} alt={alt} />);
+      case 8:
+        return (<Card.Img className="mt-3 oracle-badge" src={oracleBadge} alt={alt} />);
       default:
         return (<></>);
     }
