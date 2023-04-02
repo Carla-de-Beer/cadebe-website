@@ -47,11 +47,12 @@ export default function About() {
             <br />
             In addition to my professional work, I have a keen interest in the field of
             machine learning, a journey I embarked on through my master&apos;s degree studies.
-            The advent of TensorFlow and Keras have made it so much easier and faster to
+            The advent of TensorFlow and Keras have made it much easier and faster to
             create, train and test models.
-            I am constantly amazed at the ability these frameworks provide to
-            extract meaning from data.
-            And in a way, visualising the invisible, has been something of a passion for me.
+            I am constantly amazed at these frameworks&apos; ability
+            to easily extract meaning from complex data.
+            It is exactly this rationale that ties in
+            with that of my own computational explorations: visualising the invisible.
             <br />
             <br />
             If you want to get in touch, you can reach me via &nbsp;
