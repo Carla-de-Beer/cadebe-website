@@ -52,27 +52,38 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
     if (Object.keys(newsContent).length > 1) {
       renderContent = (
         <>
-          <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-2">
-            <div className="mt-5">
-              <div className="row">
-                <div className="col ml-3 mr-3 block-4">
-                  { this.makeStandardCard(
-                    newsContent[8].url,
-                    newsContent[8].title,
-                    newsContent[8].subTitle,
-                    newsContent[8].text,
-                    newsContent[8].id,
-                  ) }
-                </div>
-                <div className="col ml-3 mr-3 block-4">
-                  { this.makeStandardCard(
-                    newsContent[7].url,
-                    newsContent[7].title,
-                    newsContent[7].subTitle,
-                    newsContent[7].text,
-                    newsContent[7].id,
-                  ) }
-                </div>
+          <div className="mt-xl-5 mt-lg-4 mt-md-4 mt-2">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
+                { this.makeStandardCard(
+                  newsContent[9].url,
+                  newsContent[9].title,
+                  newsContent[9].subTitle,
+                  newsContent[9].text,
+                ) }
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3">
+            <div className="row">
+              <div className="col ml-3 block-4">
+                { this.makeStandardCard(
+                  newsContent[8].url,
+                  newsContent[8].title,
+                  newsContent[8].subTitle,
+                  newsContent[8].text,
+                  newsContent[8].id,
+                ) }
+              </div>
+              <div className="col ml-3 mr-3 block-4">
+                { this.makeStandardCard(
+                  newsContent[7].url,
+                  newsContent[7].title,
+                  newsContent[7].subTitle,
+                  newsContent[7].text,
+                  newsContent[7].id,
+                ) }
               </div>
             </div>
           </div>
@@ -176,7 +187,23 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
       renderContent = (
         <div className="news-wrapper">
           { this.setCommon() }
+
           <div className="mt-5">
+            <div className="mt-3">
+              <div className="row">
+                <div className="col">
+                  <div className="block-mobile">
+                    { this.makeStandardCard(
+                      newsContent[9].url,
+                      newsContent[9].title,
+                      newsContent[9].subTitle,
+                      newsContent[9].text,
+                    ) }
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="mt-3">
               <div className="row">
                 <div className="col ml-3 block-4">
@@ -389,6 +416,7 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
           <Card.Title>{ title }</Card.Title>
           <Card.Subtitle className="mt-3 sub-title">{ subTitle }</Card.Subtitle>
           <Card.Text className="mt-3">
+            {/* eslint-disable-next-line react/no-danger */}
             <div className="dangerous" dangerouslySetInnerHTML={{ __html: text }} />
           </Card.Text>
           { (window.innerWidth.valueOf() <= PageSize.SMALL

@@ -39,8 +39,8 @@
       "id": 6,
       "title": "AOP and the Spring Framework",
       "subTitle": "11 OCTOBER 2020",
-      "text": "Aspect Oriented Programming (AOP) has been around for a while but has always felt inaccessible, partly due to the opaque-sounding terminology. Actually, it is quite simple and a really powerful tool. I built a demo example using the SpringFramework, and illustrated the terminology with practical explanations. Doing is understanding!",
-      "url": "https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/aop-demo"
+      "text": "Aspect Oriented Programming (AOP) has been around for a while but has always felt inaccessible, partly due to the opaque-sounding terminology. Actually, it is quite simple and a really powerful tool. I built a demo example using the Spring Framework, and illustrated the terminology with practical explanations. Doing is understanding!",
+      "url": "https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/spring-aop-demo"
     },
     {
       "id": 7,
@@ -53,15 +53,22 @@
       "id": 8,
       "title": "Oracle Certified Professional: Java SE 11 Developer",
       "subTitle": "6 FEBRUARY 2023",
-      "text": "Passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of so many other activities. It has been worthwhile, though. My Java skills have been supercharged.",
+      "text": "Passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of many other development activities. It has been worthwhile, though. My Java skills have been supercharged.",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951F20F63C52D9518F9E1C804BCD633710E"
     },
     {
       "id": 9,
       "title": "Oracle Certified Professional: Java SE 17 Developer",
       "subTitle": "31 MARCH 2023",
-      "text": "I leveraged on my recent studies for the OCP Java SE 11 Developer exam to pass the OCP Java SE 17 Developer examination.\n\nAs Oracle puts it: \"By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.\"",
+      "text": "I leveraged on my recent studies for the OCP Java SE 11 Developer exam to pass the OCP Java SE 17 Developer examination. As Oracle puts it: \"By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.\"",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951482F83B53E3E1D5AC994787AE1FA8922"
+    },
+    {
+      "id": 10,
+      "title": "Support Vector Machines with skearn",
+      "subTitle": "1 JULY 2023",
+      "text": "Support Vector Machines (SVMs) are supervised machine learning algorithms used for classification problems. Data is mapped to a high-dimensional feature space so that data points can be categorised based in two dimensions. The algorithm creates an optimal hyperplane that divides the dataset into two classes, and then uses support vectors as its building block for classifying new data observations. Support vectors are the data points nearest to the hyperplane, meaning their influence is greater compared to other observations further away from the model boundary.<br/><br/><strong>sklearn</strong> provides a simple Python-based API to unlock the power of SVMs. This project demonstrates how a SVM can be used for binary classification, based on a Kaggle dataset.",
+      "url": "https://github.com/Carla-de-Beer/python-projects/tree/master/machine-learning/support-vector-machine/diabetes-prediction-dataset"
     }
   ]
 }

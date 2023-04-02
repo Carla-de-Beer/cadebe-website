@@ -13,13 +13,13 @@ export default class Footer extends React.Component {
       if (window.innerWidth.valueOf() < PageSize.MEDIUM) {
         return (
           <div>
-            <Badge className="badge badge-pill badge-secondary">Machine Learning</Badge>
-            <br />
             <Badge className="badge badge-pill badge-secondary">Software Engineering</Badge>
+            <br />
+            <Badge className="badge badge-pill badge-secondary">Fullstack Development</Badge>
             <br />
             <Badge className="badge badge-pill badge-secondary">Backend Development</Badge>
             <br />
-            <Badge className="badge badge-pill badge-secondary">Fullstack Development</Badge>
+            <Badge className="badge badge-pill badge-secondary">Machine Learning</Badge>
           </div>
         );
       }
@@ -40,7 +40,7 @@ export default class Footer extends React.Component {
         <div className="footer-wrapper">
           <div className="footer-style mt-5">
             <p className="pt-4 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
-            <p className="footer-text-2">Updated: April 2023</p>
+            <p className="footer-text-2">Updated: July 2023</p>
             <div className="text-fields mt-5">
               <a href="https://twitter.com/cadebe_" target="_blank" rel="noopener noreferrer">
                 <img src={twitter} width="25px" height="25px" alt="Icon" />
