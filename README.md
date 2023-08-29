@@ -1,10 +1,12 @@
 # cadebe.dev 
 
+![example event parameter](https://github.com/Carla-de-Beer/cadebe-website/actions/workflows/build.yml/badge.svg?event=push)
+
 Website to showcase current and previous development projects. Built with React, TypeScript and SCSS and deployed on AWS.
 
 ## Requirements
-* NodeJS v16.13.2
-* npm 8.3.1
+* NodeJS v17.9.1
+* npm 8.11.0
 
 ## Available Scripts
 

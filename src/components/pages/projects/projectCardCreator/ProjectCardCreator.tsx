@@ -251,6 +251,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
           <Card.Body className="text-container">
             <Card.Title>{ title }</Card.Title>
             <Card.Text>
+              {/* eslint-disable-next-line react/no-danger */}
               <div className="dangerous" dangerouslySetInnerHTML={{ __html: text }} />
             </Card.Text>
           </Card.Body>

@@ -1,0 +1,91 @@
+name: Deploy project
+
+on:
+  [ workflow_dispatch ]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  id-token: write # To interact with AWS token (requesting the JWT)
+  contents: read  # To allow GITHUB_TOKEN is allowed to get the code for the repository and download artifacts
+
+env:
+  REGION: eu-west-2
+
+jobs:
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
+
+      - name: Run linter
+        run: npm run lint
+
+  build:
+    name: Build project
+    runs-on: ubuntu-22.04
+    needs: [ lint ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: build
+
+  deploy:
+    name: Deploy project
+    runs-on: ubuntu-22.04
+    needs: [ lint, build ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifacts
+          path: build
+
+      - name: Get AWS permissions
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::258782862236:role/GitHub-S3-Write-Access
+          aws-region: ${{ env.REGION }}
+
+      - name: Deploy to S3
+        id: deploy
+        uses: ./.github/actions/deploy-aws-s3
+        with:
+          bucket: www.cadebe.dev
+          bucket-region: ${{ env.REGION }}
+          dist-folder: ./dist
+
+      - name: Output deployment information
+        run: |
+          echo "URL: %{{ steps.deploy.outputs.website-url }}"
+
+
+

@@ -1,0 +1,53 @@
+name: 'Build | Node.js'
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  pull_request:
+    branches: [ $default-branch ]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
+
+      - name: Run linter
+        run: npm run lint
+
+  build:
+    name: Build project
+    runs-on: ubuntu-22.04
+    needs: [ lint ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: build
