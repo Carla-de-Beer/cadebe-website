@@ -62,7 +62,7 @@ export default function About() {
               href="https://twitter.com/cadebe_"
               target="_blank"
             >
-              Twitter
+              X
             </a>
               &nbsp;or&nbsp;
             <a
