@@ -7,7 +7,7 @@ inputs:
   bucket-region:
     description: 'AWS S3 bucket region'
     required: false
-    default: 'use-east-1'
+    default: 'us-east-1'
   dist-folder:
     description: 'Folder containing the deployable files'
     required: true

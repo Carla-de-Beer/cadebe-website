@@ -81,7 +81,7 @@ jobs:
         with:
           bucket: www.cadebe.dev
           bucket-region: ${{ env.REGION }}
-          dist-folder: ./dist
+          dist-folder: ./build
 
       - name: Output deployment information
         run: |
