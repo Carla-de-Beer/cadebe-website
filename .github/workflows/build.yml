@@ -15,18 +15,15 @@ concurrency:
 jobs:
 
   lint:
-    name: Lint
+    name: Run linter
     runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Get and cache dependencies
-        uses: ./.github/actions/cached-dependencies
-
-      - name: Run linter
-        run: npm run lint
+      - name: Lint
+        uses: ./.github/actions/lint
 
   build:
     name: Build project
@@ -37,17 +34,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Get and cache dependencies
-        uses: ./.github/actions/cached-dependencies
-
-      - name: Run tests
-        run: npm run test
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-artifacts
-          path: build
+      - name: Test and build
+        uses: ./.github/actions/test-and-build

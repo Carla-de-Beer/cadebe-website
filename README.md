@@ -59,5 +59,6 @@ Run the deployment command: `npm run deploy -- $BUCKET`
 * [x] Add footer
 * [x] Convert to responsive design (mobile, tablet and desktop)
 * [x] Dynamically load project data from JSON file
-* [ ] Check cross-browser compatibility
 * [x] Add linting rules
+* [ ] Add basic Cypress e2e tests
+* [ ] Check cross-browser compatibility

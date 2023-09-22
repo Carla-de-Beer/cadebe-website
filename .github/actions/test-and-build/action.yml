@@ -1,0 +1,17 @@
+name: 'Test and build'
+description: 'Runs unit tests and builds the project'
+runs:
+  using: composite
+  steps:
+
+    - name: Get and cache dependencies
+      uses: ./.github/actions/cached-dependencies
+
+    - name: Run tests
+      run: npm run test
+      shell: bash
+
+    - name: Build
+      run: npm run build
+      shell: bash
+

@@ -1,0 +1,12 @@
+name: 'Lint'
+description: 'Linting static code check'
+runs:
+  using: composite
+  steps:
+
+    - name: Get and cache dependencies
+      uses: ./.github/actions/cached-dependencies
+
+    - name: Run npm lint
+      shell: bash
+      run: npm run lint
