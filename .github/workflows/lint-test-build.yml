@@ -1,0 +1,56 @@
+name: Lint, unit test and build
+
+on:
+  workflow_call:
+    inputs:
+      artifact-folder:
+        description: The name of the folder containing the artifacts to be deployed
+        type: string
+        required: false
+        default: build
+      is-deploy:
+        description: Determines whether the build artifacts are to be uploaded prior to deployment
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+
+  lint:
+    name: Run linter
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
+
+      - name: Run npm lint
+        run: npm run lint
+
+  build:
+    name: Build project
+    runs-on: ubuntu-22.04
+    needs: [ lint ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload artifacts
+        if: inputs.is-deploy == true
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: ${{ inputs.artifact-folder }}

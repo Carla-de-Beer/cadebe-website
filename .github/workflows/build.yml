@@ -14,25 +14,8 @@ concurrency:
 
 jobs:
 
-  lint:
-    name: Run linter
-    runs-on: ubuntu-22.04
+  lint-test-build:
+    uses: ./.github/workflows/lint-test-build.yml
+    with:
+      is-deploy: false
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Lint
-        uses: ./.github/actions/lint
-
-  build:
-    name: Build project
-    runs-on: ubuntu-22.04
-    needs: [ lint ]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Test and build
-        uses: ./.github/actions/test-and-build

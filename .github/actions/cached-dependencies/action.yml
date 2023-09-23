@@ -12,7 +12,7 @@ runs:
         key: dependencies-node-modules-${{ hashFiles('**/package-lock.json')}}
 
     - name: Install dependencies
-      if: steps.cache.outputs.cache-hits != 'true'
+      if: steps.cache.outputs.cache-hit != 'true'
       shell: bash
       run: npm ci
 

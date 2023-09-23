@@ -1,4 +1,4 @@
-name: Deploy project
+name: Deploy S3
 
 on:
   [ workflow_dispatch ]
@@ -16,39 +16,16 @@ env:
 
 jobs:
 
-  lint:
-    name: Run linter
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Lint
-        uses: ./.github/actions/lint
-
-  build:
-    name: Build project
-    runs-on: ubuntu-22.04
-    needs: [ lint ]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Test and build
-        uses: ./.github/actions/test-and-build
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-artifacts
-          path: build
+  lint-test-build:
+    uses: ./.github/workflows/lint-test-build.yml
+    with:
+      artifact-folder: build
+      is-deploy: true
 
   deploy:
     name: Deploy project
     runs-on: ubuntu-22.04
-    needs: [ lint, build ]
+    needs: [ lint-test-build ]
 
     steps:
       - name: Checkout code
@@ -72,11 +49,11 @@ jobs:
         with:
           bucket: www.cadebe.dev
           bucket-region: ${{ env.REGION }}
-          dist-folder: ./build
+          artifact-folder: ./build
 
       - name: Output deployment information
         run: |
-          echo "URL: %{{ steps.deploy.outputs.website-url }}"
+          echo "Deployment to S3 bucket: ${{ steps.deploy.conclusion }}"
 
 
 

@@ -8,7 +8,7 @@ inputs:
     description: 'AWS S3 bucket region'
     required: false
     default: 'us-east-1'
-  dist-folder:
+  artifact-folder:
     description: 'Folder containing the deployable files'
     required: true
 runs:
