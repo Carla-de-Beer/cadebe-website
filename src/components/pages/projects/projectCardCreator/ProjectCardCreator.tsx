@@ -42,7 +42,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
   }
 
   setCommon = () => (
-    <div>
+    <div data-cy="projects-banner">
       <Banner title="PROJECTS" />
       <div className="text-fields mt-5">
         <p className="high-light-1">Machine Learning • Swarm Intelligence</p>

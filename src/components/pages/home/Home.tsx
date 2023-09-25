@@ -51,7 +51,7 @@ export default class Home extends Component<any, any> {
         <div className="home-wrapper">
           <div className="text-fields box">
             <div>
-              <div>
+              <div data-cy="welcome-banner-mobile">
                 <Banner title="WELCOME" />
               </div>
               <br />
@@ -106,7 +106,7 @@ export default class Home extends Component<any, any> {
         <div className="home-wrapper">
           <div className="text-fields box">
             <div>
-              <div>
+              <div data-cy="welcome-banner-desktop">
                 <Banner title="WELCOME" />
               </div>
               <br />

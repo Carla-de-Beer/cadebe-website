@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div>
       <Header pageType="about" />
-      <div className="about-wrapper">
+      <div className="about-wrapper" data-cy="about-banner">
         <Banner title="ABOUT" />
         <div className="mt-5">
           <p className="text-fields high-light-1">Who • What</p>

@@ -21,7 +21,7 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
   }
 
   setCommon = () => (
-    <div>
+    <div data-cy="news-banner">
       <Banner title="NEWS & BLOG" />
       <div className="mt-4">
         <div className="card-tile text-fields" style={{ width: '80%' }}>
