@@ -30,10 +30,9 @@ jobs:
       - name: Run npm lint
         run: npm run lint
 
-  build:
-    name: Build project
+  unit-tests:
+    name: Run unit tests
     runs-on: ubuntu-22.04
-    needs: [ lint ]
 
     steps:
       - name: Checkout code
@@ -42,8 +41,40 @@ jobs:
       - name: Get and cache dependencies
         uses: ./.github/actions/cached-dependencies
 
-      - name: Run tests
+      - name: Run unit tests
         run: npm run test
+
+  e2e:
+    name: Run e2e
+    runs-on: ubuntu-22.04
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
+
+      - name: Start server in the background
+        run: npm start &
+
+      - name: Install Cypress and run tests
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: cypress
+          browser: chrome
+
+  build:
+    name: Build project
+    runs-on: ubuntu-22.04
+    needs: [ lint, unit-tests, e2e ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get and cache dependencies
+        uses: ./.github/actions/cached-dependencies
 
       - name: Build
         run: npm run build

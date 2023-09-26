@@ -50,15 +50,3 @@ Create the AWS S3 bucket path parameter: `export BUCKET=s3://<BUCKET NAME>`.
 
 Run the deployment command: `npm run deploy -- $BUCKET`
 
-## TODOs
-* [x] Complete Home Page
-* [x] Complete Projects Page
-* [x] Complete News Page
-* [x] Complete About Page
-* [x] Add header
-* [x] Add footer
-* [x] Convert to responsive design (mobile, tablet and desktop)
-* [x] Dynamically load project data from JSON file
-* [x] Add linting rules
-* [ ] Add basic Cypress e2e tests
-* [ ] Check cross-browser compatibility
