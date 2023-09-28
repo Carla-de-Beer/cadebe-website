@@ -101,6 +101,10 @@
       font-weight: bold;
       margin: unset;
     }
+
+    .badge-hashicorp {
+      width: 23%;
+    }
   }
 
   @media all and (max-width: 825px) {
@@ -120,6 +124,10 @@
       color: var(--paragraph-gray-2);
       font-weight: bold;
       margin: unset;
+    }
+
+    .badge-hashicorp {
+      width: 55%;
     }
   }
 }
