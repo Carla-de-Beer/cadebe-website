@@ -85,7 +85,7 @@
       "id": 10,
       "title": "Shape Mapping",
       "text": "This project demonstrates how a self-organising map (SOM), a type of artificial neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D point cloud.",
-      "url": "https://vimeo.com/54726553",
+      "url": "https://vimeo.com/54726553/b2c648d6d0",
       "footerClass": "Self-Organising Map",
       "footerLanguage": "Processing"
     },

@@ -116,9 +116,9 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
             </div>
           </div>
 
-          <div className="row" style={{ height: '100%' }}>
-            <div className="col-6 mt-3" style={{ paddingRight: '10px' }}>
-              <div className="block-1">
+          <div className="mt-3">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
                   newsContent[5].url,
                   newsContent[5].title,
@@ -126,7 +126,12 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
                   newsContent[5].text,
                 ) }
               </div>
-              <div className="mt-3 block-2">
+            </div>
+          </div>
+
+          <div className="mt-3">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
                   newsContent[4].url,
                   newsContent[4].title,
@@ -136,14 +141,11 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
                 ) }
               </div>
             </div>
-            <div
-              className="col mt-3"
-              style={{
-                paddingLeft: 0,
-                marginLeft: '-10px',
-              }}
-            >
-              <div className="ml-3 block-3">
+          </div>
+
+          <div className="mt-3">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
                   newsContent[3].url,
                   newsContent[3].title,
@@ -157,7 +159,7 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
 
           <div className="mt-3">
             <div className="row">
-              <div className="col ml-3 block-4">
+              <div className="col ml-3 block-4 mr-3">
                 { this.makeStandardCard(
                   newsContent[2].url,
                   newsContent[2].title,
@@ -165,7 +167,12 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
                   newsContent[2].text,
                 ) }
               </div>
-              <div className="col ml-3 block-4">
+            </div>
+          </div>
+
+          <div className="mt-3">
+            <div className="row">
+              <div className="col ml-3 block-4 mr-3">
                 { this.makeStandardCard(
                   newsContent[1].url,
                   newsContent[1].title,
@@ -173,6 +180,11 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
                   newsContent[1].text,
                 ) }
               </div>
+            </div>
+          </div>
+
+          <div className="mt-3">
+            <div className="row">
               <div className="col ml-3 block-4 mr-3">
                 { this.makeStandardCard(
                   newsContent[0].url,
@@ -423,9 +435,9 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
     const alt = 'News Image';
     switch (id) {
       case 3:
-        return (<Card.Img className="mt-3" src={awsCertManager} alt={alt} />);
+        return (<Card.Img className="mt-3 aws-image" src={awsCertManager} alt={alt} />);
       case 4:
-        return (<Card.Img className="mt-3" src={awsCert} alt={alt} />);
+        return (<Card.Img className="mt-3 aws-image" src={awsCert} alt={alt} />);
       case 7:
         return (<Card.Img className="mt-3" src={oracleBadge11} alt={alt} />);
       case 8:
