@@ -18,6 +18,22 @@
     },
     {
       "id": 2,
+      "title": "Shape Mapping",
+      "text": "This project demonstrates how a self-organising map (SOM), a type of artificial neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D point cloud.",
+      "url": "https://vimeo.com/54726553/b2c648d6d0",
+      "footerClass": "Self-Organising Map",
+      "footerLanguage": "Processing"
+    },
+    {
+      "id": 3,
+      "title": "Self-Organising Structure",
+      "text": " Randomised autonomous agents self-organise to build a structured pattern based on their ability to seek out a target and to adjust their velocity and acceleration accordingly.",
+      "url": "https://vimeo.com/85047354",
+      "footerClass": "Boids",
+      "footerLanguage": "Processing"
+    },
+    {
+      "id": 4,
       "title": "CNN Landscape Classifier",
       "text": "A convolutional neural network (CNN) built with TensorFlow-Keras to allow for landscape classification based on one of three categories: desert, forest and polar.",
       "url": "https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier",
@@ -25,16 +41,15 @@
       "footerLanguage": "TensorFlow"
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "Neural Network Matrix Visualisation",
       "text": "Artificial neural networks operate on a highly non-linear model and are typically described as \"black boxes\". This project is an attempt to peer into the black box model by visualising the weight changes affecting the hidden neurons, as well as the hidden neuron matrices themselves. A simple three-layer feedforward neural network was set up to differentiate between two classes of images: cartoons and photographs. From this study it became clear that there appears to be a general visual pattern to the hidden matrices of each of the image sets provided.",
       "url": "https://vimeo.com/152473776",
       "footerClass": "Feed-Forward Neural Network",
       "footerLanguage": "Java"
     },
-
     {
-      "id": 4,
+      "id": 6,
       "title": "Cartoon-Photo Classifier (Model)",
       "text": "Two comparative Tensorflow-Keras-based deeplearning convolutional neural networks (CNNs) to predict whether an image is a cartoon or a photo. The simpler CNN makes use solely of the provided dataset, whereas the other CNN additionally benefits from the application of the weights from a pre-trained model in the process of transfer learning. The classifier based on transfer learning boosts the accuracy of the somewhat limited dataset to nearly 100%, and additionally manages to train more quickly in only a handful of epochs.",
       "url": "https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/classifier",
@@ -42,27 +57,11 @@
       "footerLanguage": "TensorFlow"
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "Cartoon-Photo Classifier (Deployment)",
       "text": "<p>Two techniques are explored for deploying the pre-trained cartoons-photos model:</p><ul><li>Python Flask apps exposing the TensorFlow-Keras model either as an API or as a web app. Photos are uploaded and the model predicts whether the image is a cartoon or a photo, and the degree of certainty associated with this prediction.</li><li>TensorFlow Serving, run inside a docker container, acting as a wrapper for the model to provide an API by which to query the model directly via HTTP requests.</li></ul><p>The deployment code can be found <a className=\"highlighted-text\" target=\"_blank\" href=\"https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment\">here</a>.</p>",
       "url": "https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment",
       "footerClass": "Convolutional Neural Network",
-      "footerLanguage": "TensorFlow"
-    },
-    {
-      "id": 6,
-      "title": "Naive Bayes Text Classifier",
-      "text": "A Naive Bayes Text Classifier that classifies input text into one of two categories: either a BUSINESS article or a SPORT article.",
-      "url": "https://github.com/Carla-de-Beer/naive-bayes-text-classifier",
-      "footerClass": "Bayes Classifier",
-      "footerLanguage": "JavaScript"
-    },
-    {
-      "id": 7,
-      "title": "Autoencoder for Dimensionality Reduction",
-      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
-      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
-      "footerClass": "Autoencoder",
       "footerLanguage": "TensorFlow"
     },
     {
@@ -83,19 +82,19 @@
     },
     {
       "id": 10,
-      "title": "Shape Mapping",
-      "text": "This project demonstrates how a self-organising map (SOM), a type of artificial neural network also known as a Kohonen map, maps a randomised 2D mesh over a 3D point cloud.",
-      "url": "https://vimeo.com/54726553/b2c648d6d0",
-      "footerClass": "Self-Organising Map",
-      "footerLanguage": "Processing"
+      "title": "Naive Bayes Text Classifier",
+      "text": "A Naive Bayes Text Classifier that classifies input text into one of two categories: either a BUSINESS article or a SPORT article.",
+      "url": "https://github.com/Carla-de-Beer/naive-bayes-text-classifier",
+      "footerClass": "Bayes Classifier",
+      "footerLanguage": "JavaScript"
     },
     {
       "id": 11,
-      "title": "Self-Organising Structure",
-      "text": " Randomised autonomous agents self-organise to build a structured pattern based on their ability to seek out a target and to adjust their velocity and acceleration accordingly.",
-      "url": "https://vimeo.com/85047354",
-      "footerClass": "Boids",
-      "footerLanguage": "Processing"
+      "title": "Autoencoder for Dimensionality Reduction",
+      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
+      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
+      "footerClass": "Autoencoder",
+      "footerLanguage": "TensorFlow"
     }
   ]
 }
