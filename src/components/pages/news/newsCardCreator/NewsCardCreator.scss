@@ -103,13 +103,18 @@
     }
 
     .badge-hashicorp {
-      width: 23%;
-      margin-left: 35%;
+      width: 20%;
+      margin-left: 40%;
     }
 
     .aws-image {
       width: 45%;
       margin-left: 27%;
+    }
+
+    .aws-badge {
+      width: 20%;
+      margin-left: 40%;
     }
   }
 
@@ -133,8 +138,13 @@
     }
 
     .badge-hashicorp {
-      width: 65%;
-      margin-left: 16%;
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .aws-badge {
+      width: 60%;
+      margin-left: 20%;
     }
   }
 }

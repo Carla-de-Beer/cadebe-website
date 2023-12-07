@@ -30,7 +30,7 @@
     },
     {
       "id": 4,
-      "title": "AWS Developer Associate Certification",
+      "title": "AWS Certified Developer – Associate",
       "subTitle": "23 SEPTEMBER 2020",
       "text": "I passed the AWS Developer Associate Examination today.",
       "url": "https://www.youracclaim.com/badges/e5bb66e2-78bc-4be1-820e-df7963b8e410?source=linked_in_profile"
@@ -76,6 +76,13 @@
       "subTitle": "27 SEPTEMBER 2023",
       "text": "I passed the HashiCorp Certified: Terraform Associate (003) exam today. Terraform simplifies the process of automating and standardising Cloud infrastructure. Beats endless clicking around inside the AWS console.",
       "url": "https://www.credly.com/badges/50f6ff77-cef7-47b8-953a-3aaffa3c659d"
+    },
+    {
+      "id": 11,
+      "title": "AWS Certified Solutions Architect – Associate",
+      "subTitle": "6 DECEMBER 2023",
+      "text": "I passed the AWS Certified Solutions Architect – Associate exam today.",
+      "url": "https://www.credly.com/badges/3abc8136-88c3-49fc-818a-4e33d52ac781/public_url"
     }
   ]
 }

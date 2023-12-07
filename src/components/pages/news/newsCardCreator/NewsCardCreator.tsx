@@ -6,7 +6,8 @@ import Header from '../../../header/Header';
 
 import './NewsCardCreator.scss';
 
-import awsCert from '../../../../assets/images/news/aws-certificate.png';
+import awsDeveloperCert from '../../../../assets/images/news/aws-developer.png';
+import awsSolutionsArchitectCert from '../../../../assets/images/news/aws-solutions-architect.png';
 import awsCertManager from '../../../../assets/images/news/aws-image.png';
 import oracleBadge11 from '../../../../assets/images/news/ocp-java-11.jpg';
 import oracleBadge17 from '../../../../assets/images/news/ocp-java-17.jpg';
@@ -54,6 +55,20 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
       renderContent = (
         <>
           <div className="mt-xl-5 mt-lg-4 mt-md-4 mt-2">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
+                { this.makeStandardCard(
+                  newsContent[11].url,
+                  newsContent[11].title,
+                  newsContent[11].subTitle,
+                  newsContent[11].text,
+                  newsContent[11].id,
+                ) }
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3">
             <div className="row">
               <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
@@ -437,13 +452,15 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
       case 3:
         return (<Card.Img className="mt-3 aws-image" src={awsCertManager} alt={alt} />);
       case 4:
-        return (<Card.Img className="mt-3 aws-image" src={awsCert} alt={alt} />);
+        return (<Card.Img className="mt-3 aws-badge" src={awsDeveloperCert} alt={alt} />);
       case 7:
         return (<Card.Img className="mt-3" src={oracleBadge11} alt={alt} />);
       case 8:
         return (<Card.Img className="mt-3" src={oracleBadge17} alt={alt} />);
       case 10:
         return (<Card.Img className="mt-3 badge-hashicorp" src={hashicorpTerraformBadge} alt={alt} />);
+      case 11:
+        return (<Card.Img className="mt-3 aws-badge" src={awsSolutionsArchitectCert} alt={alt} />);
       default:
         return (<></>);
     }
