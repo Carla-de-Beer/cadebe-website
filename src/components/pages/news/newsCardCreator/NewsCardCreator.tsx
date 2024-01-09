@@ -12,6 +12,7 @@ import awsCertManager from '../../../../assets/images/news/aws-image.png';
 import oracleBadge11 from '../../../../assets/images/news/ocp-java-11.jpg';
 import oracleBadge17 from '../../../../assets/images/news/ocp-java-17.jpg';
 import hashicorpTerraformBadge from '../../../../assets/images/news/hashicorp-terraform.png';
+import springCert from '../../../../assets/images/news/spring-2024.png';
 
 export default class NewsCardCreator extends Component<INewsDataProps, INewsDataState> {
   constructor(props: INewsDataState) {
@@ -55,6 +56,20 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
       renderContent = (
         <>
           <div className="mt-xl-5 mt-lg-4 mt-md-4 mt-2">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
+                { this.makeStandardCard(
+                  newsContent[12].url,
+                  newsContent[12].title,
+                  newsContent[12].subTitle,
+                  newsContent[12].text,
+                  newsContent[12].id,
+                ) }
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3">
             <div className="row">
               <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
@@ -236,11 +251,41 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
                 <div className="col">
                   <div className="block-mobile">
                     { this.makeStandardCard(
+                      newsContent[12].url,
+                      newsContent[12].title,
+                      newsContent[12].subTitle,
+                      newsContent[12].text,
+                      newsContent[12].id,
+                    ) }
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-3">
+              <div className="row">
+                <div className="col">
+                  <div className="block-mobile">
+                    { this.makeStandardCard(
+                      newsContent[11].url,
+                      newsContent[11].title,
+                      newsContent[11].subTitle,
+                      newsContent[11].text,
+                    ) }
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-3">
+              <div className="row">
+                <div className="col">
+                  <div className="block-mobile">
+                    { this.makeStandardCard(
                       newsContent[10].url,
                       newsContent[10].title,
                       newsContent[10].subTitle,
                       newsContent[10].text,
-                      newsContent[10].id,
                     ) }
                   </div>
                 </div>
@@ -461,6 +506,8 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
         return (<Card.Img className="mt-3 badge-hashicorp" src={hashicorpTerraformBadge} alt={alt} />);
       case 11:
         return (<Card.Img className="mt-3 aws-badge" src={awsSolutionsArchitectCert} alt={alt} />);
+      case 12:
+        return (<Card.Img className="mt-3 badge-spring" src={springCert} alt={alt} />);
       default:
         return (<></>);
     }

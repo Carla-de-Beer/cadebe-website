@@ -116,6 +116,11 @@
       width: 20%;
       margin-left: 40%;
     }
+
+    .badge-spring {
+      width: 20%;
+      margin-left: 40%;
+    }
   }
 
   @media all and (max-width: 825px) {
@@ -145,6 +150,11 @@
     .aws-badge {
       width: 60%;
       margin-left: 20%;
+    }
+
+    .badge-spring {
+      width: 50%;
+      margin-left: 25%;
     }
   }
 }
