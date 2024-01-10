@@ -30,7 +30,7 @@
     },
     {
       "id": 4,
-      "title": "AWS Certified Developer – Associate",
+      "title": "AWS Certified Developer – Associate (DVA-C01)",
       "subTitle": "23 SEPTEMBER 2020",
       "text": "I passed the AWS Developer Associate Examination today.",
       "url": "https://www.youracclaim.com/badges/e5bb66e2-78bc-4be1-820e-df7963b8e410?source=linked_in_profile"
@@ -51,14 +51,14 @@
     },
     {
       "id": 7,
-      "title": "Oracle Certified Professional: Java SE 11 Developer",
+      "title": "Oracle Certified Professional: Java SE 11 Developer (1Z0-819)",
       "subTitle": "6 FEBRUARY 2023",
       "text": "I passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of many other development activities. It has been worthwhile, though. My Java skills have been supercharged.",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951F20F63C52D9518F9E1C804BCD633710E"
     },
     {
       "id": 8,
-      "title": "Oracle Certified Professional: Java SE 17 Developer",
+      "title": "Oracle Certified Professional: Java SE 17 Developer (1Z0-829)",
       "subTitle": "31 MARCH 2023",
       "text": "I leveraged on my recent studies for the OCP Java SE 11 Developer exam to pass the OCP Java SE 17 Developer examination. As Oracle puts it: \"By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.\"",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951482F83B53E3E1D5AC994787AE1FA8922"
@@ -74,12 +74,12 @@
       "id": 10,
       "title": "HashiCorp Certified: Terraform Associate (003)",
       "subTitle": "27 SEPTEMBER 2023",
-      "text": "I passed the HashiCorp Certified: Terraform Associate (003) exam today. Terraform simplifies the process of automating and standardising Cloud infrastructure. Beats endless clicking around inside the AWS console.",
+      "text": "I passed the HashiCorp Certified: Terraform Associate exam today. Terraform simplifies the process of automating and standardising Cloud infrastructure. Beats endless clicking around inside the AWS console.",
       "url": "https://www.credly.com/badges/50f6ff77-cef7-47b8-953a-3aaffa3c659d"
     },
     {
       "id": 11,
-      "title": "AWS Certified Solutions Architect – Associate",
+      "title": "AWS Certified Solutions Architect – Associate (SAA-C03)",
       "subTitle": "6 DECEMBER 2023",
       "text": "I passed the AWS Certified Solutions Architect – Associate exam today.",
       "url": "https://www.credly.com/badges/3abc8136-88c3-49fc-818a-4e33d52ac781/public_url"
@@ -88,7 +88,7 @@
       "id": 12,
       "title": "VMware Spring Certified Professional 2024 (2V0-72.22)",
       "subTitle": "8 JANUARY 2024",
-      "text": "I passed the VMware Spring Certified Professional 2024 (2V0-72.22) exam today. </br></br>The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey.</br></br>Spring IoC. Spring AOP. Spring Data. Spring Boot. Spring MVC. Spring Security. Spring Rest. Spring Testing.</br>All things Spring Core.",
+      "text": "I passed the VMware Spring Certified Professional 2024 exam today. </br></br>The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey.</br></br>Spring IoC. Spring AOP. Spring Data. Spring Boot. Spring MVC. Spring Security. Spring Rest. Spring Testing.</br>All things Spring Core.",
       "url": "https://www.credly.com/badges/45d83de3-fb14-43eb-a80e-dc3b083c658e/linked_in_profile"
     }
   ]
