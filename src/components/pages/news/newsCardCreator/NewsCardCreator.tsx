@@ -6,8 +6,9 @@ import Header from '../../../header/Header';
 
 import './NewsCardCreator.scss';
 
-import awsDeveloperCert from '../../../../assets/images/news/aws-developer.png';
-import awsSolutionsArchitectCert from '../../../../assets/images/news/aws-solutions-architect.png';
+import awsDeveloperCertC01 from '../../../../assets/images/news/AWS-DVA-C01.png';
+import awsDeveloperCertC02 from '../../../../assets/images/news/AWS-DVA-C02.jpg';
+import awsSolutionsArchitectCert from '../../../../assets/images/news/AWS-SAA-C03.png';
 import awsCertManager from '../../../../assets/images/news/aws-image.png';
 import oracleBadge11 from '../../../../assets/images/news/ocp-java-11.jpg';
 import oracleBadge17 from '../../../../assets/images/news/ocp-java-17.jpg';
@@ -56,6 +57,20 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
       renderContent = (
         <>
           <div className="mt-xl-5 mt-lg-4 mt-md-4 mt-2">
+            <div className="row">
+              <div className="col ml-3 mr-3 block-4">
+                { this.makeStandardCard(
+                  newsContent[13].url,
+                  newsContent[13].title,
+                  newsContent[13].subTitle,
+                  newsContent[13].text,
+                  newsContent[13].id,
+                ) }
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-3">
             <div className="row">
               <div className="col ml-3 mr-3 block-4">
                 { this.makeStandardCard(
@@ -251,11 +266,26 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
                 <div className="col">
                   <div className="block-mobile">
                     { this.makeStandardCard(
+                      newsContent[13].url,
+                      newsContent[13].title,
+                      newsContent[13].subTitle,
+                      newsContent[13].text,
+                      newsContent[13].id,
+                    ) }
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-3">
+              <div className="row">
+                <div className="col">
+                  <div className="block-mobile">
+                    { this.makeStandardCard(
                       newsContent[12].url,
                       newsContent[12].title,
                       newsContent[12].subTitle,
                       newsContent[12].text,
-                      newsContent[12].id,
                     ) }
                   </div>
                 </div>
@@ -497,7 +527,7 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
       case 3:
         return (<Card.Img className="mt-3 aws-image" src={awsCertManager} alt={alt} />);
       case 4:
-        return (<Card.Img className="mt-3 aws-badge" src={awsDeveloperCert} alt={alt} />);
+        return (<Card.Img className="mt-3 aws-badge" src={awsDeveloperCertC01} alt={alt} />);
       case 7:
         return (<Card.Img className="mt-3" src={oracleBadge11} alt={alt} />);
       case 8:
@@ -508,6 +538,8 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
         return (<Card.Img className="mt-3 aws-badge" src={awsSolutionsArchitectCert} alt={alt} />);
       case 12:
         return (<Card.Img className="mt-3 badge-spring" src={springCert} alt={alt} />);
+      case 13:
+        return (<Card.Img className="mt-3 aws-cert" src={awsDeveloperCertC02} alt={alt} />);
       default:
         return (<></>);
     }
