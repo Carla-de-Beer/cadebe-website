@@ -54,14 +54,17 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
         style={{ width: '80%' }}
       >
         <p>
-          This is a selection of my own projects
-          I have worked on over the past few years.
-          Whilst most of my regular work involves Java development,
-          these projects reflect my interest beyond my day-to-day work,
-          and typically contain a strong focus on machine learning.
-          In the search for finding patterns,
-          many of these project often also endevour to make the
-          invisible visible via various means.
+          This collection showcases a selection of my projects developed over the past few years.
+        </p>
+        <p>
+          While my primary focus in day-to-day work revolves around
+          Java development for enterprise-level software,
+          these projects reveal my broader interests.
+          Many of them delve into the realm of machine learning,
+          reflecting my passion for uncovering patterns.
+          Additionally, these endeavors often aim to reveal the invisible through various means,
+          emphasising my exploration of visualisations and other
+          dimensions beyond conventional software development.
         </p>
       </div>
     </div>
@@ -219,7 +222,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       case 7:
         return (<Card.Img className="image-container" src={cartoonsPhotosFlask} alt={alt} />);
       case 8:
-        return (<Card.Img className="image-container" src={fourier} alt={alt} />);
+        return (<Card.Img className="image-container-fourier" src={fourier} alt={alt} />);
       case 9:
         return (<Card.Img className="image-container" src={imageSegmentation} alt={alt} />);
       case 10:

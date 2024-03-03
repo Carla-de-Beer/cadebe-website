@@ -29,16 +29,19 @@ export default class Home extends Component<any, any> {
           <Card.Body>
             <Card.Title />
             <Card.Text>
-              I&apos;m Carla de Beer, a software engineer involved in
-              web development and machine learning.
+              I&apos;m Carla de Beer, an experienced software engineer
+              specialising in web development and machine learning.
               <br />
               <br />
-              What started off as an experiment in uploading content to AWS S3 and
-              integrating an SSL certificate with AWS CloudFront,
-              has morphed into a proper website.
-              This website showcases some of my own development work from the past few
-              years,
-              as well as news and blog updates.
+              What initially began as an experiment in uploading content to AWS S3
+              and integrating an SSL certificate with AWS CloudFront has evolved into
+              a fully-fledged website. Accompanied by the acquisition of a
+              few AWS certifications along the way. This is my digital realm.
+              Here, I showcase some of my own development work from the past few years,
+              along with news and blog updates.
+              <br />
+              <br />
+              Explore and discover the world of software engineering and technology with me.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -89,7 +92,8 @@ export default class Home extends Component<any, any> {
                   Top: Image Segmentation, Voronoi Tessellation.
                 </p>
                 <p className="caption-text-mobile">
-                  Bottom: Circle Packing, Thresholding, Dot-Screening
+                  Bottom: Circle Packing, Thresholding, Dot-Screening.
+                  Built with Processing.
                 </p>
               </div>
               <br />
@@ -138,7 +142,8 @@ export default class Home extends Component<any, any> {
                 <div>
                   <p className="caption-text">
                     Image Processing Studies | Top: Image Segmentation, Voronoi Tessellation.
-                    Bottom: Circle Packing, Thresholding, Dot-Screening
+                    Bottom: Circle Packing, Thresholding, Dot-Screening.
+                    Built with Processing.
                   </p>
                 </div>
               </div>
