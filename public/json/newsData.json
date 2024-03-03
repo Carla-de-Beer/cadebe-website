@@ -74,28 +74,28 @@
       "id": 10,
       "title": "HashiCorp Certified: Terraform Associate (003)",
       "subTitle": "27 SEPTEMBER 2023",
-      "text": "I passed the HashiCorp Certified: Terraform Associate exam today. Terraform simplifies the process of automating and standardising Cloud infrastructure. Beats endless clicking around inside the AWS console.",
+      "text": "I passed the HashiCorp Certified: Terraform Associate exam today. </br></br>Terraform provides an Infrastructure and Code (IaC) solution that simplifies the process of automating and standardising Cloud infrastructure. It allows users to define and provision infrastructure resources in a declarative configuration language. With Terraform, you can manage various cloud services and providers, such as Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and many others, as well as on-premises infrastructure components.",
       "url": "https://www.credly.com/badges/50f6ff77-cef7-47b8-953a-3aaffa3c659d"
     },
     {
       "id": 11,
       "title": "AWS Certified Solutions Architect – Associate (SAA-C03)",
       "subTitle": "6 DECEMBER 2023",
-      "text": "I passed the AWS Certified Solutions Architect – Associate exam today.",
+      "text": "I passed the AWS Certified Solutions Architect – Associate exam today.</br></br>The preparation for this exam equipped me with a deeper understanding of the event-driven nature of cloud architectures. It has also taught me how to strategically design well-architected distributed systems that are scalable, resilient, efficient, and fault-tolerant.",
       "url": "https://www.credly.com/badges/3abc8136-88c3-49fc-818a-4e33d52ac781/public_url"
     },
     {
       "id": 12,
       "title": "VMware Spring Certified Professional 2024 (2V0-72.22)",
       "subTitle": "8 JANUARY 2024",
-      "text": "I passed the VMware Spring Certified Professional 2024 exam today. </br></br>The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey.</br></br>Spring IoC. Spring AOP. Spring Data. Spring Boot. Spring MVC. Spring Security. Spring Rest. Spring Testing.</br>All things Spring Core.",
+      "text": "I passed the VMware Spring Certified Professional 2024 exam today.</br></br>The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey. learned tonnes of useful bits and believe that it makes me a more effective and confident Spring-based developer. I highly recommend this certification for the valuable skillset and knowledge that comes with its preparation.</br></br>Spring IoC • Spring AOP • Spring Data • Spring Boot • Spring MVC • Spring Security •Spring Rest • Spring Testing.</br></br>All things Spring Core.",
       "url": "https://www.credly.com/badges/45d83de3-fb14-43eb-a80e-dc3b083c658e"
     },
     {
       "id": 13,
       "title": "AWS Certified Developer – Associate (DVA-C02)",
       "subTitle": "15 FEBRUARY 2024",
-      "text": "I renewed my AWS Certified Developer – Associate certification today. This means that, together with the recently accomplished AWS Certified Solutions Architect – Associate certification, I now hold two valid AWS credentials simultaneously. More than that though, I have learned tonnes along the way and feel comfortable working in the AWS Cloud ☁\uFE0F.",
+      "text": "I renewed my AWS Certified Developer – Associate certification today. This means that, together with the recently accomplished AWS Certified Solutions Architect – Associate certification, I now hold two valid AWS credentials simultaneously. More than that though, I have learned tonnes along the way and feel comfortable working in the AWS Cloud.",
       "url": "https://www.credly.com/badges/4ed64177-27db-47df-a320-6f54646924f7"
     }
   ]

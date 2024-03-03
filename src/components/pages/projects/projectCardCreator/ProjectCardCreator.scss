@@ -98,11 +98,21 @@
   }
 
   @media all and (min-width: 1201px) {
-    .image-container {
+    .image-container-base {
       width: 485px;
       display: block;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .image-container {
+      @extend .image-container-base;
+      width: 485px;
+    }
+
+    .image-container-fourier {
+      @extend .image-container-base;
+      width: 385px;
     }
   }
 

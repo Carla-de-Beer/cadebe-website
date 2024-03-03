@@ -18,7 +18,7 @@ export default function About() {
         <div className="text-fields card-tile mt-5" style={{ width: '80%' }}>
           <p>
             I&apos;m Carla de Beer,
-            a software engineer involved in web development and machine learning.
+            an experienced software engineer specialising in web development and machine learning.
             <br />
             <br />
             <div className="mt-4">
@@ -37,22 +37,27 @@ export default function About() {
             </div>
             <br />
             <br />
-            As a software engineer with experience in developing web-based applications,
-            I am comfortable working in both the front and back end of an application.
-            A lot of what I do is focused around the use of Java and the Spring Framework,
-            often in conjunction with a front end framework such as Angular or React.
-            That said, I tend to be language-agnostic, favouring the use of the most suitable
-            tool for the job.
+            With over eight years in the industry,
+            I&apos;ve focused on backend and full-stack web development,
+            delivering robust solutions across diverse sectors.
+            Proficient in Java, Spring Framework, Spring Boot, and AWS,
+            I&apos;ve contributed to various projects,
+            sharing insights through articles on web development and certification preparation.
+            I am enthusiastic about learning new technologies and
+            applying them to solve real-world problems.
             <br />
             <br />
-            In addition to my professional work, I have a keen interest in the field of
-            machine learning, a journey I embarked on through my master&apos;s degree studies.
-            The advent of TensorFlow and Keras have made it much easier and faster to
-            create, train and test models.
-            I am constantly amazed at these frameworks&apos; ability
-            to easily extract meaning from complex data.
-            It is exactly this rationale that ties in
-            with that of my own computational explorations: visualising the invisible.
+            While Java and the Spring Framework are my mainstays,
+            I remain adaptable, prioritising the most effective tools for each task.
+            <br />
+            <br />
+            Beyond my professional work, I&apos;m passionate about machine learning,
+            a journey I embarked on through my master&apos;s degree studies.
+            I&apos;ve expanded my expertise through online courses and certifications,
+            leveraging frameworks like TensorFlow and Keras
+            to distill meaning from complex data.
+            It is exactly this rationale that ties in with that of my
+            own computational explorations: visualising the invisible.
             <br />
             <br />
             If you want to get in touch, you can reach me via &nbsp;
