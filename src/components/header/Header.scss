@@ -47,6 +47,18 @@
     color: var(--logo-accent-color);
   }
 
+  .navbar-light .navbar-brand {
+    @extend .font-size-standard;
+    color: var(--logo-accent-color);
+    font-weight: bold;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    @extend .font-size-standard;
+    color: var(--paragraph-gray-1);
+    font-weight: bold;
+  }
+
   .logo {
     opacity: 5%;
   }

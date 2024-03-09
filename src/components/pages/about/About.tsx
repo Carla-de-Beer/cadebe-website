@@ -56,8 +56,12 @@ export default function About() {
             I&apos;ve expanded my expertise through online courses and certifications,
             leveraging frameworks like TensorFlow and Keras
             to distill meaning from complex data.
+            <br />
+            <br />
             It is exactly this rationale that ties in with that of my
-            own computational explorations: visualising the invisible.
+            own computational explorations:
+            <strong className="typewriter-text"> visualising the invisible</strong>
+            .
             <br />
             <br />
             If you want to get in touch, you can reach me via &nbsp;

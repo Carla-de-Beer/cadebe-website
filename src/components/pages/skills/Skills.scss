@@ -1,0 +1,162 @@
+@import 'src/style/colors';
+@import 'src/style/fonts';
+@import 'src/style/common';
+
+.skills-wrapper {
+  body {
+    padding: 0;
+    position: relative;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @extend .font-style-default;
+    color: var(--header-grey);
+  }
+
+  a {
+    @extend .font-style-default;
+    color: var(--accent-gray);
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  p {
+    @extend .font-style-default;
+    @include font-size-large-1;
+    color: var(--paragraph-gray-2);
+  }
+
+  .card {
+    background-color: var(--white);
+    border: 0;
+  }
+
+  .card-text {
+    color: var(--accent-gray);
+  }
+
+  .card-tile {
+    border: 0;
+    color: var(--accent-gray);
+    margin: 0 auto;
+    width: 50%;
+
+    .typewriter-text {
+      @extend .font-style-accent;
+      @include font-size-large-1;
+      color: var(--header-grey);
+      font-weight: bold;
+    }
+  }
+
+  .header-text {
+    font-size: 45px !important;
+  }
+
+  .text-fields {
+    @extend %base-text-fields;
+  }
+
+  .text-fields {
+    text-align: center;
+  }
+
+  .images {
+    text-align: center;
+
+    .caption-text {
+      @extend .font-size-small;
+      margin-top: 12px;
+      color: var(--paragraph-gray-2);
+      text-align: center;
+    }
+
+    .caption-text-mobile {
+      @extend .font-size-small;
+      margin-top: -15px;
+      color: var(--paragraph-gray-2);
+      text-align: center;
+    }
+  }
+
+  .card-title {
+    color: var(--header-grey);
+  }
+
+  .sub-title {
+    @include font-size-small;
+    color: var(--paragraph-gray-1);
+    font-weight: bold;
+  }
+
+  .sub-title-tech {
+    font-size: 16px;
+    color: var(--paragraph-gray-1);
+    font-weight: bold;
+    @include font-size-marge;
+  }
+
+  .skills-outer-card {
+    border: 1px solid rgba(0, 0, 0, .125);
+    color: var(--accent-gray);
+    height: 100%;
+    width: 48.5%;
+    margin-left: -20px;
+
+    .progress-bar {
+      background-color: var(--logo-accent-color);
+    }
+  }
+
+  .skills-outer-card-2 {
+    @extend .skills-outer-card;
+
+    .progress-bar {
+      background-color: #cadebe;
+    }
+  }
+
+
+  .skills-outer-card-devops {
+    @extend .skills-outer-card
+  }
+
+  .skills-card {
+    color: var(--accent-gray);
+    margin-left: -25px;
+    height: 100%;
+    width: 100%;
+    margin-top: -15px;
+  }
+
+  @media all and (max-width: 824px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+
+    .high-light-1 {
+      @include font-size-large-1;
+      color: var(--paragraph-gray-2);
+      font-weight: bold;
+      margin: unset;
+    }
+  }
+
+  @media all and (min-width: 825px) {
+    .high-light-1 {
+      @include font-size-large-2;
+      color: var(--paragraph-gray-2);
+      font-weight: bold;
+      margin: unset;
+    }
+  }
+}

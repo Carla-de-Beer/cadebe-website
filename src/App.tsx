@@ -10,6 +10,7 @@ import Footer from './components/footer/Footer';
 
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Skills from './components/pages/skills/Skills';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <div className="red">
               <Route exact path="/" component={Home} />
               <Route path="/projects" component={Projects} />
+              <Route path="/skills" component={Skills} />
               <Route path="/news" component={News} />
               <Route path="/about" component={About} />
             </div>
