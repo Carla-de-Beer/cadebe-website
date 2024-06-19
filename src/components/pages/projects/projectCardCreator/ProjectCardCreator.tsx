@@ -12,14 +12,14 @@ import './ProjectCardCreator.scss';
 import TSPImage from '../../../../assets/images/projects/TSP.gif';
 import ISSImage from '../../../../assets/images/projects/ISS.png';
 import cnn from '../../../../assets/images/projects/cnn.png';
-import matrix from '../../../../assets/images/projects/matrix-1.png';
 import mushroomAE from '../../../../assets/images/projects/mushroom-autoencoder.png';
+import textToImage from '../../../../assets/images/projects/birdie-laptop.png';
 import cartoonsPhotos from '../../../../assets/images/projects/cartoons-photos.png';
 import cartoonsPhotosFlask from '../../../../assets/images/projects/cartoons-photos-flask.png';
+import svm from '../../../../assets/images/projects/SVM-dataset.png';
 import naive from '../../../../assets/images/projects/naive-bayes.png';
 import som from '../../../../assets/images/projects/shape-mapping.gif';
 import selfOrganising from '../../../../assets/images/projects/self-organising.png';
-import fourier from '../../../../assets/images/projects/FourierTransformHeart.gif';
 import imageSegmentation from '../../../../assets/images/projects/image-segmentation.png';
 import dummy from '../../../../assets/images/shared/dummy.png';
 
@@ -214,21 +214,21 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       case 3:
         return (<Card.Img className="image-container" src={selfOrganising} alt={alt} />);
       case 4:
-        return (<Card.Img className="image-container" src={cnn} alt={alt} />);
+        return (<Card.Img className="image-container" src={textToImage} alt={alt} />);
       case 5:
-        return (<Card.Img className="image-container" src={matrix} alt={alt} />);
+        return (<Card.Img className="image-container" src={cnn} alt={alt} />);
       case 6:
         return (<Card.Img className="image-container" src={cartoonsPhotos} alt={alt} />);
       case 7:
         return (<Card.Img className="image-container" src={cartoonsPhotosFlask} alt={alt} />);
       case 8:
-        return (<Card.Img className="image-container-fourier" src={fourier} alt={alt} />);
+        return (<Card.Img className="image-container" src={svm} alt={alt} />);
       case 9:
-        return (<Card.Img className="image-container" src={imageSegmentation} alt={alt} />);
+        return (<Card.Img className="image-container" src={mushroomAE} alt={alt} />);
       case 10:
         return (<Card.Img className="image-container" src={naive} alt={alt} />);
       case 11:
-        return (<Card.Img className="image-container" src={mushroomAE} alt={alt} />);
+        return (<Card.Img className="image-container" src={imageSegmentation} alt={alt} />);
       default:
         return (<Card.Img className="image-container" src={dummy} alt={alt} />);
     }

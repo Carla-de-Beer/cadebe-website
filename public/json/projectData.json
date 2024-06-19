@@ -34,19 +34,19 @@
     },
     {
       "id": 4,
+      "title": "Text-to-Image Generation with Amazon Bedrock",
+      "text": "This project consists of a React application integrated with AWS to create and display generative AI images based on textual prompts. Users can interact with the underlying Amazon Bedrock model through an AWS Lambda function, which, in turn, is accessed via the AWS API Gateway. The application processes the requests and dynamically displays the generated images in a responsive user interface.",
+      "url": "https://github.com/Carla-de-Beer/amazon-bedrock-image-generator",
+      "footerClass": "Generative AI",
+      "footerLanguage": "Amazon Bedrock"
+    },
+    {
+      "id": 5,
       "title": "CNN Landscape Classifier",
       "text": "A convolutional neural network (CNN) built with TensorFlow-Keras to allow for landscape classification based on one of three categories: desert, forest and polar.",
       "url": "https://github.com/Carla-de-Beer/convolutional-neural-network-landscape-classifier",
       "footerClass": "Convolutional Neural Network",
       "footerLanguage": "TensorFlow"
-    },
-    {
-      "id": 5,
-      "title": "Neural Network Matrix Visualisation",
-      "text": "Artificial neural networks operate on a highly non-linear model and are typically described as \"black boxes\". This project is an attempt to peer into the black box model by visualising the weight changes affecting the hidden neurons, as well as the hidden neuron matrices themselves. A simple three-layer feedforward neural network was set up to differentiate between two classes of images: cartoons and photographs. From this study it became clear that there appears to be a general visual pattern to the hidden matrices of each of the image sets provided.",
-      "url": "https://vimeo.com/152473776",
-      "footerClass": "Feed-Forward Neural Network",
-      "footerLanguage": "Java"
     },
     {
       "id": 6,
@@ -66,19 +66,19 @@
     },
     {
       "id": 8,
-      "title": "Discrete Fourier Transformation of a Heart Curve",
-      "text": " Discrete Fourier Transformation with epicycles using a heart curve as input.",
-      "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/fourier-transformations/FourierTransformHeart",
-      "footerClass": "Mathematical Transform",
-      "footerLanguage": "Processing"
+      "title": "Support Vector Machine",
+      "text": "This project uses a Support Vector Machine to classify the data obtained from the Kaggle Diabetes Prediction Dataset.",
+      "url": "https://github.com/Carla-de-Beer/python-projects/tree/master/machine-learning/support-vector-machine/diabetes-prediction-dataset",
+      "footerClass": "Support Vector Machine",
+      "footerLanguage": "scikit-learn"
     },
     {
       "id": 9,
-      "title": "Image Segmentation with K-Nearest Neighbour",
-      "text": "An image segmentation example using the k-nearest neighbour algorithm.",
-      "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN",
-      "footerClass": "Image Segmentation",
-      "footerLanguage": "Processing"
+      "title": "Autoencoder for Dimensionality Reduction",
+      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
+      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
+      "footerClass": "Autoencoder",
+      "footerLanguage": "TensorFlow"
     },
     {
       "id": 10,
@@ -90,11 +90,11 @@
     },
     {
       "id": 11,
-      "title": "Autoencoder for Dimensionality Reduction",
-      "text": "This is a demo project that shows how an autoencoder, built with TensorFlow-Keras, can be used to graphically represent high-dimensional data into a 2D or 3D space for visualisation. The project uses the multivariate Mushroom Dataset. It consists of mushroom dimensions and appearances and classifies them as being either edible or poisonous. The autoencoder shows that the two classes, when reduced to a 2-dimensional space, are not linearly separable.",
-      "url": "https://github.com/Carla-de-Beer/tensorflow-2.x-projects/tree/master/autoencoder/mushroom-dataset-autoencoder",
-      "footerClass": "Autoencoder",
-      "footerLanguage": "TensorFlow"
+      "title": "Image Segmentation with K-Nearest Neighbour",
+      "text": "An image segmentation example using the k-nearest neighbour algorithm.",
+      "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN",
+      "footerClass": "Image Segmentation",
+      "footerLanguage": "Processing"
     }
   ]
 }
