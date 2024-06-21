@@ -62,7 +62,7 @@
       "text": "<p>Two techniques are explored for deploying the pre-trained cartoons-photos model:</p><ul><li>Python Flask apps exposing the TensorFlow-Keras model either as an API or as a web app. Photos are uploaded and the model predicts whether the image is a cartoon or a photo, and the degree of certainty associated with this prediction.</li><li>TensorFlow Serving, run inside a docker container, acting as a wrapper for the model to provide an API by which to query the model directly via HTTP requests.</li></ul><p>The deployment code can be found <a className=\"highlighted-text\" target=\"_blank\" href=\"https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment\">here</a>.</p>",
       "url": "https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment",
       "footerClass": "Convolutional Neural Network",
-      "footerLanguage": "TensorFlow"
+      "footerLanguage": "TensorFlow Serving"
     },
     {
       "id": 8,
@@ -82,19 +82,19 @@
     },
     {
       "id": 10,
-      "title": "Naive Bayes Text Classifier",
-      "text": "A Naive Bayes Text Classifier that classifies input text into one of two categories: either a BUSINESS article or a SPORT article.",
-      "url": "https://github.com/Carla-de-Beer/naive-bayes-text-classifier",
-      "footerClass": "Bayes Classifier",
-      "footerLanguage": "JavaScript"
-    },
-    {
-      "id": 11,
       "title": "Image Segmentation with K-Nearest Neighbour",
       "text": "An image segmentation example using the k-nearest neighbour algorithm.",
       "url": "https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN",
       "footerClass": "Image Segmentation",
       "footerLanguage": "Processing"
+    },
+    {
+      "id": 11,
+      "title": "Naive Bayes Text Classifier",
+      "text": "A Naive Bayes Text Classifier that classifies input text into one of two categories: either a BUSINESS article or a SPORT article.",
+      "url": "https://github.com/Carla-de-Beer/naive-bayes-text-classifier",
+      "footerClass": "Bayes Classifier",
+      "footerLanguage": "JavaScript"
     }
   ]
 }
