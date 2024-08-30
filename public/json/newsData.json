@@ -104,6 +104,13 @@
       "subTitle": "26 APRIL 2024",
       "text": "I passed the Google Cloud Certified - Associate Cloud Engineer exam today. I aimed to boost my skills in Google Kubernetes Engine (GKE), so it made sense to get a strong foundation in Google Cloud Platform (GCP) as a whole. This certification now allows me to leverage GCP for various projects, including machine learning tasks.",
       "url": "https://www.credly.com/badges/8115b70e-6dc1-49bd-8428-59877911f1a9/public_url"
+    },
+    {
+      "id": 15,
+      "title": "Beta - AWS Certified AI Practitioner (AI1-C01)",
+      "subTitle": "29 AUGUST 2024",
+      "text": "I passed the Beta version of the new AWS Certified AI Practitioner (AI1-C01) exam today! This achievement additionally grants me the status of AWS Certified AI Practitioner Early Adopter. The certification validates in-demand knowledge of Artificial Intelligence (AI), Machine Learning (ML), and Generative AI concepts and use cases, with an emphasis on Amazon SageMaker and the application of Foundation Models with Amazon Bedrock.",
+      "url": "https://www.credly.com/badges/8bba7644-fc94-4d31-9eef-3baa756e1392/public_url"
     }
   ]
 }
