@@ -25,6 +25,163 @@ class Skills extends Component<any, any> {
           <div>
             <div data-cy="skills-banner-mobile">
               <Banner title="Skills" />
+              <div className="card-tile text-fields" style={{ width: '80%' }}>
+                <div className="text-fields mt-5">
+                  {window.innerWidth.valueOf() >= PageSize.SMALL
+                    ? <p className="high-light-1">Experience • Technical Skills</p> : (
+                      <div>
+                        <p className="high-light-1">Experience</p>
+                        <p className="high-light-1">Technical Skills</p>
+                      </div>
+                    )}
+                </div>
+                <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+                  <p>
+                    Over the course of my professional career I have accumulated
+                    a wealth of experience in contemporary technologies.
+                    From mastering various programming languages, tools,
+                    and frameworks to applying them in hands-on projects and professional settings,
+                    I&apos;ve honed my skills to deliver high-quality solutions.
+                    With a passion for staying abreast of the latest industry trends,
+                    I&apos;m always eager to tackle new challenges and push the boundaries of
+                    what&apos;s possible in the ever-evolving tech landscape.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5">
+                <div className="row">
+                  <div className="col">
+                    <div className="block-mobile">
+                      <Card className="p-3 skills-outer-card" style={{ marginRight: '50px' }}>
+                        <Card.Body>
+                          <Card.Title style={{ marginBottom: '20px' }}>Programming Languages</Card.Title>
+                          {this.makeStandardCard(
+                            'Java',
+                            '2024',
+                            85,
+                            8,
+                            'Version: 21',
+                          )}
+                          {this.makeStandardCard(
+                            'C++',
+                            '2014',
+                            55,
+                            1,
+                            'Version: C++11',
+                          )}
+                          {this.makeStandardCard(
+                            'Python',
+                            '2023',
+                            60,
+                            4,
+                            'Version: 3',
+                          )}
+                          {this.makeStandardCard(
+                            'SQL',
+                            '2023',
+                            60,
+                            8,
+                            'Version: ANSI',
+                          )}
+                          {this.makeStandardCard(
+                            'JavaScript',
+                            '2023',
+                            80,
+                            8,
+                            'Version: ES6',
+                          )}
+                          {this.makeStandardCard(
+                            'TypeScript',
+                            '2023',
+                            75,
+                            4,
+                            'Version: 21',
+                          )}
+                          {this.makeStandardCard(
+                            'Shell Scripting',
+                            '2024',
+                            70,
+                            4,
+                            'Version: bash',
+                          )}
+                          {this.makeStandardCard(
+                            'Assembler',
+                            '2014',
+                            60,
+                            1,
+                            'x86',
+                          )}
+                          {this.makeStandardCard(
+                            'MATLAB',
+                            '2015',
+                            60,
+                            2,
+                            'Version: 15',
+                          )}
+                        </Card.Body>
+                      </Card>
+                      <Card className="mt-3 p-3 skills-second-card-mobile">
+                        <Card.Body>
+                          <Card.Title style={{ marginBottom: '20px' }}>DevOps</Card.Title>
+                          {this.makeStandardCard(
+                            'GitHub Actions',
+                            '2023',
+                            80,
+                            1,
+                          )}
+                          {this.makeStandardCard(
+                            'GitLab CI/CD',
+                            '2024',
+                            60,
+                            1,
+                          )}
+                          {this.makeStandardCard(
+                            'Docker',
+                            '2024',
+                            80,
+                            4,
+                            'Version: 24',
+                          )}
+                          {this.makeStandardCard(
+                            'OpenShift',
+                            '2024',
+                            55,
+                            1,
+                            'Version: 4',
+                          )}
+                          {this.makeStandardCard(
+                            'Terraform',
+                            '2024',
+                            80,
+                            1,
+                            'Version: 1',
+                          )}
+                          {this.makeStandardCard(
+                            'ELK Stack',
+                            '2024',
+                            60,
+                            1,
+                            'Version: 8',
+                          )}
+                          {this.makeStandardCard(
+                            'SonarQube',
+                            '2022',
+                            60,
+                            3,
+                          )}
+                          {this.makeStandardCard(
+                            'Linux',
+                            '2024',
+                            80,
+                            8,
+                            'Version: Ubuntu/Debian/CentOS',
+                          )}
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <br />
           </div>
@@ -169,15 +326,8 @@ class Skills extends Component<any, any> {
                     55,
                     1,
                     'Version: 4',
-                  ) }
-                  { this.makeStandardCard(
-                    'Kustomize',
-                    '2024',
-                    70,
-                    1,
-                    'Version: 5',
-                  ) }
-                  { this.makeStandardCard(
+                  )}
+                  {this.makeStandardCard(
                     'Terraform',
                     '2023',
                     80,
@@ -196,14 +346,16 @@ class Skills extends Component<any, any> {
                     '2022',
                     60,
                     3,
-                  ) }
-                  { this.makeStandardCard(
-                    'Linux',
-                    '2024',
-                    80,
-                    8,
-                    'Version: Ubuntu/Debian/CentOS',
-                  ) }
+                  )}
+                  <div style={{ marginBottom: '107px' }}>
+                    {this.makeStandardCard(
+                      'Linux',
+                      '2024',
+                      80,
+                      8,
+                      'Version: Ubuntu/Debian/CentOS',
+                    )}
+                  </div>
                 </Card.Body>
               </Card>
             </div>
@@ -400,7 +552,7 @@ class Skills extends Component<any, any> {
                   { this.makeStandardCard(
                     'Cucumber',
                     '2023',
-                    85,
+                    80,
                     1,
                     'Version: 7',
                   ) }
@@ -443,6 +595,12 @@ class Skills extends Component<any, any> {
                     3,
                   ) }
                   { this.makeStandardCard(
+                    'GCP',
+                    '2024',
+                    65,
+                    1,
+                  ) }
+                  { this.makeStandardCard(
                     'Machine Learning (TensorFlow, scikit-learn)',
                     '2023',
                     80,
@@ -454,7 +612,7 @@ class Skills extends Component<any, any> {
                     70,
                     4,
                   ) }
-                  <div style={{ marginBottom: '322px' }}>
+                  <div style={{ marginBottom: '214px' }}>
                     { this.makeStandardCard(
                       'Data Visualization (Matplotlib)',
                       '2023',

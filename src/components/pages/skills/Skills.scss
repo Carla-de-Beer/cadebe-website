@@ -107,8 +107,8 @@
     border: 1px solid rgba(0, 0, 0, .125);
     color: var(--accent-gray);
     height: 100%;
-    width: 48.5%;
-    margin-left: -20px;
+    width: 49%;
+    margin-left: -16px;
 
     .progress-bar {
       background-color: var(--logo-accent-color);
@@ -117,6 +117,18 @@
 
   .skills-outer-card-2 {
     @extend .skills-outer-card;
+
+    .progress-bar {
+      background-color: #cadebe;
+    }
+  }
+
+  .skills-second-card-mobile {
+    border: 1px solid rgba(0, 0, 0, .125);
+    color: var(--accent-gray);
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
 
     .progress-bar {
       background-color: #cadebe;
@@ -148,6 +160,18 @@
       color: var(--paragraph-gray-2);
       font-weight: bold;
       margin: unset;
+    }
+
+    .skills-outer-card {
+      border: 1px solid rgba(0, 0, 0, .125);
+      color: var(--accent-gray);
+      height: 100%;
+      width: 100%;
+      margin-left: 0;
+
+      .progress-bar {
+        background-color: var(--logo-accent-color);
+      }
     }
   }
 
