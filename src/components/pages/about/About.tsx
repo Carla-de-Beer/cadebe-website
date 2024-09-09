@@ -79,6 +79,17 @@ export default function About() {
               LinkedIn
             </a>
             .
+            <br />
+            You can also find my online articles on &nbsp;
+            <a
+              className="typewriter-text"
+              rel="noopener noreferrer"
+              href="https://medium.com/@carla.debeer.uk"
+              target="_blank"
+            >
+              Medium
+            </a>
+            .
           </p>
         </div>
       </div>
