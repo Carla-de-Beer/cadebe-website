@@ -1,4 +1,4 @@
-name: Lint, unit test and build
+name: Lint, test and build
 
 on:
   workflow_call:
