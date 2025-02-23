@@ -109,8 +109,15 @@
       "id": 15,
       "title": "Beta - AWS Certified AI Practitioner (AI1-C01)",
       "subTitle": "29 AUGUST 2024",
-      "text": "I passed the Beta version of the new AWS Certified AI Practitioner (AI1-C01) exam today! This achievement additionally grants me the status of AWS Certified AI Practitioner Early Adopter. The certification validates in-demand knowledge of Artificial Intelligence (AI), Machine Learning (ML), and Generative AI concepts and use cases, with an emphasis on Amazon SageMaker and the application of Foundation Models with Amazon Bedrock.",
+      "text": "I passed the Beta version of the new AWS Certified AI Practitioner (AI1-C01) exam today. This achievement additionally grants me the status of AWS Certified AI Practitioner Early Adopter. The certification validates in-demand knowledge of Artificial Intelligence (AI), Machine Learning (ML), and Generative AI concepts and use cases, with an emphasis on Amazon SageMaker and the application of Foundation Models with Amazon Bedrock.",
       "url": "https://www.credly.com/badges/8bba7644-fc94-4d31-9eef-3baa756e1392/public_url"
+    },
+    {
+      "id": 16,
+      "title": "CKAD: Certified Kubernetes Application Developer",
+      "subTitle": "23 FEBRUARY 2025",
+      "text": "I passed the Certified Kubernetes Application Developer (CKAD) exam today. This certification validates expertise in designing, building, monitoring, and troubleshooting scalable applications in Kubernetes. It covers core concepts, configuration, multi-container pods, observability, pod design, services and networking, and state persistence through a hands-on, performance-based exam.",
+      "url": "https://www.credly.com/badges/26e4aec9-4848-426b-9442-831b7d70ddc3"
     }
   ]
 }
