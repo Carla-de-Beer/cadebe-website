@@ -26,8 +26,8 @@ export default class Footer extends React.Component {
       return (
         <div>
           <Badge className="badge badge-pill badge-secondary">Software Engineering</Badge>
-          <Badge className="badge badge-pill badge-secondary ml-2">Fullstack Development</Badge>
           <Badge className="badge badge-pill badge-secondary ml-2">Backend Development</Badge>
+          <Badge className="badge badge-pill badge-secondary ml-2">Fullstack Development</Badge>
           <Badge className="badge badge-pill badge-secondary ml-2">Machine Learning</Badge>
         </div>
       );

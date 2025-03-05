@@ -37,27 +37,32 @@ export default function About() {
             </div>
             <br />
             <br />
-            With over eight years in the industry,
-            I&apos;ve focused on backend and full-stack web development,
-            delivering robust solutions across diverse sectors.
-            Proficient in Java, Spring Framework, Spring Boot, and AWS,
-            I&apos;ve contributed to various projects,
-            sharing insights through articles on web development and certification preparation.
-            I am enthusiastic about learning new technologies and
-            applying them to solve real-world problems.
+            With over nine years of professional experience as a software engineer,
+            I have developed a strong expertise in backend and full-stack web development,
+            delivering high-quality and scalable solutions for various industries and domains.
+            I have a deep understanding of the entire software development lifecycle —
+            from planning and architecture to deployment and maintenance.
             <br />
             <br />
-            While Java and the Spring Framework are my mainstays,
-            I remain adaptable, prioritising the most effective tools for each task.
+            My expertise lies in Java, the Spring Framework, and AWS,
+            with certifications as an Oracle Certified Professional
+            and Spring Certified Professional.
+            Additionally, I have hands-on experience with DevOps technologies,
+            applying them in real-world projects to enhance efficiency and reliability.
+            While Java and the Spring Framework are my mainstays, I remain adaptable,
+            prioritising the most effective tools for each task.
+            Beyond my core technical skills, I actively share my knowledge through
+            online publications on web development and certification preparation.
             <br />
             <br />
-            Beyond my professional work, I&apos;m passionate about machine learning,
-            a journey I embarked on through my master&apos;s degree studies.
-            I&apos;ve expanded my expertise through online courses and certifications,
-            leveraging frameworks like TensorFlow and Keras
-            to distill meaning from complex data.
-            It is exactly this rationale that ties in with that of my
-            own computational explorations: visualising the invisible.
+            Alongside my professional work, I have a strong passion for artificial
+            intelligence and machine learning — an area I explored extensively during
+            my bachelor’s and master’s studies.
+            I am continuously expanding my knowledge in AI, machine learning,
+            and generative AI, aiming to apply these technologies to solve real-world problems,
+            leveraging various frameworks to distill meaning from complex data.
+            It is exactly this rationale that ties in with that of
+            my own computational explorations: visualising the invisible.
             <br />
             <br />
             If you want to get in touch, you can reach me via &nbsp;
