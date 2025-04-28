@@ -117,19 +117,14 @@
       margin-left: 40%;
     }
 
+    .badge-spring {
+      width: 20%;
+      margin-left: 40%;
+    }
+
     .aws-cert {
       width: 25%;
       margin-left: 37.5%;
-    }
-
-    .aws-ai-practitioner-cert {
-      width: 40%;
-      margin-left: 30%;
-    }
-
-    .ckad-cert {
-      width: 23%;
-      margin-left: 38.5%;
     }
 
     .gcp-ace-cert {
@@ -137,9 +132,19 @@
       margin-left: 37%;
     }
 
-    .badge-spring {
-      width: 20%;
-      margin-left: 40%;
+    .aws-ai-practitioner-cert {
+      width: 38%;
+      margin-left: 33.25%;
+    }
+
+    .ckad-cert {
+      width: 23%;
+      margin-left: 38.5%;
+    }
+
+    .isqb-cert {
+      width: 18%;
+      margin-left: 41.25%;
     }
   }
 
@@ -162,6 +167,11 @@
       margin: unset;
     }
 
+    .oracle-badge {
+      width: 120%;
+      margin-left: -10%;
+    }
+
     .badge-hashicorp {
       width: 60%;
       margin-left: 20%;
@@ -178,8 +188,23 @@
     }
 
     .badge-spring {
-      width: 50%;
-      margin-left: 25%;
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .aws-ai-practitioner-cert {
+      width: 110%;
+      margin-left: 0;
+    }
+
+    .ckad-cert {
+      width: 80%;
+      margin-left: 9%;
+    }
+
+    .isqb-cert {
+      width: 70%;
+      margin-left: 12%;
     }
   }
 }
