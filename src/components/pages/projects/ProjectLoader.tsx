@@ -3,9 +3,9 @@ import axios from 'axios';
 import ProjectCardCreator from './projectCardCreator/ProjectCardCreator';
 
 export default function ProjectLoader() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const [list, setProjects] = useState({
+  const [list, setList] = useState({
     projects: [{
       id: 1,
       title: 'TSP Distance Calculator',
@@ -20,17 +20,12 @@ export default function ProjectLoader() {
     setIsLoading(true);
     axios.get('json/projectData.json')
       .then((response) => {
-        setProjects(response.data);
+        setList(response.data);
         setIsLoading(false);
       });
   }, []);
 
-  return (
-    <>
-      { isLoading && <ProjectCardCreator projectContent={list.projects} /> }
-      { !isLoading && (
-        <ProjectCardCreator projectContent={list.projects} />
-      ) }
-    </>
-  );
+  if (isLoading) return null;
+
+  return <ProjectCardCreator projectContent={list.projects} />;
 }

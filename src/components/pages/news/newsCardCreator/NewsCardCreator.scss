@@ -40,10 +40,6 @@
     @extend %base-text-fields;
   }
 
-  .text-fields {
-    @extend %base-text-fields;
-  }
-
   .dangerous p {
     @extend .font-size-standard;
     color: var(--dark-accent-2);
@@ -55,6 +51,8 @@
   }
 
   .no-link {
+    display: block;
+    height: 100%;
     text-decoration: none;
   }
 
@@ -132,6 +130,13 @@
       margin-left: 38.5%;
     }
 
+    .isaqb-cert {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 18%;
+    }
+
     .gcp-ace-cert {
       width: 26%;
       margin-left: 37%;
@@ -180,6 +185,13 @@
     .badge-spring {
       width: 50%;
       margin-left: 25%;
+    }
+
+    .isaqb-cert {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
     }
   }
 }

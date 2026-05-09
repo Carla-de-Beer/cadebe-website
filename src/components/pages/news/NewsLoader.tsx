@@ -3,9 +3,9 @@ import axios from 'axios';
 import NewsCardCreator from './newsCardCreator/NewsCardCreator';
 
 export default function NewsLoader() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const [list, setNews] = useState({
+  const [list, setList] = useState({
     news: [{
       id: 1,
       title: 'Essential Unix-based Anaconda Setup Guide',
@@ -19,17 +19,12 @@ export default function NewsLoader() {
     setIsLoading(true);
     axios.get('json/newsData.json')
       .then((response) => {
-        setNews(response.data);
+        setList(response.data);
         setIsLoading(false);
       });
   }, []);
 
-  return (
-    <>
-      { isLoading && <NewsCardCreator newsContent={list.news} /> }
-      { !isLoading && (
-        <NewsCardCreator newsContent={list.news} />
-      ) }
-    </>
-  );
+  if (isLoading) return null;
+
+  return <NewsCardCreator newsContent={list.news} />;
 }

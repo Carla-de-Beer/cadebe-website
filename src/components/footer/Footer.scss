@@ -34,8 +34,8 @@
     @extend .font-style-accent;
   }
 
-  .badge-secondary {
-    background-color: var(--warm-grey-2);
+  .badge {
+    background-color: var(--paragraph-gray-1) !important;
     color: var(--white);
   }
 

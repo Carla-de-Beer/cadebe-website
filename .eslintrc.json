@@ -53,7 +53,10 @@
       {
         "devDependencies": true
       }
-    ]
+    ],
+    "react/react-in-jsx-scope": "off",
+    "class-methods-use-this": "off",
+    "max-len": ["error", { "code": 150 }]
   },
   "settings": {
     "import/resolver": {

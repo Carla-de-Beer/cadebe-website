@@ -94,7 +94,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
         if (i === 0) {
           outerArray.push(
             <div className="mt-3" key={projectContent[i].id}>
-              <Row className="mt-sm-4 mt-md-4">
+              <Row className="g-0 mt-sm-4 mt-md-4">
                 { innerArray[i] }
               </Row>
             </div>,
@@ -102,7 +102,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
         } else if (i === innerArray.length - 1) {
           outerArray.push(
             <div className="mt-3" key={projectContent[i].id}>
-              <Row className="mt-sm-3 mt-md-3" style={{ marginBottom: '-15px' }}>
+              <Row className="g-0 mt-sm-3 mt-md-3" style={{ marginBottom: '-15px' }}>
                 { innerArray[i] }
               </Row>
             </div>,
@@ -110,7 +110,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
         } else {
           outerArray.push(
             <div className="mt-3" key={projectContent[i].id}>
-              <Row className="mt-sm-3 mt-md-3">
+              <Row className="g-0 mt-sm-3 mt-md-3">
                 { innerArray[i] }
               </Row>
             </div>,
@@ -140,7 +140,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
       for (let i = 0; i < Object.keys(projectContent).length; i += 1) {
         if (i % 2 === 0) {
           innerArray.push(
-            <Col className="project-card left-card pb-5">
+            <Col className="project-card left-card">
               { this.makeCard(
                 projectContent[i].id,
                 projectContent[i].url,
@@ -153,7 +153,7 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
           );
         } else {
           innerArray.push(
-            <Col className="project-card right-card pb-5">
+            <Col className="project-card right-card">
               {this.makeCard(
                 projectContent[i].id,
                 projectContent[i].url,
@@ -169,23 +169,12 @@ export default class ProjectCardCreator extends Component<any, IProjectDataState
     }
 
     for (let i = 0; i < innerArray.length; i += 2) {
-      if (i < 2) {
-        outerArray.push(
-          <Row key={projectContent[i].id}>
-            { innerArray[i] }
-            { innerArray[i + 1] }
-          </Row>,
-        );
-      } else {
-        outerArray.push(
-          <div className="project-card mt-4" key={projectContent[i].id}>
-            <Row className="project-card">
-              { innerArray[i] }
-              { innerArray[i + 1] }
-            </Row>
-          </div>,
-        );
-      }
+      outerArray.push(
+        <Row className="g-3 mt-3" key={projectContent[i].id}>
+          { innerArray[i] }
+          { innerArray[i + 1] }
+        </Row>,
+      );
     }
 
     return (
