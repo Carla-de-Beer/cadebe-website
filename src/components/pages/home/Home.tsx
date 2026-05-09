@@ -23,22 +23,16 @@ function HomeBody() {
           <Card.Title />
           <div className="two-column-text">
             <p style={{ breakAfter: 'column' }}>
-              I&apos;m
-              {' '}
-              <strong>Carla de Beer</strong>
-              , a software engineer specialising in web development
-              and machine learning.
+              I&apos;m <strong>Carla de Beer</strong>
+              , a software engineer specialising in web development and machine learning.
               <br />
               <br />
-              What began as a small experiment – hosting content on AWS S3 and wiring up SSL
-              with AWS CloudFront – has grown into this fully fledged website, built and iterated
-              on as I deepened my experience with AWS and picked up a few certifications along
-              the way.
+              What began as a small experiment – hosting content on AWS S3 and wiring up SSL with
+              AWS CloudFront – has grown into this fully fledged website, built and iterated on as I
+              deepened my experience with AWS and picked up a few certifications along the way.
             </p>
             <p>
-              <strong>This is my digital realm:</strong>
-              {' '}
-              a space where I share selected projects,
+              <strong>This is my digital realm:</strong> a space where I share selected projects,
               experiments, and thoughts from the past few years.
               <br />
               <br />
@@ -65,12 +59,13 @@ function LayoutMobile() {
               <Banner title="WELCOME" />
             </div>
             <div className="text-fields mt-5">
-              <p className="high-light-1">Software Engineering • Cloud • Machine Learning</p>
+              <p className="high-light-1">Software Engineering • Backend Development</p>
+              <p className="high-light-1">Cloud • Machine Learning</p>
             </div>
             <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
               <p>
-                A personal space for software engineering, cloud architecture,
-                and machine learning — built and iterated on over the years.
+                A personal space for software engineering, cloud architecture, and machine learning
+                — built and iterated on over the years.
               </p>
             </div>
             <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2" />
@@ -86,10 +81,13 @@ function LayoutMobile() {
             <div className="images">
               <img src={photoImageDotScreen} style={{ maxWidth: sizeRatioMobile }} alt="Portrait" />
               <p className="caption-text">Image Processing Studies</p>
-              <p className="caption-text-mobile">Top: Image Segmentation, Voronoi Tessellation.</p>
               <p className="caption-text-mobile">
-                Bottom: Circle Packing, Thresholding, Dot-Screening. Built with Processing.
+                Image Segmentation (1,2) &middot; Voronoi Tessellation (3,4)
               </p>
+              <p className="caption-text-mobile">
+                Circle Packing (5) &middot; Thresholding (6,7) &middot; Dot-Screening (8).
+              </p>
+              <p className="caption-text-mobile">Built with Processing.</p>
             </div>
             <br />
             <HomeBody />
@@ -111,12 +109,13 @@ function LayoutDesktop() {
               <Banner title="WELCOME" />
             </div>
             <div className="text-fields mt-5">
-              <p className="high-light-1">Software Engineering • Cloud • Machine Learning</p>
+              <p className="high-light-1">Software Engineering • Backend Development</p>
+              <p className="high-light-1">Cloud • Machine Learning</p>
             </div>
             <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
               <p>
-                A personal space for software engineering, cloud architecture,
-                and machine learning — built and iterated on over the years.
+                A personal space for software engineering, cloud architecture, and machine learning
+                — built and iterated on over the years.
               </p>
             </div>
             <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2" />
@@ -130,9 +129,9 @@ function LayoutDesktop() {
               <img src={photoImageDotScreen} style={{ maxWidth: sizeRatio }} alt="Portrait" />
               <div>
                 <p className="caption-text">
-                  Image Processing Studies | Top: Image Segmentation, Voronoi Tessellation.
-                  Bottom: Circle Packing, Thresholding, Dot-Screening.
-                  Built with Processing.
+                  Image Processing Studies | Image Segmentation (1,2) &middot; Voronoi Tessellation
+                  (3,4) &middot; Circle Packing (5) &middot; Thresholding (6,7) &middot;
+                  Dot-Screening(8). Built with Processing.
                 </p>
               </div>
             </div>
@@ -147,8 +146,6 @@ function LayoutDesktop() {
 export default function Home() {
   const layout = getLayoutSize();
   return (
-    <div>
-      { (layout === 'mobile' || layout === 'tablet') ? <LayoutMobile /> : <LayoutDesktop /> }
-    </div>
+    <div>{layout === 'mobile' || layout === 'tablet' ? <LayoutMobile /> : <LayoutDesktop />}</div>
   );
 }

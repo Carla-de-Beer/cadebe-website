@@ -51,9 +51,17 @@
     opacity: 100%;
   }
 
+  .link-high-light-mobile {
+    color: var(--paragraph-gray-2) !important;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
   .link-high-light {
     color: var(--paragraph-gray-2) !important;
     font-weight: 700;
     text-decoration: none;
+    border-bottom: 2px solid var(--logo-accent-color);
+    padding-bottom: 2px;
   }
 }

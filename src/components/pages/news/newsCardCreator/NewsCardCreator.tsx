@@ -59,16 +59,19 @@ function makeStandardCard(item: NewsItem) {
   return (
     <a className="no-link" href={item.url} target="_blank" rel="noopener noreferrer">
       <Card className="p-3 news-card">
-        <Card.Body>
-          <Card.Title>{item.title}</Card.Title>
-          <Card.Subtitle className="mt-3 sub-title">{item.subTitle}</Card.Subtitle>
-          <Card.Text as="div" className="mt-3">
-            {/* eslint-disable-next-line react/no-danger */}
-            <div className="dangerous" dangerouslySetInnerHTML={{ __html: item.text }} />
-          </Card.Text>
+        <Card.Body className="card-body-flex">
+          <div>
+            <Card.Title>{item.title}</Card.Title>
+            <Card.Subtitle className="mt-3 sub-title">{item.subTitle}</Card.Subtitle>
+            <Card.Text as="div" className="mt-3">
+              {/* eslint-disable-next-line react/no-danger */}
+              <div className="dangerous" dangerouslySetInnerHTML={{ __html: item.text }} />
+            </Card.Text>
+          </div>
           {(window.innerWidth.valueOf() <= PageSize.SMALL ||
-            window.innerWidth.valueOf() > PageSize.LARGE) &&
-            bindImages(item.id)}
+            window.innerWidth.valueOf() > PageSize.LARGE) && (
+            <div className="card-image-bottom">{bindImages(item.id)}</div>
+          )}
         </Card.Body>
       </Card>
     </a>
@@ -93,8 +96,11 @@ function NewsCommon() {
           </div>
           <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
             <p>
-              Development news and blog stories relating to software engineering, including Java,
-              Spring Framework, Python, Cloud Computing, TensorFlow and machine learning.
+              Development news and blog stories on software engineering, including Java, Spring
+              Framework, Python, cloud computing, and much more. I also list certification exams I
+              have passed, which I treat as a gateway into new technologies – a way to build a
+              solid, hands‑on foundation and internalise best practices, rather than a box‑ticking
+              exercise.
             </p>
           </div>
         </div>

@@ -6,8 +6,6 @@ import { getLayoutSize } from '../../utils/pageSize';
 import { HeaderProps } from '../../model/HeaderProps';
 
 import './Header.scss';
-
-import logo from '../../assets/images/shared/logo.png';
 import menu from '../../assets/icons/menu.svg';
 
 function HeaderLayoutMobile({ pageType }: HeaderProps) {
@@ -16,7 +14,7 @@ function HeaderLayoutMobile({ pageType }: HeaderProps) {
       <div className="row me-3">
         <div className="col-lg-2 col-md-2 col-3">
           <Link to="/">
-            <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+            {/* <img className="logo" src={logo} width="60" height="60" alt="Logo" /> */}
           </Link>
         </div>
         <div className="col-lg-9 col-md-9 col-7" />
@@ -35,25 +33,27 @@ function HeaderLayoutMobile({ pageType }: HeaderProps) {
           >
             <Dropdown.Item
               href="/"
-              className={pageType === 'home' ? 'nav-text link-high-light' : 'nav-text link'}
+              className={pageType === 'home' ? 'nav-text link-high-light-mobile' : 'nav-text link'}
             >
               Home
             </Dropdown.Item>
             <Dropdown.Item
               href="/projects"
-              className={pageType === 'projects' ? 'nav-text link-high-light' : 'nav-text link'}
+              className={
+                pageType === 'projects' ? 'nav-text link-high-light-mobile' : 'nav-text link'
+              }
             >
               Projects
             </Dropdown.Item>
             <Dropdown.Item
               href="/news"
-              className={pageType === 'news' ? 'nav-text link-high-light' : 'nav-text link'}
+              className={pageType === 'news' ? 'nav-text link-high-light-mobile' : 'nav-text link'}
             >
               News
             </Dropdown.Item>
             <Dropdown.Item
               href="/about"
-              className={pageType === 'about' ? 'nav-text link-high-light' : 'nav-text link'}
+              className={pageType === 'about' ? 'nav-text link-high-light-mobile' : 'nav-text link'}
             >
               About
             </Dropdown.Item>
@@ -72,7 +72,7 @@ function HeaderLayoutLarge({ pageType }: HeaderProps) {
           <div className="row">
             <div className="col-lg-3">
               <Link to="/">
-                <img className="logo" src={logo} width="60" height="60" alt="Logo" />
+                {/* <img className="logo" src={logo} width="60" height="60" alt="Logo" /> */}
               </Link>
             </div>
             <div className="col-lg-5" />
