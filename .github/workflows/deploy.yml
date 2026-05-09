@@ -19,26 +19,26 @@ jobs:
   lint-test-build:
     uses: ./.github/workflows/lint-test-build.yml
     with:
-      artifact-folder: build
+      artifact-folder: dist
       is-deploy: true
 
   deploy:
     name: Deploy project
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs: [ lint-test-build ]
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4.3.0
         with:
           name: build-artifacts
-          path: build
+          path: dist
 
       - name: Get AWS permissions
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v4.3.1
         with:
           role-to-assume: arn:aws:iam::258782862236:role/GitHub-S3-Write-Access
           aws-region: ${{ env.REGION }}
@@ -49,7 +49,7 @@ jobs:
         with:
           bucket: www.cadebe.dev
           bucket-region: ${{ env.REGION }}
-          artifact-folder: ./build
+          artifact-folder: ./dist
 
       - name: Output deployment information
         run: |

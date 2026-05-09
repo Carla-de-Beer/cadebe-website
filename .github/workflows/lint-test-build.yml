@@ -7,7 +7,7 @@ on:
         description: The name of the folder containing the artifacts to be deployed
         type: string
         required: false
-        default: build
+        default: dist
       is-deploy:
         description: Determines whether the build artifacts are to be uploaded prior to deployment
         type: boolean
@@ -18,11 +18,11 @@ jobs:
 
   lint:
     name: Run linter
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Get and cache dependencies
         uses: ./.github/actions/cached-dependencies
@@ -30,13 +30,16 @@ jobs:
       - name: Run npm lint
         run: npm run lint
 
+      - name: Run style lint
+        run: npm run style
+
   unit-tests:
     name: Run unit tests
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Get and cache dependencies
         uses: ./.github/actions/cached-dependencies
@@ -46,11 +49,11 @@ jobs:
 
   e2e:
     name: Run e2e
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Get and cache dependencies
         uses: ./.github/actions/cached-dependencies
@@ -59,19 +62,19 @@ jobs:
         run: npm start &
 
       - name: Install Cypress and run tests
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v6.10.9
         with:
           working-directory: tests
           browser: chrome
 
   build:
     name: Build project
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs: [ lint, unit-tests, e2e ]
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Get and cache dependencies
         uses: ./.github/actions/cached-dependencies
@@ -81,7 +84,7 @@ jobs:
 
       - name: Upload artifacts
         if: inputs.is-deploy == true
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: build-artifacts
           path: ${{ inputs.artifact-folder }}
