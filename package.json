@@ -19,7 +19,8 @@
     "test": "vitest",
     "deploy": "npm run build && aws s3 sync dist",
     "lint": "eslint src/**/*.tsx",
-    "style": "stylelint \"**/*.scss\""
+    "style": "stylelint \"**/*.scss\"",
+    "prepare": "husky"
   },
   "browserslist": {
     "production": [
@@ -33,23 +34,39 @@
       "last 1 safari version"
     ]
   },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.59.2",
-    "@typescript-eslint/parser": "^8.59.2",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.1.7",
     "jsdom": "^29.1.1",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
     "stylelint": "^16.6.1",
     "stylelint-config-sass-guidelines": "^11.1.0",
     "stylelint-config-standard": "^36.0.1",

@@ -51,18 +51,9 @@
     opacity: 100%;
   }
 
-  @media all and (max-width: 1024px) {
-    .link-high-light {
-      color: var(--paragraph-gray-2) !important;
-      text-decoration: none;
-    }
-  }
-
-  @media all and (min-width: 1025px) {
-    .link-high-light {
-      border-bottom: solid var(--paragraph-gray-2) 2px;
-      color: var(--paragraph-gray-2) !important;
-      text-decoration: none;
-    }
+  .link-high-light {
+    color: var(--paragraph-gray-2) !important;
+    font-weight: 700;
+    text-decoration: none;
   }
 }

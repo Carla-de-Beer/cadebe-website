@@ -1,29 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 
 import './Home.scss';
 import '../../../style/_fonts.scss';
 import Banner from '../../banner/Banner';
 import Header from '../../header/Header';
+import { getLayoutSize } from '../../../utils/pageSize';
 
 import photoImageSeg from '../../../assets/images/home/result-image-seg.jpg';
 import photoImageDotScreen from '../../../assets/images/home/result-dot-screen.jpg';
 import photoImageThreshold from '../../../assets/images/home/result-threshold.jpg';
 import photoImageVoronoi from '../../../assets/images/home/result-voronoi.jpg';
-import PageSize from '../../../utils/enums';
 
 const sizeRatio = '40%';
 const sizeRatioMobile = '80%';
 
-export default class Home extends Component<any, any> {
-  setPageLayout() {
-    if (window.innerWidth.valueOf() <= PageSize.MEDIUM) {
-      return this.setLayoutMobile();
-    }
-    return this.setLayoutDesktop();
-  }
-
-  setBody = () => (
+function HomeBody() {
+  return (
     <div>
       <Card className="card-tile" style={{ width: '80%' }}>
         <Card.Body>
@@ -59,8 +52,10 @@ export default class Home extends Component<any, any> {
       </Card>
     </div>
   );
+}
 
-  setLayoutMobile = () => (
+function LayoutMobile() {
+  return (
     <div>
       <Header pageType="home" />
       <div className="home-wrapper">
@@ -69,54 +64,44 @@ export default class Home extends Component<any, any> {
             <div data-cy="welcome-banner-mobile">
               <Banner title="WELCOME" />
             </div>
-            <br />
-            <div className="images">
-              <img
-                src={photoImageSeg}
-                style={{ maxWidth: sizeRatioMobile }}
-                alt="Portrait"
-              />
+            <div className="text-fields mt-5">
+              <p className="high-light-1">Software Engineering • Cloud • Machine Learning</p>
             </div>
-            <div className="images">
-              <img
-                src={photoImageVoronoi}
-                style={{ maxWidth: sizeRatioMobile }}
-                alt="Portrait"
-              />
-            </div>
-            <div className="images">
-              <img
-                src={photoImageThreshold}
-                style={{ maxWidth: sizeRatioMobile }}
-                alt="Portrait"
-              />
-            </div>
-            <div className="images">
-              <img
-                src={photoImageDotScreen}
-                style={{ maxWidth: sizeRatioMobile }}
-                alt="Portrait"
-              />
-              <p className="caption-text">
-                Image Processing Studies
+            <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+              <p>
+                A personal space for software engineering, cloud architecture,
+                and machine learning — built and iterated on over the years.
               </p>
+            </div>
+            <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2" />
+            <div className="images">
+              <img src={photoImageSeg} style={{ maxWidth: sizeRatioMobile }} alt="Portrait" />
+            </div>
+            <div className="images">
+              <img src={photoImageVoronoi} style={{ maxWidth: sizeRatioMobile }} alt="Portrait" />
+            </div>
+            <div className="images">
+              <img src={photoImageThreshold} style={{ maxWidth: sizeRatioMobile }} alt="Portrait" />
+            </div>
+            <div className="images">
+              <img src={photoImageDotScreen} style={{ maxWidth: sizeRatioMobile }} alt="Portrait" />
+              <p className="caption-text">Image Processing Studies</p>
+              <p className="caption-text-mobile">Top: Image Segmentation, Voronoi Tessellation.</p>
               <p className="caption-text-mobile">
-                Top: Image Segmentation, Voronoi Tessellation.
-              </p>
-              <p className="caption-text-mobile">
-                Bottom: Circle Packing, Thresholding, Dot-Screening.
-                Built with Processing.
+                Bottom: Circle Packing, Thresholding, Dot-Screening. Built with Processing.
               </p>
             </div>
             <br />
-            {this.setBody()}
+            <HomeBody />
           </div>
         </div>
       </div>
     </div>
   );
+}
 
-  setLayoutDesktop = () => (
+function LayoutDesktop() {
+  return (
     <div>
       <Header pageType="home" />
       <div className="home-wrapper">
@@ -125,32 +110,24 @@ export default class Home extends Component<any, any> {
             <div data-cy="welcome-banner-desktop">
               <Banner title="WELCOME" />
             </div>
-            <br />
-            <br />
+            <div className="text-fields mt-5">
+              <p className="high-light-1">Software Engineering • Cloud • Machine Learning</p>
+            </div>
+            <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+              <p>
+                A personal space for software engineering, cloud architecture,
+                and machine learning — built and iterated on over the years.
+              </p>
+            </div>
+            <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2" />
             <div className="images">
-              <img
-                src={photoImageSeg}
-                style={{ maxWidth: sizeRatio }}
-                alt="Portrait"
-              />
-              <img
-                src={photoImageVoronoi}
-                style={{ maxWidth: sizeRatio }}
-                alt="Portrait"
-              />
+              <img src={photoImageSeg} style={{ maxWidth: sizeRatio }} alt="Portrait" />
+              <img src={photoImageVoronoi} style={{ maxWidth: sizeRatio }} alt="Portrait" />
             </div>
             <br />
             <div className="images">
-              <img
-                src={photoImageThreshold}
-                style={{ maxWidth: sizeRatio }}
-                alt="Portrait"
-              />
-              <img
-                src={photoImageDotScreen}
-                style={{ maxWidth: sizeRatio }}
-                alt="Portrait"
-              />
+              <img src={photoImageThreshold} style={{ maxWidth: sizeRatio }} alt="Portrait" />
+              <img src={photoImageDotScreen} style={{ maxWidth: sizeRatio }} alt="Portrait" />
               <div>
                 <p className="caption-text">
                   Image Processing Studies | Top: Image Segmentation, Voronoi Tessellation.
@@ -159,18 +136,19 @@ export default class Home extends Component<any, any> {
                 </p>
               </div>
             </div>
-            {this.setBody()}
+            <HomeBody />
           </div>
         </div>
       </div>
     </div>
   );
+}
 
-  render() {
-    return (
-      <div>
-        {this.setPageLayout()}
-      </div>
-    );
-  }
+export default function Home() {
+  const layout = getLayoutSize();
+  return (
+    <div>
+      { (layout === 'mobile' || layout === 'tablet') ? <LayoutMobile /> : <LayoutDesktop /> }
+    </div>
+  );
 }

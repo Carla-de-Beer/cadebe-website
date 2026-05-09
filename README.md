@@ -1,52 +1,60 @@
-# cadebe.dev 
+# cadebe.dev
 
 ![example event parameter](https://github.com/Carla-de-Beer/cadebe-website/actions/workflows/build.yml/badge.svg?event=push)
 
-Website to showcase current and previous development projects. Built with React, TypeScript and SCSS and deployed on AWS.
+Personal portfolio website showcasing development projects, certifications, and blog posts. Built with React 18, TypeScript, and SCSS, bundled with Vite, and deployed on AWS S3.
 
 ## Requirements
-* NodeJS v17.9.1
-* npm 8.11.0
+
+* Node.js v22
+* npm v10
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000). The page reloads automatically on edits.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+Runs unit tests with Vitest in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `dist` folder. Bundles and optimises React for best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### `npm run preview`
 
-### `npm run eject`
+Serves the production build locally for review before deployment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `npm run lint`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Runs ESLint across all TypeScript source files.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `npm run style`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Runs Stylelint across all SCSS files.
 
-### `npm run deploy -- <BUCKET PATH>`
+### `npm run deploy`
 
-Builds and deploys the frontend code directly to AWS S3.
+Builds the project and syncs the `dist` folder to AWS S3.
 
-Create the AWS S3 bucket path parameter: `export BUCKET=s3://<BUCKET NAME>`.
+Ensure your AWS credentials are configured before running:
 
-Run the deployment command: `npm run deploy -- $BUCKET`
+```bash
+npm run deploy
+```
 
+## E2E Tests
+
+End-to-end tests use Cypress and are located in the `tests/` directory. The development server must be running on port 3000 before executing the tests.
+
+```bash
+# Start the dev server
+npm start
+
+# In a separate terminal, from the tests/ directory:
+cd tests
+npm run e2e-open        # Open Cypress UI in Chrome
+npm run e2e-headless    # Run headless in Chrome
+```

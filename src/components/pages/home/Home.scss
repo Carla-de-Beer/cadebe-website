@@ -3,16 +3,6 @@
 @import 'src/style/common';
 
 .home-wrapper {
-  body {
-    padding: 0;
-    position: relative;
-  }
-
-  html,
-  body {
-    height: 100%;
-  }
-
   h1,
   h2,
   h3 {
@@ -46,7 +36,6 @@
     border: 0;
     color: var(--accent-gray);
     margin: 0 auto;
-    width: 50%;
 
     .typewriter-text {
       @extend .font-style-accent;
@@ -57,12 +46,34 @@
   }
 
   .header-text {
-    font-size: 45px !important;
+    font-size: 45px;
   }
 
   .text-fields {
     @extend %base-text-fields;
-    text-align: center;
+  }
+
+  .high-light-1 {
+    color: var(--paragraph-gray-2);
+    font-weight: bold;
+  }
+
+  @media all and (max-width: 824px) {
+    .high-light-1 {
+      @include font-size-large-1;
+      color: var(--paragraph-gray-2);
+      font-weight: bold;
+      margin: unset;
+    }
+  }
+
+  @media all and (min-width: 825px) {
+    .high-light-1 {
+      @include font-size-large-2;
+      color: var(--paragraph-gray-2);
+      font-weight: bold;
+      margin: unset;
+    }
   }
 
   .images {

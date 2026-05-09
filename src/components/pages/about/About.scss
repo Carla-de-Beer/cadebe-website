@@ -3,16 +3,6 @@
 @import 'src/style/common';
 
 .about-wrapper {
-  body {
-    padding: 0;
-    position: relative;
-  }
-
-  html,
-  body {
-    height: 100%;
-  }
-
   p {
     @include font-size-large-1;
   }
@@ -21,7 +11,6 @@
     border: 0;
     color: var(--accent-gray);
     margin: 0 auto;
-    width: 50%;
 
     .typewriter-text {
       @extend .font-style-accent;
@@ -33,11 +22,6 @@
 
   .text-fields {
     @extend %base-text-fields;
-  }
-
-  .high-light-1 {
-    color: var(--paragraph-gray-2);
-    font-weight: bold;
   }
 
   .theme-color {

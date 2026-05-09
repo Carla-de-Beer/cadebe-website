@@ -61,7 +61,7 @@ jobs:
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v6
         with:
-          working-directory: cypress
+          working-directory: tests
           browser: chrome
 
   build:

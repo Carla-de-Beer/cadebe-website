@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
-import PageSize from '../../../../utils/enums';
 import Banner from '../../../banner/Banner';
 import Header from '../../../header/Header';
+import { getLayoutSize } from '../../../../utils/pageSize';
+import PageSize from '../../../../utils/enums';
+import { NewsDataProps, NewsItem } from '../../../../model/NewsDataProps';
 
 import './NewsCardCreator.scss';
 
@@ -19,243 +21,178 @@ import hashicorpTerraformBadge from '../../../../assets/images/news/hashicorp-te
 import springCert from '../../../../assets/images/news/spring-2024.png';
 import gcpCertACE from '../../../../assets/images/news/gcp-ace.png';
 
-export default class NewsCardCreator extends Component<INewsDataProps, INewsDataState> {
-  constructor(props: INewsDataState) {
-    super(props);
-
-    this.state = {
-      newsContent: props.newsContent,
-    };
+function bindImages(id: number | undefined) {
+  const alt = 'News Image';
+  switch (id) {
+    case 3:
+      return <Card.Img className="mt-3 aws-image" src={awsCertManager} alt={alt} />;
+    case 4:
+      return <Card.Img className="mt-3 aws-badge" src={awsDeveloperCertC01} alt={alt} />;
+    case 7:
+      return <Card.Img className="mt-3 oracle-badge" src={oracleBadge11} alt={alt} />;
+    case 8:
+      return <Card.Img className="mt-3 oracle-badge" src={oracleBadge17} alt={alt} />;
+    case 10:
+      return <Card.Img className="mt-3 badge-hashicorp" src={hashicorpTerraformBadge} alt={alt} />;
+    case 11:
+      return <Card.Img className="mt-3 aws-badge" src={awsSolutionsArchitectCert} alt={alt} />;
+    case 12:
+      return <Card.Img className="mt-3 badge-spring" src={springCert} alt={alt} />;
+    case 13:
+      return <Card.Img className="mt-3 aws-cert" src={awsDeveloperCertC02} alt={alt} />;
+    case 14:
+      return <Card.Img className="mt-3 gcp-ace-cert" src={gcpCertACE} alt={alt} />;
+    case 15:
+      return (
+        <Card.Img className="mt-3 aws-ai-practitioner-cert" src={awsAiPractitionerCert} alt={alt} />
+      );
+    case 16:
+      return <Card.Img className="mt-3 ckad-cert" src={ckadCert} alt={alt} />;
+    case 17:
+      return <Card.Img className="mt-3 isaqb-cert" src={isaqbCert} alt={alt} />;
+    default:
+      return null;
   }
+}
 
-  setCommon = () => (
+function makeStandardCard(item: NewsItem) {
+  return (
+    <a className="no-link" href={item.url} target="_blank" rel="noopener noreferrer">
+      <Card className="p-3 news-card">
+        <Card.Body>
+          <Card.Title>{item.title}</Card.Title>
+          <Card.Subtitle className="mt-3 sub-title">{item.subTitle}</Card.Subtitle>
+          <Card.Text as="div" className="mt-3">
+            {/* eslint-disable-next-line react/no-danger */}
+            <div className="dangerous" dangerouslySetInnerHTML={{ __html: item.text }} />
+          </Card.Text>
+          {(window.innerWidth.valueOf() <= PageSize.SMALL ||
+            window.innerWidth.valueOf() > PageSize.LARGE) &&
+            bindImages(item.id)}
+        </Card.Body>
+      </Card>
+    </a>
+  );
+}
+
+function NewsCommon() {
+  return (
     <div data-cy="news-banner">
       <Banner title="NEWS & BLOG" />
       <div className="mt-4">
         <div className="card-tile text-fields" style={{ width: '80%' }}>
           <div className="text-fields mt-5">
-            { window.innerWidth.valueOf() >= PageSize.SMALL
-              ? <p className="high-light-1">Software Development • Machine Learning</p> : (
-                <div>
-                  <p className="high-light-1">Software Development</p>
-                  <p className="high-light-1">Machine Learning</p>
-                </div>
-              ) }
+            {window.innerWidth.valueOf() >= PageSize.SMALL ? (
+              <p className="high-light-1">Software Engineering • Machine Learning</p>
+            ) : (
+              <div>
+                <p className="high-light-1">Software Engineering</p>
+                <p className="high-light-1">Machine Learning</p>
+              </div>
+            )}
           </div>
           <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
             <p>
-              Development news and blog stories relating to software development,
-              including Java, Spring Framework, Python, Cloud Computing, TensorFlow
-              and machine learning.
+              Development news and blog stories relating to software engineering, including Java,
+              Spring Framework, Python, Cloud Computing, TensorFlow and machine learning.
             </p>
           </div>
         </div>
       </div>
     </div>
   );
+}
 
-  setLayoutDesktop({ ...newsContent }) {
-    let renderContent;
-
-    if (Object.keys(newsContent).length > 1) {
-      renderContent = (
-        <div className="mt-3" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 15) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 14) }</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 13) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 12) }</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 11) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 10) }</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 9) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 8) }</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 7) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 6) }</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 5) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 4) }</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 3) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 2) }</div>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 1) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 0) }</div>
-          </div>
-        </div>
-      );
-    }
-
+function LayoutDesktop({ newsContent }: NewsDataProps) {
+  if (newsContent.length <= 1) {
     return (
       <div className="news-wrapper">
-        { this.setCommon() }
-        { renderContent }
+        <NewsCommon />
       </div>
     );
   }
 
-  setLayoutTablet({ ...newsContent }) {
-    let renderContent;
-
-    if (Object.keys(newsContent).length > 1) {
-      renderContent = (
-        <div className="news-wrapper">
-          { this.setCommon() }
-
-          <div className="mt-3" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 15) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 14) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 13) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 12) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 11) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 10) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 9) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 8) }</div>
-            <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-              <div style={{ flex: 1 }}>{ this.card(newsContent, 7) }</div>
-              <div style={{ flex: 1 }}>{ this.card(newsContent, 6) }</div>
-            </div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 5) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 4) }</div>
-            <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-              <div style={{ flex: 1 }}>{ this.card(newsContent, 3) }</div>
-              <div style={{ flex: 1 }}>{ this.card(newsContent, 2) }</div>
-            </div>
-            <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-              <div style={{ flex: 1 }}>{ this.card(newsContent, 1) }</div>
-              <div style={{ flex: 1 }}>{ this.card(newsContent, 0) }</div>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    return (
-      renderContent
+  const rows = [];
+  for (let i = newsContent.length - 1; i >= 0; i -= 2) {
+    const left = newsContent[i];
+    const right = i - 1 >= 0 ? newsContent[i - 1] : null;
+    rows.push(
+      <div key={left.id} style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+        <div style={{ flex: 1 }}>{makeStandardCard(left)}</div>
+        {right && <div style={{ flex: 1 }}>{makeStandardCard(right)}</div>}
+      </div>,
     );
   }
 
-  setLayoutMobile({ ...newsContent }) {
-    const renderContent = [];
+  return (
+    <div className="news-wrapper">
+      <NewsCommon />
+      <div
+        className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2"
+        style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
+      >
+        {rows}
+      </div>
+    </div>
+  );
+}
 
-    if (Object.keys(newsContent).length > 1) {
-      for (let i = Object.keys(newsContent).length - 1; i >= 0; i -= 1) {
-        renderContent.push(
-          <div key={i}>
-            { this.makeStandardCard(
-              newsContent[i].url,
-              newsContent[i].title,
-              newsContent[i].subTitle,
-              newsContent[i].text,
-              newsContent[i].id,
-            ) }
-          </div>,
-        );
-      }
-    }
+function LayoutTablet({ newsContent }: NewsDataProps) {
+  if (newsContent.length <= 1) return null;
 
+  const items = [...newsContent].reverse().map((item) => (
+    <div key={item.id} style={{ width: '100%' }}>
+      {makeStandardCard(item)}
+    </div>
+  ));
+
+  return (
+    <div className="news-wrapper">
+      <NewsCommon />
+      <div
+        className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2"
+        style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
+      >
+        {items}
+      </div>
+    </div>
+  );
+}
+
+function LayoutMobile({ newsContent }: NewsDataProps) {
+  if (newsContent.length <= 1) {
     return (
       <div className="news-wrapper">
-        { this.setCommon() }
-        <div className="mt-3" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          { renderContent }
-        </div>
+        <NewsCommon />
       </div>
     );
   }
 
-  setPageLayout() {
-    const { newsContent } = this.state;
-    if (window.innerWidth.valueOf() <= PageSize.SMALL) {
-      return this.setLayoutMobile(newsContent);
-    }
-    if (window.innerWidth.valueOf() > PageSize.SMALL
-      && window.innerWidth.valueOf() < PageSize.LARGE) {
-      return this.setLayoutTablet(newsContent);
-    }
+  const items = [...newsContent]
+    .reverse()
+    .map((item) => <div key={item.id}>{makeStandardCard(item)}</div>);
 
-    return this.setLayoutDesktop(newsContent);
-  }
-
-  card = (newsContent: { [key: number]: any }, i: number) => this.makeStandardCard(
-    newsContent[i].url,
-    newsContent[i].title,
-    newsContent[i].subTitle,
-    newsContent[i].text,
-    newsContent[i].id,
-  );
-
-  bindImages = (id: number | undefined) => {
-    const alt = 'News Image';
-    switch (id) {
-      case 3:
-        return (<Card.Img className="mt-3 aws-image" src={awsCertManager} alt={alt} />);
-      case 4:
-        return (<Card.Img className="mt-3 aws-badge" src={awsDeveloperCertC01} alt={alt} />);
-      case 7:
-        return (<Card.Img className="mt-3 oracle-badge" src={oracleBadge11} alt={alt} />);
-      case 8:
-        return (<Card.Img className="mt-3 oracle-badge" src={oracleBadge17} alt={alt} />);
-      case 10:
-        return (<Card.Img className="mt-3 badge-hashicorp" src={hashicorpTerraformBadge} alt={alt} />);
-      case 11:
-        return (<Card.Img className="mt-3 aws-badge" src={awsSolutionsArchitectCert} alt={alt} />);
-      case 12:
-        return (<Card.Img className="mt-3 badge-spring" src={springCert} alt={alt} />);
-      case 13:
-        return (<Card.Img className="mt-3 aws-cert" src={awsDeveloperCertC02} alt={alt} />);
-      case 14:
-        return (<Card.Img className="mt-3 gcp-ace-cert" src={gcpCertACE} alt={alt} />);
-      case 15:
-        return (<Card.Img className="mt-3 aws-ai-practitioner-cert" src={awsAiPractitionerCert} alt={alt} />);
-      case 16:
-        return (<Card.Img className="mt-3 ckad-cert" src={ckadCert} alt={alt} />);
-      case 17:
-        return (<Card.Img className="mt-3 isaqb-cert" src={isaqbCert} alt={alt} />);
-      default:
-        return null;
-    }
-  };
-
-  makeStandardCard = (url: string, title: string, subTitle: string, text: string, id?: number) => (
-    <a
-      className="no-link"
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Card className="p-3 news-card">
-        <Card.Body>
-          <Card.Title>{ title }</Card.Title>
-          <Card.Subtitle className="mt-3 sub-title">{ subTitle }</Card.Subtitle>
-          <Card.Text as="div" className="mt-3">
-            {/* eslint-disable-next-line react/no-danger */}
-            <div className="dangerous" dangerouslySetInnerHTML={{ __html: text }} />
-          </Card.Text>
-          { (window.innerWidth.valueOf() <= PageSize.SMALL
-            || window.innerWidth.valueOf() > PageSize.LARGE)
-          && this.bindImages(id) }
-        </Card.Body>
-      </Card>
-    </a>
-  );
-
-  render() {
-    return (
-      <div>
-        <Header pageType="news" />
-        { this.setPageLayout() }
+  return (
+    <div className="news-wrapper">
+      <NewsCommon />
+      <div
+        className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2"
+        style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
+      >
+        {items}
       </div>
-    );
-  }
+    </div>
+  );
+}
+
+export default function NewsCardCreator({ newsContent }: NewsDataProps) {
+  const layout = getLayoutSize();
+  return (
+    <div>
+      <Header pageType="news" />
+      {layout === 'mobile' && <LayoutMobile newsContent={newsContent} />}
+      {layout === 'tablet' && <LayoutTablet newsContent={newsContent} />}
+      {layout === 'desktop' && <LayoutDesktop newsContent={newsContent} />}
+    </div>
+  );
 }

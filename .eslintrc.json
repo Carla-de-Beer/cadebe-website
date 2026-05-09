@@ -1,23 +1,13 @@
 {
   "env": {
     "browser": true,
-    "es2020": true,
-    "jest": true
-  },
-  "globals": {
-    "IBannerProps": "readonly",
-    "IBannerState": "writable",
-    "IHeaderProps": "readonly",
-    "IHeaderState": "writable",
-    "IProjectDataProps": "readonly",
-    "IProjectDataState": "writable",
-    "INewsDataProps": "readonly",
-    "INewsDataState": "writable",
-    "cy": true
+    "es2020": true
   },
   "extends": [
+    "airbnb",
+    "airbnb-typescript",
     "plugin:react/recommended",
-    "airbnb"
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -25,7 +15,8 @@
       "jsx": true
     },
     "ecmaVersion": 2020,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "react",
@@ -35,17 +26,8 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".ts", ".tsx"]
       }
-    ],
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
     ],
     "import/extensions": "off",
     "import/no-extraneous-dependencies": [
@@ -55,18 +37,14 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "class-methods-use-this": "off",
-    "max-len": ["error", { "code": 150 }]
+    "max-len": ["error", { "code": 150 }],
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-throw-literal": "off"
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }

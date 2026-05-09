@@ -2,25 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import PageSize from '../../utils/enums';
+import { getLayoutSize } from '../../utils/pageSize';
+import { HeaderProps } from '../../model/HeaderProps';
 
 import './Header.scss';
 
 import logo from '../../assets/images/shared/logo.png';
 import menu from '../../assets/icons/menu.svg';
 
-export default class Header extends React.Component<IHeaderProps, IHeaderState> {
-  constructor(props: IHeaderProps) {
-    super(props);
-
-    const { pageType } = this.props;
-
-    this.state = {
-      pageType,
-    };
-  }
-
-  setHeaderLayoutMobile = (pageType: string) => (
+function HeaderLayoutMobile({ pageType }: HeaderProps) {
+  return (
     <div className="mt-xl-5 mt-lg-4 mt-md-3 mt-3">
       <div className="row me-3">
         <div className="col-lg-2 col-md-2 col-3">
@@ -33,18 +24,14 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
           <DropdownButton
             align="end"
             className="menu-button"
-            style={{
-              width: '50%',
-            }}
-            title={(
+            style={{ width: '50%' }}
+            title={
               <img
                 src={menu}
                 alt="Menu"
-                style={{
-                  width: '30px', height: '30px', opacity: '0.5',
-                }}
+                style={{ width: '30px', height: '30px', opacity: '0.5' }}
               />
-              )}
+            }
           >
             <Dropdown.Item
               href="/"
@@ -75,8 +62,10 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
       </div>
     </div>
   );
+}
 
-  setHeaderLayoutLarge = (pageType: string) => (
+function HeaderLayoutLarge({ pageType }: HeaderProps) {
+  return (
     <div className="mt-4">
       <div className="row">
         <div className="col-4">
@@ -129,21 +118,17 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
       </div>
     </div>
   );
+}
 
-  setNavHeader = () => {
-    const { pageType } = this.state;
-
-    if (window.innerWidth.valueOf() < PageSize.LARGE) {
-      return this.setHeaderLayoutMobile(pageType);
-    }
-    return this.setHeaderLayoutLarge(pageType);
-  };
-
-  render() {
-    return (
-      <div className="header-wrapper">
-        { this.setNavHeader() }
-      </div>
-    );
-  }
+export default function Header({ pageType }: HeaderProps) {
+  const layout = getLayoutSize();
+  return (
+    <div className="header-wrapper">
+      {layout === 'mobile' || layout === 'tablet' ? (
+        <HeaderLayoutMobile pageType={pageType} />
+      ) : (
+        <HeaderLayoutLarge pageType={pageType} />
+      )}
+    </div>
+  );
 }

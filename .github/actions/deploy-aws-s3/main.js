@@ -10,6 +10,6 @@ const main = () => {
     exec.exec(`aws s3 sync ${artifactFolder} ${bucketUri} --region ${bucketRegion}`)
         .then(() => core.notice('Deployment to S3 completed'))
         .catch((error) => core.error(`Deployment was unsuccessful due ro error ${error}`));
-}
+};
 
 main();
