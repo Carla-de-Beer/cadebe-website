@@ -1,21 +1,32 @@
-@import 'src/style/colors';
-@import 'src/style/fonts';
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
 
-%base-text-fields {
+@mixin base-text-fields {
   text-align: center;
 }
 
-%base-high-light {
+%base-text-fields {
+  @include base-text-fields;
+}
+
+@mixin base-high-light {
   font-family: avenirblack, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: $paragraph-gray-2;
   font-size: 38px;
   font-weight: 400;
 }
 
-%base-high-light-mobile {
+%base-high-light {
+  @include base-high-light;
+}
+
+@mixin base-high-light-mobile {
   font-family: avenirblack, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: $paragraph-gray-2;
   font-size: 30px;
   font-weight: 400;
 }
 
+%base-high-light-mobile {
+  @include base-high-light-mobile;
+}

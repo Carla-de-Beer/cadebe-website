@@ -46,6 +46,14 @@ function HeaderLayoutMobile({ pageType }: HeaderProps) {
               Projects
             </Dropdown.Item>
             <Dropdown.Item
+              href="/skills"
+              className={
+                pageType === 'skills' ? 'nav-text link-high-light-mobile' : 'nav-text link'
+              }
+            >
+              Skills
+            </Dropdown.Item>
+            <Dropdown.Item
               href="/news"
               className={pageType === 'news' ? 'nav-text link-high-light-mobile' : 'nav-text link'}
             >
@@ -66,56 +74,34 @@ function HeaderLayoutMobile({ pageType }: HeaderProps) {
 
 function HeaderLayoutLarge({ pageType }: HeaderProps) {
   return (
-    <div className="mt-4">
-      <div className="row">
-        <div className="col-4">
-          <div className="row">
-            <div className="col-lg-3">
-              <Link to="/">
-                {/* <img className="logo" src={logo} width="60" height="60" alt="Logo" /> */}
-              </Link>
-            </div>
-            <div className="col-lg-5" />
-          </div>
-        </div>
-        <div className="col-lg-4 mt-3">
-          <div className="row text-center">
-            <div className="col-lg-3">
-              <Link
-                to="/"
-                className={pageType === 'home' ? 'nav-text link-high-light' : 'nav-text link'}
-              >
-                Home
-              </Link>
-            </div>
-            <div className="col-lg-3">
-              <Link
-                to="/projects"
-                className={pageType === 'projects' ? 'nav-text link-high-light' : 'nav-text link'}
-              >
-                Projects
-              </Link>
-            </div>
-            <div className="col-lg-3">
-              <Link
-                to="/news"
-                className={pageType === 'news' ? 'nav-text link-high-light' : 'nav-text link'}
-              >
-                News
-              </Link>
-            </div>
-            <div className="col-lg-3">
-              <Link
-                to="/about"
-                className={pageType === 'about' ? 'nav-text link-high-light' : 'nav-text link'}
-              >
-                About
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4" />
-      </div>
+    <div className="mt-4 nav-bar-large">
+      <Link to="/" className={pageType === 'home' ? 'nav-text link-high-light' : 'nav-text link'}>
+        Home
+      </Link>
+      <Link
+        to="/projects"
+        className={pageType === 'projects' ? 'nav-text link-high-light' : 'nav-text link'}
+      >
+        Projects
+      </Link>
+      <Link
+        to="/skills"
+        className={pageType === 'skills' ? 'nav-text link-high-light' : 'nav-text link'}
+      >
+        Skills
+      </Link>
+      <Link
+        to="/news"
+        className={pageType === 'news' ? 'nav-text link-high-light' : 'nav-text link'}
+      >
+        News
+      </Link>
+      <Link
+        to="/about"
+        className={pageType === 'about' ? 'nav-text link-high-light' : 'nav-text link'}
+      >
+        About
+      </Link>
     </div>
   );
 }

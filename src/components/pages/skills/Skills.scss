@@ -1,0 +1,104 @@
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
+@use 'src/style/common' as *;
+
+.skills-wrapper {
+  h1,
+  h2,
+  h3:not(.skill-category-title) {
+    @extend .font-style-default;
+    color: var(--header-grey);
+  }
+
+  p {
+    @extend .font-style-default;
+    @include font-size-large-1;
+    color: var(--paragraph-gray-2);
+  }
+
+  .card-tile {
+    border: 0;
+    color: var(--accent-gray);
+    margin: 0 auto;
+  }
+
+  .text-fields {
+    @include base-text-fields;
+  }
+
+  .high-light-1 {
+    color: var(--paragraph-gray-2);
+    font-weight: bold;
+  }
+
+  @media all and (max-width: 824px) {
+    .box {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+
+    .high-light-1 {
+      @include font-size-large-1;
+      margin: unset;
+    }
+  }
+
+  @media all and (min-width: 825px) {
+    .high-light-1 {
+      @include font-size-large-2;
+      margin: unset;
+    }
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-bottom: 2rem;
+
+    @media all and (min-width: 825px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .skill-category {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.375rem;
+    padding: 1.25rem;
+  }
+
+  .skill-category-title {
+    color: var(--header-grey);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    @include font-size-small;
+    background-color: var(--tag-color, var(--warm-grey-1));
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    color: var(--paragraph-gray-2);
+    cursor: default;
+    padding: 0.3rem 0.8rem;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.2);
+      filter: saturate(2) brightness(0.95);
+    }
+  }
+}

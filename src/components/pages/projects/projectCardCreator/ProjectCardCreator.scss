@@ -1,6 +1,6 @@
-@import 'src/style/colors';
-@import 'src/style/fonts';
-@import 'src/style/common';
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
+@use 'src/style/common' as *;
 
 .projects-wrapper {
   p {
@@ -43,7 +43,7 @@
   }
 
   .text-fields {
-    @extend %base-text-fields;
+    @include base-text-fields;
   }
 
   .no-link {

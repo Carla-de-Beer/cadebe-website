@@ -1,6 +1,6 @@
-@import 'src/style/colors';
-@import 'src/style/fonts';
-@import 'src/style/common';
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
+@use 'src/style/common' as *;
 
 .home-wrapper {
   h1,
@@ -50,7 +50,7 @@
   }
 
   .text-fields {
-    @extend %base-text-fields;
+    @include base-text-fields;
   }
 
   .high-light-1 {

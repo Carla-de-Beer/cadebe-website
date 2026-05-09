@@ -1,5 +1,5 @@
-@import 'src/style/colors';
-@import 'src/style/fonts';
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
 
 .header-wrapper {
   a:active {
@@ -41,6 +41,12 @@
     @extend .font-size-standard;
     color: var(--paragraph-gray-2);
     font-weight: 500;
+  }
+
+  .nav-bar-large {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
 
   .logo-accent {

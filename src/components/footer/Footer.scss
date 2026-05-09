@@ -1,5 +1,5 @@
-@import 'src/style/colors';
-@import 'src/style/fonts';
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
 
 .footer-wrapper {
   .footer-text-small {
