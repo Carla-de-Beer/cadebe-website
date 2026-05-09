@@ -37,10 +37,10 @@
   }
 
   .nav-text {
-    @extend .font-style-default;
+    font-family: 'Avenir Next', avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     @extend .font-size-standard;
     color: var(--paragraph-gray-2);
-    font-weight: bold;
+    font-weight: 500;
   }
 
   .logo-accent {

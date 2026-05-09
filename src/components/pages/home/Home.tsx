@@ -28,21 +28,33 @@ export default class Home extends Component<any, any> {
       <Card className="card-tile" style={{ width: '80%' }}>
         <Card.Body>
           <Card.Title />
-          <Card.Text>
-            I&apos;m Carla de Beer, an experienced software engineer
-            specialising in web development and machine learning.
-            <br />
-            <br />
-            What initially began as an experiment in uploading content to AWS S3
-            and integrating an SSL certificate with AWS CloudFront has evolved into
-            a fully-fledged website. Accompanied by the acquisition of a
-            few AWS certifications along the way. This is my digital realm.
-            Here, I showcase some of my own development work from the past few years,
-            along with news and blog updates.
-            <br />
-            <br />
-            Explore and discover the world of software engineering and technology with me.
-          </Card.Text>
+          <div className="two-column-text">
+            <p style={{ breakAfter: 'column' }}>
+              I&apos;m
+              {' '}
+              <strong>Carla de Beer</strong>
+              , a software engineer specialising in web development
+              and machine learning.
+              <br />
+              <br />
+              What began as a small experiment – hosting content on AWS S3 and wiring up SSL
+              with AWS CloudFront – has grown into this fully fledged website, built and iterated
+              on as I deepened my experience with AWS and picked up a few certifications along
+              the way.
+            </p>
+            <p>
+              <strong>This is my digital realm:</strong>
+              {' '}
+              a space where I share selected projects,
+              experiments, and thoughts from the past few years.
+              <br />
+              <br />
+              Here you&apos;ll find examples of my work in Java, Spring, AWS, and machine learning,
+              along with news and blog posts on software engineering, cloud, and AI. Have a look
+              around, explore the projects, and follow along as I keep learning, building, and
+              visualising the &ldquo;invisible&rdquo; in code and data.
+            </p>
+          </div>
         </Card.Body>
       </Card>
     </div>
@@ -147,7 +159,6 @@ export default class Home extends Component<any, any> {
                 </p>
               </div>
             </div>
-            <br />
             {this.setBody()}
           </div>
         </div>

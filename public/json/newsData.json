@@ -43,17 +43,10 @@
       "url": "https://github.com/Carla-de-Beer/spring-boot-projects/tree/master/spring-aop-demo"
     },
     {
-      "id": 6,
-      "title": "TensorFlow Serving for Deployment",
-      "subTitle": "27 FEBRUARY 2021",
-      "text": "TensorFlow Serving is a flexible, high-performance serving system for machine learning models, designed for production environments. It provides out-of-the-box integration with TensorFlow models by providing an easily accessible API to directly query a pre-trained model. Whilst here are several methods by which TensorFlow Serving can be installed, this example uses Docker.",
-      "url": "https://github.com/Carla-de-Beer/cartoon-photo-classifier/tree/main/deployment/tensorflow-serving-deployment"
-    },
-    {
       "id": 7,
       "title": "Oracle Certified Professional: Java SE 11 Developer (1Z0-819)",
       "subTitle": "6 FEBRUARY 2023",
-      "text": "I passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of many other development activities. It has been worthwhile, though. My Java skills have been supercharged.",
+      "text": "I passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of many other development activities. It has been worthwhile, though. My Java skills have been supercharged, especially around core APIs, concurrency and modularisation.",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951F20F63C52D9518F9E1C804BCD633710E"
     },
     {
@@ -62,13 +55,6 @@
       "subTitle": "31 MARCH 2023",
       "text": "I leveraged on my recent studies for the OCP Java SE 11 Developer exam to pass the OCP Java SE 17 Developer examination. As Oracle puts it: \"By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.\"",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951482F83B53E3E1D5AC994787AE1FA8922"
-    },
-    {
-      "id": 9,
-      "title": "Support Vector Machines with skearn",
-      "subTitle": "1 JULY 2023",
-      "text": "Support Vector Machines (SVMs) are supervised machine learning algorithms used for classification problems. Data is mapped to a high-dimensional feature space so that data points can be categorised based in two dimensions. The algorithm creates an optimal hyperplane that divides the dataset into two classes, and then uses support vectors as its building block for classifying new data observations. Support vectors are the data points nearest to the hyperplane, meaning their influence is greater compared to other observations further away from the model boundary.<br/><br/><strong>sklearn</strong> provides a simple Python-based API to unlock the power of SVMs. This project demonstrates how a SVM can be used for binary classification, based on a Kaggle dataset.",
-      "url": "https://github.com/Carla-de-Beer/python-projects/tree/master/machine-learning/support-vector-machine/diabetes-prediction-dataset"
     },
     {
       "id": 10,
@@ -88,14 +74,14 @@
       "id": 12,
       "title": "VMware Spring Certified Professional 2024 (2V0-72.22)",
       "subTitle": "8 JANUARY 2024",
-      "text": "I passed the VMware Spring Certified Professional 2024 exam today.</br></br>The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey. learned tonnes of useful bits and believe that it makes me a more effective and confident Spring-based developer. I highly recommend this certification for the valuable skillset and knowledge that comes with its preparation.</br></br>Spring IoC • Spring AOP • Spring Data • Spring Boot • Spring MVC • Spring Security •Spring Rest • Spring Testing.</br></br>All things Spring Core.",
+      "text": "Spring IoC • Spring AOP • Spring Data • Spring Boot • Spring MVC • Spring Security •Spring Rest • Spring Testing </br></br>I passed the VMware Spring Certified Professional 2024 exam today. The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey. learned tonnes of useful bits and believe that it makes me a more effective and confident Spring-based developer. I highly recommend this certification for the valuable skillset and knowledge that comes with its preparation.",
       "url": "https://www.credly.com/badges/45d83de3-fb14-43eb-a80e-dc3b083c658e"
     },
     {
       "id": 13,
       "title": "AWS Certified Developer – Associate (DVA-C02)",
       "subTitle": "15 FEBRUARY 2024",
-      "text": "I renewed my AWS Certified Developer – Associate certification today. This means that, together with the recently accomplished AWS Certified Solutions Architect – Associate certification, I now hold two valid AWS credentials simultaneously. More than that though, I have learned tonnes along the way and feel comfortable working in the AWS Cloud.",
+      "text": "I renewed my AWS Certified Developer – Associate certification today. This means that, together with the recently accomplished AWS Certified Solutions Architect – Associate certification, I now hold two valid AWS credentials simultaneously. More than that though, I have learned tonnes along the way and feel comfortable working in the AWS Cloud, from designing resilient architectures to automating deployments and optimising costs. These certifications back up real, hands‑on experience building and running AWS workloads in production",
       "url": "https://www.credly.com/badges/4ed64177-27db-47df-a320-6f54646924f7"
     },
     {

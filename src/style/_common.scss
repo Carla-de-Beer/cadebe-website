@@ -6,16 +6,16 @@
 }
 
 %base-high-light {
-  @include font-style-highlight;
+  font-family: avenirblack, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: $paragraph-gray-2;
   font-size: 38px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 %base-high-light-mobile {
-  @include font-style-highlight;
+  font-family: avenirblack, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: $paragraph-gray-2;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 400;
 }
 

@@ -60,26 +60,38 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
     if (Object.keys(newsContent).length > 1) {
       renderContent = (
         <div className="mt-3" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 17) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 16) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 15) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 14) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 13) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 12) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 11) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 10) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 9) }</div>
           <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 8) }</div>
-            <div style={{ flex: 1 }}>{ this.card(newsContent, 7) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 15) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 14) }</div>
           </div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 6) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 5) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 4) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 3) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 2) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 1) }</div>
-          <div style={{ width: '100%' }}>{ this.card(newsContent, 0) }</div>
+          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 13) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 12) }</div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 11) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 10) }</div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 9) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 8) }</div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 7) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 6) }</div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 5) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 4) }</div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 3) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 2) }</div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 1) }</div>
+            <div style={{ flex: 1 }}>{ this.card(newsContent, 0) }</div>
+          </div>
         </div>
       );
     }
@@ -101,8 +113,6 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
           { this.setCommon() }
 
           <div className="mt-3" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 17) }</div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 16) }</div>
             <div style={{ width: '100%' }}>{ this.card(newsContent, 15) }</div>
             <div style={{ width: '100%' }}>{ this.card(newsContent, 14) }</div>
             <div style={{ width: '100%' }}>{ this.card(newsContent, 13) }</div>
@@ -110,11 +120,11 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
             <div style={{ width: '100%' }}>{ this.card(newsContent, 11) }</div>
             <div style={{ width: '100%' }}>{ this.card(newsContent, 10) }</div>
             <div style={{ width: '100%' }}>{ this.card(newsContent, 9) }</div>
+            <div style={{ width: '100%' }}>{ this.card(newsContent, 8) }</div>
             <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-              <div style={{ flex: 1 }}>{ this.card(newsContent, 8) }</div>
               <div style={{ flex: 1 }}>{ this.card(newsContent, 7) }</div>
+              <div style={{ flex: 1 }}>{ this.card(newsContent, 6) }</div>
             </div>
-            <div style={{ width: '100%' }}>{ this.card(newsContent, 6) }</div>
             <div style={{ width: '100%' }}>{ this.card(newsContent, 5) }</div>
             <div style={{ width: '100%' }}>{ this.card(newsContent, 4) }</div>
             <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
@@ -193,9 +203,9 @@ export default class NewsCardCreator extends Component<INewsDataProps, INewsData
       case 4:
         return (<Card.Img className="mt-3 aws-badge" src={awsDeveloperCertC01} alt={alt} />);
       case 7:
-        return (<Card.Img className="mt-3" src={oracleBadge11} alt={alt} />);
+        return (<Card.Img className="mt-3 oracle-badge" src={oracleBadge11} alt={alt} />);
       case 8:
-        return (<Card.Img className="mt-3" src={oracleBadge17} alt={alt} />);
+        return (<Card.Img className="mt-3 oracle-badge" src={oracleBadge17} alt={alt} />);
       case 10:
         return (<Card.Img className="mt-3 badge-hashicorp" src={hashicorpTerraformBadge} alt={alt} />);
       case 11:

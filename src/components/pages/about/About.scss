@@ -78,4 +78,17 @@
       margin: unset;
     }
   }
+
+  .two-column-text {
+    text-align: justify;
+    border-top: 1px solid var(--dark-accent);
+    padding-top: 1.5rem;
+  }
+
+  @media all and (min-width: 1025px) {
+    .two-column-text {
+      column-count: 2;
+      column-gap: 2rem;
+    }
+  }
 }

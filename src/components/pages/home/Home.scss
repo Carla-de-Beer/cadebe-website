@@ -62,9 +62,6 @@
 
   .text-fields {
     @extend %base-text-fields;
-  }
-
-  .text-fields {
     text-align: center;
   }
 
@@ -83,6 +80,23 @@
       margin-top: -15px;
       color: var(--paragraph-gray-2);
       text-align: center;
+    }
+  }
+
+  .two-column-text {
+    text-align: justify;
+    border-top: 1px solid var(--dark-accent);
+    padding-top: 1.5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media all and (min-width: 1025px) {
+    .two-column-text {
+      column-count: 2;
+      column-gap: 2rem;
     }
   }
 

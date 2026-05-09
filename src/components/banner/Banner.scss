@@ -11,6 +11,7 @@
     @extend %base-high-light;
   }
 
+
   @media all and (max-width: 768px) {
     .high-light {
       @extend %base-high-light;
