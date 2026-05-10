@@ -1,40 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import NewsCardCreator from './newsCardCreator/NewsCardCreator';
+import newsData from '../../../data/newsData.json';
 import { NewsItem } from '../../../model/NewsDataProps';
 
 export default function NewsLoader() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
-  const [list, setList] = useState<{ news: NewsItem[] }>({
-    news: [
-      {
-        id: 1,
-        title: 'Essential Unix-based Anaconda Setup Guide',
-        subTitle: '8 FEBRUARY 2020',
-        text: 'This article describes the essential steps required for installing Anaconda and creating a conda environment on a Unix-based OS.',
-        url: 'https://medium.com/@carla.debeer.uk/essential-anaconda-setup-kit-4b7e1fb803fc',
-      },
-    ],
-  });
-
-  useEffect(() => {
-    setIsLoading(true);
-    axios
-      .get('json/newsData.json')
-      .then((response) => {
-        setList(response.data);
-        setIsLoading(false);
-      })
-      .catch(() => {
-        setHasError(true);
-        setIsLoading(false);
-      });
-  }, []);
-
-  if (isLoading) return null;
-  if (hasError) return null;
-
-  return <NewsCardCreator newsContent={list.news} />;
+  return <NewsCardCreator newsContent={newsData.news as NewsItem[]} />;
 }
