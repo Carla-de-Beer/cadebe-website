@@ -5,4 +5,14 @@ describe('About Page', () => {
     AboutPage.visit();
     cy.get('[data-cy="about-banner"]').should('be.visible');
   });
+
+  it('should display the page header', () => {
+    AboutPage.visit();
+    cy.get('[data-cy="about-banner"]').contains('ABOUT').should('be.visible');
+  });
+
+  it('should display the footer', () => {
+    AboutPage.visit();
+    cy.get('[data-cy="footer"]').should('be.visible');
+  });
 });

@@ -37,6 +37,10 @@
     color: var(--accent-gray);
     margin: 0 auto;
 
+    > p:last-of-type {
+      margin-bottom: 0;
+    }
+
     .typewriter-text {
       @extend .font-style-accent;
       @include font-size-large-1;

@@ -5,4 +5,14 @@ describe('Project Page', () => {
     ProjectsPage.visit();
     cy.get('[data-cy="projects-banner"]').should('be.visible');
   });
+
+  it('should display the page header', () => {
+    ProjectsPage.visit();
+    cy.get('[data-cy="projects-banner"]').contains('PROJECTS').should('be.visible');
+  });
+
+  it('should display the footer', () => {
+    ProjectsPage.visit();
+    cy.get('[data-cy="footer"]').should('be.visible');
+  });
 });

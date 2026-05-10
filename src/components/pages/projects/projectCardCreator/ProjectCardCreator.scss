@@ -21,6 +21,10 @@
     margin: 0 auto;
     width: 50%;
 
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
     .typewriter-text {
       @extend .font-style-accent;
       @include font-size-large-1;

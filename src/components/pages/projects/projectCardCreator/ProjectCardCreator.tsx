@@ -82,23 +82,27 @@ function ProjectCommon() {
   return (
     <div data-cy="projects-banner">
       <Banner title="PROJECTS" />
-      <div className="text-fields mt-5">
-        <p className="high-light-1">Machine Learning • Swarm Intelligence</p>
-        <p className="high-light-1">Data Visualisation • Image Processing</p>
-        <p className="high-light-1">Mathematics</p>
-      </div>
-      <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
-        <p>
-          This collection showcases a selection of my projects developed over the past few years.
-        </p>
-        <p>
-          While my primary focus in day-to-day work revolves around Java development for
-          enterprise-level software, these projects reveal my broader interests. Many of them delve
-          into the realm of machine learning, reflecting my passion for uncovering patterns.
-          Additionally, these endeavors often aim to reveal the invisible through various means,
-          emphasising my exploration of visualisations and other dimensions beyond conventional
-          software development.
-        </p>
+      <div className="mt-4">
+        <div className="card-tile text-fields" style={{ width: '80%' }}>
+          <div className="text-fields mt-5">
+            <p className="high-light-1">Machine Learning • Swarm Intelligence</p>
+            <p className="high-light-1">Data Visualisation • Image Processing</p>
+            <p className="high-light-1">Mathematics</p>
+          </div>
+          <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+            <p>
+              This collection showcases a selection of my code-based projects from the past few
+              years.
+            </p>
+            <p>
+              While my day-to-day work focuses on Java development for enterprise software, these
+              projects highlight my broader interests. Many explore machine learning and my
+              curiosity for uncovering patterns in data. Others experiment with making the invisible
+              visible through visualisations and different ways of presenting information, extending
+              beyond traditional software development.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
