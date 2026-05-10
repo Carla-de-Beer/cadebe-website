@@ -22,6 +22,10 @@
     margin: 0 auto;
   }
 
+  .content-width {
+    width: 80%;
+  }
+
   .text-fields {
     @include base-text-fields;
   }

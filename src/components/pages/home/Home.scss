@@ -26,6 +26,10 @@
   .card {
     background-color: var(--white);
     border: 0;
+
+    .card-body {
+      padding-top: 0;
+    }
   }
 
   .card-text {

@@ -33,13 +33,13 @@ npm run e2e-headless    # Run headless in Chrome (requires app running on :3000)
 ## Architecture
 
 ### Routing (App.tsx)
-Four routes: `/` (Home), `/projects`, `/news`, `/about`. `Footer` renders outside the `Routes` switch so it appears on every page.
+Five routes: `/` (Home), `/projects`, `/news`, `/about`, `/skills`. `Footer` renders outside the `Routes` switch so it appears on every page.
 
 ### Data Loading Pattern
-`ProjectLoader` and `NewsLoader` fetch JSON data at runtime via `axios.get('json/projectData.json')` and `json/newsData.json`. These JSON files live in `public/json/` and are served statically — this is where project and news content is maintained, not in component code.
+`ProjectLoader` and `NewsLoader` import JSON data statically at build time from `src/data/projectData.json` and `src/data/newsData.json`. This is where project and news content is maintained, not in component code.
 
 ### Component Structure
-- `src/components/pages/` — page-level components (home, about, projects, news)
+- `src/components/pages/` — page-level components (home, about, projects, news, skills)
 - `src/components/pages/projects/projectCardCreator/` — renders project cards from loaded data
 - `src/components/pages/news/newsCardCreator/` — renders news cards from loaded data
 - `src/components/banner/`, `header/`, `footer/` — layout components

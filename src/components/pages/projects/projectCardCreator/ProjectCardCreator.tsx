@@ -138,10 +138,16 @@ function LayoutDesktop({ projectContent }: ProjectDataProps) {
     const left = projectContent[i];
     const right = projectContent[i + 1];
     rows.push(
-      <Row className="g-3 mt-3" key={left.id}>
-        <Col className="project-card left-card">{makeCard(left)}</Col>
-        {right && <Col className="project-card right-card">{makeCard(right)}</Col>}
-      </Row>,
+      <div key={left.id} style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+        <div style={{ flex: 1 }} className="project-card">
+          {makeCard(left)}
+        </div>
+        {right && (
+          <div style={{ flex: 1 }} className="project-card">
+            {makeCard(right)}
+          </div>
+        )}
+      </div>,
     );
   }
 
@@ -150,7 +156,12 @@ function LayoutDesktop({ projectContent }: ProjectDataProps) {
       <Header pageType="projects" />
       <div className="projects-wrapper">
         <ProjectCommon />
-        <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2 project-card">{rows}</div>
+        <div
+          className="mt-4 pt-2"
+          style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
+        >
+          {rows}
+        </div>
       </div>
     </div>
   );

@@ -2,8 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Banner from '../../../banner/Banner';
 import Header from '../../../header/Header';
-import { getLayoutSize } from '../../../../utils/pageSize';
-import PageSize from '../../../../utils/enums';
+import { getLayoutSize, LayoutSize } from '../../../../utils/pageSize';
 import { NewsDataProps, NewsItem } from '../../../../model/NewsDataProps';
 
 import './NewsCardCreator.scss';
@@ -55,7 +54,7 @@ function bindImages(id: number | undefined) {
   }
 }
 
-function makeStandardCard(item: NewsItem) {
+function makeStandardCard(item: NewsItem, layout: LayoutSize) {
   return (
     <a className="no-link" href={item.url} target="_blank" rel="noopener noreferrer">
       <Card className="p-3 news-card">
@@ -68,8 +67,7 @@ function makeStandardCard(item: NewsItem) {
               <div className="dangerous" dangerouslySetInnerHTML={{ __html: item.text }} />
             </Card.Text>
           </div>
-          {(window.innerWidth.valueOf() <= PageSize.SMALL ||
-            window.innerWidth.valueOf() > PageSize.LARGE) && (
+          {(layout === 'mobile' || layout === 'desktop') && (
             <div className="card-image-bottom">{bindImages(item.id)}</div>
           )}
         </Card.Body>
@@ -78,20 +76,20 @@ function makeStandardCard(item: NewsItem) {
   );
 }
 
-function NewsCommon() {
+function NewsCommon({ layout }: Readonly<{ layout: LayoutSize }>) {
   return (
     <div data-cy="news-banner">
       <Banner title="NEWS & BLOG" />
       <div className="mt-4">
         <div className="card-tile text-fields" style={{ width: '80%' }}>
           <div className="text-fields mt-5">
-            {window.innerWidth.valueOf() >= PageSize.SMALL ? (
-              <p className="high-light-1">Software Engineering • Machine Learning</p>
-            ) : (
+            {layout === 'mobile' ? (
               <div>
                 <p className="high-light-1">Software Engineering</p>
                 <p className="high-light-1">Machine Learning</p>
               </div>
+            ) : (
+              <p className="high-light-1">Software Engineering • Machine Learning</p>
             )}
           </div>
           <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
@@ -109,11 +107,11 @@ function NewsCommon() {
   );
 }
 
-function LayoutDesktop({ newsContent }: NewsDataProps) {
+function LayoutDesktop({ newsContent, layout }: Readonly<NewsDataProps & { layout: LayoutSize }>) {
   if (newsContent.length <= 1) {
     return (
       <div className="news-wrapper">
-        <NewsCommon />
+        <NewsCommon layout={layout} />
       </div>
     );
   }
@@ -124,67 +122,64 @@ function LayoutDesktop({ newsContent }: NewsDataProps) {
     const right = i - 1 >= 0 ? newsContent[i - 1] : null;
     rows.push(
       <div key={left.id} style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-        <div style={{ flex: 1 }}>{makeStandardCard(left)}</div>
-        {right && <div style={{ flex: 1 }}>{makeStandardCard(right)}</div>}
+        <div style={{ flex: 1 }}>{makeStandardCard(left, layout)}</div>
+        {right && <div style={{ flex: 1 }}>{makeStandardCard(right, layout)}</div>}
       </div>,
     );
   }
 
   return (
     <div className="news-wrapper">
-      <NewsCommon />
-      <div
-        className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2"
-        style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
-      >
+      <NewsCommon layout={layout} />
+      <div className="mt-4 pt-2" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {rows}
       </div>
     </div>
   );
 }
 
-function LayoutTablet({ newsContent }: NewsDataProps) {
-  if (newsContent.length <= 1) return null;
+function LayoutTablet({ newsContent, layout }: Readonly<NewsDataProps & { layout: LayoutSize }>) {
+  if (newsContent.length <= 1) {
+    return (
+      <div className="news-wrapper">
+        <NewsCommon layout={layout} />
+      </div>
+    );
+  }
 
   const items = [...newsContent].reverse().map((item) => (
     <div key={item.id} style={{ width: '100%' }}>
-      {makeStandardCard(item)}
+      {makeStandardCard(item, layout)}
     </div>
   ));
 
   return (
     <div className="news-wrapper">
-      <NewsCommon />
-      <div
-        className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2"
-        style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
-      >
+      <NewsCommon layout={layout} />
+      <div className="mt-4 pt-2" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {items}
       </div>
     </div>
   );
 }
 
-function LayoutMobile({ newsContent }: NewsDataProps) {
+function LayoutMobile({ newsContent, layout }: Readonly<NewsDataProps & { layout: LayoutSize }>) {
   if (newsContent.length <= 1) {
     return (
       <div className="news-wrapper">
-        <NewsCommon />
+        <NewsCommon layout={layout} />
       </div>
     );
   }
 
   const items = [...newsContent]
     .reverse()
-    .map((item) => <div key={item.id}>{makeStandardCard(item)}</div>);
+    .map((item) => <div key={item.id}>{makeStandardCard(item, layout)}</div>);
 
   return (
     <div className="news-wrapper">
-      <NewsCommon />
-      <div
-        className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2"
-        style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
-      >
+      <NewsCommon layout={layout} />
+      <div className="mt-4 pt-2" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {items}
       </div>
     </div>
@@ -196,9 +191,9 @@ export default function NewsCardCreator({ newsContent }: NewsDataProps) {
   return (
     <div>
       <Header pageType="news" />
-      {layout === 'mobile' && <LayoutMobile newsContent={newsContent} />}
-      {layout === 'tablet' && <LayoutTablet newsContent={newsContent} />}
-      {layout === 'desktop' && <LayoutDesktop newsContent={newsContent} />}
+      {layout === 'mobile' && <LayoutMobile newsContent={newsContent} layout={layout} />}
+      {layout === 'tablet' && <LayoutTablet newsContent={newsContent} layout={layout} />}
+      {layout === 'desktop' && <LayoutDesktop newsContent={newsContent} layout={layout} />}
     </div>
   );
 }

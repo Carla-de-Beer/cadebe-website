@@ -24,7 +24,7 @@ export default function About() {
             I&apos;m Carla de Beer, an experienced software engineer specialising in web development
             and machine learning.
           </p>
-          <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2">
+          <div className="mt-4 pt-2">
             <img src={photo} style={{ maxWidth: '100%' }} alt="Portrait" />
           </div>
           <div className="theme-color">

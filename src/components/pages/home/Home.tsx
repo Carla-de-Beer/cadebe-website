@@ -17,7 +17,7 @@ const sizeRatioMobile = '80%';
 
 function HomeBody() {
   return (
-    <div>
+    <div className="mt-4">
       <Card className="card-tile" style={{ width: '80%' }}>
         <Card.Body>
           <Card.Title />
@@ -68,7 +68,7 @@ function LayoutMobile() {
                 — built and iterated on over the years.
               </p>
             </div>
-            <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2" />
+            <div className="mt-4 pt-2" />
             <div className="images">
               <img src={photoImageSeg} style={{ maxWidth: sizeRatioMobile }} alt="Portrait" />
             </div>
@@ -118,7 +118,7 @@ function LayoutDesktop() {
                 — built and iterated on over the years.
               </p>
             </div>
-            <div className="mt-xl-4 mt-lg-4 mt-md-4 mt-4 pt-2" />
+            <div className="mt-4 pt-2" />
             <div className="images">
               <img src={photoImageSeg} style={{ maxWidth: sizeRatio }} alt="Portrait" />
               <img src={photoImageVoronoi} style={{ maxWidth: sizeRatio }} alt="Portrait" />
