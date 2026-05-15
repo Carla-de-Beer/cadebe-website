@@ -13,7 +13,7 @@
   button.dropdown-toggle.btn.btn-primary {
     background-color: var(--white);
     border-color: var(--white);
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
   }
 
   .btn {
@@ -26,20 +26,20 @@
   }
 
   .link {
-    color: var(--paragraph-gray-1) !important;
+    color: var(--paragraph-gray) !important;
     text-decoration: none;
   }
 
   .name-text {
     @extend .font-style-default;
     @extend .font-size-standard;
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
   }
 
   .nav-text {
     font-family: 'Avenir Next', avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     @extend .font-size-standard;
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
     font-weight: 500;
   }
 
@@ -50,7 +50,7 @@
   }
 
   .logo-accent {
-    color: var(--logo-accent-color);
+    color: var(--link-accent-color);
   }
 
   .logo {
@@ -58,16 +58,16 @@
   }
 
   .link-high-light-mobile {
-    color: var(--paragraph-gray-2) !important;
+    color: var(--paragraph-gray) !important;
     font-weight: 700;
     text-decoration: none;
   }
 
   .link-high-light {
-    color: var(--paragraph-gray-2) !important;
+    color: var(--paragraph-gray) !important;
     font-weight: 700;
     text-decoration: none;
-    border-bottom: 2px solid var(--logo-accent-color);
+    border-bottom: 2px solid var(--link-accent-color);
     padding-bottom: 2px;
   }
 }

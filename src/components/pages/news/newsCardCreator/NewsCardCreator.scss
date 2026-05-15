@@ -9,12 +9,12 @@
 
   p.card-text {
     @extend .font-size-standard;
-    color: var(--dark-accent-2);
+    color: var(--paragraph-gray);
   }
 
   .card-tile {
     border: 0;
-    color: var(--accent-gray);
+    color: var(--paragraph-gray);
     margin: 0 auto;
     width: 50%;
 
@@ -32,25 +32,49 @@
 
   .sub-title {
     @include font-size-small;
-    color: var(--paragraph-gray-1);
+    color: var(--paragraph-gray);
     font-weight: bold;
+  }
+
+  .content-width {
+    width: 80%;
   }
 
   .text-fields {
     @include base-text-fields;
   }
 
-  .dangerous p {
-    @extend .font-size-standard;
-    color: var(--dark-accent-2);
+  .dangerous {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
+  }
+
+  .dangerous p,
+  .dangerous li {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
+  }
+
+  .dangerous ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+  }
+
+  .card-list,
+  .card-list li {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
   .news-card {
-    color: var(--accent-gray);
+    color: var(--paragraph-gray);
     height: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
     transition:
       transform 0.2s ease,
-      box-shadow 0.2s ease;
+      box-shadow 0.2s ease,
+      border-top-color 0.2s ease;
   }
 
   .card-body-flex {
@@ -71,25 +95,33 @@
     &:hover .news-card {
       transform: translateY(-4px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      border-top: 3px solid var(--cadebe-accent-color) !important;
     }
   }
 
   .high-light-1 {
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
     font-weight: bold;
   }
 
   .highlighted-text {
-    color: var(--logo-accent-color) !important;
+    color: var(--link-accent-color) !important;
     font-weight: bold;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--cadebe-accent-color) !important;
+    }
   }
 
   .dangerous span {
-    color: var(--logo-accent-color) !important;
+    color: var(--link-accent-color) !important;
     font-weight: bold;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--cadebe-accent-color) !important;
+    }
   }
 
   .block-1 {
@@ -116,7 +148,7 @@
   @media all and (min-width: 824px) {
     .high-light-1 {
       @include font-size-large-2;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
     }
@@ -129,6 +161,16 @@
     .aws-image {
       width: 45%;
       margin-left: 27%;
+    }
+
+    .article-image {
+      width: 45%;
+      margin-left: 27%;
+    }
+
+    .hand-blue-logo {
+      width: 22%;
+      margin-left: 39%;
     }
 
     .aws-badge {
@@ -176,11 +218,25 @@
     }
   }
 
+  @media all and (max-width: 575px) {
+    .content-width {
+      width: 100%;
+    }
+  }
+
   @media all and (max-width: 825px) {
     .box {
       display: block;
       float: none;
       width: 100%;
+    }
+
+    .news-card {
+      border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+    .no-link:hover .news-card {
+      border-top: 3px solid var(--cadebe-accent-color) !important;
     }
 
     .high-light {
@@ -190,12 +246,22 @@
 
     .high-light-1 {
       @include font-size-large-1;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
     }
 
     .badge-hashicorp {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .article-image {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .hand-blue-logo {
       width: 60%;
       margin-left: 20%;
     }

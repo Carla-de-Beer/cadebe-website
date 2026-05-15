@@ -14,11 +14,12 @@ npm start           # Dev server at http://localhost:3000 (runs vite)
 
 # Build & Deploy
 npm run build       # Production build to /dist (tsc + vite build)
-npm run deploy      # Build + sync to AWS S3
+npm run deploy      # Build + sync to AWS S3 (requires AWS credentials configured)
 npm run preview     # Preview production build locally
 
 # Testing
-npm test            # Vitest unit tests (watch mode)
+npm test                        # Vitest unit tests (watch mode)
+npm test -- --run               # Run tests once (non-watch, for CI)
 
 # Linting
 npm run lint        # ESLint on src/**/*.tsx
@@ -33,7 +34,10 @@ npm run e2e-headless    # Run headless in Chrome (requires app running on :3000)
 ## Architecture
 
 ### Routing (App.tsx)
-Five routes: `/` (Home), `/projects`, `/news`, `/about`, `/skills`. `Footer` renders outside the `Routes` switch so it appears on every page.
+Five routes: `/` (Home), `/projects`, `/news`, `/about`, `/skills`. `Footer` renders outside the `Routes` switch so it appears on every page. `ScrollToTop` (defined in `App.tsx`) resets scroll position on every route change via `useEffect` on `pathname`.
+
+### Pre-commit Hooks
+Husky + lint-staged run automatically on commit: ESLint + Prettier on `src/**/*.{ts,tsx}`, Stylelint + Prettier on `src/**/*.scss`. Fix any lint errors before committing or the commit will be blocked.
 
 ### Data Loading Pattern
 `ProjectLoader` and `NewsLoader` import JSON data statically at build time from `src/data/projectData.json` and `src/data/newsData.json`. This is where project and news content is maintained, not in component code.
@@ -52,6 +56,29 @@ SCSS with Bootstrap 5. Shared variables/mixins in `src/style/`. Each component h
 
 ### Linting
 ESLint with Airbnb config + `@typescript-eslint`. JSX is allowed in `.ts` and `.tsx` files.
+
+SonarLint (typescript:S6772) flags ambiguous spacing when punctuation or plain text appears directly adjacent to a closing JSX tag. Always wrap such characters in `{'...'}`, e.g.:
+```tsx
+// Bad
+</a>
+.
+
+// Good
+</a>
+{'.'}
+```
+
+**After editing any `.tsx` file, scan every closing inline tag (`</a>`, `</strong>`, `</span>`, `</em>`, etc.) in that file and confirm no bare punctuation or plain text sits on the next line. Fix any found before finishing.**
+
+Also watch for text nodes on a separate line immediately before an opening inline tag — e.g. bare text followed by a `<span>` on the next line also triggers S6772. The fix is to place them on the same line with no whitespace between, e.g.:
+```tsx
+// Bad
+{'#cadebe'}
+<span className="...">...</span>
+
+// Good
+{'#cadebe'}<span className="...">...</span>
+```
 
 ### E2E Tests
 Cypress tests live in `cypress/cypress/e2e/`. The app must be running locally on port 3000 before running e2e tests.

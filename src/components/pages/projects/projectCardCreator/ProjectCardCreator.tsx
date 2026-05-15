@@ -25,34 +25,89 @@ import naive from '../../../../assets/images/projects/naive-bayes.png';
 import dummy from '../../../../assets/images/shared/dummy.png';
 
 function bindImages(id: number) {
-  const alt = 'Project Image';
   switch (id) {
     case 0:
-      return <Card.Img className="image-container" src={TSPImage} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={TSPImage}
+          alt="Travelling Salesman Problem visualisation"
+        />
+      );
     case 1:
-      return <Card.Img className="image-container" src={ISSImage} alt={alt} />;
+      return <Card.Img className="image-container" src={ISSImage} alt="ISS Tracker world map" />;
     case 2:
-      return <Card.Img className="image-container" src={som} alt={alt} />;
+      return (
+        <Card.Img className="image-container" src={som} alt="Shape mapping self-organising map" />
+      );
     case 3:
-      return <Card.Img className="image-container" src={selfOrganising} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={selfOrganising}
+          alt="Self-organising map visualisation"
+        />
+      );
     case 4:
-      return <Card.Img className="image-container" src={awsBedrockTextToImage} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={awsBedrockTextToImage}
+          alt="Text-to-image generation with AWS Bedrock"
+        />
+      );
     case 5:
-      return <Card.Img className="image-container" src={landscapeClassifierCnn} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={landscapeClassifierCnn}
+          alt="Landscape classifier convolutional neural network"
+        />
+      );
     case 6:
-      return <Card.Img className="image-container" src={cartoonsPhotos} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={cartoonsPhotos}
+          alt="Cartoons vs photos classifier"
+        />
+      );
     case 7:
-      return <Card.Img className="image-container" src={cartoonsPhotosFlask} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={cartoonsPhotosFlask}
+          alt="Cartoons vs photos classifier Flask app"
+        />
+      );
     case 8:
-      return <Card.Img className="image-container" src={svmKaggle} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={svmKaggle}
+          alt="SVM Kaggle dataset visualisation"
+        />
+      );
     case 9:
-      return <Card.Img className="image-container" src={autoencoderMushroomDataset} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={autoencoderMushroomDataset}
+          alt="Autoencoder mushroom dataset"
+        />
+      );
     case 10:
-      return <Card.Img className="image-container" src={imageSegmentation} alt={alt} />;
+      return (
+        <Card.Img
+          className="image-container"
+          src={imageSegmentation}
+          alt="Image segmentation result"
+        />
+      );
     case 11:
-      return <Card.Img className="image-container" src={naive} alt={alt} />;
+      return <Card.Img className="image-container" src={naive} alt="Naive Bayes classifier" />;
     default:
-      return <Card.Img className="image-container" src={dummy} alt={alt} />;
+      return <Card.Img className="image-container" src={dummy} alt="Project placeholder" />;
   }
 }
 
@@ -83,23 +138,18 @@ function ProjectCommon() {
     <div data-cy="projects-banner">
       <Banner title="PROJECTS" />
       <div className="mt-4">
-        <div className="card-tile text-fields" style={{ width: '80%' }}>
+        <div className="card-tile text-fields content-width">
           <div className="text-fields mt-5">
-            <p className="high-light-1">Machine Learning • Swarm Intelligence</p>
-            <p className="high-light-1">Data Visualisation • Image Processing</p>
-            <p className="high-light-1">Mathematics</p>
+            <p className="high-light-1">Backend Engineering · Cloud & DevOps</p>
+            <p className="high-light-1">Machine Learning · Data Visualisation</p>
           </div>
-          <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+          <div className="card-tile text-fields content-width mt-5">
             <p>
-              This collection showcases a selection of my code-based projects from the past few
-              years.
-            </p>
-            <p>
-              While my day-to-day work focuses on Java development for enterprise software, these
-              projects highlight my broader interests. Many explore machine learning and my
-              curiosity for uncovering patterns in data. Others experiment with making the invisible
-              visible through visualisations and different ways of presenting information, extending
-              beyond traditional software development.
+              In my professional work I focus on backend and cloud‑native systems in enterprise
+              environments. The projects below complement that experience with smaller,
+              self‑contained explorations in web applications, applied machine learning, algorithms
+              and visualisation — from cloud services and automation to ML techniques, uncovering
+              patterns in data, and making the invisible visible.
             </p>
           </div>
         </div>
@@ -110,11 +160,7 @@ function ProjectCommon() {
 
 function LayoutMobile({ projectContent }: ProjectDataProps) {
   const rows = projectContent.map((item, i) => (
-    <div
-      className="mt-3"
-      key={item.id}
-      style={i === projectContent.length - 1 ? { marginBottom: '-15px' } : {}}
-    >
+    <div className="mt-3" key={item.id}>
       <Row className={i === 0 ? 'g-0 mt-sm-4 mt-md-4' : 'g-0 mt-sm-3 mt-md-3'}>
         <Col>{makeCard(item)}</Col>
       </Row>
@@ -152,7 +198,7 @@ function LayoutDesktop({ projectContent }: ProjectDataProps) {
   }
 
   return (
-    <div className="pb-5">
+    <div className="pb-3">
       <Header pageType="projects" />
       <div className="projects-wrapper">
         <ProjectCommon />

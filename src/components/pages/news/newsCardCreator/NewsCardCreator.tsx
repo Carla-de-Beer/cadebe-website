@@ -19,36 +19,115 @@ import oracleBadge17 from '../../../../assets/images/news/ocp-java-17.jpg';
 import hashicorpTerraformBadge from '../../../../assets/images/news/hashicorp-terraform.png';
 import springCert from '../../../../assets/images/news/spring-2024.png';
 import gcpCertACE from '../../../../assets/images/news/gcp-ace.png';
+import handBlueLogo from '../../../../assets/images/news/hand-blue-logo.png';
+import beanstalkImage from '../../../../assets/images/news/beanstalk.webp';
 
 function bindImages(id: number | undefined) {
-  const alt = 'News Image';
   switch (id) {
     case 3:
-      return <Card.Img className="mt-3 aws-image" src={awsCertManager} alt={alt} />;
+      return (
+        <Card.Img className="mt-3 aws-image" src={awsCertManager} alt="AWS Certificate Manager" />
+      );
     case 4:
-      return <Card.Img className="mt-3 aws-badge" src={awsDeveloperCertC01} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 aws-badge"
+          src={awsDeveloperCertC01}
+          alt="AWS Certified Developer Associate C01 badge"
+        />
+      );
     case 7:
-      return <Card.Img className="mt-3 oracle-badge" src={oracleBadge11} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 oracle-badge"
+          src={oracleBadge11}
+          alt="Oracle Certified Professional Java 11 badge"
+        />
+      );
     case 8:
-      return <Card.Img className="mt-3 oracle-badge" src={oracleBadge17} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 oracle-badge"
+          src={oracleBadge17}
+          alt="Oracle Certified Professional Java 17 badge"
+        />
+      );
     case 10:
-      return <Card.Img className="mt-3 badge-hashicorp" src={hashicorpTerraformBadge} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 badge-hashicorp"
+          src={hashicorpTerraformBadge}
+          alt="HashiCorp Terraform Associate badge"
+        />
+      );
     case 11:
-      return <Card.Img className="mt-3 aws-badge" src={awsSolutionsArchitectCert} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 aws-badge"
+          src={awsSolutionsArchitectCert}
+          alt="AWS Certified Solutions Architect Associate badge"
+        />
+      );
     case 12:
-      return <Card.Img className="mt-3 badge-spring" src={springCert} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 badge-spring"
+          src={springCert}
+          alt="Spring Certified Professional badge"
+        />
+      );
     case 13:
-      return <Card.Img className="mt-3 aws-cert" src={awsDeveloperCertC02} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 aws-cert"
+          src={awsDeveloperCertC02}
+          alt="AWS Certified Developer Associate C02 badge"
+        />
+      );
     case 14:
-      return <Card.Img className="mt-3 gcp-ace-cert" src={gcpCertACE} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 gcp-ace-cert"
+          src={gcpCertACE}
+          alt="Google Cloud Associate Cloud Engineer badge"
+        />
+      );
     case 15:
       return (
-        <Card.Img className="mt-3 aws-ai-practitioner-cert" src={awsAiPractitionerCert} alt={alt} />
+        <Card.Img
+          className="mt-3 aws-ai-practitioner-cert"
+          src={awsAiPractitionerCert}
+          alt="AWS Certified AI Practitioner badge"
+        />
       );
     case 16:
-      return <Card.Img className="mt-3 ckad-cert" src={ckadCert} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 ckad-cert"
+          src={ckadCert}
+          alt="Certified Kubernetes Application Developer badge"
+        />
+      );
     case 17:
-      return <Card.Img className="mt-3 isaqb-cert" src={isaqbCert} alt={alt} />;
+      return (
+        <Card.Img
+          className="mt-3 isaqb-cert"
+          src={isaqbCert}
+          alt="iSAQB Certified Professional for Software Architecture badge"
+        />
+      );
+    case 141:
+      return (
+        <Card.Img className="mt-3 hand-blue-logo" src={handBlueLogo} alt="Article illustration" />
+      );
+    case 142:
+      return (
+        <Card.Img
+          className="mt-3 article-image"
+          src={beanstalkImage}
+          alt="AWS Elastic Beanstalk article illustration"
+        />
+      );
     default:
       return null;
   }
@@ -81,7 +160,7 @@ function NewsCommon({ layout }: Readonly<{ layout: LayoutSize }>) {
     <div data-cy="news-banner">
       <Banner title="NEWS & BLOG" />
       <div className="mt-4">
-        <div className="card-tile text-fields" style={{ width: '80%' }}>
+        <div className="card-tile text-fields content-width">
           <div className="text-fields mt-5">
             {layout === 'mobile' ? (
               <div>
@@ -92,13 +171,10 @@ function NewsCommon({ layout }: Readonly<{ layout: LayoutSize }>) {
               <p className="high-light-1">Software Engineering • Machine Learning</p>
             )}
           </div>
-          <div className="card-tile text-fields mt-5" style={{ width: '80%' }}>
+          <div className="card-tile text-fields content-width mt-5">
             <p>
-              Development news and blog stories on software engineering, including Java, Spring
-              Framework, Python, cloud computing, and much more. I also list certification exams I
-              have passed, which I treat as a gateway into new technologies – a way to build a
-              solid, hands‑on foundation and internalise best practices, rather than a box‑ticking
-              exercise.
+              News and blog posts featuring certification milestones, technical articles and
+              practical takeaways from day‑to‑day software engineering work.
             </p>
           </div>
         </div>
@@ -129,7 +205,7 @@ function LayoutDesktop({ newsContent, layout }: Readonly<NewsDataProps & { layou
   }
 
   return (
-    <div className="news-wrapper">
+    <div className="news-wrapper pb-3">
       <NewsCommon layout={layout} />
       <div className="mt-4 pt-2" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {rows}
@@ -154,7 +230,7 @@ function LayoutTablet({ newsContent, layout }: Readonly<NewsDataProps & { layout
   ));
 
   return (
-    <div className="news-wrapper">
+    <div className="news-wrapper pb-3">
       <NewsCommon layout={layout} />
       <div className="mt-4 pt-2" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {items}
@@ -177,7 +253,7 @@ function LayoutMobile({ newsContent, layout }: Readonly<NewsDataProps & { layout
     .map((item) => <div key={item.id}>{makeStandardCard(item, layout)}</div>);
 
   return (
-    <div className="news-wrapper">
+    <div className="news-wrapper pb-3">
       <NewsCommon layout={layout} />
       <div className="mt-4 pt-2" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {items}

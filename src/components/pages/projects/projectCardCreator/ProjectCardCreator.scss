@@ -5,6 +5,7 @@
 .projects-wrapper {
   p {
     @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
   .card-title {
@@ -17,7 +18,7 @@
 
   .card-tile {
     border: 0;
-    color: var(--accent-gray);
+    color: var(--paragraph-gray);
     margin: 0 auto;
     width: 50%;
 
@@ -34,16 +35,29 @@
   }
 
   p.card-text {
-    @extend .font-size-standard;
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
-  .dangerous p {
-    @extend .font-size-standard;
+  .dangerous p,
+  .dangerous li {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
   .dangerous a {
-    color: var(--logo-accent-color) !important;
+    color: var(--link-accent-color) !important;
     font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--cadebe-accent-color) !important;
+    }
+  }
+
+  .content-width {
+    width: 80%;
   }
 
   .text-fields {
@@ -51,26 +65,30 @@
   }
 
   .no-link {
-    color: var(--dark-accent-2);
+    color: var(--paragraph-gray);
     text-decoration: none;
 
     &:hover .card-style {
       transform: translateY(-4px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-top: 3px solid var(--cadebe-accent-color) !important;
       transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        border-top-color 0.2s ease;
     }
   }
 
   .card-style {
+    border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
     transition:
       transform 0.2s ease,
-      box-shadow 0.2s ease;
+      box-shadow 0.2s ease,
+      border-top-color 0.2s ease;
   }
 
   .high-light-1 {
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
     font-weight: bold;
   }
 
@@ -78,6 +96,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media all and (max-width: 575px) {
+    .content-width {
+      width: 100%;
+    }
   }
 
   @media all and (max-width: 824px) {
@@ -93,11 +117,16 @@
 
     .card-style {
       padding: 1rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+    .no-link:hover .card-style {
+      border-top: 3px solid var(--cadebe-accent-color) !important;
     }
 
     .high-light-1 {
       @include font-size-large-1;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
     }
@@ -127,7 +156,6 @@
 
   .text-container {
     margin-top: 10px;
-    text-align: justify;
   }
 
   @media all and (min-width: 825px) {
@@ -146,7 +174,7 @@
 
     .high-light-1 {
       @include font-size-large-2;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
     }

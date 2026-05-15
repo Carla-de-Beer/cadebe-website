@@ -12,13 +12,8 @@ function HeaderLayoutMobile({ pageType }: HeaderProps) {
   return (
     <div className="mt-xl-5 mt-lg-4 mt-md-3 mt-3">
       <div className="row me-3">
-        <div className="col-lg-2 col-md-2 col-3">
-          <Link to="/">
-            {/* <img className="logo" src={logo} width="60" height="60" alt="Logo" /> */}
-          </Link>
-        </div>
-        <div className="col-lg-9 col-md-9 col-7" />
-        <div className="mt-2 col-lg-1 col-md-1 col-2 ps-lg-5 ps-md-4 ps-4">
+        <div className="col-11" />
+        <div className="mt-2 col-1">
           <DropdownButton
             align="end"
             className="menu-button"

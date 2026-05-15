@@ -11,7 +11,7 @@
 
 @mixin base-high-light {
   font-family: avenirblack, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $paragraph-gray-2;
+  color: $paragraph-gray;
   font-size: 38px;
   font-weight: 400;
 }
@@ -22,7 +22,7 @@
 
 @mixin base-high-light-mobile {
   font-family: avenirblack, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $paragraph-gray-2;
+  color: $paragraph-gray;
   font-size: 30px;
   font-weight: 400;
 }

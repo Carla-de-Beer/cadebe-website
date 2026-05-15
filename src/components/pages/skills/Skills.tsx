@@ -20,20 +20,16 @@ interface SkillGroup {
   color: string;
 }
 
-function SkillTag({ title, lastUsed, years, version }: Readonly<SkillItem>) {
-  const tooltip = [version, `Last used: ${lastUsed}`, `${years} yr${years === 1 ? '' : 's'}`]
-    .filter(Boolean)
-    .join(' · ');
-  return (
-    <span className="skill-tag" title={tooltip}>
-      {title}
-    </span>
-  );
+function SkillTag({ title }: Readonly<SkillItem>) {
+  return <span className="skill-tag">{title}</span>;
 }
 
 function SkillCategory({ category, items, color }: Readonly<SkillGroup>) {
   return (
-    <div className="skill-category" style={{ '--tag-color': color } as React.CSSProperties}>
+    <div
+      className={`skill-category${color === '#cadebe' ? ' accent-hover' : ''}`}
+      style={{ '--tag-color': color } as React.CSSProperties}
+    >
       <h3 className="skill-category-title">{category}</h3>
       <div className="skill-tag-cloud">
         {items.map((item) => (
@@ -58,7 +54,7 @@ export default function Skills() {
   return (
     <div>
       <Header pageType="skills" />
-      <div className="skills-wrapper">
+      <div className="skills-wrapper pb-3">
         <div className="text-fields box">
           <div data-cy={isMobile ? 'skills-banner-mobile' : 'skills-banner-desktop'}>
             <Banner title="SKILLS" />
@@ -79,11 +75,25 @@ export default function Skills() {
           </div>
           <div className="card-tile text-fields mt-5 content-width">
             <p>
-              In my professional work, I&apos;ve gained practical experience with modern
-              technologies, including a variety of programming languages, tools, and frameworks. I
-              use these skills in collaborative, real-world projects to help deliver robust and
-              maintainable solutions.
+              I design and deliver enterprise‑grade applications end to end – from backend services
+              and cloud infrastructure to intuitive, insight‑driven user interfaces. I draw on
+              practical experience with modern programming languages, tools and frameworks to build
+              robust, maintainable solutions in collaborative, real‑world projects.
             </p>
+            <p className="high-light-1 mt-5">Highlights from recent projects</p>
+            <ul className="highlights-list mt-4">
+              <li>
+                Setting up OpenSearch/Elasticsearch for efficient search in Spring Boot applications
+              </li>
+              <li>
+                Designing and operating CI/CD pipelines on GitLab/OpenShift with automated tests and
+                vulnerability scans
+              </li>
+              <li>Using Spring Batch for job‑oriented processing in enterprise systems</li>
+              <li>Building event‑driven architectures with cloud pub/sub and message queues</li>
+              <li>Implementing PKI‑based API authentication with TLS client certificates</li>
+              <li>Rolling out Cypress end‑to‑end tests in containerised environments</li>
+            </ul>
           </div>
           <div className="mt-4 pt-2 skills-grid">
             {(skillsData.skillGroups as SkillGroup[]).map((group) => (

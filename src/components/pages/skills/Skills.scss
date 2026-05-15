@@ -13,17 +13,21 @@
   p {
     @extend .font-style-default;
     @include font-size-large-1;
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
   }
 
   .card-tile {
     border: 0;
-    color: var(--accent-gray);
+    color: var(--paragraph-gray);
     margin: 0 auto;
   }
 
   .content-width {
     width: 80%;
+
+    @media all and (max-width: 575px) {
+      width: 100%;
+    }
   }
 
   .text-fields {
@@ -31,7 +35,7 @@
   }
 
   .high-light-1 {
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
     font-weight: bold;
   }
 
@@ -55,11 +59,33 @@
     }
   }
 
+  .highlights-list {
+    border-left: 3px solid var(--cadebe-accent-color);
+    list-style: none;
+    margin: 0 auto;
+    padding-left: 1.25rem;
+    text-align: left;
+    width: fit-content;
+
+    li {
+      @include font-size-large-1;
+      color: var(--paragraph-gray);
+      padding: 0.35rem 0;
+
+      &::before {
+        content: '–';
+        color: var(--cadebe-accent-color);
+        font-weight: bold;
+        margin-right: 0.6rem;
+      }
+    }
+  }
+
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
 
     @media all and (min-width: 825px) {
       grid-template-columns: 1fr 1fr;
@@ -68,8 +94,21 @@
 
   .skill-category {
     border: 1px solid rgba(0, 0, 0, 0.125);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.375rem;
     padding: 1.25rem;
+    transition:
+      box-shadow 0.2s ease,
+      border-top-color 0.2s ease,
+      border-top-width 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    &.accent-hover:hover {
+      border-top: 3px solid var(--cadebe-accent-color);
+    }
   }
 
   .skill-category-title {
@@ -90,9 +129,8 @@
   .skill-tag {
     @include font-size-small;
     background-color: var(--tag-color, var(--warm-grey-1));
-    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
     cursor: default;
     padding: 0.3rem 0.8rem;
     transition:
@@ -101,7 +139,6 @@
       border-color 0.2s ease;
 
     &:hover {
-      border-color: rgba(0, 0, 0, 0.2);
       filter: saturate(2) brightness(0.95);
     }
   }

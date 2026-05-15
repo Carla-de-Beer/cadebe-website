@@ -4,21 +4,21 @@
       "id": 0,
       "title": "Essential Unix-based Anaconda Setup Guide",
       "subTitle": "8 FEBRUARY 2020",
-      "text": "This article describes the essential steps required for installing Anaconda and creating a conda environment on a Unix-based OS.",
+      "text": "A practical guide to installing Anaconda and managing Python environments on Unix-based systems. Covers environment isolation, package management and common pitfalls — written as an 'Anaconda 101' cheat sheet for Linux and macOS users.",
       "url": "https://medium.com/@carla.debeer.uk/essential-anaconda-setup-kit-4b7e1fb803fc"
     },
     {
       "id": 1,
       "title": "DeepLearning.AI Tensorflow Developer Coursera Certification",
       "subTitle": "13 APRIL 2020",
-      "text": "<p>Completed all 4 courses of the DeepLearning.AI Tensorflow Developer Professional Certificate program:<ul><li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li><li>Convolutional Neural Networks in TensorFlow</li><li>Natural Language Processing in TensorFlow</li><li>Sequences, Time Series and Prediction</li></ul></p>",
+      "text": "I completed all four courses of the DeepLearning.AI TensorFlow Developer Professional Certificate — a deep dive into neural networks, CNNs, NLP and time-series prediction that solidified my practical foundation in applied machine learning.<ul class=\"card-list\"><li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li><li>Convolutional Neural Networks in TensorFlow</li><li>Natural Language Processing in TensorFlow</li><li>Sequences, Time Series and Prediction</li></ul>",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/54T2J5Z5KWCN"
     },
     {
       "id": 2,
       "title": "Website Live",
       "subTitle": "31 JULY 2020",
-      "text": "<span className=\"highlighted-text\">cadebe.dev</span> went live today!<br /><br />What started off as an experiment on how to upload content to AWS S3 and integrating an SSL certificate with AWS CloudFront, gradually morphed into a website.",
+      "text": "<span className=\"highlighted-text\">cadebe.dev</span> went live today!<br /><br />What started off as an experiment on how to upload content to AWS S3 and integrating an SSL certificate with AWS CloudFront, gradually morphed into a personal website. It remains a work in progress — a living record of what I'm learning, building and thinking about.",
       "url": "https://cadebe.dev"
     },
     {
@@ -32,7 +32,7 @@
       "id": 4,
       "title": "AWS Certified Developer – Associate (DVA-C01)",
       "subTitle": "23 SEPTEMBER 2020",
-      "text": "I passed the AWS Developer Associate Examination today.",
+      "text": "I passed the AWS Developer Associate Examination today. I pursued this certification to consolidate my hands-on AWS experience and build a more systematic understanding of cloud-native development patterns.",
       "url": "https://www.youracclaim.com/badges/e5bb66e2-78bc-4be1-820e-df7963b8e410?source=linked_in_profile"
     },
     {
@@ -46,70 +46,84 @@
       "id": 7,
       "title": "Oracle Certified Professional: Java SE 11 Developer (1Z0-819)",
       "subTitle": "6 FEBRUARY 2023",
-      "text": "I passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of many other development activities. It has been worthwhile, though. My Java skills have been supercharged, especially around core APIs, concurrency and modularisation.",
+      "text": "I passed the OCP Java SE 11 Developer examination. This has been a tough exam and has consumed a large amount of my free time over of the course of the past year, at the expense of many other development activities. It has been worthwhile, though. My Java skills have been supercharged, especially around core APIs, concurrency and modularisation. Java has been my primary language throughout my career, and I wanted a formal benchmark to validate the depth of my knowledge.",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951F20F63C52D9518F9E1C804BCD633710E"
     },
     {
       "id": 8,
       "title": "Oracle Certified Professional: Java SE 17 Developer (1Z0-829)",
       "subTitle": "31 MARCH 2023",
-      "text": "I leveraged on my recent studies for the OCP Java SE 11 Developer exam to pass the OCP Java SE 17 Developer examination. As Oracle puts it: \"By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.\"",
+      "text": "I leveraged on my recent studies for the OCP Java SE 11 Developer exam to pass the OCP Java SE 17 Developer examination. As Oracle puts it: \"By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.\" Keeping current with the Java platform matters in enterprise work — this certification ensured my knowledge of the latest language features was solid and up to date.",
       "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=56E21B91CBC3AE88469BB69418775951482F83B53E3E1D5AC994787AE1FA8922"
     },
     {
       "id": 10,
       "title": "HashiCorp Certified: Terraform Associate (003)",
       "subTitle": "27 SEPTEMBER 2023",
-      "text": "I passed the HashiCorp Certified: Terraform Associate exam today. </br></br>Terraform provides an Infrastructure and Code (IaC) solution that simplifies the process of automating and standardising Cloud infrastructure. It allows users to define and provision infrastructure resources in a declarative configuration language. With Terraform, you can manage various cloud services and providers, such as Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and many others, as well as on-premises infrastructure components.",
+      "text": "I passed the HashiCorp Certified: Terraform Associate exam today. </br></br>Terraform provides an Infrastructure and Code (IaC) solution that simplifies the process of automating and standardising Cloud infrastructure. It allows users to define and provision infrastructure resources in a declarative configuration language. With Terraform, you can manage various cloud services and providers, such as Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and many others, as well as on-premises infrastructure components. This certification formalised the Terraform skills I'd been applying in production.",
       "url": "https://www.credly.com/badges/50f6ff77-cef7-47b8-953a-3aaffa3c659d"
     },
     {
       "id": 11,
       "title": "AWS Certified Solutions Architect – Associate (SAA-C03)",
       "subTitle": "6 DECEMBER 2023",
-      "text": "I passed the AWS Certified Solutions Architect – Associate exam today.</br></br>The preparation for this exam equipped me with a deeper understanding of the event-driven nature of cloud architectures. It has also taught me how to strategically design well-architected distributed systems that are scalable, resilient, efficient, and fault-tolerant.",
+      "text": "I passed the AWS Certified Solutions Architect – Associate exam today.</br></br>The preparation for this exam equipped me with a deeper understanding of the event-driven nature of cloud architectures. It has also taught me how to strategically design well-architected distributed systems that are scalable, resilient, efficient, and fault-tolerant. I pursued this certification to deepen my understanding of cloud-native architectures and gain hands-on experience with the broader AWS ecosystem beyond the developer tooling I use daily.",
       "url": "https://www.credly.com/badges/3abc8136-88c3-49fc-818a-4e33d52ac781/public_url"
     },
     {
       "id": 12,
       "title": "VMware Spring Certified Professional 2024 (2V0-72.22)",
       "subTitle": "8 JANUARY 2024",
-      "text": "Spring IoC • Spring AOP • Spring Data • Spring Boot • Spring MVC • Spring Security •Spring Rest • Spring Testing </br></br>I passed the VMware Spring Certified Professional 2024 exam today. The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey. learned tonnes of useful bits and believe that it makes me a more effective and confident Spring-based developer. I highly recommend this certification for the valuable skillset and knowledge that comes with its preparation.",
+      "text": "Spring IoC • Spring AOP • Spring Data • Spring Boot • Spring MVC • Spring Security •Spring Rest • Spring Testing </br></br>I passed the VMware Spring Certified Professional 2024 exam today. The objective to deepen my understanding of the Spring Framework has evolved into a successfully completed certification journey. learned tonnes of useful bits and believe that it makes me a more effective and confident Spring-based developer. I highly recommend this certification for the valuable skillset and knowledge that comes with its preparation. Spring is the backbone of most of the backend systems I build, so being able to demonstrate that expertise formally felt like a natural step.",
       "url": "https://www.credly.com/badges/45d83de3-fb14-43eb-a80e-dc3b083c658e"
     },
     {
       "id": 13,
       "title": "AWS Certified Developer – Associate (DVA-C02)",
       "subTitle": "15 FEBRUARY 2024",
-      "text": "I renewed my AWS Certified Developer – Associate certification today. This means that, together with the recently accomplished AWS Certified Solutions Architect – Associate certification, I now hold two valid AWS credentials simultaneously. More than that though, I have learned tonnes along the way and feel comfortable working in the AWS Cloud, from designing resilient architectures to automating deployments and optimising costs. These certifications back up real, hands‑on experience building and running AWS workloads in production",
+      "text": "I renewed my AWS Certified Developer – Associate certification today. This means that, together with the recently accomplished AWS Certified Solutions Architect – Associate certification, I now hold two valid AWS credentials simultaneously. More than that though, I have learned tonnes along the way and feel comfortable working in the AWS Cloud, from designing resilient architectures to automating deployments and optimising costs. These certifications back up real, hands‑on experience building and running AWS workloads in production Renewing this certification kept my AWS knowledge current and aligned with the evolving developer tooling and services landscape.",
       "url": "https://www.credly.com/badges/4ed64177-27db-47df-a320-6f54646924f7"
     },
     {
       "id": 14,
       "title": "Google Cloud Certified - Associate Cloud Engineer",
       "subTitle": "26 APRIL 2024",
-      "text": "I passed the Google Cloud Certified - Associate Cloud Engineer exam today. I aimed to boost my skills in Google Kubernetes Engine (GKE), so it made sense to get a strong foundation in Google Cloud Platform (GCP) as a whole. This certification now allows me to leverage GCP for various projects, including machine learning tasks.",
+      "text": "I passed the Google Cloud Certified - Associate Cloud Engineer exam today. I aimed to boost my skills in Google Kubernetes Engine (GKE), so it made sense to get a strong foundation in Google Cloud Platform (GCP) as a whole. This certification now allows me to leverage GCP for various projects, including machine learning tasks. I pursued GCP to broaden beyond AWS and deepen my practical Kubernetes skills, particularly around GKE.",
       "url": "https://www.credly.com/badges/8115b70e-6dc1-49bd-8428-59877911f1a9/public_url"
+    },
+    {
+      "id": 141,
+      "title": "Text-to-Image Generation with Amazon Bedrock",
+      "subTitle": "16 JUNE 2024",
+      "text": "I wrote an article on building a text-to-image pipeline using Amazon Bedrock's Titan Image Generator G1 model. It walks through wiring up a Lambda function behind an API Gateway to invoke the model, store the result in S3, and return a pre-signed URL to the client — a clean, event-driven pattern you can drop straight into your own AWS architecture.",
+      "url": "https://medium.com/@carla.de.beer/text-to-image-generation-with-amazon-bedrock-fb7320da151b"
+    },
+    {
+      "id": 142,
+      "title": "Configuring Your React App for AWS Elastic Beanstalk",
+      "subTitle": "15 OCTOBER 2024",
+      "text": "I wrote an article on deploying a React app to AWS Elastic Beanstalk — a task that sounds straightforward until you hit the configuration gotchas. The guide covers the five key steps needed to get everything running smoothly, so you can skip the trial and error.",
+      "url": "https://medium.com/@carla.de.beer/configuring-your-react-app-for-aws-elastic-beanstalk-1f2e02171629"
     },
     {
       "id": 15,
       "title": "Beta - AWS Certified AI Practitioner (AI1-C01)",
       "subTitle": "29 AUGUST 2024",
-      "text": "I passed the Beta version of the new AWS Certified AI Practitioner (AI1-C01) exam today. This achievement additionally grants me the status of AWS Certified AI Practitioner Early Adopter. The certification validates in-demand knowledge of Artificial Intelligence (AI), Machine Learning (ML), and Generative AI concepts and use cases, with an emphasis on Amazon SageMaker and the application of Foundation Models with Amazon Bedrock.",
+      "text": "I passed the Beta version of the new AWS Certified AI Practitioner (AI1-C01) exam today. This achievement additionally grants me the status of AWS Certified AI Practitioner Early Adopter. The certification validates in-demand knowledge of Artificial Intelligence (AI), Machine Learning (ML), and Generative AI concepts and use cases, with an emphasis on Amazon SageMaker and the application of Foundation Models with Amazon Bedrock. With generative AI becoming central to product development, I wanted a grounded, AWS-specific understanding of how these services fit into real architectures.",
       "url": "https://www.credly.com/badges/8bba7644-fc94-4d31-9eef-3baa756e1392/public_url"
     },
     {
       "id": 16,
       "title": "CKAD: Certified Kubernetes Application Developer",
       "subTitle": "23 FEBRUARY 2025",
-      "text": "I passed the Certified Kubernetes Application Developer (CKAD) exam today. This certification validates expertise in designing, building, monitoring, and troubleshooting scalable applications in Kubernetes. It covers core concepts, configuration, multi-container pods, observability, pod design, services and networking, and state persistence through a hands-on, performance-based exam.",
+      "text": "I passed the Certified Kubernetes Application Developer (CKAD) exam today. This certification validates expertise in designing, building, monitoring, and troubleshooting scalable applications in Kubernetes. It covers core concepts, configuration, multi-container pods, observability, pod design, services and networking, and state persistence through a hands-on, performance-based exam. Container orchestration had become part of my daily work via OpenShift — the CKAD gave me a rigorous, vendor-neutral foundation in Kubernetes itself.",
       "url": "https://www.credly.com/badges/26e4aec9-4848-426b-9442-831b7d70ddc3"
     },
     {
       "id": 17,
       "title": "iSAQB® Certified Professional for Software Architecture – Foundation Level (CPSA-F)",
       "subTitle": "26 APRIL 2025",
-      "text": "I passed the iSAQB® Certified Professional for Software Architecture – Foundation Level (CPSA-F) exam today. The CPSA-F certification validates a solid foundation in the design and documentation of software architectures, the assurance and evaluation of quality attributes, and the use of essential tools and methods for systems of medium complexity.",
+      "text": "I passed the iSAQB® Certified Professional for Software Architecture – Foundation Level (CPSA-F) exam today. The CPSA-F certification validates a solid foundation in the design and documentation of software architectures, the assurance and evaluation of quality attributes, and the use of essential tools and methods for systems of medium complexity. Software architecture decisions have long-term consequences — this certification gave me a structured vocabulary and framework for the architectural trade-offs I make in practice.",
       "url": "https://app.skillsclub.com/credentials/MTg5MjI3LTYyOTE4NmFkNTJkZTRiMmI0OTE2MWUzNTc4MmU0Mjg0NGMyMTFlYzI4ZmE0NzEzNGE3YWVmODk3NmNiM2U1OWIt"
     }
   ]

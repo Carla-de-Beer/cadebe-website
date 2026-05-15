@@ -1,10 +1,7 @@
 $header-grey: #555;
-$accent-gray: #626272;
-$paragraph-gray-1: #919191;
-$paragraph-gray-2: #6f6f6f;
+$paragraph-gray: #6f6f6f;
 $footer-background: #4d4d4d;
 $dark-accent: rgba(0, 0, 0, 0.12);
-$dark-accent-2: #212529;
 $button-background: #b7b2b2;
 $footer-text: #f6f3f3;
 $off-white: #f6f1f1;
@@ -12,16 +9,14 @@ $white: #fff;
 $warm-grey-1: #fafaf9;
 $warm-grey-2: #8c8c8c;
 $warm-grey-3: rgba(190, 190, 190, 0.1);
-$logo-accent-color: rgb(49, 129, 253);
+$cadebe-accent-color: #cadebe;
+$link-accent-color: rgb(49, 129, 253);
 
 :root {
   --header-grey: #{$header-grey};
-  --accent-gray: #{$accent-gray};
-  --paragraph-gray-1: #{$paragraph-gray-1};
-  --paragraph-gray-2: #{$paragraph-gray-2};
+  --paragraph-gray: #{$paragraph-gray};
   --footer-background: #{$footer-background};
   --dark-accent: #{$dark-accent};
-  --dark-accent-2: #{$dark-accent-2};
   --button-background: #{$button-background};
   --footer-text: #{$footer-text};
   --off-white: #{$off-white};
@@ -29,5 +24,6 @@ $logo-accent-color: rgb(49, 129, 253);
   --warm-grey-1: #{$warm-grey-1};
   --warm-grey-2: #{$warm-grey-2};
   --warm-grey-3: #{$warm-grey-3};
-  --logo-accent-color: #{$logo-accent-color};
+  --cadebe-accent-color: #{$cadebe-accent-color};
+  --link-accent-color: #{$link-accent-color};
 }
