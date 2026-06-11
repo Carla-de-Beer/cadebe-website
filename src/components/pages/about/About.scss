@@ -116,35 +116,19 @@
     color: var(--paragraph-gray);
     text-align: left;
 
-    .theme-note-mobile {
-      display: inline;
-    }
-
-    .theme-note-desktop {
-      display: none;
-    }
-
     .theme-note-rgb {
-      display: none;
+      font-family: 'DejaVu Sans', Courier, Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: normal;
     }
 
-    @media all and (min-width: 825px) {
-      .theme-note-rgb {
-        display: inline;
-        font-family: 'DejaVu Sans', Courier, Arial, Helvetica, sans-serif;
-        font-size: 11px;
-        font-weight: normal;
-      }
+    .theme-note-break {
+      display: block;
     }
 
-    @media all and (min-width: 1200px) {
-      .theme-note-mobile {
-        display: none;
-      }
-
-      .theme-note-desktop {
-        display: inline;
-      }
+    .theme-note-second-line {
+      display: block;
+      padding-left: 18px;
     }
   }
 

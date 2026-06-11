@@ -86,7 +86,7 @@ export default function Footer() {
             <img src={gitHub} width="25px" height="25px" alt="GitHub" />
           </a>
         </div>
-        <div className="text-fields mt-4 mb-4">
+        <div className="text-fields mt-4 mb-4" style={{ paddingBottom: '6px' }}>
           <FooterBadges />
         </div>
         <div className="footer-bottom-line" />

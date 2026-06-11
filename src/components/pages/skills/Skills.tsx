@@ -76,9 +76,9 @@ export default function Skills() {
           <div className="card-tile text-fields mt-5 content-width">
             <p>
               I design and deliver enterprise‑grade applications end to end – from backend services
-              and cloud infrastructure to intuitive, insight‑driven user interfaces. I draw on
-              practical experience with modern programming languages, tools and frameworks to build
-              robust, maintainable solutions in collaborative, real‑world projects.
+              to cloud infrastructure. I draw on practical experience with modern programming
+              languages, tools and frameworks to build robust, maintainable solutions in
+              collaborative, real‑world projects.
             </p>
             <p className="high-light-1 mt-5">Highlights from recent projects</p>
             <ul className="highlights-list mt-4">
