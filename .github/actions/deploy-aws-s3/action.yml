@@ -1,5 +1,5 @@
 name: 'Deploy to AWS S3'
-description: 'Deploy a static website to an AWS S3 bucket'
+description: 'Deploy the static website to an AWS S3 bucket'
 inputs:
   bucket:
     description: 'Bucket name'
