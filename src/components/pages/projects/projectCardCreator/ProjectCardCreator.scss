@@ -1,12 +1,11 @@
-@import 'src/style/colors';
-@import 'src/style/fonts';
-@import 'src/style/common';
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
+@use 'src/style/common' as *;
 
 .projects-wrapper {
-  box-sizing: revert;
-
   p {
     @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
   .card-title {
@@ -19,9 +18,13 @@
 
   .card-tile {
     border: 0;
-    color: var(--accent-gray);
+    color: var(--paragraph-gray);
     margin: 0 auto;
     width: 50%;
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
 
     .typewriter-text {
       @extend .font-style-accent;
@@ -32,29 +35,60 @@
   }
 
   p.card-text {
-    @extend .font-size-standard;
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
-  .dangerous p {
-    @extend p.card-text;
+  .dangerous p,
+  .dangerous li {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
   .dangerous a {
-    color: var(--logo-accent-color) !important;
+    color: var(--link-accent-color) !important;
     font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--cadebe-accent-color) !important;
+    }
+  }
+
+  .content-width {
+    width: 80%;
   }
 
   .text-fields {
-    @extend %base-text-fields;
+    @include base-text-fields;
   }
 
   .no-link {
-    color:var(--dark-accent-2);
+    color: var(--paragraph-gray);
     text-decoration: none;
+
+    &:hover .card-style {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-top: 3px solid var(--cadebe-accent-color) !important;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-top-color 0.2s ease;
+    }
+  }
+
+  .card-style {
+    border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-top-color 0.2s ease;
   }
 
   .high-light-1 {
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
     font-weight: bold;
   }
 
@@ -64,20 +98,15 @@
     margin-right: auto;
   }
 
-  *,
-  ::after,
-  ::before {
-    box-sizing: content-box;
-  }
-
-  .text-fields {
-    @extend %base-text-fields;
+  @media all and (max-width: 575px) {
+    .content-width {
+      width: 100%;
+    }
   }
 
   @media all and (max-width: 824px) {
     .card {
-      background-color: var(--warm-grey-1);
-      border: 0.5px solid var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.125);
     }
 
     .box {
@@ -88,33 +117,55 @@
 
     .card-style {
       padding: 1rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+    .no-link:hover .card-style {
+      border-top: 3px solid var(--cadebe-accent-color) !important;
     }
 
     .high-light-1 {
       @include font-size-large-1;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
     }
   }
 
+  @media all and (min-width: 1201px) {
+    .image-container-base {
+      width: 485px;
+      height: 280px;
+      object-fit: contain;
+      background-color: var(--warm-grey-1);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-container {
+      @extend .image-container-base;
+      width: 485px;
+    }
+
+    .image-container-fourier {
+      @extend .image-container-base;
+      width: 385px;
+    }
+  }
+
+  .text-container {
+    margin-top: 10px;
+  }
+
   @media all and (min-width: 825px) {
     .card {
-      background-color: var(--warm-grey-1);
-      border: 0.5px solid var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.125);
       height: 100%;
     }
 
-    div.left-card {
-      margin-right: 3px;
-    }
-
-    div.right-card {
-      margin-left: 3px;
-    }
-
     div.project-card {
-      margin-top: 0.8rem;
+      margin-top: 0;
     }
 
     .card-style {
@@ -123,7 +174,7 @@
 
     .high-light-1 {
       @include font-size-large-2;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
     }

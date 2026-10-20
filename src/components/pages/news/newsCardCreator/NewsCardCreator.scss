@@ -1,6 +1,6 @@
-@import 'src/style/colors';
-@import 'src/style/fonts';
-@import 'src/style/common';
+@use 'src/style/colors' as *;
+@use 'src/style/fonts' as *;
+@use 'src/style/common' as *;
 
 .news-wrapper {
   p {
@@ -9,12 +9,12 @@
 
   p.card-text {
     @extend .font-size-standard;
-    color: var(--dark-accent-2);
+    color: var(--paragraph-gray);
   }
 
   .card-tile {
     border: 0;
-    color: var(--accent-gray);
+    color: var(--paragraph-gray);
     margin: 0 auto;
     width: 50%;
 
@@ -32,44 +32,96 @@
 
   .sub-title {
     @include font-size-small;
-    color: var(--paragraph-gray-1);
+    color: var(--paragraph-gray);
     font-weight: bold;
   }
 
-  .text-fields {
-    @extend %base-text-fields;
+  .content-width {
+    width: 80%;
   }
 
   .text-fields {
-    @extend %base-text-fields;
+    @include base-text-fields;
   }
 
-  .dangerous p {
-    @extend p.card-text;
+  .dangerous {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
+  }
+
+  .dangerous p,
+  .dangerous li {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
+  }
+
+  .dangerous ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+  }
+
+  .card-list,
+  .card-list li {
+    @include font-size-large-1;
+    color: var(--paragraph-gray);
   }
 
   .news-card {
-    color: var(--accent-gray);
+    color: var(--paragraph-gray);
+    height: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-top-color 0.2s ease;
+  }
+
+  .card-body-flex {
+    display: flex;
+    flex-direction: column;
     height: 100%;
   }
 
+  .card-image-bottom {
+    margin-top: auto;
+  }
+
   .no-link {
+    display: block;
+    height: 100%;
     text-decoration: none;
+
+    &:hover .news-card {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-top: 3px solid var(--cadebe-accent-color) !important;
+    }
   }
 
   .high-light-1 {
-    color: var(--paragraph-gray-2);
+    color: var(--paragraph-gray);
     font-weight: bold;
   }
 
   .highlighted-text {
-    color: var(--logo-accent-color) !important;
+    color: var(--link-accent-color) !important;
     font-weight: bold;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--cadebe-accent-color) !important;
+    }
   }
 
   .dangerous span {
-    color: var(--logo-accent-color) !important;
+    color: var(--link-accent-color) !important;
     font-weight: bold;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--cadebe-accent-color) !important;
+    }
   }
 
   .block-1 {
@@ -96,9 +148,79 @@
   @media all and (min-width: 824px) {
     .high-light-1 {
       @include font-size-large-2;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
+    }
+
+    .badge-hashicorp {
+      width: 20%;
+      margin-left: 40%;
+    }
+
+    .aws-image {
+      width: 45%;
+      margin-left: 27%;
+    }
+
+    .article-image {
+      width: 45%;
+      margin-left: 27%;
+    }
+
+    .hand-blue-logo {
+      width: 22%;
+      margin-left: 39%;
+    }
+
+    .aws-badge {
+      width: 20%;
+      margin-left: 40%;
+    }
+
+    .aws-cert {
+      width: 25%;
+      margin-left: 37.5%;
+    }
+
+    .aws-ai-practitioner-cert {
+      width: 40%;
+      margin-left: 30%;
+    }
+
+    .ckad-cert {
+      width: 23%;
+      margin-left: 38.5%;
+    }
+
+    .isaqb-cert {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 18%;
+    }
+
+    .gcp-ace-cert {
+      width: 26%;
+      margin-left: 37%;
+    }
+
+    .badge-spring {
+      width: 20%;
+      margin-left: 40%;
+    }
+
+    .oracle-badge {
+      display: block;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media all and (max-width: 575px) {
+    .content-width {
+      width: 100%;
     }
   }
 
@@ -109,6 +231,14 @@
       width: 100%;
     }
 
+    .news-card {
+      border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    }
+
+    .no-link:hover .news-card {
+      border-top: 3px solid var(--cadebe-accent-color) !important;
+    }
+
     .high-light {
       @extend .high-light;
       @include font-size-large-3;
@@ -116,9 +246,46 @@
 
     .high-light-1 {
       @include font-size-large-1;
-      color: var(--paragraph-gray-2);
+      color: var(--paragraph-gray);
       font-weight: bold;
       margin: unset;
+    }
+
+    .badge-hashicorp {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .article-image {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .hand-blue-logo {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .aws-badge {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .gcp-ace-cert {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .badge-spring {
+      width: 50%;
+      margin-left: 25%;
+    }
+
+    .isaqb-cert {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
     }
   }
 }

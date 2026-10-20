@@ -1,36 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import ProjectCardCreator from './projectCardCreator/ProjectCardCreator';
+import projectData from '../../../data/projectData.json';
+import { ProjectItem } from '../../../model/ProjectDataProps';
 
 export default function ProjectLoader() {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [list, setProjects] = useState({
-    projects: [{
-      id: 1,
-      title: 'TSP Distance Calculator',
-      text: 'CCC',
-      url: 'https://carla-de-beer.github.io/TSP-distance-calculator/',
-      footerClass: 'Genetic Algorithm',
-      footerLanguage: 'JavaScript',
-    }],
-  });
-
-  useEffect(() => {
-    setIsLoading(true);
-    axios.get('json/projectData.json')
-      .then((response) => {
-        setProjects(response.data);
-        setIsLoading(false);
-      });
-  }, []);
-
-  return (
-    <>
-      { isLoading && <ProjectCardCreator projectContent={list.projects} /> }
-      { !isLoading && (
-        <ProjectCardCreator projectContent={list.projects} />
-      ) }
-    </>
-  );
+  return <ProjectCardCreator projectContent={projectData.projects as ProjectItem[]} />;
 }

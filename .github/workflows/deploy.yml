@@ -1,0 +1,59 @@
+name: Deploy S3
+
+on:
+  [ workflow_dispatch ]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  id-token: write # To interact with AWS token (requesting the JWT)
+  contents: read  # To allow GITHUB_TOKEN is allowed to get the code for the repository and download artifacts
+
+env:
+  REGION: eu-west-2
+
+jobs:
+
+  lint-test-build:
+    uses: ./.github/workflows/lint-test-build.yml
+    with:
+      artifact-folder: dist
+      is-deploy: true
+
+  deploy:
+    name: Deploy project
+    runs-on: ubuntu-24.04
+    needs: [ lint-test-build ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4.3.0
+        with:
+          name: build-artifacts
+          path: dist
+
+      - name: Get AWS permissions
+        uses: aws-actions/configure-aws-credentials@v4.3.1
+        with:
+          role-to-assume: arn:aws:iam::258782862236:role/GitHub-S3-Write-Access
+          aws-region: ${{ env.REGION }}
+
+      - name: Deploy to S3
+        id: deploy
+        uses: ./.github/actions/deploy-aws-s3
+        with:
+          bucket: www.cadebe.dev
+          bucket-region: ${{ env.REGION }}
+          artifact-folder: ./dist
+
+      - name: Output deployment information
+        run: |
+          echo "Deployment to S3 bucket: ${{ steps.deploy.conclusion }}"
+
+
+

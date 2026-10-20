@@ -1,82 +1,99 @@
 import React from 'react';
 import Badge from 'react-bootstrap/Badge';
-import PageSize from '../../utils/enums';
+import { Link } from 'react-router-dom';
+import { getLayoutSize } from '../../utils/pageSize';
 
 import './Footer.scss';
 
-import linkedIn from '../../assets/icons/Linkedin_1.svg';
-import gitHub from '../../assets/icons/Github_1.svg';
-import twitter from '../../assets/icons/Twitter_1.svg';
+import linkedIn from '../../assets/icons/Linkedin.svg';
+import gitHub from '../../assets/icons/Github.svg';
+import twitter from '../../assets/icons/X.svg';
 
-export default class Footer extends React.Component {
-    setNavHeader = () => {
-      if (window.innerWidth.valueOf() < PageSize.MEDIUM) {
-        return (
-          <div>
-            <Badge className="badge badge-pill badge-secondary">Machine Learning</Badge>
-            <br />
-            <Badge className="badge badge-pill badge-secondary">Software Engineering</Badge>
-            <br />
-            <Badge className="badge badge-pill badge-secondary">Backend Development</Badge>
-            <br />
-            <Badge className="badge badge-pill badge-secondary">Fullstack Development</Badge>
-          </div>
-        );
-      }
-      return (
-        <div>
-          <Badge className="badge badge-pill badge-secondary">Machine Learning</Badge>
-          <Badge className="badge badge-pill badge-secondary ml-2">Software Engineering</Badge>
-          <Badge className="badge badge-pill badge-secondary ml-2">Backend Development</Badge>
-          <Badge className="badge badge-pill badge-secondary ml-2">Fullstack Development</Badge>
-        </div>
-      );
-    };
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-    render() {
-      const date = new Date();
-      const year = date.getFullYear();
-      return (
-        <div className="footer-wrapper">
-          <div className="footer-style mt-5">
-            <p className="pt-4 footer-text typewriter-text">Carla de Beer | cadebe.dev</p>
-            <p className="footer-text-2">Updated: October 2021</p>
-            <div className="text-fields mt-5">
-              <a href="https://twitter.com/cadebe_" target="_blank" rel="noopener noreferrer">
-                <img src={twitter} width="25px" height="25px" alt="Icon" />
-              </a>
-              <a
-                className="ml-2"
-                href="https://www.linkedin.com/in/carla-de-beer/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={linkedIn} width="25px" height="25px" alt="Icon" />
-              </a>
-              <a
-                className="ml-2"
-                href="https://github.com/Carla-de-Beer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={gitHub} width="25px" height="25px" alt="Icon" />
-              </a>
-            </div>
-            <div className="text-fields" style={{ marginTop: '90px' }}>
-              { this.setNavHeader() }
-            </div>
-            <div>
-              <p className="footer-style pb-5 pt-3 footer-text-small mb-lg-2" style={{ marginTop: '50px' }}>
-                Built with React and
-                deployed on AWS
-                {' '}
-                •
-                {' '}
-                {year}
-              </p>
-            </div>
-          </div>
+function FooterBadges() {
+  const layout = getLayoutSize();
+  if (layout === 'mobile') {
+    return (
+      <div>
+        <Badge bg="secondary" pill>
+          Software Engineering
+        </Badge>
+        <br />
+        <Badge bg="secondary" pill>
+          Cloud
+        </Badge>
+        <br />
+        <Badge bg="secondary" pill>
+          Backend Development
+        </Badge>
+        <br />
+        <Badge bg="secondary" pill>
+          Machine Learning
+        </Badge>
+      </div>
+    );
+  }
+  return (
+    <div>
+      <Badge bg="secondary" pill>
+        Software Engineering
+      </Badge>
+      <Badge bg="secondary" pill className="ms-2">
+        Backend Development
+      </Badge>
+      <Badge bg="secondary" pill className="ms-2">
+        Cloud
+      </Badge>
+      <Badge bg="secondary" pill className="ms-2">
+        Machine Learning
+      </Badge>
+    </div>
+  );
+}
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+  return (
+    <div className="footer-wrapper" data-cy="footer">
+      <div className="footer-style mt-2">
+        <p className="pt-4 footer-text typewriter-text">
+          <Link to="/" className="footer-home-link" onClick={scrollToTop}>
+            Carla de Beer | cadebe.dev
+          </Link>
+        </p>
+        <p className="footer-text-2">Updated: May 2026</p>
+        <div className="text-fields mt-4">
+          <a href="https://twitter.com/cadebe_" target="_blank" rel="noopener noreferrer">
+            <img src={twitter} width="25px" height="25px" alt="X (Twitter)" />
+          </a>
+          <a
+            className="ms-2"
+            href="https://www.linkedin.com/in/carla-de-beer/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedIn} width="25px" height="25px" alt="LinkedIn" />
+          </a>
+          <a
+            className="ms-2"
+            href="https://github.com/Carla-de-Beer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={gitHub} width="25px" height="25px" alt="GitHub" />
+          </a>
         </div>
-      );
-    }
+        <div className="text-fields mt-4 mb-4" style={{ paddingBottom: '6px' }}>
+          <FooterBadges />
+        </div>
+        <div className="footer-bottom-line" />
+      </div>
+      <p className="pb-4 pt-3 footer-text-small mb-lg-2 mt-0">
+        Built with React and deployed on AWS • {year}
+      </p>
+    </div>
+  );
 }
