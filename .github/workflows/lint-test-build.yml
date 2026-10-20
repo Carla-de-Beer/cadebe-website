@@ -62,7 +62,7 @@ jobs:
         run: npm start &
 
       - name: Install Cypress and run tests
-        uses: cypress-io/github-action@v6.10.9
+        uses: cypress-io/github-action@v7.4.6
         with:
           working-directory: tests
           browser: chrome

@@ -9,7 +9,7 @@ const main = () => {
     const bucketUri = `s3://${bucket}`;
     exec.exec(`aws s3 sync ${artifactFolder} ${bucketUri} --region ${bucketRegion}`)
         .then(() => core.notice('Deployment to S3 completed'))
-        .catch((error) => core.error(`Deployment was unsuccessful due to error ${error}`));
+        .catch((error) => core.setFailed(`Deployment was unsuccessful due to error ${error}`));
 };
 
 main();
