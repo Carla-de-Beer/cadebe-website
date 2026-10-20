@@ -16,7 +16,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "deploy": "npm run build && aws s3 sync dist",
+    "deploy": "npm run build && aws s3 sync dist \"s3://${S3_BUCKET:?Set S3_BUCKET}\"",
     "lint": "eslint src/**/*.tsx",
     "style": "stylelint \"**/*.scss\"",
     "prepare": "husky"

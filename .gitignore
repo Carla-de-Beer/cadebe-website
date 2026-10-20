@@ -125,3 +125,11 @@ Desktop.ini
 ######################
 .eslintcache
 dist/
+
+######################
+# TLS / Certificates
+######################
+*.key
+*.csr
+*.crt
+*.pem

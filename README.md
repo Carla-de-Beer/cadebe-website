@@ -1,60 +1,90 @@
 # cadebe.dev
 
-![example event parameter](https://github.com/Carla-de-Beer/cadebe-website/actions/workflows/build.yml/badge.svg?event=push)
+![build status](https://github.com/Carla-de-Beer/cadebe-website/actions/workflows/build.yml/badge.svg?event=push)
 
-Personal portfolio website showcasing development projects, certifications, and blog posts. Built with React 18, TypeScript, and SCSS, bundled with Vite, and deployed on AWS S3.
+Personal portfolio website showcasing projects, skills, news and blog posts.
+
+- Live site: [https://cadebe.dev](https://cadebe.dev)
+- Repository: https://github.com/Carla-de-Beer/cadebe-website
 
 ## Requirements
 
-* Node.js v22
-* npm v10
+- Node.js (LTS recommended)
+- npm
 
-## Available Scripts
-
-### `npm start`
-
-Runs the app in development mode at [http://localhost:3000](http://localhost:3000). The page reloads automatically on edits.
-
-### `npm test`
-
-Runs unit tests with Vitest in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder. Bundles and optimises React for best performance.
-
-### `npm run preview`
-
-Serves the production build locally for review before deployment.
-
-### `npm run lint`
-
-Runs ESLint across all TypeScript source files.
-
-### `npm run style`
-
-Runs Stylelint across all SCSS files.
-
-### `npm run deploy`
-
-Builds the project and syncs the `dist` folder to AWS S3.
-
-Ensure your AWS credentials are configured before running:
+## Quick start
 
 ```bash
+git clone https://github.com/Carla-de-Beer/cadebe-website.git
+cd cadebe-website
+npm install
+npm start
+```
+
+The app runs at [http://localhost:3000](http://localhost:3000).
+
+## Tech stack
+
+- React + TypeScript
+- Vite
+- React Router
+- React-Bootstrap + SCSS
+- Vitest + Testing Library
+- Cypress (E2E)
+- ESLint + Stylelint + Husky/lint-staged
+
+## Available scripts
+
+| Command             | Description                        |
+|---------------------|------------------------------------|
+| `npm start`         | Start Vite dev server              |
+| `npm run build`     | Build production assets to `dist/` |
+| `npm run preview`   | Preview production build locally   |
+| `npm test`          | Run unit tests in watch mode       |
+| `npm test -- --run` | Run unit tests once (CI-friendly)  |
+| `npm run lint`      | Run ESLint on TypeScript/TSX files |
+| `npm run style`     | Run Stylelint on SCSS files        |
+| `npm run deploy`    | Build and deploy `dist/` to S3     |
+
+## E2E tests
+
+E2E tests live in `tests/` and run with Cypress.
+
+```bash
+# Terminal 1 (keep this running)
+npm start
+
+# Terminal 2
+cd tests
+npm install
+
+npm run e2e-open
+npm run e2e-headless
+```
+
+## Deployment through AWS S3
+
+The deploy script expects an environment variable named `S3_BUCKET`.
+
+```bash
+export S3_BUCKET=bucket-name
 npm run deploy
 ```
 
-## E2E Tests
+Prerequisites:
 
-End-to-end tests use Cypress and are located in the `tests/` directory. The development server must be running on port 3000 before executing the tests.
+- AWS CLI installed
+- Credentials configured (`aws configure` or environment variables)
+- IAM permissions for S3 object upload/delete in the bucket
 
-```bash
-# Start the dev server
-npm start
+To use CloudFront, invalidate the distribution cache after deployment.
 
-# In a separate terminal, from the tests/ directory:
-cd tests
-npm run e2e-open        # Open Cypress UI in Chrome
-npm run e2e-headless    # Run headless in Chrome
-```
+## Certificate renewal and CloudFront configuration
+
+For TLS certificate renewal, DNS validation, and CloudFront certificate configuration, see
+[INFRASTRUCTURE.md](INFRASTRUCTURE.md).
+
+## Contributor notes
+
+- Pre-commit hooks run automatically via Husky + lint-staged.
+- For architecture and coding conventions, see `CLAUDE.md`.
